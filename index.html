@@ -7,48 +7,147 @@
     <title>Home - Umara Group</title>
 </head>
 <body class="bg-gray-50 min-h-screen">
-    <!-- Responsive Container -->
-    <div class="w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 class="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800">Umara Group</h1>
-        
-        <!-- Responsive Grid: 1 column on mobile, 2 on tablet, 3 on desktop -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            <div class="card">
-                <h2 class="text-xl sm:text-2xl font-bold mb-3 text-gray-800">Card 1</h2>
-                <p class="text-gray-600 text-sm sm:text-base">This is the content of the first card. It adapts to different screen sizes.</p>
+
+    <header>
+        <div class="min-w-full">
+            <!-- Navbar -->
+            <nav class="relative bg-gray-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button" id="mobile-menu-button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Menu open icon -->
+                        <svg id="menu-open-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <!-- Menu close icon -->
+                        <svg id="menu-close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 hidden">
+                            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex shrink-0 items-center">
+                    <img src="public/assets/images/logo-umara.svg" alt="" class="size-10" />
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4">
+                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+                        <a href="#" aria-current="page" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">Dashboard</a>
+                        <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Team</a>
+                        <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Projects</a>
+                        <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Calendar</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+                    <!-- Profile dropdown -->
+                    <div class="relative ml-3">
+                        
+                    </div>
+                </div>
+                </div>
             </div>
-            <div class="card">
-                <h2 class="text-xl sm:text-2xl font-bold mb-3 text-gray-800">Card 2</h2>
-                <p class="text-gray-600 text-sm sm:text-base">This is the content of the second card. Perfect for tablet and mobile viewing.</p>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden sm:hidden">
+                <div class="space-y-1 px-2 pt-2 pb-3">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+                    <a href="#" aria-current="page" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">Dashboard</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Team</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Projects</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Calendar</a>
+                </div>
             </div>
-            <div class="card">
-                <h2 class="text-xl sm:text-2xl font-bold mb-3 text-gray-800">Card 3</h2>
-                <p class="text-gray-600 text-sm sm:text-base">This is the content of the third card. Responsive design at its best.</p>
-            </div>
+            </nav>
+            <!-- End of Navbar -->
         </div>
-        
-        <!-- Additional Responsive Section -->
-        <div class="mt-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">Our Services</h2>
-            
-            <!-- Responsive Flex Layout -->
-            <div class="flex flex-col lg:flex-row gap-6">
-                <div class="flex-1 bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-lg sm:text-xl font-semibold mb-3 text-blue-600">Mobile First</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">Our designs work perfectly on mobile devices with touch-friendly interfaces.</p>
-                </div>
-                <div class="flex-1 bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-lg sm:text-xl font-semibold mb-3 text-green-600">Tablet Optimized</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">Tablet users get an enhanced experience with optimized layouts and spacing.</p>
-                </div>
-                <div class="flex-1 bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-lg sm:text-xl font-semibold mb-3 text-purple-600">Desktop Ready</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">Full desktop experience with maximum screen real estate utilization.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-      
+    </header>
     
+    
+
+
+    <script>
+        // Menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // User dropdown menu elements
+            const userMenuButton = document.getElementById('user-menu-button');
+            const userMenu = document.getElementById('user-menu');
+            
+            // Mobile menu elements
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOpenIcon = document.getElementById('menu-open-icon');
+            const menuCloseIcon = document.getElementById('menu-close-icon');
+            
+            // Toggle user dropdown when button is clicked
+            userMenuButton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isExpanded = userMenuButton.getAttribute('aria-expanded') === 'true';
+                
+                if (isExpanded) {
+                    userMenu.classList.add('hidden');
+                    userMenuButton.setAttribute('aria-expanded', 'false');
+                } else {
+                    userMenu.classList.remove('hidden');
+                    userMenuButton.setAttribute('aria-expanded', 'true');
+                }
+            });
+            
+            // Toggle mobile menu when button is clicked
+            mobileMenuButton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                
+                if (isExpanded) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    menuOpenIcon.classList.remove('hidden');
+                    menuCloseIcon.classList.add('hidden');
+                } else {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'true');
+                    menuOpenIcon.classList.add('hidden');
+                    menuCloseIcon.classList.remove('hidden');
+                }
+            });
+            
+            // Close menus when clicking outside
+            document.addEventListener('click', function(e) {
+                // Close user menu
+                if (!userMenuButton.contains(e.target) && !userMenu.contains(e.target)) {
+                    userMenu.classList.add('hidden');
+                    userMenuButton.setAttribute('aria-expanded', 'false');
+                }
+                
+                // Close mobile menu
+                if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    menuOpenIcon.classList.remove('hidden');
+                    menuCloseIcon.classList.add('hidden');
+                }
+            });
+            
+            // Close menus when pressing Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    // Close user menu
+                    userMenu.classList.add('hidden');
+                    userMenuButton.setAttribute('aria-expanded', 'false');
+                    
+                    // Close mobile menu
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    menuOpenIcon.classList.remove('hidden');
+                    menuCloseIcon.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
