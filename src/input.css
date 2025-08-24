@@ -13,3 +13,19 @@
 .nav-link {
   @apply text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md;
 }
+
+.bg-body-color {
+  background-color: #5A3113;
+}
+
+.higlights {
+  margin: 0.5rem 0 2.5rem 0;
+}
+
+.bg-branding {
+  background-color: #CE8131;
+}
+
+main p {
+  color: #ffffff;
+}
