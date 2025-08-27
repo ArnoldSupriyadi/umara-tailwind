@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./dist/output.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Home - Umara Group</title>
 </head>
 <body>
@@ -78,70 +80,63 @@
     <main class="bg-body-color text-white lg:pt-2">
         <!-- SECTION CAROUSEL -->
         <section id="carousel" class="w-full">
-            <div class="w-full">           
-                <!-- Image Carousel -->
-                <div class="relative w-full">
-                    <!-- Carousel Container -->
-                    <div class="overflow-hidden shadow-lg">
-                        <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out">
-                            <!-- Slide 1 -->
-                            <div class="w-full flex-shrink-0 relative">
-                                <img src="public/assets/images/carousel-1.jpg" 
-                                    alt="Mountain Landscape" 
-                                    class="w-full h-80 sm:h-96 md:h-[32rem] lg:h-[40rem] object-cover">
-                                <!-- Text Overlay -->
-                                <div class="absolute bottom-0 left-0 right-0 bg-black-0 text-white p-4 text-center">
-                                    <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2">Majestic Mountain Views</h3>
-                                    <p class="text-sm sm:text-base opacity-90">Experience breathtaking landscapes and pristine wilderness</p>
-                                </div>
-                            </div>
-                            <!-- Slide 2 -->
-                            <div class="w-full flex-shrink-0 relative">
-                                <img src="public/assets/images/carousel-2.jpg" 
-                                    alt="Forest Path" 
-                                    class="w-full h-80 sm:h-96 md:h-[32rem] lg:h-[40rem] object-cover">
-                                <!-- Text Overlay -->
-                                <div class="absolute bottom-0 left-0 right-0 bg-black-0 text-white p-4 text-center">
-                                    <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2">Peaceful Forest Trails</h3>
-                                    <p class="text-sm sm:text-base opacity-90">Discover tranquil paths through ancient woodlands</p>
-                                </div>
-                            </div>
-                            <!-- Slide 3 -->
-                            <div class="w-full flex-shrink-0 relative">
-                                <img src="public/assets/images/carousel-1.jpg"
-                                    alt="Ocean Sunset" 
-                                    class="w-full h-80 sm:h-96 md:h-[32rem] lg:h-[40rem] object-cover">
-                                <!-- Text Overlay -->
-                                <div class="absolute bottom-0 left-0 right-0 bg-black-0 text-white p-4 text-center">
-                                    <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2">Golden Hour Serenity</h3>
-                                    <p class="text-sm sm:text-base opacity-90">Watch stunning sunsets paint the sky in brilliant colors</p>
-                                </div>
+            <!-- Swiper -->
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide relative">
+                        <img src="public/assets/images/carousel-1.jpg"
+                             loading="lazy"
+                             alt="Mountain Landscape" 
+                             class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover">
+                        <!-- Text Overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 text-white p-4">
+                            <div class="text-center max-w-4xl mx-auto px-4">
+                                <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-4 leading-tight">Majestic Mountain Views</h3>
+                                <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 max-w-2xl mx-auto leading-relaxed">Experience breathtaking landscapes and pristine wilderness</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Navigation Buttons -->
-                    <button id="prev-btn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button id="next-btn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                    
-                    <!-- Dots Indicator -->
-                    <div class="hidden flex justify-center mt-2 space-x-2">
-                        <button class="carousel-dot w-2 h-2 rounded-full bg-gray-400 hover:bg-gray-600 transition-colors duration-200" data-slide="0"></button>
-                        <button class="carousel-dot w-2 h-2 rounded-full bg-gray-400 hover:bg-gray-600 transition-colors duration-200" data-slide="1"></button>
-                        <button class="carousel-dot w-2 h-2 rounded-full bg-gray-400 hover:bg-gray-600 transition-colors duration-200" data-slide="2"></button>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide relative">
+                        <img src="public/assets/images/carousel-2.jpg"
+                            loading="lazy" 
+                             alt="Forest Trail" 
+                             class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover">
+                        <!-- Text Overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 text-white p-4">
+                            <div class="text-center max-w-4xl mx-auto px-4">
+                                <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-4 leading-tight">Peaceful Forest Trails</h3>
+                                <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 max-w-2xl mx-auto leading-relaxed">Discover tranquil paths through ancient woodlands</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide relative">
+                        <img src="public/assets/images/carousel-3.jpg"
+                             loading="lazy" 
+                             alt="Golden Hour" 
+                             class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover">
+                        <!-- Text Overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 text-white p-4">
+                            <div class="text-center max-w-4xl mx-auto px-4">
+                                <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-4 leading-tight">Golden Hour Serenity</h3>
+                                <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 max-w-2xl mx-auto leading-relaxed">Witness stunning sunsets that paint the sky in gold</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
+                <!-- Navigation arrows -->
+                <div class="swiper-button-next !text-white !text-lg sm:!text-xl"></div>
+                <div class="swiper-button-prev !text-white !text-lg sm:!text-xl"></div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination !bottom-4 sm:!bottom-6"></div>
             </div>
         </section>
-        
         <!-- END OF SECTION CAROUSEL -->
 
         <!-- SECTION BRANDING OVERVIEW -->
@@ -426,6 +421,9 @@
         </div>
     </footer>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
     <script>
     // Toggle mobile nav
     (function () {
@@ -434,77 +432,116 @@
         const openI = document.getElementById('icon-open');
         const closeI = document.getElementById('icon-close');
 
-        btn.addEventListener('click', () => {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
-        menu.classList.toggle('hidden', expanded);
-        openI.classList.toggle('hidden', !expanded);
-        closeI.classList.toggle('hidden', expanded);
-        });
+        if (btn && menu && openI && closeI) {
+            btn.addEventListener('click', () => {
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!expanded));
+                menu.classList.toggle('hidden', expanded);
+                openI.classList.toggle('hidden', !expanded);
+                closeI.classList.toggle('hidden', expanded);
+            });
 
-        // Tutup saat esc
-        document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
-            btn.click();
-        }
-        });
-    })();
-
-    // Carousel functionality
-    (function() {
-        const carouselTrack = document.getElementById('carousel-track');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        const carouselDots = document.querySelectorAll('.carousel-dot');
-        
-        let currentSlide = 0;
-        const totalSlides = 3;
-        
-        function updateCarousel() {
-            const translateX = -currentSlide * 100;
-            carouselTrack.style.transform = `translateX(${translateX}%)`;
-            
-            // Update dots
-            carouselDots.forEach((dot, index) => {
-                if (index === currentSlide) {
-                    dot.classList.remove('bg-gray-400');
-                    dot.classList.add('bg-gray-800');
-                } else {
-                    dot.classList.remove('bg-gray-800');
-                    dot.classList.add('bg-gray-400');
+            // Close on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+                    btn.click();
                 }
             });
         }
-        
-        // Next button
-        nextBtn.addEventListener('click', function() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateCarousel();
-        });
-        
-        // Previous button
-        prevBtn.addEventListener('click', function() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateCarousel();
-        });
-        
-        // Dot navigation
-        carouselDots.forEach((dot, index) => {
-            dot.addEventListener('click', function() {
-                currentSlide = index;
-                updateCarousel();
-            });
-        });
-        
-        // Auto-play carousel (optional)
-        setInterval(function() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateCarousel();
-        }, 5000); // Change slide every 5 seconds
-        
-        // Initialize carousel
-        updateCarousel();
     })();
+
+    // Initialize Swiper
+    document.addEventListener('DOMContentLoaded', function() {
+        const swiper = new Swiper('.hero-swiper', {
+            // Basic settings
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            speed: 800,
+            
+            // Effects
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            
+            // Pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            
+            // Responsive breakpoints
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                1024: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                }
+            },
+            
+            // Touch settings
+            touchRatio: 1,
+            touchAngle: 45,
+            grabCursor: true,
+            
+            // Keyboard control
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true,
+            },
+            
+            // Mouse wheel control
+            mousewheel: {
+                enabled: false,
+            },
+            
+            // Accessibility
+            a11y: {
+                enabled: true,
+                prevSlideMessage: 'Previous slide',
+                nextSlideMessage: 'Next slide',
+                firstSlideMessage: 'This is the first slide',
+                lastSlideMessage: 'This is the last slide',
+            },
+            
+            // Events
+            on: {
+                init: function () {
+                    console.log('Swiper initialized');
+                },
+                slideChange: function () {
+                    // Add any custom logic on slide change
+                },
+            }
+        });
+        
+        // Pause autoplay when page is not visible
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                swiper.autoplay.stop();
+            } else {
+                swiper.autoplay.start();
+            }
+        });
+    });
     </script>
 </body>
 </html>
