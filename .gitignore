@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Build outputs (opsional)
+dist/
+build/
+
+# Env & logs
+.env
+.env.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+public/umara-compro/*.pptx
