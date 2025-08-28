@@ -51,9 +51,19 @@ main {
   color: #ce8131;
 }
 
+.text-title-about2 {
+  font-size: 2rem;
+  color: #354024;
+}
+
 .title-footer {
   letter-spacing: 1px;
   color: #ce8131;
+}
+
+.title-footer2 {
+  letter-spacing: 1px;
+  color: #ffffff;
 }
 
 .swiper-pagination-bullet {
