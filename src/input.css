@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -23,7 +23,7 @@
 }
 
 .bg-body-color {
-  background-color: #5A3113;
+  background-color: #5a3113;
 }
 
 .higlights {
@@ -31,7 +31,7 @@
 }
 
 .bg-branding {
-  background-color: #CE8131;
+  background-color: #ce8131;
 }
 
 main p {
@@ -48,5 +48,19 @@ main {
 
 .text-title-about {
   font-size: 2rem;
-  color: #CE8131;
+  color: #ce8131;
+}
+
+.title-footer {
+  letter-spacing: 1px;
+  color: #ce8131;
+}
+
+.swiper-pagination-bullet {
+  background-color: #d1d5db; /* abu-abu */
+  opacity: 1; /* kalau mau penuh */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ce8131 !important; /* biru Tailwind (blue-500) */
 }
