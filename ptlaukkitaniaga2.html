@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Lauk Kita Niaga - Laukita Frozen Food Solutions</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="font-inter bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50" x-data="{ mobileMenuOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">LN</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">PT Lauk Kita Niaga</h1>
+                        <p class="text-sm text-green-600">Laukita Frozen Food Solutions</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-green-600 font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-green-600 font-medium transition-colors">About Laukita</a>
+                    <a href="#benefits" class="text-gray-700 hover:text-green-600 font-medium transition-colors">Why Laukita</a>
+                    <a href="#products" class="text-gray-700 hover:text-green-600 font-medium transition-colors">Products</a>
+                    <a href="#distribution" class="text-gray-700 hover:text-green-600 font-medium transition-colors">Distribution</a>
+                    <a href="#contact" class="text-gray-700 hover:text-green-600 font-medium transition-colors">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 rounded-md text-gray-700 hover:text-green-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div x-show="mobileMenuOpen" x-transition class="md:hidden pb-4">
+                <nav class="flex flex-col space-y-2">
+                    <a href="#home" class="text-gray-700 hover:text-green-600 font-medium py-2 transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-green-600 font-medium py-2 transition-colors">About Laukita</a>
+                    <a href="#benefits" class="text-gray-700 hover:text-green-600 font-medium py-2 transition-colors">Why Laukita</a>
+                    <a href="#products" class="text-gray-700 hover:text-green-600 font-medium py-2 transition-colors">Products</a>
+                    <a href="#distribution" class="text-gray-700 hover:text-green-600 font-medium py-2 transition-colors">Distribution</a>
+                    <a href="#contact" class="text-gray-700 hover:text-green-600 font-medium py-2 transition-colors">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-br from-green-50 to-green-100 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                    <span class="text-green-600">Laukita</span> Frozen Food
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
+                    Premium frozen food solutions with advanced skinpack technology, preserving freshness without preservatives
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#about" class="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                        Learn About Laukita
+                    </a>
+                    <a href="#contact" class="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Laukita Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="bg-green-600 text-white p-8 lg:p-12 rounded-2xl">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6">What is Laukita?</h2>
+                    <p class="text-lg leading-relaxed">
+                        Laukita is a product that has been developed by prioritizing consumer practicality. Laukita used real ingredients without preservative, we freeze our food at the peak of its freshness. Sealed with a packaging that applies technology vacuum on thermo sealing machine, which covers the product completely keeping the product safe and dry. With the help of our technology Laukita was able to extend the shelf life of its products up to 1 year.
+                    </p>
+                </div>
+
+                <!-- Right Content -->
+                <div class="space-y-6">
+                    <div class="bg-green-50 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold text-green-800 mb-2">DURABLE & WITHOUT PRESERVATIVES</h3>
+                        <p class="text-gray-700">Real ingredients frozen at peak freshness with no artificial preservatives</p>
+                    </div>
+                    
+                    <div class="bg-green-50 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold text-green-800 mb-2">SKINPACK TECHNOLOGY</h3>
+                        <p class="text-gray-700">Packaging that applies technology vacuum on thermo sealing machine. Which covers the product completely keeping the product safe and dry.</p>
+                    </div>
+
+                    <div class="flex items-center space-x-4 pt-4">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <span class="text-blue-600 font-bold">BPOM</span>
+                        </div>
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                            <span class="text-green-600 font-bold">HALAL</span>
+                        </div>
+                        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center">
+                            <span class="text-yellow-600 font-bold text-xs">PRAKTIS</span>
+                        </div>
+                        <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
+                            <span class="text-red-600 font-bold text-xs">SEHAT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Laukita Section -->
+    <section id="benefits" class="py-20 bg-green-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Why Laukita?</h2>
+                <p class="text-xl text-gray-700">8 Key Benefits That Make Laukita Your Best Choice</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Benefits Grid -->
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-green-100 p-6 rounded-xl text-center">
+                        <div class="w-16 h-16 bg-green-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-white font-bold">Q</span>
+                        </div>
+                        <h3 class="font-semibold text-green-800 mb-2">QUALITY</h3>
+                        <p class="text-sm text-gray-700">Nature's Pause Button: Preserve at The Peak of Freshness</p>
+                    </div>
+
+                    <div class="bg-green-200 p-6 rounded-xl text-center">
+                        <div class="w-16 h-16 bg-green-700 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-white font-bold">V</span>
+                        </div>
+                        <h3 class="font-semibold text-green-800 mb-2">VALUE</h3>
+                        <p class="text-sm text-gray-700">Made Smarter to Cost Less</p>
+                    </div>
+
+                    <div class="bg-green-300 p-6 rounded-xl text-center">
+                        <div class="w-16 h-16 bg-green-800 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-white font-bold">P</span>
+                        </div>
+                        <h3 class="font-semibold text-green-800 mb-2">PROVENANCE</h3>
+                        <p class="text-sm text-gray-700">Trusted Sources In and Out of Season</p>
+                    </div>
+
+                    <div class="bg-green-400 p-6 rounded-xl text-center">
+                        <div class="w-16 h-16 bg-green-900 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-white font-bold">C</span>
+                        </div>
+                        <h3 class="font-semibold text-green-800 mb-2">CONVENIENCE</h3>
+                        <p class="text-sm text-gray-700">Always Available and Easy to Prepare</p>
+                    </div>
+                </div>
+
+                <!-- Additional Benefits -->
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="font-semibold text-green-800 mb-2">CHOICE</h3>
+                        <p class="text-gray-700">Whatever You Want Whenever You Want It</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="font-semibold text-green-800 mb-2">LESS WASTE</h3>
+                        <p class="text-gray-700">Only Use What You Need</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="font-semibold text-green-800 mb-2">TASTE</h3>
+                        <p class="text-gray-700">Lock In The Flavours</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="font-semibold text-green-800 mb-2">HEALTH & NUTRITION</h3>
+                        <p class="text-gray-700">No Added Artificial preservatives with Essential Nutrients Retained</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Products</h2>
+                <p class="text-xl text-gray-700">Premium frozen food with advanced packaging technology</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl text-center">
+                    <div class="w-20 h-20 bg-green-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-white text-2xl">🍱</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Ready-to-Eat Meals</h3>
+                    <p class="text-gray-700">Complete meals frozen at peak freshness, ready in minutes</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl text-center">
+                    <div class="w-20 h-20 bg-green-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-white text-2xl">🥘</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Traditional Dishes</h3>
+                    <p class="text-gray-700">Authentic Indonesian flavors preserved with modern technology</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl text-center">
+                    <div class="w-20 h-20 bg-green-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-white text-2xl">🍖</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Premium Proteins</h3>
+                    <p class="text-gray-700">High-quality meat and seafood with extended shelf life</p>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-green-600 text-white p-8 rounded-2xl">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-4">Skinpack Technology Benefits</h3>
+                    <div class="grid md:grid-cols-3 gap-6 mt-8">
+                        <div class="text-center">
+                            <div class="text-3xl mb-2">📦</div>
+                            <h4 class="font-semibold mb-2">Vacuum Sealed</h4>
+                            <p class="text-green-100">Complete protection from air and moisture</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl mb-2">🛡️</div>
+                            <h4 class="font-semibold mb-2">Extended Shelf Life</h4>
+                            <p class="text-green-100">Up to 1 year storage capability</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl mb-2">🌿</div>
+                            <h4 class="font-semibold mb-2">No Preservatives</h4>
+                            <p class="text-green-100">Natural preservation through technology</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Distribution Network -->
+    <section id="distribution" class="py-20 bg-green-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">DISTRIBUTION</h2>
+                <p class="text-xl text-green-100">Our nationwide distribution network</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-4xl">🔍</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">DISTRIBUTOR</h3>
+                    <h4 class="text-lg font-medium">JABODETABEK</h4>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-4xl">🚚</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">DISTRIBUTOR</h3>
+                    <h4 class="text-lg font-medium">MAKASSAR</h4>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-4xl">📦</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">DISTRIBUTOR</h3>
+                    <h4 class="text-lg font-medium">PALEMBANG</h4>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-4xl">🗺️</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">DISTRIBUTOR</h3>
+                    <h4 class="text-lg font-medium">MALANG</h4>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-lg text-green-100">Expanding nationwide to serve you better</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Information -->
+    <section id="company" class="py-20 bg-gradient-to-br from-green-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Company Logo and Info -->
+                <div class="text-center lg:text-left">
+                    <div class="inline-flex items-center justify-center w-32 h-32 bg-gradient-to-br from-green-600 to-yellow-500 rounded-2xl mb-8">
+                        <span class="text-white text-4xl font-bold">LNI</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">LAUKITA NIAGA INDONESIA</h2>
+                    
+                    <div class="flex justify-center lg:justify-start space-x-4 mb-8">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center">
+                            <span class="text-yellow-600 font-bold text-xs">HALAL</span>
+                        </div>
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                            <span class="text-green-600 font-bold text-xs">BPOM</span>
+                        </div>
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                            <span class="text-blue-600 font-bold text-xs">ISO</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-100 p-6 rounded-xl">
+                        <h3 class="text-lg font-semibold text-yellow-800 mb-4">ONE STOP SOLUTION FIT FOR</h3>
+                        <h4 class="text-xl font-bold text-yellow-900">FOOD DISTRIBUTION & MANUFACTURING TO CUSTOMER</h4>
+                    </div>
+                </div>
+
+                <!-- Company Description -->
+                <div class="space-y-6">
+                    <p class="text-gray-700 leading-relaxed">
+                        Established in March 2024, we are here as the Main Distributor of the best and quality products in the Food and Beverage Industry, especially UMARA GROUP products. We provide the best service to our partners and consumers and are business-oriented, present in detail or in detail and also right on target and benefit all parties.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed">
+                        We recognize that the need for quality frozen food in Indonesia, where delicious and frozen food has become part of the daily culture of Indonesian society and will become a new need. Seeing the big problems that exist, we focus on providing solutions, innovations to create a new lifestyle.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed">
+                        Through our various sales channels, the distribution of SMI products is currently in more than 20 major cities in Indonesia. In the future, we will continue to expand distribution channels to all regions in Indonesia.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed font-semibold">
+                        A one stop solution between manufacturer and consumers for frozen foods using our digital ecosystem.
+                    </p>
+
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p><strong>Year of Establishment:</strong> 2024</p>
+                                <p><strong>Line of Business:</strong> Sales, Distribution & Digital Platform</p>
+                            </div>
+                            <div>
+                                <p><strong>Social Media:</strong> @laukitaindonesia (65.7K Followers)</p>
+                                <p><strong>Brands:</strong> Laukitamart, Laukitashop, Samara</p>
+                                <p><strong>Business:</strong> TokoKita, MitraKita</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">CONTACT US</h2>
+                <p class="text-xl text-gray-700">Get in touch with Laukita Niaga Indonesia</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="flex items-center justify-center lg:justify-start">
+                        <div class="w-32 h-32 bg-gradient-to-br from-green-600 to-yellow-500 rounded-2xl flex items-center justify-center mr-6">
+                            <span class="text-white text-3xl font-bold">LNI</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">LAUKITA NIAGA</h3>
+                            <h4 class="text-xl font-semibold text-gray-700">INDONESIA</h4>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Office Address</h4>
+                            <p class="text-gray-700">
+                                Bintaro Avenue Lt.2 Jl. M.H Thamrin Blok A2 No. 1 Bintaro<br>
+                                Sektor 7, Bintaro Jaya, Tangerang Selatan
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Telp / Call Centre</h4>
+                            <p class="text-gray-700">
+                                (021) 80 600 900 | WA Centre : +62 821 8888 3810
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Email</h4>
+                            <p class="text-green-600">
+                                <a href="mailto:customer.support@solusimakanan.com" class="hover:underline">
+                                    customer.support@solusimakanan.com
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="pt-4">
+                            <p class="font-semibold text-gray-900">PT. LAUKITA NIAGA INDONESIA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-green-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-yellow-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">LN</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">PT Lauk Kita Niaga</h3>
+                            <p class="text-green-400">Laukita Frozen Food Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Leading distributor of premium frozen food products in Indonesia, committed to providing quality and convenience through innovative technology.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987c6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297L3.89 16.927c-.854-.854-1.297-2.025-1.297-3.323s.443-2.469 1.297-3.323L5.126 9.045c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297l1.236 1.236c.854.854 1.297 2.025 1.297 3.323s-.443 2.469-1.297 3.323l-1.236 1.236c-.875.807-2.026 1.297-3.323 1.297z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About Laukita</a></li>
+                        <li><a href="#benefits" class="text-gray-300 hover:text-white transition-colors">Why Laukita</a></li>
+                        <li><a href="#products" class="text-gray-300 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#distribution" class="text-gray-300 hover:text-white transition-colors">Distribution</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Bintaro Avenue Lt.2</li>
+                        <li>Tangerang Selatan</li>
+                        <li>(021) 80 600 900</li>
+                        <li>+62 821 8888 3810</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2024 PT Lauk Kita Niaga. All rights reserved. | Part of Umara Group
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+        });
+    </script>
+</body>
+</html>
