@@ -1874,6 +1874,18 @@ body{
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-palette1-b{
+  --tw-gradient-from: #354024 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(53 64 36 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-palette1-e{
+  --tw-gradient-from: #E5D7C4 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(229 215 196 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .to-amber-600{
   --tw-gradient-to: #d97706 var(--tw-gradient-to-position);
 }
@@ -2000,6 +2012,14 @@ body{
 
 .to-teal-300{
   --tw-gradient-to: #5eead4 var(--tw-gradient-to-position);
+}
+
+.to-palette1-a{
+  --tw-gradient-to: #4C3D19 var(--tw-gradient-to-position);
+}
+
+.to-palette1-c{
+  --tw-gradient-to: #889063 var(--tw-gradient-to-position);
 }
 
 .object-contain{
@@ -2477,6 +2497,16 @@ body{
 .text-amber-400{
   --tw-text-opacity: 1;
   color: rgb(251 191 36 / var(--tw-text-opacity, 1));
+}
+
+.text-amber-300{
+  --tw-text-opacity: 1;
+  color: rgb(90 50 17 / var(--tw-text-opacity, 1));
+}
+
+.text-amber-50{
+  --tw-text-opacity: 1;
+  color: rgb(255 251 235 / var(--tw-text-opacity, 1));
 }
 
 .underline{
