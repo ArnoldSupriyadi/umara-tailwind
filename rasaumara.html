@@ -4,45 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rasa Umara - Authentic Indonesian Culinary Experience</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif'],
-                        'playfair': ['Playfair Display', 'serif']
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                        'fade-in': 'fadeIn 1s ease-out'
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' }
-                        },
-                        glow: {
-                            '0%': { boxShadow: '0 0 20px rgba(251, 191, 36, 0.5)' },
-                            '100%': { boxShadow: '0 0 30px rgba(251, 191, 36, 0.8)' }
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(100px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' }
-                        },
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+
     <style>
         .glass-morphism {
             background: rgba(255, 255, 255, 0.1);
@@ -117,15 +82,15 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="text-white hover:text-amber-400 transition-colors duration-300 font-medium">Home</a>
-                        <a href="#about" class="text-white hover:text-amber-400 transition-colors duration-300 font-medium">About</a>
-                        <a href="#dining" class="text-white hover:text-amber-400 transition-colors duration-300 font-medium">Dining</a>
-                        <a href="#menu" class="text-white hover:text-amber-400 transition-colors duration-300 font-medium">Menu</a>
-                        <a href="#contact" class="text-white hover:text-amber-400 transition-colors duration-300 font-medium">Contact</a>
+                        <a href="#home" class="text-white hover:text-palette1-d transition-colors duration-300 font-medium">Home</a>
+                        <a href="#about" class="text-white hover:text-palette1-d transition-colors duration-300 font-medium">About</a>
+                        <a href="#dining" class="text-white hover:text-palette1-d transition-colors duration-300 font-medium">Dining</a>
+                        <a href="#menu" class="text-white hover:text-palette1-d transition-colors duration-300 font-medium">Menu</a>
+                        <a href="#contact" class="text-white hover:text-palette1-d transition-colors duration-300 font-medium">Contact</a>
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-white hover:text-amber-400 transition-colors duration-300">
+                    <button id="mobile-menu-btn" class="text-white hover:text-palette1-d transition-colors duration-300">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -134,11 +99,11 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden glass-dark">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block px-3 py-2 text-white hover:text-amber-400 transition-colors duration-300">Home</a>
-                <a href="#about" class="block px-3 py-2 text-white hover:text-amber-400 transition-colors duration-300">About</a>
-                <a href="#dining" class="block px-3 py-2 text-white hover:text-amber-400 transition-colors duration-300">Dining</a>
-                <a href="#menu" class="block px-3 py-2 text-white hover:text-amber-400 transition-colors duration-300">Menu</a>
-                <a href="#contact" class="block px-3 py-2 text-white hover:text-amber-400 transition-colors duration-300">Contact</a>
+                <a href="#home" class="block px-3 py-2 text-white hover:text-palette1-d transition-colors duration-300">Home</a>
+                <a href="#about" class="block px-3 py-2 text-white hover:text-palette1-d transition-colors duration-300">About</a>
+                <a href="#dining" class="block px-3 py-2 text-white hover:text-palette1-d transition-colors duration-300">Dining</a>
+                <a href="#menu" class="block px-3 py-2 text-white hover:text-palette1-d transition-colors duration-300">Menu</a>
+                <a href="#contact" class="block px-3 py-2 text-white hover:text-palette1-d transition-colors duration-300">Contact</a>
             </div>
         </div>
     </nav>
@@ -154,14 +119,14 @@
                         <h1 class="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white leading-tight">
                             Authentic
                             <span class="gradient-text block">Indonesian</span>
-                            <span class="text-amber-400">Flavors</span>
+                            <span class="text-palette1-d">Flavors</span>
                         </h1>
                         <p class="text-xl md:text-2xl text-gray-300 max-w-2xl leading-relaxed">
                             Experience the rich culinary heritage of Indonesia in our modern, sophisticated dining space where tradition meets innovation.
                         </p>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-amber-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 animate-glow">
+                        <button class="bg-gradient-to-r from-palette1-a to-palette1-b text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-palette1-b hover:to-palette1-c transition-all duration-300 transform hover:scale-105 animate-glow">
                             Reserve Table
                         </button>
                         <button class="glass-morphism text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300">

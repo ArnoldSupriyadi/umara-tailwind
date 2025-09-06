@@ -20,7 +20,7 @@ module.exports = {
            c: '#889063',
            d: '#CFBB99',
            e: '#E5D7C4'
-         }
+         },
        },
       fontFamily: {
         'nunito': ['Nunito Sans', 'sans-serif']

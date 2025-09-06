@@ -1,8 +1,10 @@
 {
   "devDependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "@tailwindcss/postcss": "^4.1.13",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^4.1.13"
   },
   "name": "umara-group-tailwind",
   "version": "1.0.0",
@@ -24,8 +26,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+      "dev": "npm exec --yes --package @tailwindcss/cli -- tailwindcss --watch -i ./src/input.css -o ./dist/output.css",
+  "build": "npm exec --yes --package @tailwindcss/cli -- tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },
   "keywords": [],
   "author": "",

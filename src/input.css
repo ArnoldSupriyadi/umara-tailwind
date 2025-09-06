@@ -1,30 +1,23 @@
+@config "../tailwind.config.js";
+@import "tailwindcss";           
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;800&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* jangan pakai lagi: @tailwind base/components/utilities */
 
 @layer base {
-  body {
-    @apply font-nunito;
-  }
+  body { @apply font-nunito; }
 }
 
-.btn-primary {
-  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
-}
 
-.card {
-  @apply bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300;
-}
+/* utilitas custommu tetap boleh */
+.btn-primary { @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded; }
+.card { @apply bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300; }
+.nav-link { @apply text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md; }
 
-.nav-link {
-  @apply text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md;
-}
+/* CSS biasa kamu tetap oke */
+.bg-body-color { background-color: #5a3113; }
 
-.bg-body-color {
-  background-color: #5a3113;
-}
+
 
 .higlights {
   margin: 0.5rem 0 2.5rem 0;
