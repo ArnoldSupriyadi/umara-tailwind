@@ -6,6 +6,8 @@
     <link href="./dist/output.css" rel="stylesheet" />
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Home - Umara Group</title>
   </head>
   <body>
@@ -80,7 +82,7 @@
 
     <main class="text-white">
       <!-- SECTION CAROUSEL -->
-      <section id="carousel" class="w-full">
+      <section id="carousel" class="w-full" data-aos="fade-in" data-aos-duration="1000">
         <!-- Swiper -->
         <div class="swiper hero-swiper">
           <div class="swiper-wrapper">
@@ -231,11 +233,11 @@
 
       <!-- SECTION BRANDING OVERVIEW -->
       <section id="branding-overview" class="w-full py-12 px-8 md:px-2 lg:px-12 bg-blue-300">
-        <div class="w-full flex justify-center mt-4">
+        <div class="w-full flex justify-center mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
           <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
             <div>
-              <h2 class="text-4xl font-bold mb-4 text-center">BRAND OVERVIEW</h2>
-              <p>We are a leading brand in the industry, known for our quality products and exceptional customer service.</p>
+              <h2 class="text-4xl font-bold mb-4 text-center" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">BRAND OVERVIEW</h2>
+              <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">We are a leading brand in the industry, known for our quality products and exceptional customer service.</p>
             </div>
           </div>
         </div>
@@ -245,7 +247,7 @@
         <section class="w-full py-12 px-8 md:px-2 lg:px-12">
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             <!-- Grid Item 1 -->
-            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full">
+            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
               <div class="w-36 h-36 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <img src="public/assets/images/pt-nusantara-baru.svg" alt="PT Lauk Kita Bersama" class="w-32 h-32 object-contain" />
               </div>
@@ -255,7 +257,7 @@
             </div>
 
             <!-- Grid Item 2 -->
-            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full">
+            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
               <div class="w-36 h-36 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <img src="public/assets/images/pt-umara-cipta-rasa.svg" alt="" class="w-32 h-32 object-contain" />
               </div>
@@ -265,7 +267,7 @@
             </div>
 
             <!-- Grid Item 3 -->
-            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full">
+            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
               <div class="w-36 h-36 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <img src="public/assets/images/pt-umara-mitra-kulina.svg" alt="" class="w-32 h-32 object-contain" />
               </div>
@@ -275,7 +277,7 @@
             </div>
 
             <!-- Grid Item 4 -->
-            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full">
+            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="800">
               <div class="w-36 h-36 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <img src="public/assets/images/pt-lauk-kita-bersama.svg" alt="" class="w-32 h-32 object-contain" />
               </div>
@@ -285,7 +287,7 @@
             </div>
 
             <!-- Grid Item 5 -->
-            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full">
+            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">
               <div class="w-36 h-36 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <img src="public/assets/images/pt-laukita-niaga.svg" alt="" class="w-32 h-32 object-contain" />
               </div>
@@ -304,32 +306,32 @@
       <!-- SECTION HIGHlights -->
       <section id="highlights" class="py-16 bg-gray-900 text-white">
         <div class="container mx-auto px-4">
-          <div class="higlights">
+          <div class="higlights" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <h1 class="text-4xl font-bold text-center">HIGHLIGHTS</h1>
           </div>
 
           <!-- 4 COLUMN GRID -->
           <div class="flex flex-wrap lg:flex-nowrap gap-8 justify-center items-center mt-12">
             <!-- Grid Item 1 -->
-            <div class="p-8 text-center flex flex-col h-full">
+            <div class="p-8 text-center flex flex-col h-full" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
               <h1 class="text-3xl font-bold mb-4">+10.000</h1>
               <p class="text-lg font-medium">Event</p>
             </div>
 
             <!-- Grid Item 2 -->
-            <div class="p-8 text-center flex flex-col h-full">
+            <div class="p-8 text-center flex flex-col h-full" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
               <h1 class="text-3xl font-bold mb-4">+15 Years</h1>
               <p class="text-lg font-medium">Experience</p>
             </div>
 
             <!-- Grid Item 3 -->
-            <div class="p-8 text-center flex flex-col h-full">
+            <div class="p-8 text-center flex flex-col h-full" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">
               <h1 class="text-3xl font-bold mb-4">HACPP</h1>
               <p class="text-lg font-medium">Halal Certified</p>
             </div>
 
             <!-- Grid Item 4 -->
-            <div class="p-8 text-center flex flex-col h-full">
+            <div class="p-8 text-center flex flex-col h-full" data-aos="fade-left" data-aos-duration="800" data-aos-delay="1000">
               <h1 class="text-3xl font-bold mb-4">3</h1>
               <p class="text-lg font-medium">Central Kitchen</p>
             </div>
@@ -342,64 +344,64 @@
       <!-- SECTION OUR CLIENT -->
       <section id="our-client" class="py-16 bg-blue-300">
         <div class="container mx-auto px-4">
-          <div class="higlights">
+          <div class="higlights" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <h2 class="text-4xl font-bold text-center">OUR CLIENT</h2>
           </div>
 
           <!-- 12 COLUMN GRID -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             <!-- Grid Item 1 -->
-            <div class="p-8 flex items-center justify-center h-full">
+            <div class="p-8 flex items-center justify-center h-full" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
               <img src="public/assets/images/logo-BI.png" alt="" class="max-w-full max-h-48 object-contain" />
             </div>
 
             <!-- Grid Item 2 -->
-            <div class="p-8 flex items-center justify-center h-full">
+            <div class="p-8 flex items-center justify-center h-full" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
               <img src="public/assets/images/logo-pertamina.png" alt="" class="max-w-full max-h-48 object-contain" />
             </div>
 
             <!-- Grid Item 3 -->
-            <div class="p-8 flex items-center justify-center h-full">
+            <div class="p-8 flex items-center justify-center h-full" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
               <img src="public/assets/images/logo-garuda-indonesia.png" alt="" class="max-w-full max-h-48 object-contain" />
             </div>
 
             <!-- Grid Item 4 -->
-            <div class="p-8 flex items-center justify-center h-full">
+            <div class="p-8 flex items-center justify-center h-full" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
               <img src="public/assets/images/logo-gojek.png" alt="" class="max-w-full max-h-48 object-contain" />
             </div>
 
             <!-- Grid Item 5 -->
-            <div class="p-8 flex items-center justify-center h-full">
+            <div class="p-8 flex items-center justify-center h-full" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">
               <img src="public/assets/images/logo-antam.png" alt="" class="max-w-full max-h-48 object-contain" />
             </div>
 
             <!-- Grid Item 6 -->
-            <div class="p-8 flex items-center justify-center h-full">
+            <div class="p-8 flex items-center justify-center h-full" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
               <img src="public/assets/images/logo-sucofindo.png" alt="" class="max-w-full max-h-48 object-contain" />
             </div>
 
             <!-- Grid Item 7 -->
-            <div class="p-8 flex items-center justify-center h-full">
+            <div class="p-8 flex items-center justify-center h-full" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="900">
               <img src="public/assets/images/logo-mandiri.png" alt="" class="max-w-full max-h-48 object-contain" />
             </div>
 
             <!-- Grid Item 8 -->
-            <div class="p-8 flex items-center justify-center h-full">
+            <div class="p-8 flex items-center justify-center h-full" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="1000">
               <img src="public/assets/images/logo-telkomsel.png" alt="" class="max-w-full max-h-48 object-contain" />
             </div>
 
             <!-- Grid Item 9 -->
-            <div class="p-8 flex items-center justify-center h-full">
+            <div class="p-8 flex items-center justify-center h-full" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="1100">
               <img src="public/assets/images/logo-komdigi.png" alt="" class="max-w-full max-h-48 object-contain" />
             </div>
 
             <!-- Grid Item 10 -->
-            <div class="p-8 flex items-center justify-center h-full">
+            <div class="p-8 flex items-center justify-center h-full" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="1200">
               <img src="public/assets/images/logo-polri.png" alt="" class="max-w-full max-h-48 object-contain" />
             </div>
 
             <!-- Grid Item 11 -->
-            <div class="p-8 flex items-center justify-center h-full">
+            <div class="p-8 flex items-center justify-center h-full" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="1300">
               <img src="public/assets/images/logo-unilever.png" alt="" class="max-w-full max-h-48 object-contain" />
             </div>
           </div>
@@ -411,11 +413,11 @@
       <!-- SECTION RESERVATION -->
       <section id="booking" class="py-16 bg-gray-900 text-white">
         <div class="container mx-auto px-4">
-          <div class="higlights">
+          <div class="higlights" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <h2 class="text-4xl font-bold text-center">RESERVATION</h2>
           </div>
 
-          <form action="" class="max-w-2xl mx-auto mt-8 bg-white rounded-lg shadow-lg p-6 md:p-8 text-gray-800">
+          <form action="" class="max-w-2xl mx-auto mt-8 bg-white rounded-lg shadow-lg p-6 md:p-8 text-gray-800" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
             <div class="space-y-6">
               <div>
                 <label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
@@ -473,7 +475,7 @@
         <!-- Footer Content -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <!-- Company Info -->
-          <div class="title-footer">
+          <div class="title-footer" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
             <h3 class="text-xl font-bold mb-4">Umara Group</h3>
             <p class="text-gray-300 mb-4">Umara Catering serves the food industry with excellence</p>
             <div class="flex space-x-4">
@@ -502,7 +504,7 @@
           </div>
 
           <!-- Quick Links -->
-          <div class="title-footer">
+          <div class="title-footer" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
             <h3 class="text-xl font-bold mb-4">Quick Links</h3>
             <ul class="space-y-2">
               <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
@@ -514,7 +516,7 @@
           </div>
 
           <!-- Services -->
-          <div class="title-footer">
+          <div class="title-footer" data-aos="fade-down" data-aos-duration="800" data-aos-delay="600">
             <h3 class="text-xl font-bold mb-4">Our Services</h3>
             <ul class="space-y-2">
               <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Corporate Catering</a></li>
@@ -526,7 +528,7 @@
           </div>
 
           <!-- Contact Info -->
-          <div class="title-footer">
+          <div class="title-footer" data-aos="fade-left" data-aos-duration="800" data-aos-delay="800">
             <h3 class="text-xl font-bold mb-4">Contact Us</h3>
             <div class="space-y-3">
               <div class="flex items-start space-x-3">
@@ -555,7 +557,7 @@
         </div>
 
         <!-- Footer Bottom -->
-        <div class="border-t border-gray-700 pt-8">
+        <div class="border-t border-gray-700 pt-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000">
           <div class="flex flex-col md:flex-row justify-between items-center">
             <p class="text-gray-300 mb-4 md:mb-0">Copyright © 2025 Umara Group. All Rights Reserved.</p>
             <div class="flex space-x-6">
@@ -570,8 +572,17 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
       // Toggle mobile nav
       (function () {
         const btn = document.getElementById("nav-toggle");

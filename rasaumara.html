@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="./dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <style>
-        .glass-morphism {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .solid-light {
+            background: #E5D7C4;
+            border: 1px solid #CFBB99;
         }
-        .glass-dark {
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .solid-dark {
+            background: #354024;
+            border: 1px solid #889063;
         }
         .floating-card {
             transform: translateY(0);
@@ -28,13 +28,10 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
         .gradient-text {
-            background: linear-gradient(135deg, #f59e0b, #d97706, #92400e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #889063;
         }
         .hero-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            background: linear-gradient(135deg, #E5D7C4 0%, #CFBB99 50%, #889063 100%);
             position: relative;
         }
         .hero-bg::before {
@@ -72,32 +69,35 @@
         }
     </style>
 </head>
-<body class="font-inter bg-slate-50 overflow-x-hidden">
+<body class="font-inter overflow-x-hidden" style="background: #E5D7C4;">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 glass-morphism">
+    <nav class="fixed top-0 left-0 right-0 z-50 solid-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <h1 class="text-2xl font-playfair font-bold gradient-text">Rasa Umara</h1>
+                    <picture>
+                        <source srcset="public/assets/vector/-_umarahouse putih.png" type="image/png">
+                        <img src="public/assets/vector/-_umarahouse putih.png" alt="Rasa Umara" class="h-12">
+                    </picture>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="text-white hover:text-palette1-d transition-colors duration-300 font-medium">Home</a>
-                        <a href="#about" class="text-white hover:text-palette1-d transition-colors duration-300 font-medium">About</a>
-                        <a href="#dining" class="text-white hover:text-palette1-d transition-colors duration-300 font-medium">Dining</a>
-                        <a href="#menu" class="text-white hover:text-palette1-d transition-colors duration-300 font-medium">Menu</a>
-                        <a href="#contact" class="text-white hover:text-palette1-d transition-colors duration-300 font-medium">Contact</a>
+                        <a href="#home" class="transition-colors duration-300 font-medium" style="color: #4C3D19;" onmouseover="this.style.color='#889063'" onmouseout="this.style.color='#4C3D19'">Home</a>
+                        <a href="#about" class="transition-colors duration-300 font-medium" style="color: #4C3D19;" onmouseover="this.style.color='#889063'" onmouseout="this.style.color='#4C3D19'">About</a>
+                        <a href="#dining" class="transition-colors duration-300 font-medium" style="color: #4C3D19;" onmouseover="this.style.color='#889063'" onmouseout="this.style.color='#4C3D19'">Dining</a>
+                        <a href="#menu" class="transition-colors duration-300 font-medium" style="color: #4C3D19;" onmouseover="this.style.color='#889063'" onmouseout="this.style.color='#4C3D19'">Menu</a>
+                        <a href="#contact" class="transition-colors duration-300 font-medium" style="color: #4C3D19;" onmouseover="this.style.color='#889063'" onmouseout="this.style.color='#4C3D19'">Contact</a>
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-white hover:text-palette1-d transition-colors duration-300">
+                    <button id="mobile-menu-btn" class="transition-colors duration-300" style="color: #4C3D19;" onmouseover="this.style.color='#889063'" onmouseout="this.style.color='#4C3D19'">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden glass-dark">
+        <div id="mobile-menu" class="hidden md:hidden solid-dark">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="#home" class="block px-3 py-2 text-white hover:text-palette1-d transition-colors duration-300">Home</a>
                 <a href="#about" class="block px-3 py-2 text-white hover:text-palette1-d transition-colors duration-300">About</a>
@@ -110,43 +110,72 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-black/50 via-transparent to-black/30"></div>
+        <div class="absolute inset-0 bg-[#4C3D19]/50"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-12 gap-8 items-center">
                 <!-- Left Content - Asymmetric Layout -->
-                <div class="lg:col-span-7 space-y-8 animate-slide-up">
+                <div class="lg:col-span-7 space-y-8 animate-slide-up" data-aos="fade-right" data-aos-duration="1200">
                     <div class="space-y-6">
-                        <h1 class="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white leading-tight">
+                        <h1 class="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white leading-tight" data-aos="fade-up" data-aos-delay="200">
                             Authentic
                             <span class="gradient-text block">Indonesian</span>
                             <span class="text-palette1-d">Flavors</span>
                         </h1>
-                        <p class="text-xl md:text-2xl text-gray-300 max-w-2xl leading-relaxed">
+                        <p class="text-xl md:text-2xl text-gray-300 max-w-2xl leading-relaxed" data-aos="fade-up" data-aos-delay="400">
                             Experience the rich culinary heritage of Indonesia in our modern, sophisticated dining space where tradition meets innovation.
                         </p>
                     </div>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-gradient-to-r from-palette1-a to-palette1-b text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-palette1-b hover:to-palette1-c transition-all duration-300 transform hover:scale-105 animate-glow">
+                    <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="600">
+                        <button class="bg-[#4C3D19] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:bg-[#354024] transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                             Reserve Table
                         </button>
-                        <button class="glass-morphism text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300">
+                        <button class="border-2 border-[#889063] text-[#889063] px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[#889063] hover:text-white transition-all duration-300 hover:scale-105">
                             View Menu
                         </button>
                     </div>
                 </div>
-                <!-- Right Images - Floating Cards -->
-                <div class="lg:col-span-5 relative">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="floating-card glass-morphism rounded-3xl overflow-hidden animate-float" style="animation-delay: 0s;">
-                            <img src="public/assets/images/umara-house/umara-house-1.jpg" alt="Rasa Umara Interior" class="w-full h-64 object-cover">
-                        </div>
-                        <div class="floating-card glass-morphism rounded-3xl overflow-hidden animate-float mt-8" style="animation-delay: 1s;">
-                            <img src="public/assets/images/umara-house/umara-house-2.jpg" alt="Dining Space" class="w-full h-64 object-cover">
-                        </div>
-                        <div class="floating-card glass-morphism rounded-3xl overflow-hidden animate-float col-span-2" style="animation-delay: 2s;">
-                            <img src="public/assets/images/umara-house/umara-house-3.jpg" alt="Restaurant Ambiance" class="w-full h-48 object-cover">
+                <!-- Right Images - 2025 Bento Grid Design -->
+                <div class="lg:col-span-5 relative" data-aos="fade-left" data-aos-duration="1200">
+                    <!-- Main Image Card with 3D Effect -->
+                    <div class="relative bg-[#E5D7C4]/90 rounded-3xl p-6 border border-[#CFBB99] shadow-2xl transform hover:scale-105 transition-all duration-500 hover:rotate-1" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="relative overflow-hidden rounded-2xl">
+                            <img src="public/assets/rasa-umara/1.jpeg" alt="Rasa Umara Interior" class="w-full h-80 object-cover transform hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-[#4C3D19]/30"></div>
+                            <!-- Floating Badge -->
+                            <div class="absolute top-4 left-4 bg-[#889063] text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg" data-aos="fade-down" data-aos-delay="800">
+                                Premium Dining
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Floating Elements with 3D Depth -->
+                    <div class="absolute -top-6 -right-6 w-24 h-24 bg-[#CFBB99] rounded-2xl transform rotate-12 hover:rotate-45 transition-transform duration-500 shadow-xl opacity-90" data-aos="flip-left" data-aos-delay="600">
+                        <div class="w-full h-full flex items-center justify-center text-white text-2xl font-bold">🍽️</div>
+                    </div>
+
+                    <div class="absolute -bottom-4 -left-4 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-white/30 transform hover:scale-110 transition-all duration-300" data-aos="fade-up" data-aos-delay="1000">
+                        <div class="flex items-center space-x-2">
+                            <div class="flex text-yellow-400">
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <span class="text-sm font-semibold text-gray-800">4.9/5</span>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-1">1,200+ Reviews</p>
+                    </div>
+
+                    <!-- Secondary Images Grid -->
+                    <div class="absolute top-8 -right-12 space-y-3" data-aos="fade-left" data-aos-delay="700">
+                        <div class="w-20 h-20 rounded-xl overflow-hidden shadow-lg transform hover:scale-110 transition-all duration-300 border-2 border-white/50" data-aos="zoom-in" data-aos-delay="900">
+                            <img src="public/assets/rasa-umara/2.jpeg" alt="Dining" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-20 h-20 rounded-xl overflow-hidden shadow-lg transform hover:scale-110 transition-all duration-300 border-2 border-white/50" data-aos="zoom-in" data-aos-delay="1100">
+                            <img src="public/assets/rasa-umara/3.jpeg" alt="Ambiance" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Animated Background Elements -->
+                    <div class="absolute top-1/3 -left-8 w-32 h-32 bg-[#CFBB99]/30 rounded-full blur-xl animate-pulse"></div>
+                    <div class="absolute bottom-1/4 -right-8 w-24 h-24 bg-[#889063]/40 rounded-full blur-lg animate-bounce"></div>
                 </div>
             </div>
         </div>
@@ -156,22 +185,22 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gradient-to-br from-slate-50 via-white to-amber-50 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-amber-100/30 to-transparent"></div>
+    <section id="about" class="py-20 bg-[#E5D7C4] relative overflow-hidden">
+        <div class="absolute inset-0 bg-[#CFBB99]/20"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 animate-fade-in">
-                <h2 class="text-4xl md:text-6xl font-playfair font-bold gradient-text mb-6">
+            <div class="text-center mb-16 animate-fade-in" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-4xl md:text-6xl font-playfair font-bold gradient-text mb-6" data-aos="fade-up" data-aos-delay="200">
                     Culinary Heritage
                 </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="400">
                     Where authentic Indonesian flavors meet contemporary dining excellence
                 </p>
             </div>
             
             <!-- Asymmetric Grid Layout -->
             <div class="grid lg:grid-cols-12 gap-8 items-center">
-                <div class="lg:col-span-5 space-y-8">
-                    <div class="floating-card glass-morphism p-8 rounded-3xl bg-white/80">
+                <div class="lg:col-span-5 space-y-8" data-aos="fade-right" data-aos-duration="1200">
+                    <div class="floating-card solid-light p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
                         <h3 class="text-2xl font-playfair font-bold text-gray-800 mb-4">
                             Our Philosophy
                         </h3>
@@ -179,14 +208,14 @@
                             At Rasa Umara, we believe that food is more than sustenance—it's a bridge between cultures, generations, and memories. Our chefs meticulously craft each dish using time-honored recipes passed down through generations.
                         </p>
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center">
+                            <div class="w-12 h-12 bg-[#889063] rounded-full flex items-center justify-center">
                                 <i class="fas fa-heart text-white"></i>
                             </div>
                             <span class="text-gray-700 font-medium">Made with passion & tradition</span>
                         </div>
                     </div>
                     
-                    <div class="floating-card glass-morphism p-8 rounded-3xl bg-gradient-to-br from-amber-50 to-orange-50">
+                    <div class="floating-card solid-light p-8 rounded-3xl">
                         <h3 class="text-2xl font-playfair font-bold text-gray-800 mb-4">
                             Fresh Ingredients
                         </h3>
@@ -199,15 +228,15 @@
                 <!-- Bento Grid Features -->
                 <div class="lg:col-span-7">
                     <div class="bento-grid">
-                        <div class="floating-card glass-morphism rounded-3xl overflow-hidden bg-white/90">
-                            <img src="public/assets/images/umara-house/umara-house-4.jpg" alt="Chef Preparation" class="w-full h-48 object-cover">
+                        <div class="floating-card solid-light rounded-3xl overflow-hidden">
+                            <img src="public/assets/rasa-umara/4.jpeg" alt="Chef Preparation" class="w-full h-48 object-cover">
                             <div class="p-6">
                                 <h4 class="text-lg font-semibold text-gray-800 mb-2">Master Chefs</h4>
                                 <p class="text-gray-600 text-sm">Expert culinary artists with decades of experience</p>
                             </div>
                         </div>
                         
-                        <div class="floating-card glass-morphism rounded-3xl p-6 bg-gradient-to-br from-amber-400 to-orange-500 text-white">
+                        <div class="floating-card solid-dark rounded-3xl p-6 text-white">
                             <div class="text-3xl mb-4">
                                 <i class="fas fa-award"></i>
                             </div>
@@ -215,20 +244,20 @@
                             <p class="text-amber-100">Recognized for culinary excellence</p>
                         </div>
                         
-                        <div class="bento-wide floating-card glass-morphism rounded-3xl p-8 bg-gradient-to-r from-slate-800 to-slate-700 text-white">
+                        <div class="bento-wide floating-card solid-dark rounded-3xl p-8 text-white">
                             <div class="flex items-center justify-between">
                                 <div>
                                     <h4 class="text-2xl font-playfair font-bold mb-2">25+ Years</h4>
                                     <p class="text-gray-300">Of culinary tradition and innovation</p>
                                 </div>
-                                <div class="text-4xl text-amber-400">
+                                <div class="text-4xl text-white">
                                     <i class="fas fa-utensils"></i>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="floating-card glass-morphism rounded-3xl p-6 bg-white/90">
-                            <div class="text-2xl text-amber-500 mb-4">
+                        <div class="floating-card solid-light rounded-3xl p-6">
+                            <div class="text-2xl text-white mb-4">
                                 <i class="fas fa-leaf"></i>
                             </div>
                             <h4 class="text-lg font-semibold text-gray-800 mb-2">Sustainable</h4>
@@ -245,8 +274,8 @@
     </section>
 
     <!-- Dining Spaces Section -->
-    <section id="dining" class="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-amber-900/20 via-transparent to-orange-900/20"></div>
+    <section id="dining" class="py-20 bg-[#354024] relative overflow-hidden">
+        <div class="absolute inset-0 bg-[#4C3D19]/20"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-6xl font-playfair font-bold text-white mb-6">
@@ -261,10 +290,10 @@
             <div class="grid lg:grid-cols-3 gap-8">
                 <!-- Main Dining Hall -->
                 <div class="lg:col-span-2">
-                    <div class="floating-card glass-dark rounded-3xl overflow-hidden h-full">
+                    <div class="floating-card solid-dark rounded-3xl overflow-hidden h-full">
                         <div class="relative h-96">
-                            <img src="public/assets/images/umara-house/umara-house-1.jpg" alt="Main Dining Hall" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <img src="public/assets/rasa-umara/1.jpeg" alt="Main Dining Hall" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-[#4C3D19]/80"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-8">
                                 <h3 class="text-3xl font-playfair font-bold text-white mb-4">Main Dining Hall</h3>
                                 <p class="text-gray-200 leading-relaxed mb-6">
@@ -287,10 +316,10 @@
                 
                 <!-- Private Dining -->
                 <div class="space-y-8">
-                    <div class="floating-card glass-dark rounded-3xl overflow-hidden">
+                    <div class="floating-card solid-dark rounded-3xl overflow-hidden">
                         <div class="relative h-48">
-                            <img src="public/assets/images/umara-house/umara-house-2.jpg" alt="Private Dining" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                            <img src="public/assets/rasa-umara/2.jpeg" alt="Private Dining" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-[#4C3D19]/80"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-6">
                                 <h3 class="text-xl font-playfair font-bold text-white mb-2">Private Dining</h3>
                                 <p class="text-gray-200 text-sm mb-3">
@@ -304,10 +333,10 @@
                         </div>
                     </div>
                     
-                    <div class="floating-card glass-dark rounded-3xl overflow-hidden">
+                    <div class="floating-card solid-dark rounded-3xl overflow-hidden">
                         <div class="relative h-48">
-                            <img src="public/assets/images/umara-house/umara-house-5.jpg" alt="Rooftop Terrace" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                            <img src="public/assets/rasa-umara/3.jpeg" alt="Rooftop Terrace" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-[#4C3D19]/80"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-6">
                                 <h3 class="text-xl font-playfair font-bold text-white mb-2">Rooftop Terrace</h3>
                                 <p class="text-gray-200 text-sm mb-3">
@@ -324,25 +353,25 @@
             </div>
             
             <!-- Features Row -->
-            <div class="grid md:grid-cols-3 gap-6 mt-16">
-                <div class="floating-card glass-dark rounded-2xl p-6 text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div class="grid md:grid-cols-3 gap-6 mt-16" data-aos="fade-up" data-aos-delay="600">
+                <div class="floating-card solid-dark rounded-2xl p-6 text-center" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="w-16 h-16 bg-[#889063] rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-utensils text-white text-xl"></i>
                     </div>
                     <h4 class="text-lg font-semibold text-white mb-2">Open Kitchen</h4>
                     <p class="text-gray-300 text-sm">Watch our chefs create culinary masterpieces</p>
                 </div>
                 
-                <div class="floating-card glass-dark rounded-2xl p-6 text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="floating-card solid-dark rounded-2xl p-6 text-center" data-aos="zoom-in" data-aos-delay="900">
+                    <div class="w-16 h-16 bg-[#889063] rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-music text-white text-xl"></i>
                     </div>
                     <h4 class="text-lg font-semibold text-white mb-2">Live Music</h4>
                     <p class="text-gray-300 text-sm">Traditional Indonesian music on weekends</p>
                 </div>
                 
-                <div class="floating-card glass-dark rounded-2xl p-6 text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="floating-card solid-dark rounded-2xl p-6 text-center" data-aos="zoom-in" data-aos-delay="1100">
+                    <div class="w-16 h-16 bg-[#889063] rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-parking text-white text-xl"></i>
                     </div>
                     <h4 class="text-lg font-semibold text-white mb-2">Valet Parking</h4>
@@ -356,172 +385,27 @@
         <div class="absolute bottom-20 left-20 w-16 h-16 bg-orange-500/10 rounded-full animate-float" style="animation-delay: 3s;"></div>
     </section>
 
-    <!-- Menu Highlights Section -->
-    <section id="menu" class="py-20 bg-gradient-to-br from-amber-50 via-white to-orange-50 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-amber-100/30 via-transparent to-orange-100/30"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-6xl font-playfair font-bold gradient-text mb-6">
-                    Signature <span class="text-slate-800">Dishes</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Discover our most beloved Indonesian specialties, crafted with authentic recipes and premium ingredients
-                </p>
-            </div>
-            
-            <!-- Bento Grid Layout -->
-            <div class="bento-grid">
-                <!-- Featured Dish - Large -->
-                <div class="bento-large floating-card glass-morphism rounded-3xl overflow-hidden bg-white/90">
-                    <div class="grid md:grid-cols-2 h-full">
-                        <div class="relative">
-                            <img src="public/assets/images/umara-house/umara-house-3.jpg" alt="Rendang Daging" class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-gradient-to-r from-amber-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                    Chef's Special
-                                </span>
-                            </div>
-                        </div>
-                        <div class="p-8 flex flex-col justify-center">
-                            <h3 class="text-3xl font-playfair font-bold text-gray-800 mb-4">Rendang Daging</h3>
-                            <p class="text-gray-600 leading-relaxed mb-6">
-                                Slow-cooked beef in rich coconut curry with aromatic spices. A true Indonesian masterpiece that melts in your mouth.
-                            </p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-2xl font-bold text-amber-600">$28</span>
-                                <button class="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:from-amber-600 hover:to-orange-700 transition-all duration-300">
-                                    Order Now
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Menu Item 1 -->
-                <div class="floating-card glass-morphism rounded-3xl overflow-hidden bg-white/90">
-                    <div class="relative h-48">
-                        <img src="public/assets/images/umara-house/umara-house-4.jpg" alt="Nasi Gudeg" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6">
-                            <h4 class="text-xl font-playfair font-bold text-white mb-2">Nasi Gudeg</h4>
-                            <p class="text-gray-200 text-sm mb-3">Traditional Yogyakarta sweet jackfruit curry</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-lg font-bold text-amber-400">$18</span>
-                                <div class="flex items-center space-x-1">
-                                    <i class="fas fa-star text-amber-400 text-xs"></i>
-                                    <i class="fas fa-star text-amber-400 text-xs"></i>
-                                    <i class="fas fa-star text-amber-400 text-xs"></i>
-                                    <i class="fas fa-star text-amber-400 text-xs"></i>
-                                    <i class="fas fa-star text-amber-400 text-xs"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Menu Item 2 -->
-                <div class="floating-card glass-morphism rounded-3xl overflow-hidden bg-white/90">
-                    <div class="relative h-48">
-                        <img src="public/assets/images/umara-house/umara-house-1.jpg" alt="Sate Ayam" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6">
-                            <h4 class="text-xl font-playfair font-bold text-white mb-2">Sate Ayam</h4>
-                            <p class="text-gray-200 text-sm mb-3">Grilled chicken skewers with peanut sauce</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-lg font-bold text-amber-400">$15</span>
-                                <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                                    Popular
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Special Offer - Wide -->
-                <div class="bento-wide floating-card glass-morphism rounded-3xl p-8 bg-gradient-to-r from-slate-800 to-slate-700 text-white">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <h3 class="text-2xl font-playfair font-bold mb-2">Weekend Special</h3>
-                            <p class="text-gray-300 mb-4">Complete Indonesian feast for 2 people</p>
-                            <div class="flex items-center space-x-4">
-                                <span class="text-3xl font-bold text-amber-400">$45</span>
-                                <span class="text-gray-400 line-through">$65</span>
-                                <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                    30% OFF
-                                </span>
-                            </div>
-                        </div>
-                        <div class="text-6xl text-amber-400">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Menu Item 3 -->
-                <div class="floating-card glass-morphism rounded-3xl overflow-hidden bg-white/90">
-                    <div class="relative h-48">
-                        <img src="public/assets/images/umara-house/umara-house-2.jpg" alt="Gado-Gado" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6">
-                            <h4 class="text-xl font-playfair font-bold text-white mb-2">Gado-Gado</h4>
-                            <p class="text-gray-200 text-sm mb-3">Fresh vegetable salad with peanut dressing</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-lg font-bold text-amber-400">$12</span>
-                                <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                                    Vegan
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Beverage Highlight -->
-                <div class="floating-card glass-morphism rounded-3xl p-6 bg-gradient-to-br from-amber-400 to-orange-500 text-white">
-                    <div class="text-center">
-                        <div class="text-4xl mb-4">
-                            <i class="fas fa-coffee"></i>
-                        </div>
-                        <h4 class="text-xl font-bold mb-2">Es Teh Manis</h4>
-                        <p class="text-amber-100 text-sm mb-4">Traditional sweet iced tea</p>
-                        <span class="text-2xl font-bold">$5</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- View Full Menu Button -->
-            <div class="text-center mt-16">
-                <button class="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-12 py-4 rounded-full font-semibold text-lg hover:from-amber-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">
-                    View Full Menu
-                </button>
-            </div>
-        </div>
-        
-        <!-- Background Elements -->
-        <div class="absolute top-20 right-10 w-24 h-24 bg-amber-200/20 rounded-full animate-float" style="animation-delay: 1s;"></div>
-        <div class="absolute bottom-32 left-16 w-20 h-20 bg-orange-300/20 rounded-full animate-float" style="animation-delay: 3s;"></div>
-    </section>
-
     <!-- Contact & Reservation Section -->
-    <section id="contact" class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-transparent to-orange-500/10"></div>
+    <section id="contact" class="py-20 bg-[#4C3D19] text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[#354024]/20"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-6xl font-playfair font-bold mb-6">
+            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-4xl md:text-6xl font-playfair font-bold mb-6" data-aos="fade-up" data-aos-delay="200">
                     Reserve Your <span class="gradient-text">Experience</span>
                 </h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="400">
                     Book your table and embark on an unforgettable culinary journey through authentic Indonesian flavors
                 </p>
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div class="grid lg:grid-cols-2 gap-16 items-start" data-aos="fade-up" data-aos-delay="600">
                 <!-- Contact Information -->
-                <div class="space-y-8">
-                    <div class="floating-card glass-morphism rounded-3xl p-8 bg-white/10">
-                        <h3 class="text-2xl font-playfair font-bold mb-6 text-amber-400">Get in Touch</h3>
+                <div class="space-y-8" data-aos="fade-right" data-aos-delay="800">
+                    <div class="floating-card solid-dark rounded-3xl p-8" data-aos="zoom-in" data-aos-delay="1000">
+                        <h3 class="text-2xl font-playfair font-bold mb-6 text-white">Get in Touch</h3>
                         <div class="space-y-6">
                             <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center">
+                                <div class="w-12 h-12 bg-[#889063] rounded-full flex items-center justify-center">
                                     <i class="fas fa-map-marker-alt text-white"></i>
                                 </div>
                                 <div>
@@ -530,7 +414,7 @@
                                 </div>
                             </div>
                             <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center">
+                                <div class="w-12 h-12 bg-[#889063] rounded-full flex items-center justify-center">
                                     <i class="fas fa-phone text-white"></i>
                                 </div>
                                 <div>
@@ -539,7 +423,7 @@
                                 </div>
                             </div>
                             <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center">
+                                <div class="w-12 h-12 bg-[#889063] rounded-full flex items-center justify-center">
                                     <i class="fas fa-clock text-white"></i>
                                 </div>
                                 <div>
@@ -551,16 +435,16 @@
                     </div>
                     
                     <!-- Social Media -->
-                    <div class="floating-card glass-morphism rounded-3xl p-8 bg-white/10">
-                        <h3 class="text-xl font-playfair font-bold mb-6 text-amber-400">Follow Us</h3>
+                    <div class="floating-card solid-dark rounded-3xl p-8">
+                        <h3 class="text-xl font-playfair font-bold mb-6 text-white">Follow Us</h3>
                         <div class="flex space-x-4">
-                            <a href="#" class="w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                            <a href="#" class="w-12 h-12 bg-[#889063] rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
                                 <i class="fab fa-instagram text-white"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                            <a href="#" class="w-12 h-12 bg-[#889063] rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
                                 <i class="fab fa-facebook text-white"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                            <a href="#" class="w-12 h-12 bg-[#889063] rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
                                 <i class="fab fa-whatsapp text-white"></i>
                             </a>
                         </div>
@@ -568,8 +452,8 @@
                 </div>
                 
                 <!-- Reservation Form -->
-                <div class="floating-card glass-morphism rounded-3xl p-8 bg-white/10">
-                    <h3 class="text-2xl font-playfair font-bold mb-6 text-amber-400">Make a Reservation</h3>
+                <div class="floating-card solid-dark rounded-3xl p-8">
+                    <h3 class="text-2xl font-playfair font-bold mb-6 text-white">Make a Reservation</h3>
                     <form class="space-y-6">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
@@ -625,7 +509,7 @@
                             <label class="block text-sm font-semibold text-gray-300 mb-2">Special Requests</label>
                             <textarea rows="4" class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300" placeholder="Any special requests or dietary requirements?"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-amber-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">
+                        <button type="submit" class="w-full bg-[#4C3D19] text-white py-4 rounded-xl font-semibold text-lg hover:bg-[#354024] transition-all duration-300 transform hover:scale-105">
                             Reserve Table
                         </button>
                     </form>
@@ -644,22 +528,25 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <!-- Brand -->
                 <div class="md:col-span-2">
-                    <h3 class="text-3xl font-playfair font-bold gradient-text mb-4">Rasa Umara</h3>
-                    <p class="text-gray-300 leading-relaxed mb-6">
+                    <picture>
+                        <source srcset="public/assets/vector/-_umarahouse putih.png" type="image/png">
+                        <img src="public/assets/vector/-_umarahouse putih.png" alt="Rasa Umara" class="h-12">
+                    </picture>
+                    <p class="text-gray-300 leading-relaxed mb-6 mt-5">
                         Experience the authentic flavors of Indonesia in a modern, elegant setting. 
                         Where tradition meets innovation in every dish.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                        <a href="#" class="w-10 h-10 bg-[#889063] rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
                             <i class="fab fa-instagram text-white text-sm"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                        <a href="#" class="w-10 h-10 bg-[#889063] rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
                             <i class="fab fa-facebook text-white text-sm"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                        <a href="#" class="w-10 h-10 bg-[#889063] rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
                             <i class="fab fa-whatsapp text-white text-sm"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                        <a href="#" class="w-10 h-10 bg-[#889063] rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
                             <i class="fab fa-tiktok text-white text-sm"></i>
                         </a>
                     </div>
@@ -667,30 +554,30 @@
                 
                 <!-- Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold text-amber-400 mb-4">Quick Links</h4>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Home</a></li>
-                        <li><a href="#about" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">About</a></li>
-                        <li><a href="#dining" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Dining</a></li>
-                        <li><a href="#menu" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Menu</a></li>
-                        <li><a href="#contact" class="text-gray-300 hover:text-amber-400 transition-colors duration-300">Contact</a></li>
+                        <li><a href="#home" class="text-gray-300 hover:text-[#889063] transition-colors duration-300">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-[#889063] transition-colors duration-300">About</a></li>
+                        <li><a href="#dining" class="text-gray-300 hover:text-[#889063] transition-colors duration-300">Dining</a></li>
+                        <li><a href="#menu" class="text-gray-300 hover:text-[#889063] transition-colors duration-300">Menu</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-[#889063] transition-colors duration-300">Contact</a></li>
                     </ul>
                 </div>
                 
                 <!-- Contact Info -->
                 <div>
-                    <h4 class="text-lg font-semibold text-amber-400 mb-4">Contact</h4>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
                     <div class="space-y-3">
                         <p class="text-gray-300 flex items-center">
-                            <i class="fas fa-map-marker-alt text-amber-400 mr-2"></i>
+                            <i class="fas fa-map-marker-alt text-[#889063] mr-2"></i>
                             123 Culinary Street, Jakarta
                         </p>
                         <p class="text-gray-300 flex items-center">
-                            <i class="fas fa-phone text-amber-400 mr-2"></i>
+                            <i class="fas fa-phone text-[#889063] mr-2"></i>
                             +62 21 1234 5678
                         </p>
                         <p class="text-gray-300 flex items-center">
-                            <i class="fas fa-envelope text-amber-400 mr-2"></i>
+                            <i class="fas fa-envelope text-[#889063] mr-2"></i>
                             info@rasaumara.com
                         </p>
                     </div>
@@ -743,5 +630,14 @@
         });
     </script>
 
+    <!-- AOS Animation Initialization -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>

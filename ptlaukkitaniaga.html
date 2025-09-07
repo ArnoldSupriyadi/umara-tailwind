@@ -58,16 +58,10 @@
             <div class="flex justify-between items-center py-4">
                 <!-- Logo with Modern Design -->
                 <div class="flex items-center space-x-4" data-aos="fade-right">
-                    <div class="relative">
-                        <div class="w-14 h-14 bg-gradient-to-br from-palette1-a to-palette1-b rounded-2xl flex items-center justify-center custom-shadow transform hover:scale-105 transition-all duration-300">
-                            <span class="text-palette1-e font-bold text-xl">LN</span>
-                        </div>
-                        <div class="absolute -top-1 -right-1 w-4 h-4 bg-palette1-c rounded-full animate-pulse"></div>
-                    </div>
-                    <div>
-                        <h1 class="text-xl font-bold text-palette1-a font-playfair">PT Lauk Kita Niaga</h1>
-                        <p class="text-sm text-palette1-c font-medium">Premium Frozen Food Solutions</p>
-                    </div>
+                    <picture>
+                        <source srcset="public/assets/images/converted_white_to_black.svg" type="image/svg+xml">
+                        <img src="public/assets/images/converted_white_to_black.svg" alt="PT Lauk Kita Niaga" class="w-12 h-12 rounded-xl">
+                    </picture>
                 </div>
 
                 <!-- Desktop Navigation with Hover Effects -->
@@ -661,14 +655,13 @@
         </div>
     </section>
 
-<!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-palette1-a text-palette1-e py-16">
         <div class="container mx-auto px-6">
             <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
                 <div class="lg:col-span-2">
                     <div class="flex items-center space-x-3 mb-6">
-                        <img src="public/assets/lauk-kita-niaga/logo.png" alt="Laukita Logo" class="w-12 h-12 rounded-xl">
-                        <h3 class="text-2xl font-bold font-playfair">Laukita</h3>
+                        <img src="public/assets/images/pt-laukita-niaga.svg" alt="Laukita Logo" class="w-12 h-12 rounded-xl">
                     </div>
                     <p class="text-palette1-d leading-relaxed mb-6 max-w-md">
                         Revolutionizing Indonesian cuisine with innovative SKINPACK technology. 
@@ -728,7 +721,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

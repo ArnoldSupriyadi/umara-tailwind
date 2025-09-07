@@ -6,6 +6,7 @@
     <title>Lumpang Emas Bintaro - Premium Dining Experience</title>
     <link href="./dist/output.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         .hero-bg {
             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
@@ -37,13 +38,13 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Left Side - Content -->
-                <div class="max-w-xl">
-                    <img src="public/assets/vector/-_lumpang bintaro putih.png" alt="" class="w-full h-auto max-w-full object-contain mb-10">
+                <div class="max-w-xl" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="public/assets/vector/-_lumpang bintaro putih.png" alt="" class="w-full h-auto max-w-full object-contain mb-10" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="400">
                     
                     <!-- <p class="text-xl text-white/90 mb-8 leading-relaxed">
                         Experience premium dining in the heart of Bintaro. Where traditional Indonesian flavors meet modern elegance in our beautifully designed spaces.
                     </p> -->
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                         <button class="bg-palette1-e text-palette1-b px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors">
                             Reserve Table
                         </button>
@@ -54,7 +55,7 @@
                 </div>
                 
                 <!-- Right Side - Image Carousel -->
-                <div class="relative">
+                <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
                     <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
                         <div class="relative overflow-hidden rounded-2xl shadow-2xl">
                             <!-- Carousel Container -->
@@ -94,15 +95,15 @@
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-palette1-b mb-4">Welcome to Lumpang Emas Bintaro</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <h2 class="text-4xl font-bold text-palette1-b mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">Welcome to Lumpang Emas Bintaro</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                     Located in the prestigious Bintaro area, our restaurant offers an exceptional dining experience that combines authentic Indonesian cuisine with contemporary ambiance.
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
+                <div class="text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
                     <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-map-marker-alt text-2xl text-palette1-a"></i>
                     </div>
@@ -110,7 +111,7 @@
                     <p class="text-gray-600">Strategically located in Bintaro, easily accessible from Jakarta and surrounding areas.</p>
                 </div>
                 
-                <div class="text-center">
+                <div class="text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
                     <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-utensils text-2xl text-palette1-b"></i>
                     </div>
@@ -118,7 +119,7 @@
                     <p class="text-gray-600">Traditional Indonesian dishes prepared with the finest ingredients and modern techniques.</p>
                 </div>
                 
-                <div class="text-center">
+                <div class="text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
                     <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-star text-2xl text-palette1-a"></i>
                     </div>
@@ -132,14 +133,14 @@
     <!-- Rooms Section -->
     <section id="rooms" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-palette1-b mb-4">Our Dining Spaces</h2>
-                <p class="text-xl text-gray-600">Choose from our variety of beautifully designed dining areas</p>
+            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <h2 class="text-4xl font-bold text-palette1-b mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">Our Dining Spaces</h2>
+                <p class="text-xl text-gray-600" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Choose from our variety of beautifully designed dining areas</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Main Dining -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openModal('public/assets/lumpang-emas-bintaro/main-dining.jpeg', 'Main Dining Area')">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openModal('public/assets/lumpang-emas-bintaro/main-dining.jpeg', 'Main Dining Area')" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                     <div class="h-64 bg-gradient-to-br from-amber-100 to-orange-200 relative" style="background-image: url('public/assets/lumpang-emas-bintaro/main-dining.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                         <div class="absolute bottom-4 left-4">
                             <h3 class="text-2xl font-bold text-white">Main Dining</h3>
@@ -159,7 +160,7 @@
                 </div>
 
                 <!-- VIP Room -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openModal('public/assets/lumpang-emas-bintaro/main-dining2.jpeg', 'VIP Private Room')">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openModal('public/assets/lumpang-emas-bintaro/main-dining2.jpeg', 'VIP Private Room')" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
                     <div class="h-64 bg-gradient-to-br from-amber-100 to-orange-200 relative" style="background-image: url('public/assets/lumpang-emas-bintaro/main-dining2.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                         
                         <div class="absolute bottom-4 left-4">
@@ -180,7 +181,7 @@
                 </div>
 
                 <!-- Outdoor Terrace -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openModal('public/assets/lumpang-emas-bintaro/outdoor-1.jpeg', 'Outdoor Terrace')">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openModal('public/assets/lumpang-emas-bintaro/outdoor-1.jpeg', 'Outdoor Terrace')" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
                     <div class="h-64 bg-gradient-to-br from-amber-100 to-orange-200 relative" style="background-image: url('public/assets/lumpang-emas-bintaro/outdoor-1.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                         <div class="absolute bottom-4 left-4">
                             <h3 class="text-2xl font-bold text-white">Outdoor Terrace</h3>
@@ -205,13 +206,13 @@
     <!-- Features Section -->
     <section id="features" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-palette1-b mb-4">Why Choose Lumpang Emas Bintaro?</h2>
-                <p class="text-xl text-gray-600">Premium facilities and exceptional service for your dining experience</p>
+            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <h2 class="text-4xl font-bold text-palette1-b mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">Why Choose Lumpang Emas Bintaro?</h2>
+                <p class="text-xl text-gray-600" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Premium facilities and exceptional service for your dining experience</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
+                <div class="text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
                     <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-wifi text-2xl text-palette1-a"></i>
                     </div>
@@ -219,7 +220,7 @@
                     <p class="text-gray-600">High-speed internet connection available throughout the restaurant for your convenience.</p>
                 </div>
 
-                <div class="text-center">
+                <div class="text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
                     <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-car text-2xl text-palette1-a"></i>
                     </div>
@@ -227,7 +228,7 @@
                     <p class="text-gray-600">Spacious parking area with security for your peace of mind during your visit.</p>
                 </div>
 
-                <div class="text-center">
+                <div class="text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
                     <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-concierge-bell text-2xl text-palette1-a"></i>
                     </div>
@@ -241,18 +242,18 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-palette1-b mb-4">Contact & Reservation</h2>
-                <p class="text-xl text-gray-600">Get in touch with us for reservations and inquiries</p>
+            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <h2 class="text-4xl font-bold text-palette1-b mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">Contact & Reservation</h2>
+                <p class="text-xl text-gray-600" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Get in touch with us for reservations and inquiries</p>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Contact Info -->
-                <div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                     <h3 class="text-2xl font-bold text-palette1-b mb-6">Get in Touch</h3>
                     
                     <div class="space-y-4">
-                        <div class="flex items-center space-x-4">
+                        <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                             <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
                                 <i class="fas fa-map-marker-alt text-palette1-a"></i>
                             </div>
@@ -262,7 +263,7 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-center space-x-4">
+                        <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                             <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
                                 <i class="fas fa-phone text-palette1-a"></i>
                             </div>
@@ -272,7 +273,7 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-center space-x-4">
+                        <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
                             <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
                                 <i class="fas fa-clock text-palette1-a"></i>
                             </div>
@@ -285,21 +286,21 @@
                 </div>
                 
                 <!-- Reservation Form -->
-                <div class="bg-white rounded-2xl shadow-xl p-8">
-                    <h3 class="text-2xl font-bold text-palette1-b mb-6">Make a Reservation</h3>
+                <div class="bg-white rounded-2xl shadow-xl p-8" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold text-palette1-b mb-6" data-aos="fade-down" data-aos-duration="800" data-aos-delay="600">Make a Reservation</h3>
                     
                     <form class="space-y-4">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
                             <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
                             <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
                         </div>
                         
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000">
                             <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
                             <input type="time" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
                         </div>
                         
-                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1200">
                             <option>Number of Guests</option>
                             <option>1-2 People</option>
                             <option>3-5 People</option>
@@ -307,9 +308,9 @@
                             <option>10+ People</option>
                         </select>
                         
-                        <textarea placeholder="Special Requests" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"></textarea>
+                        <textarea placeholder="Special Requests" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1400"></textarea>
                         
-                        <button type="submit" class="w-full bg-palette1-a text-white py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors">
+                        <button type="submit" class="w-full bg-palette1-a text-white py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="1600">
                             Submit Reservation
                         </button>
                     </form>
@@ -322,7 +323,7 @@
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="flex items-center space-x-2 mb-4">
                         <img src="public/assets/vector/-_lumpang bintaro putih.png" alt="Lumpang Emas" class="h-16 w-auto">
                     </div>
@@ -331,7 +332,7 @@
                     </p>
                 </div>
                 
-                <div>
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
                         <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
@@ -341,7 +342,7 @@
                     </ul>
                 </div>
                 
-                <div>
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                     <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white transition-colors">
@@ -357,7 +358,7 @@
                 </div>
             </div>
             
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
                 <p class="text-gray-400">&copy; 2024 Lumpang Emas Bintaro. All rights reserved.</p>
             </div>
         </div>
@@ -376,7 +377,18 @@
         </div>
     </div>
 
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false,
+            offset: 100
+        });
+
         function openModal(imageSrc, title) {
             document.getElementById('modalImage').src = imageSrc;
             document.getElementById('modalTitle').textContent = title;
