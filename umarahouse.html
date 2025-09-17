@@ -4,16 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Umara House - Premium Dining Experience</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./dist/output.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
-        .hero-bg {
-            background: #f59e0b;
-            background-attachment: fixed;
-            position: relative;
-        }
         .hero-bg::before {
             content: '';
             position: absolute;
@@ -70,49 +65,42 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body>
     <!-- Navigation -->
-    <nav style="background-color: #d97706;" class="shadow-lg fixed w-full z-50">
+    <nav class="bg-white shadow-lg fixed w-full z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-2">
                     <picture>
-                        <img src="public/assets/vector/-_rasa umara putih.png" alt="Umara House" class="h-10 w-auto">
+                        <img src="public/assets/vector/-_rasa umara hitam.png" alt="Umara House" class="h-10 w-auto">
                     </picture>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" style="color: #fbbf24;" class="hover:opacity-80 transition-colors">Home</a>
-                <a href="#about" style="color: #fbbf24;" class="hover:opacity-80 transition-colors">About</a>
-                <a href="#spaces" style="color: #fbbf24;" class="hover:opacity-80 transition-colors">Dining Spaces</a>
-                <a href="#features" style="color: #fbbf24;" class="hover:opacity-80 transition-colors">Features</a>
-                <a href="#contact" style="color: #fbbf24;" class="hover:opacity-80 transition-colors">Contact</a>
+                    <a href="#home" class="hover:opacity-80 transition-colors">Home</a>
+                    <a href="#about" class="hover:opacity-80 transition-colors">About</a>
+                    <a href="#spaces" class="hover:opacity-80 transition-colors">Dining Spaces</a>
+                    <a href="#features" class="hover:opacity-80 transition-colors">Features</a>
+                    <a href="#contact" class="hover:opacity-80 transition-colors">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center pt-20 relative">
+    <section id="home" class="bg-amber-50 min-h-screen flex items-center pt-20 relative">
         <div class="container mx-auto px-4 relative z-10">
             <div class="asymmetric-grid items-center" data-aos="fade-up" data-aos-duration="1000">
                 <!-- Left Side - Content -->
                 <div class="space-y-8" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
-                    <img src="public/assets/vector/-_rasa umara putih.png" alt="" class="w-32 h-auto object-contain mb-4">
+                    <img src="public/assets/vector/-_rasa umara hitam.png" alt="" class="w-64 h-auto object-contain mb-4">
                     <div>
-                        <h1 class="text-6xl md:text-8xl font-black mb-6">
-                            <span class="gradient-text">Umara</span>
-                            <span class="block text-5xl md:text-7xl text-white font-light">House</span>
-                        </h1>
-                        <p class="text-xl text-gray-300 mb-8 leading-relaxed max-w-lg">
+                        <p class="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
                             Experience sophisticated dining in our elegantly designed spaces. Where contemporary aesthetics meet culinary excellence.
                         </p>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button style="background: #f59e0b; color: #92400e;" class="px-8 py-4 rounded-2xl font-semibold hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl">
-                            Book Your Table
-                        </button>
-                        <button class="glassmorphism px-8 py-4 rounded-2xl font-semibold hover:bg-white/20 transition-all duration-300" style="color: #fef3c7;">
-                            Explore Menu
+                        <button class="bg-palette2-e text-white px-8 py-4 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                            Explore Our Menu
                         </button>
                     </div>
                 </div>
@@ -252,7 +240,7 @@
     </section>
 
     <!-- Dining Spaces Section -->
-    <section id="spaces" class="py-32 relative" style="background: #fef3c7;">
+    <section id="spaces" class="py-32 relative">
         <div class="container mx-auto px-4">
             <div class="text-center mb-20" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="text-5xl md:text-6xl font-black mb-6">
@@ -355,8 +343,8 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-32 relative overflow-hidden" style="background: #92400e;">
-            <div class="absolute inset-0" style="background: rgba(251, 191, 36, 0.1);"></div>
+    <section id="contact" class="py-32 relative overflow-hidden">
+            <div class="absolute inset-0"></div>
         
         <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-20" data-aos="fade-up" data-aos-duration="1000">
@@ -489,7 +477,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-16" style="background: #92400e;">
+    <footer class="bg-gray-900 text-white py-16">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
@@ -498,7 +486,7 @@
                             <img src="public/assets/vector/-_rasa umara putih.png" alt="Umara House" class="h-8 w-auto">
                         </picture>
                     </div>
-                    <p style="color: #CFBB99;">
+                    <p>
                         Experience sophisticated dining in our elegantly designed spaces where contemporary aesthetics meet culinary excellence.
                     </p>
                 </div>
@@ -506,26 +494,26 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4" style="color: #E5D7C4;">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="transition-colors" style="color: #CFBB99;" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">Home</a></li>
-                        <li><a href="#about" class="transition-colors" style="color: #CFBB99;" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">About</a></li>
-                        <li><a href="#spaces" class="transition-colors" style="color: #CFBB99;" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">Dining Spaces</a></li>
-                        <li><a href="#contact" class="transition-colors" style="color: #CFBB99;" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">Contact</a></li>
+                        <li><a href="#home" class="transition-colors" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">Home</a></li>
+                        <li><a href="#about" class="transition-colors" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">About</a></li>
+                        <li><a href="#spaces" class="transition-colors" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">Dining Spaces</a></li>
+                        <li><a href="#contact" class="transition-colors" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="text-lg font-semibold mb-4" style="color: #E5D7C4;">Follow Us</h4>
                     <div class="flex space-x-4">
-                        <a href="#" class="transition-colors" style="color: #CFBB99;" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">
+                        <a href="#" class="transition-colors" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">
                             <i class="fab fa-facebook-f text-xl"></i>
                         </a>
-                        <a href="#" class="transition-colors" style="color: #CFBB99;" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">
+                        <a href="#" class="transition-colors" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">
                             <i class="fab fa-instagram text-xl"></i>
                         </a>
-                        <a href="#" class="transition-colors" style="color: #CFBB99;" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">
+                        <a href="#" class="transition-colors" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">
                             <i class="fab fa-whatsapp text-xl"></i>
                         </a>
-                        <a href="#" class="transition-colors" style="color: #CFBB99;" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">
+                        <a href="#" class="transition-colors" onmouseover="this.style.color='#E5D7C4'" onmouseout="this.style.color='#CFBB99'">
                             <i class="fab fa-linkedin text-xl"></i>
                         </a>
                     </div>
@@ -533,7 +521,7 @@
             </div>
             
             <div class="mt-8 pt-8 text-center" style="border-top: 1px solid rgba(136, 144, 99, 0.3);">
-                <p style="color: #CFBB99;">&copy; 2024 Umara House. All rights reserved.</p>
+                <p>&copy; 2024 Umara House. All rights reserved.</p>
             </div>
         </div>
     </footer>
