@@ -10,9 +10,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
         .hero-bg {
-            background: linear-gradient(135deg, #4C3D19 0%, #354024 50%, #889063 100%);
+            background: #f59e0b;
+            background-attachment: fixed;
             position: relative;
-            overflow: hidden;
         }
         .hero-bg::before {
             content: '';
@@ -21,8 +21,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 30% 20%, rgba(207, 187, 153, 0.2) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 80%, rgba(229, 215, 196, 0.15) 0%, transparent 50%);
+            background: rgba(251, 191, 36, 0.1);
+            pointer-events: none;
         }
         .text-shadow {
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -40,7 +40,7 @@
             transform: translateY(-10px);
         }
         .gradient-text {
-            color: #889063;
+            color: #f59e0b;
         }
         .asymmetric-grid {
             display: grid;
@@ -58,19 +58,21 @@
             gap: 1.5rem;
         }
         .feature-card {
-            background: linear-gradient(145deg, #E5D7C4, #CFBB99);
-            border: 1px solid rgba(76, 61, 25, 0.1);
+            background: rgba(254, 243, 199, 0.5);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            backdrop-filter: blur(10px);
             transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(245, 158, 11, 0.1);
         }
         .feature-card:hover {
-            background: linear-gradient(145deg, #CFBB99, #E5D7C4);
-            box-shadow: 0 20px 40px rgba(76, 61, 25, 0.2);
+            background: linear-gradient(145deg, #fbbf24, #fef3c7);
+            box-shadow: 0 20px 40px rgba(245, 158, 11, 0.2);
         }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav style="background-color: #4C3D19;" class="shadow-lg fixed w-full z-50">
+    <nav style="background-color: #d97706;" class="shadow-lg fixed w-full z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-2">
@@ -79,11 +81,11 @@
                     </picture>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" style="color: #CFBB99;" class="hover:opacity-80 transition-colors">Home</a>
-                    <a href="#about" style="color: #CFBB99;" class="hover:opacity-80 transition-colors">About</a>
-                    <a href="#spaces" style="color: #CFBB99;" class="hover:opacity-80 transition-colors">Dining Spaces</a>
-                    <a href="#features" style="color: #CFBB99;" class="hover:opacity-80 transition-colors">Features</a>
-                    <a href="#contact" style="color: #CFBB99;" class="hover:opacity-80 transition-colors">Contact</a>
+                    <a href="#home" style="color: #fbbf24;" class="hover:opacity-80 transition-colors">Home</a>
+                <a href="#about" style="color: #fbbf24;" class="hover:opacity-80 transition-colors">About</a>
+                <a href="#spaces" style="color: #fbbf24;" class="hover:opacity-80 transition-colors">Dining Spaces</a>
+                <a href="#features" style="color: #fbbf24;" class="hover:opacity-80 transition-colors">Features</a>
+                <a href="#contact" style="color: #fbbf24;" class="hover:opacity-80 transition-colors">Contact</a>
                 </div>
             </div>
         </div>
@@ -106,10 +108,10 @@
                         </p>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button style="background: linear-gradient(135deg, #889063, #CFBB99); color: #4C3D19;" class="px-8 py-4 rounded-2xl font-semibold hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <button style="background: #f59e0b; color: #92400e;" class="px-8 py-4 rounded-2xl font-semibold hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl">
                             Book Your Table
                         </button>
-                        <button class="glassmorphism px-8 py-4 rounded-2xl font-semibold hover:bg-white/20 transition-all duration-300" style="color: #E5D7C4;">
+                        <button class="glassmorphism px-8 py-4 rounded-2xl font-semibold hover:bg-white/20 transition-all duration-300" style="color: #fef3c7;">
                             Explore Menu
                         </button>
                     </div>
@@ -134,51 +136,51 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-32 relative overflow-hidden" style="background: linear-gradient(135deg, #E5D7C4, #CFBB99);">
-        <div class="absolute inset-0" style="background: linear-gradient(45deg, rgba(76, 61, 25, 0.1), rgba(136, 144, 99, 0.1));"></div>
+    <section id="about" class="py-32 relative overflow-hidden" style="background: #fef3c7;">
+            <div class="absolute inset-0" style="background: rgba(245, 158, 11, 0.1);"></div>
         <div class="container mx-auto px-4 relative z-10">
             <div class="asymmetric-grid items-center mb-20">
                 <div data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
                     <h2 class="text-5xl md:text-6xl font-black mb-6">
                         <span class="gradient-text">Welcome to</span>
-                        <span class="block" style="color: #4C3D19;">Umara House</span>
+                        <span class="block" style="color: #92400e;">Umara House</span>
                     </h2>
-                    <p class="text-xl leading-relaxed" style="color: #354024;">
+                    <p class="text-xl leading-relaxed" style="color: #d97706;">
                         A sophisticated dining destination where modern design meets exceptional cuisine. Our thoughtfully curated spaces offer an intimate yet vibrant atmosphere.
                     </p>
                 </div>
                 <div class="relative" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
                     <!-- Main Image Card with 3D Effect -->
                     <div class="relative transform rotate-2 hover:rotate-0 transition-all duration-500 group">
-                        <div class="absolute inset-0 bg-gradient-to-br from-[#889063] to-[#4C3D19] rounded-3xl transform translate-x-4 translate-y-4 opacity-30"></div>
-                        <div class="relative bg-white rounded-3xl p-6 shadow-2xl border border-[#CFBB99]/30">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#f59e0b] to-[#d97706] rounded-3xl transform translate-x-4 translate-y-4 opacity-30"></div>
+                        <div class="relative bg-white rounded-3xl p-6 shadow-2xl border border-[#fbbf24]/30">
                             <img src="public/assets/umara-house/4.jpeg" alt="Garden Terrace" class="w-full h-80 object-cover rounded-2xl">
-                            <div class="absolute top-4 right-4 bg-gradient-to-r from-[#889063] to-[#CFBB99] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                            <div class="absolute top-4 right-4 bg-gradient-to-r from-[#f59e0b] to-[#fbbf24] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
                                 Premium Dining
                             </div>
                         </div>
                     </div>
                     
                     <!-- Floating Elements -->
-                    <div class="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-[#E5D7C4] to-[#CFBB99] rounded-2xl flex items-center justify-center shadow-xl transform -rotate-12 group-hover:rotate-0 transition-all duration-300">
-                        <i class="fas fa-star text-[#4C3D19] text-xl"></i>
+                    <div class="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-[#fef3c7] to-[#fbbf24] rounded-2xl flex items-center justify-center shadow-xl transform -rotate-12 group-hover:rotate-0 transition-all duration-300">
+                        <i class="fas fa-star text-[#92400e] text-xl"></i>
                     </div>
                     
-                    <div class="absolute -bottom-4 -right-4 w-20 h-20 bg-gradient-to-br from-[#4C3D19] to-[#354024] rounded-full flex items-center justify-center shadow-xl transform rotate-12 group-hover:rotate-0 transition-all duration-300">
-                        <i class="fas fa-utensils text-[#E5D7C4] text-xl"></i>
+                    <div class="absolute -bottom-4 -right-4 w-20 h-20 bg-gradient-to-br from-[#92400e] to-[#d97706] rounded-full flex items-center justify-center shadow-xl transform rotate-12 group-hover:rotate-0 transition-all duration-300">
+                        <i class="fas fa-utensils text-[#fef3c7] text-xl"></i>
                     </div>
                     
                     <!-- Stats Card -->
-                    <div class="absolute top-1/2 -left-8 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-[#889063]/20">
+                    <div class="absolute top-1/2 -left-8 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-[#f59e0b]/20">
                         <div class="text-center">
-                            <div class="text-2xl font-bold text-[#4C3D19]">4.9</div>
-                            <div class="text-xs text-[#354024]">Rating</div>
+                            <div class="text-2xl font-bold text-[#92400e]">4.9</div>
+                            <div class="text-xs text-[#d97706]">Rating</div>
                             <div class="flex justify-center mt-1">
-                                <i class="fas fa-star text-[#889063] text-xs"></i>
-                                <i class="fas fa-star text-[#889063] text-xs"></i>
-                                <i class="fas fa-star text-[#889063] text-xs"></i>
-                                <i class="fas fa-star text-[#889063] text-xs"></i>
-                                <i class="fas fa-star text-[#889063] text-xs"></i>
+                                <i class="fas fa-star text-[#f59e0b] text-xs"></i>
+                                <i class="fas fa-star text-[#f59e0b] text-xs"></i>
+                                <i class="fas fa-star text-[#f59e0b] text-xs"></i>
+                                <i class="fas fa-star text-[#f59e0b] text-xs"></i>
+                                <i class="fas fa-star text-[#f59e0b] text-xs"></i>
                             </div>
                         </div>
                     </div>
@@ -187,70 +189,70 @@
             
             <div class="bento-grid">
                 <div class="feature-card rounded-3xl p-8 text-center floating-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style="background: linear-gradient(135deg, #889063, #CFBB99);">
-                        <i class="fas fa-palette text-2xl" style="color: #4C3D19;"></i>
+                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style="background: #f59e0b;">
+                        <i class="fas fa-palette text-2xl" style="color: #92400e;"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #4C3D19;">Contemporary Design</h3>
-                    <p class="leading-relaxed" style="color: #354024;">Thoughtfully designed interiors featuring warm wood tones, industrial elements, and sophisticated lighting that creates the perfect ambiance.</p>
+                    <h3 class="text-2xl font-bold mb-4" style="color: #92400e;">Contemporary Design</h3>
+                    <p class="leading-relaxed" style="color: #d97706;">Thoughtfully designed interiors featuring warm wood tones, industrial elements, and sophisticated lighting that creates the perfect ambiance.</p>
                 </div>
                 
                 <div class="feature-card rounded-3xl p-8 text-center floating-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style="background: linear-gradient(135deg, #CFBB99, #889063);">
-                        <i class="fas fa-utensils text-2xl" style="color: #4C3D19;"></i>
+                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style="background: #fbbf24;">
+                        <i class="fas fa-utensils text-2xl" style="color: #92400e;"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #4C3D19;">Culinary Excellence</h3>
-                    <p class="leading-relaxed" style="color: #354024;">Exceptional cuisine crafted with premium ingredients and innovative techniques by our expert culinary team dedicated to perfection.</p>
+                    <h3 class="text-2xl font-bold mb-4" style="color: #92400e;">Culinary Excellence</h3>
+                    <p class="leading-relaxed" style="color: #d97706;">Exceptional cuisine crafted with premium ingredients and innovative techniques by our expert culinary team dedicated to perfection.</p>
                 </div>
                 
                 <div class="feature-card rounded-3xl p-8 text-center floating-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style="background: linear-gradient(135deg, #889063, #E5D7C4);">
-                        <i class="fas fa-wine-glass text-2xl" style="color: #4C3D19;"></i>
+                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style="background: #d97706;">
+                        <i class="fas fa-wine-glass text-2xl" style="color: #92400e;"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #4C3D19;">Premium Experience</h3>
-                    <p class="leading-relaxed" style="color: #354024;">Intimate dining spaces perfect for business meetings, romantic dinners, and special celebrations in an atmosphere of refined elegance.</p>
+                    <h3 class="text-2xl font-bold mb-4" style="color: #92400e;">Premium Experience</h3>
+                    <p class="leading-relaxed" style="color: #d97706;">Intimate dining spaces perfect for business meetings, romantic dinners, and special celebrations in an atmosphere of refined elegance.</p>
                 </div>
                 
                 <!-- Premium Ambiance -->
-                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" style="background: linear-gradient(135deg, #889063, #CFBB99); border-color: rgba(76, 61, 25, 0.3);" onmouseover="this.style.borderColor='rgba(76, 61, 25, 0.7)'" onmouseout="this.style.borderColor='rgba(76, 61, 25, 0.3)'" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style="background: linear-gradient(135deg, #4C3D19, #354024);">
-                        <i class="fas fa-crown text-2xl" style="color: #E5D7C4;"></i>
+                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" style="background: #fbbf24; border-color: rgba(245, 158, 11, 0.3);" onmouseover="this.style.borderColor='rgba(245, 158, 11, 0.7)'" onmouseout="this.style.borderColor='rgba(245, 158, 11, 0.3)'" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style="background: #92400e;">
+                        <i class="fas fa-crown text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #4C3D19;">Premium Ambiance</h3>
-                    <p class="leading-relaxed" style="color: #354024;">Luxurious interior design with carefully curated atmosphere for an elevated dining experience.</p>
+                    <h3 class="text-2xl font-bold mb-4" style="color: #92400e;">Premium Ambiance</h3>
+                    <p class="leading-relaxed" style="color: #d97706;">Luxurious interior design with carefully curated atmosphere for an elevated dining experience.</p>
                 </div>
 
                 <!-- Expert Culinary Team -->
-                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" style="background: linear-gradient(135deg, #CFBB99, #E5D7C4); border-color: rgba(76, 61, 25, 0.3);" onmouseover="this.style.borderColor='rgba(76, 61, 25, 0.7)'" onmouseout="this.style.borderColor='rgba(76, 61, 25, 0.3)'">
-                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style="background: linear-gradient(135deg, #889063, #4C3D19);">
-                        <i class="fas fa-utensils text-2xl" style="color: #E5D7C4;"></i>
+                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" style="background: #fef3c7; border-color: rgba(245, 158, 11, 0.3);" onmouseover="this.style.borderColor='rgba(245, 158, 11, 0.7)'" onmouseout="this.style.borderColor='rgba(245, 158, 11, 0.3)'">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style="background: #d97706;">
+                        <i class="fas fa-utensils text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #4C3D19;">Expert Culinary Team</h3>
-                    <p class="leading-relaxed" style="color: #354024;">World-class chefs creating innovative dishes with the finest ingredients and authentic flavors.</p>
+                    <h3 class="text-2xl font-bold mb-4" style="color: #92400e;">Expert Culinary Team</h3>
+                    <p class="leading-relaxed" style="color: #d97706;">World-class chefs creating innovative dishes with the finest ingredients and authentic flavors.</p>
                 </div>
 
                 <!-- Private Events -->
-                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" style="background: linear-gradient(135deg, #889063, #CFBB99); border-color: rgba(76, 61, 25, 0.3);" onmouseover="this.style.borderColor='rgba(76, 61, 25, 0.7)'" onmouseout="this.style.borderColor='rgba(76, 61, 25, 0.3)'">
-                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style="background: linear-gradient(135deg, #354024, #4C3D19);">
-                        <i class="fas fa-calendar-alt text-2xl" style="color: #E5D7C4;"></i>
+                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" style="background: #fbbf24; border-color: rgba(245, 158, 11, 0.3);" onmouseover="this.style.borderColor='rgba(245, 158, 11, 0.7)'" onmouseout="this.style.borderColor='rgba(245, 158, 11, 0.3)'">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style="background: #92400e;">
+                        <i class="fas fa-calendar-alt text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #4C3D19;">Private Events</h3>
-                    <p class="leading-relaxed" style="color: #354024;">Customizable private dining spaces perfect for business meetings, celebrations, and special occasions.</p>
+                    <h3 class="text-2xl font-bold mb-4" style="color: #92400e;">Private Events</h3>
+                    <p class="leading-relaxed" style="color: #d97706;">Customizable private dining spaces perfect for business meetings, celebrations, and special occasions.</p>
                 </div>
 
                 <!-- Premium Service -->
-                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" style="background: linear-gradient(135deg, #CFBB99, #E5D7C4); border-color: rgba(76, 61, 25, 0.3);" onmouseover="this.style.borderColor='rgba(76, 61, 25, 0.7)'" onmouseout="this.style.borderColor='rgba(76, 61, 25, 0.3)'">
-                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style="background: linear-gradient(135deg, #889063, #354024);">
-                        <i class="fas fa-concierge-bell text-2xl" style="color: #E5D7C4;"></i>
+                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" style="background: #fef3c7; border-color: rgba(245, 158, 11, 0.3);" onmouseover="this.style.borderColor='rgba(245, 158, 11, 0.7)'" onmouseout="this.style.borderColor='rgba(245, 158, 11, 0.3)'">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style="background: #d97706;">
+                        <i class="fas fa-concierge-bell text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #4C3D19;">Premium Service</h3>
-                    <p class="leading-relaxed" style="color: #354024;">Attentive and professional staff dedicated to providing exceptional hospitality and personalized service.</p>
+                    <h3 class="text-2xl font-bold mb-4" style="color: #92400e;">Premium Service</h3>
+                    <p class="leading-relaxed" style="color: #d97706;">Attentive and professional staff dedicated to providing exceptional hospitality and personalized service.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Dining Spaces Section -->
-    <section id="spaces" class="py-32 relative" style="background: linear-gradient(135deg, #CFBB99, #E5D7C4);">
+    <section id="spaces" class="py-32 relative" style="background: #fef3c7;">
         <div class="container mx-auto px-4">
             <div class="text-center mb-20" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="text-5xl md:text-6xl font-black mb-6">
@@ -265,7 +267,7 @@
                 <!-- Main Dining Area - Large Card -->
                 <div class="lg:col-span-2 feature-card rounded-3xl overflow-hidden floating-card cursor-pointer" onclick="openModal('public/assets/umara-house/1.jpeg', 'Main Dining Area')" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
                     <div class="h-80 relative" style="background-image: url('public/assets/umara-house/1.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(76, 61, 25, 0.8), rgba(76, 61, 25, 0.2), transparent);"></div>
+                        <div class="absolute inset-0" style="background: rgba(245, 158, 11, 0.3);"></div>
                         <div class="absolute bottom-6 left-6">
                             <h3 class="text-3xl font-black text-shadow mb-2" style="color: #E5D7C4;">Main Dining</h3>
                             <span class="backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold" style="background: rgba(207, 187, 153, 0.3); color: #E5D7C4;">40+ Seats</span>
@@ -275,7 +277,7 @@
                         <p class="mb-6 text-lg leading-relaxed" style="color: #354024;">
                             Our signature dining space featuring warm wood furnishings, elegant lighting, and a sophisticated bar area. Perfect for intimate dinners and social gatherings.
                         </p>
-                        <button class="px-6 py-3 rounded-2xl font-semibold hover:opacity-90 transition-all duration-300 shadow-lg" style="background: linear-gradient(135deg, #889063, #CFBB99); color: #4C3D19;">
+                        <button class="px-6 py-3 rounded-2xl font-semibold hover:opacity-90 transition-all duration-300 shadow-lg" style="background: #f59e0b; color: #92400e;">
                             Reserve Now
                         </button>
                     </div>
@@ -284,9 +286,9 @@
                 <!-- Private Dining Room -->
                 <div class="feature-card rounded-3xl overflow-hidden floating-card cursor-pointer" onclick="openModal('public/assets/umara-house/2.jpeg', 'Private Dining Room')" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
                     <div class="h-64 relative" style="background-image: url('public/assets/umara-house/2.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(76, 61, 25, 0.8), rgba(76, 61, 25, 0.2), transparent);"></div>
+                        <div class="absolute inset-0" style="background: rgba(245, 158, 11, 0.3);"></div>
                         <div class="absolute top-4 right-4">
-                            <span class="px-3 py-1 rounded-full text-sm font-semibold" style="background: linear-gradient(135deg, #889063, #CFBB99); color: #4C3D19;">Private</span>
+                            <span class="px-3 py-1 rounded-full text-sm font-semibold" style="background: #fbbf24; color: #92400e;">Private</span>
                         </div>
                         <div class="absolute bottom-4 left-4">
                             <h3 class="text-2xl font-bold text-shadow" style="color: #E5D7C4;">Private Dining</h3>
@@ -310,7 +312,7 @@
                 <!-- Conference Dining -->
                 <div class="feature-card rounded-3xl overflow-hidden floating-card cursor-pointer" onclick="openModal('public/assets/umara-house/3.jpeg', 'Conference Dining')">
                     <div class="h-64 relative" style="background-image: url('public/assets/umara-house/3.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(76, 61, 25, 0.8), rgba(76, 61, 25, 0.2), transparent);"></div>
+                        <div class="absolute inset-0" style="background: rgba(245, 158, 11, 0.3);"></div>
                         <div class="absolute bottom-4 left-4">
                             <h3 class="text-2xl font-bold text-shadow" style="color: #E5D7C4;">Conference Dining</h3>
                         </div>
@@ -331,7 +333,7 @@
                 <!-- Garden Terrace -->
                 <div class="feature-card rounded-3xl overflow-hidden floating-card cursor-pointer" onclick="openModal('public/assets/umara-house/4.jpeg', 'Garden Terrace')" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
                     <div class="h-64 relative" style="background-image: url('public/assets/umara-house/4.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(76, 61, 25, 0.8), rgba(76, 61, 25, 0.2), transparent);"></div>
+                        <div class="absolute inset-0" style="background: rgba(245, 158, 11, 0.3);"></div>
                         <div class="absolute bottom-4 left-4">
                             <h3 class="text-2xl font-bold text-shadow" style="color: #E5D7C4;">Garden Terrace</h3>
                         </div>
@@ -353,8 +355,8 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-32 relative overflow-hidden" style="background: linear-gradient(135deg, #4C3D19, #354024);">
-        <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(136, 144, 99, 0.1), rgba(207, 187, 153, 0.1));"></div>
+    <section id="contact" class="py-32 relative overflow-hidden" style="background: #92400e;">
+            <div class="absolute inset-0" style="background: rgba(251, 191, 36, 0.1);"></div>
         
         <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-20" data-aos="fade-up" data-aos-duration="1000">
@@ -370,9 +372,9 @@
                 <div class="space-y-8" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
                     <div class="rounded-3xl p-6 floating-card" style="background: rgba(229, 215, 196, 0.1); border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
                         <div class="flex items-start space-x-6">
-                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #889063, #CFBB99);">
-                                <i class="fas fa-map-marker-alt text-xl" style="color: #4C3D19;"></i>
-                            </div>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: #f59e0b;">
+                        <i class="fas fa-map-marker-alt text-xl text-white"></i>
+                    </div>
                             <div>
                                 <h3 class="text-2xl font-bold mb-3" style="color: #E5D7C4;">Address</h3>
                                 <p class="text-lg leading-relaxed" style="color: #CFBB99;">Jl. Bintaro Raya No. 123<br>Bintaro, Tangerang Selatan<br>Indonesia 15220</p>
@@ -382,8 +384,8 @@
                     
                     <div class="rounded-3xl p-6 floating-card" style="background: rgba(229, 215, 196, 0.1); border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
                         <div class="flex items-start space-x-6">
-                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #CFBB99, #889063);">
-                                <i class="fas fa-phone text-xl" style="color: #4C3D19;"></i>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: #fbbf24;">
+                                <i class="fas fa-phone text-xl text-white"></i>
                             </div>
                             <div>
                                 <h3 class="text-2xl font-bold mb-3" style="color: #E5D7C4;">Phone</h3>
@@ -394,8 +396,8 @@
                     
                     <div class="rounded-3xl p-6 floating-card" style="background: rgba(229, 215, 196, 0.1); border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
                         <div class="flex items-start space-x-6">
-                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #889063, #E5D7C4);">
-                                <i class="fas fa-envelope text-xl" style="color: #4C3D19;"></i>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: #f59e0b;">
+                                <i class="fas fa-envelope text-xl text-white"></i>
                             </div>
                             <div>
                                 <h3 class="text-2xl font-bold mb-3" style="color: #E5D7C4;">Email</h3>
@@ -406,8 +408,8 @@
                     
                     <div class="rounded-3xl p-6 floating-card" style="background: rgba(229, 215, 196, 0.1); border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
                         <div class="flex items-start space-x-6">
-                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #354024, #889063);">
-                                <i class="fas fa-clock text-xl" style="color: #E5D7C4;"></i>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: #d97706;">
+                                <i class="fas fa-clock text-xl text-white"></i>
                             </div>
                             <div>
                                 <h3 class="text-2xl font-bold mb-3" style="color: #E5D7C4;">Operating Hours</h3>
@@ -477,7 +479,7 @@
                             <textarea rows="4" class="w-full px-6 py-4 border-2 rounded-2xl transition-all duration-300" style="background: rgba(229, 215, 196, 0.1); border-color: rgba(207, 187, 153, 0.5); color: #E5D7C4;" placeholder="Any special requests or dietary requirements..." onfocus="this.style.borderColor='#889063'" onblur="this.style.borderColor='rgba(207, 187, 153, 0.5)'"></textarea>
                         </div>
                         
-                        <button type="submit" class="w-full py-4 px-8 rounded-2xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1" style="background: linear-gradient(135deg, #889063, #CFBB99); color: #4C3D19;">
+                        <button type="submit" class="w-full py-4 px-8 rounded-2xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1" style="background: #f59e0b; color: #92400e;">
                             Make Reservation
                         </button>
                     </form>
@@ -487,7 +489,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-16" style="background: linear-gradient(135deg, #354024, #4C3D19);">
+    <footer class="py-16" style="background: #92400e;">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>

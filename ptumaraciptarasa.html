@@ -255,7 +255,7 @@
 
         .image-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(525px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             max-height: calc(95vh - 100px);
             overflow-y: auto;
@@ -412,12 +412,12 @@
         /* Responsive adjustments */
         @media (max-width: 1200px) {
             .image-gallery {
-                grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+                grid-template-columns: repeat(3, 1fr);
                 gap: 15px;
             }
             
             .gallery-image-container {
-                height: 340px;
+                height: 300px;
             }
         }
 
@@ -446,7 +446,7 @@
             }
             
             .image-gallery {
-                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
                 padding: 8px;
                 max-height: calc(98vh - 75px);
@@ -855,7 +855,13 @@
                                 Corporate celebration menus
                             </li>
                         </ul>
-                        <div class="text-palette1-c font-semibold">Starting from IDR 75K/person</div>
+                        <div class="text-palette1-c font-semibold mb-4">Starting from IDR 75K/person</div>
+                        <button class="view-menu-btn" onclick="openCorporateModal()">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path>
+                            </svg>
+                            View Corporate Gallery
+                        </button>
                     </div>
 
                     <!-- Service 5 -->
@@ -919,7 +925,13 @@
                                 Heritage event services
                             </li>
                         </ul>
-                        <div class="text-palette1-c font-semibold">Starting from IDR 125K/person</div>
+                        <div class="text-palette1-c font-semibold mb-4">Starting from IDR 125K/person</div>
+                        <button class="view-menu-btn" onclick="openMiningModal()">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path>
+                            </svg>
+                            View Mining Event Gallery
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1335,6 +1347,12 @@
          // Memory management for mobile
          let memoryWarningShown = false;
 
+         // Mining modal variables
+         let miningLoadedImages = 0;
+         let miningTotalImages = 0;
+         const miningImageQueue = [];
+         let miningIsLoading = false;
+
          // Modal functionality
          function openMenuModal() {
              const modal = document.getElementById('menuModal');
@@ -1377,6 +1395,240 @@
              isLoading = false;
          }
 
+         // Mining Modal functionality
+         function openMiningModal() {
+             const modal = document.getElementById('miningModal');
+             modal.classList.add('active');
+             document.body.style.overflow = 'hidden'; // Prevent background scrolling
+             
+             // Initialize progressive image loading for mobile optimization
+             setTimeout(() => {
+                 initializeMiningImageLoading();
+             }, 100); // Small delay to ensure modal is fully rendered
+         }
+
+         function closeMiningModal() {
+             const modal = document.getElementById('miningModal');
+             modal.classList.remove('active');
+             document.body.style.overflow = 'auto'; // Restore scrolling
+             
+             // Clean up loaded images to free memory (mobile optimization)
+             const loadedImageElements = modal.querySelectorAll('.gallery-image');
+             loadedImageElements.forEach(img => {
+                 img.src = ''; // Clear image source to free memory
+                 img.remove(); // Remove from DOM
+             });
+             
+             // Reset placeholders
+             const placeholders = modal.querySelectorAll('.image-placeholder');
+             placeholders.forEach(placeholder => {
+                 placeholder.classList.remove('hidden', 'image-error');
+                 placeholder.innerHTML = `
+                     <div class="loading-spinner"></div>
+                     <div class="loading-text">Loading image...</div>
+                     <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                 `;
+             });
+             
+             // Reset mining loading state
+             miningLoadedImages = 0;
+             miningTotalImages = 0;
+             miningImageQueue.length = 0;
+             miningIsLoading = false;
+         }
+
+         // Corporate Events Modal Functions
+         let corporateLoadedImages = 0;
+         let corporateTotalImages = 0;
+         let corporateImageQueue = [];
+         let corporateIsLoading = false;
+
+         function openCorporateModal() {
+             const modal = document.getElementById('corporateModal');
+             modal.classList.add('active');
+             document.body.style.overflow = 'hidden'; // Prevent background scrolling
+             
+             // Initialize image loading with a small delay
+             setTimeout(() => {
+                 initializeCorporateImageLoading();
+             }, 100); // Small delay to ensure modal is fully rendered
+         }
+
+         function closeCorporateModal() {
+             const modal = document.getElementById('corporateModal');
+             modal.classList.remove('active');
+             document.body.style.overflow = 'auto'; // Restore scrolling
+             
+             // Clean up loaded images to free memory (mobile optimization)
+             const loadedImageElements = modal.querySelectorAll('.gallery-image');
+             loadedImageElements.forEach(img => {
+                 img.src = ''; // Clear image source to free memory
+                 img.remove(); // Remove from DOM
+             });
+             
+             // Reset placeholders
+             const placeholders = modal.querySelectorAll('.image-placeholder');
+             placeholders.forEach(placeholder => {
+                 placeholder.classList.remove('hidden', 'image-error');
+                 placeholder.innerHTML = `
+                     <div class="loading-spinner"></div>
+                     <div class="loading-text">Loading image...</div>
+                     <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                 `;
+             });
+             
+             // Reset corporate loading state
+             corporateLoadedImages = 0;
+             corporateTotalImages = 0;
+             corporateImageQueue.length = 0;
+             corporateIsLoading = false;
+         }
+
+         // Corporate image loading functions
+         function initializeCorporateImageLoading() {
+             const galleryContainers = document.querySelectorAll('#corporateModal .gallery-image-container');
+             corporateTotalImages = galleryContainers.length;
+             corporateLoadedImages = 0;
+             corporateImageQueue = [];
+             corporateIsLoading = false;
+             
+             // Load first batch of images (first 2 images)
+             const initialBatch = Math.min(2, corporateTotalImages);
+             for (let i = 0; i < initialBatch; i++) {
+                 loadCorporateImageProgressively(galleryContainers[i]);
+             }
+             
+             // Queue remaining images
+             for (let i = initialBatch; i < corporateTotalImages; i++) {
+                 corporateImageQueue.push(galleryContainers[i]);
+             }
+         }
+
+         function loadCorporateImageProgressively(container, attempt = 0) {
+             if (corporateIsLoading && corporateLoadedImages >= maxConcurrentLoads) {
+                 corporateImageQueue.push(container);
+                 return;
+             }
+
+             corporateIsLoading = true;
+             const placeholder = container.querySelector('.image-placeholder');
+             const progressElement = placeholder.querySelector('.loading-progress');
+             const imageSrc = container.dataset.src;
+             const imageAlt = container.dataset.alt;
+             
+             // Update progress indicator
+             if (progressElement) {
+                 progressElement.textContent = `Loading... (${corporateLoadedImages + 1}/${corporateTotalImages})`;
+             }
+
+             // Create image element
+             const img = document.createElement('img');
+             img.className = 'gallery-image';
+             img.alt = imageAlt;
+             img.style.cssText = `
+                 width: 100%;
+                 height: 100%;
+                 object-fit: cover;
+                 border-radius: 15px;
+                 opacity: 0;
+                 transition: opacity 0.5s ease;
+                 cursor: zoom-in;
+             `;
+             
+             let timeoutId;
+             let hasLoaded = false;
+
+             function processNextCorporateImage() {
+                 setTimeout(() => {
+                     if (corporateImageQueue.length > 0) {
+                         const nextContainer = corporateImageQueue.shift();
+                         loadCorporateImageProgressively(nextContainer);
+                     } else {
+                         corporateIsLoading = false;
+                     }
+                 }, isMobile ? 200 : 100); // Longer delay on mobile
+             }
+
+             // Handle successful load
+              img.addEventListener('load', function() {
+                  if (hasLoaded) return;
+                  hasLoaded = true;
+                  clearTimeout(timeoutId);
+                  
+                  this.classList.add('loaded');
+                  placeholder.classList.add('hidden');
+                  container.appendChild(this);
+                  
+                  // Fade in effect
+                  setTimeout(() => {
+                      this.style.opacity = '1';
+                  }, 50);
+                  
+                  corporateLoadedImages++;
+                  
+                  // Check memory usage after loading image
+                  if (isMobile) {
+                      setTimeout(checkMemoryUsage, 100);
+                  }
+                  
+                  processNextCorporateImage();
+              });
+
+             // Handle load error with retry logic
+              img.addEventListener('error', function() {
+                  if (hasLoaded) return;
+                  hasLoaded = true;
+                  clearTimeout(timeoutId);
+                  
+                  console.error(`Failed to load corporate image: ${imageSrc} (attempt ${attempt + 1})`);
+                  
+                  if (attempt < retryAttempts) {
+                      // Retry loading
+                      console.log(`Retrying corporate image load: ${imageSrc} (attempt ${attempt + 2})`);
+                      setTimeout(() => {
+                          loadCorporateImageProgressively(container, attempt + 1);
+                      }, 1000);
+                      return;
+                  }
+                  
+                  placeholder.innerHTML = `
+                      <div style="text-align: center; color: #721c24; font-size: 0.8rem;">
+                          <div style="margin-bottom: 5px;">❌</div>
+                          <div>Failed to load</div>
+                          <div style="font-size: 0.7rem; margin-top: 5px; opacity: 0.7;">
+                              ${imageAlt}
+                          </div>
+                      </div>
+                  `;
+                  placeholder.classList.add('image-error');
+                  corporateLoadedImages++;
+                  processNextCorporateImage();
+              });
+
+             // Timeout handler to prevent hanging
+             timeoutId = setTimeout(() => {
+                 if (hasLoaded) return;
+                 hasLoaded = true;
+                 
+                 if (attempt < retryAttempts) {
+                     // Retry on timeout
+                     setTimeout(() => {
+                         loadCorporateImageProgressively(container, attempt + 1);
+                     }, 1000);
+                     return;
+                 }
+                 
+                 placeholder.innerHTML = '<span style="color: #721c24;">Loading timeout</span>';
+                 placeholder.classList.add('image-error');
+                 corporateLoadedImages++;
+                 processNextCorporateImage();
+             }, imageTimeout);
+
+             // Add image to container and start loading
+             const encodedImageSrc = encodeURI(imageSrc);
+             img.src = encodedImageSrc;
+         }
+
          // Close modal when clicking outside the content
          const menuModal = document.getElementById('menuModal');
          if (menuModal) {
@@ -1391,8 +1643,30 @@
          document.addEventListener('keydown', function(e) {
              if (e.key === 'Escape') {
                  closeMenuModal();
+                 closeMiningModal();
+                 closeCorporateModal();
              }
          });
+
+         // Close mining modal when clicking outside the content
+         const miningModal = document.getElementById('miningModal');
+         if (miningModal) {
+             miningModal.addEventListener('click', function(e) {
+                 if (e.target === this) {
+                     closeMiningModal();
+                 }
+             });
+         }
+
+         // Close corporate modal when clicking outside the content
+         const corporateModal = document.getElementById('corporateModal');
+         if (corporateModal) {
+             corporateModal.addEventListener('click', function(e) {
+                 if (e.target === this) {
+                     closeCorporateModal();
+                 }
+             });
+         }
 
          // Variables moved to top of script section
          
@@ -1566,6 +1840,150 @@
              }
          }
 
+         // Mining image loading functions
+         function loadMiningImageProgressively(container, attempt = 0) {
+             if (miningIsLoading && miningLoadedImages >= maxConcurrentLoads) {
+                 miningImageQueue.push(container);
+                 return;
+             }
+
+             miningIsLoading = true;
+             const placeholder = container.querySelector('.image-placeholder');
+             const progressElement = placeholder.querySelector('.loading-progress');
+             const imageSrc = container.dataset.src;
+             const imageAlt = container.dataset.alt;
+             
+             // Update progress indicator
+             if (progressElement) {
+                 progressElement.textContent = `Loading... (${miningLoadedImages + 1}/${miningTotalImages})`;
+             }
+
+             // Create image element
+             const img = document.createElement('img');
+             img.className = 'gallery-image';
+             img.alt = imageAlt;
+             img.style.cssText = `
+                 width: 100%;
+                 height: 100%;
+                 object-fit: cover;
+                 border-radius: 15px;
+                 opacity: 0;
+                 transition: opacity 0.5s ease;
+                 cursor: zoom-in;
+             `;
+             
+             let timeoutId;
+             let hasLoaded = false;
+
+             function processNextMiningImage() {
+                 setTimeout(() => {
+                     if (miningImageQueue.length > 0) {
+                         const nextContainer = miningImageQueue.shift();
+                         loadMiningImageProgressively(nextContainer);
+                     } else {
+                         miningIsLoading = false;
+                     }
+                 }, isMobile ? 200 : 100); // Longer delay on mobile
+             }
+
+             // Handle successful load
+              img.addEventListener('load', function() {
+                  if (hasLoaded) return;
+                  hasLoaded = true;
+                  clearTimeout(timeoutId);
+                  
+                  this.classList.add('loaded');
+                  placeholder.classList.add('hidden');
+                  container.appendChild(this);
+                  
+                  // Fade in effect
+                  setTimeout(() => {
+                      this.style.opacity = '1';
+                  }, 50);
+                  
+                  miningLoadedImages++;
+                  
+                  // Check memory usage after loading image
+                  if (isMobile) {
+                      setTimeout(checkMemoryUsage, 100);
+                  }
+                  
+                  processNextMiningImage();
+              });
+
+             // Handle load error with retry logic
+              img.addEventListener('error', function() {
+                  if (hasLoaded) return;
+                  hasLoaded = true;
+                  clearTimeout(timeoutId);
+                  
+                  console.error(`Failed to load mining image: ${imageSrc} (attempt ${attempt + 1})`);
+                  
+                  if (attempt < retryAttempts) {
+                      // Retry loading
+                      console.log(`Retrying mining image load: ${imageSrc} (attempt ${attempt + 2})`);
+                      setTimeout(() => {
+                          loadMiningImageProgressively(container, attempt + 1);
+                      }, 1000);
+                      return;
+                  }
+                  
+                  placeholder.innerHTML = `
+                      <div style="text-align: center; color: #721c24; font-size: 0.8rem;">
+                          <div style="margin-bottom: 5px;">❌</div>
+                          <div>Failed to load</div>
+                          <div style="font-size: 0.7rem; margin-top: 5px; opacity: 0.7;">
+                              ${imageAlt}
+                          </div>
+                      </div>
+                  `;
+                  placeholder.classList.add('image-error');
+                  miningLoadedImages++;
+                  processNextMiningImage();
+              });
+
+             // Timeout handler to prevent hanging
+             timeoutId = setTimeout(() => {
+                 if (hasLoaded) return;
+                 hasLoaded = true;
+                 
+                 if (attempt < retryAttempts) {
+                     // Retry on timeout
+                     setTimeout(() => {
+                         loadMiningImageProgressively(container, attempt + 1);
+                     }, 1000);
+                     return;
+                 }
+                 
+                 placeholder.innerHTML = '<span style="color: #721c24;">Loading timeout</span>';
+                 placeholder.classList.add('image-error');
+                 miningLoadedImages++;
+                 processNextMiningImage();
+             }, imageTimeout);
+
+             // Add image to container and start loading
+             const encodedImageSrc = encodeURI(imageSrc);
+             img.src = encodedImageSrc;
+         }
+
+         // Initialize mining progressive loading when modal opens
+         function initializeMiningImageLoading() {
+             const containers = document.querySelectorAll('#miningModal .gallery-image-container');
+             miningLoadedImages = 0;
+             miningTotalImages = containers.length;
+             miningIsLoading = false;
+             
+             // Load first batch of images
+             for (let i = 0; i < Math.min(maxConcurrentLoads, containers.length); i++) {
+                 loadMiningImageProgressively(containers[i]);
+             }
+             
+             // Queue remaining images
+             for (let i = maxConcurrentLoads; i < containers.length; i++) {
+                 miningImageQueue.push(containers[i]);
+             }
+         }
+
          // Enhanced image click handler for full-screen view
          document.addEventListener('click', function(e) {
              if (e.target.classList.contains('gallery-image')) {
@@ -1701,6 +2119,93 @@
                     </div>
                 </div>
                 <div class="gallery-image-container" data-src="public/assets/nasi-box/menu nasi box preview-6.pdf.jpg" data-alt="Nasi Box Menu 6">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+            </div>
+         </div>
+     </div>
+
+     <!-- Mining Event Modal -->
+     <div id="miningModal" class="modal">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h2 class="modal-title">Mining Event Gallery</h2>
+                 <button class="close-modal" onclick="closeMiningModal()">&times;</button>
+             </div>
+             <div class="image-gallery">
+                <div class="gallery-image-container" data-src="public/assets/ucr-mining-event/1.jpeg" data-alt="Mining Event 1">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-mining-event/2.jpeg" data-alt="Mining Event 2">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-mining-event/3.jpeg" data-alt="Mining Event 3">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-mining-event/4.jpeg" data-alt="Mining Event 4">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-mining-event/5.jpg" data-alt="Mining Event 5">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-mining-event/6.jpeg" data-alt="Mining Event 6">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+            </div>
+         </div>
+     </div>
+
+     <!-- Corporate Events Modal -->
+     <div id="corporateModal" class="modal">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h2 class="modal-title">Corporate Events Gallery</h2>
+                 <span class="close-btn" onclick="closeCorporateModal()">&times;</span>
+             </div>
+             <div class="image-gallery">
+                <div class="gallery-image-container" data-src="public/assets/ucr-coorporate-event/1.jpg" data-alt="Corporate Event 1">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-coorporate-event/2.jpg" data-alt="Corporate Event 2">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-coorporate-event/3.jpg" data-alt="Corporate Event 3">
                     <div class="image-placeholder">
                         <div class="loading-spinner"></div>
                         <div class="loading-text">Loading image...</div>
