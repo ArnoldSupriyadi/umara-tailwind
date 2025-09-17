@@ -171,6 +171,345 @@
         ::-webkit-scrollbar-thumb:hover {
             background: var(--primary);
         }
+
+        /* Global Letter Spacing */
+        html, body {
+            letter-spacing: 1px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 98vw;
+            max-width: 1400px;
+            max-height: 95vh;
+            background: white;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            animation: slideIn 0.3s ease-out;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light);
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 10;
+        }
+
+        .modal-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.025em;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 2.5rem;
+            color: var(--primary);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-modal:hover {
+            background: var(--light);
+            transform: rotate(90deg);
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(525px, 1fr));
+            gap: 20px;
+            max-height: calc(95vh - 100px);
+            overflow-y: auto;
+            padding: 10px;
+            justify-items: center;
+        }
+
+        .gallery-image-container {
+            width: 100%;
+            height: 375px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            background: #f8f9fa;
+        }
+
+        .gallery-image-container:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 20px;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .gallery-image.loaded {
+            opacity: 1;
+        }
+
+        .image-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #6c757d;
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-placeholder.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-spinner {
+            width: 30px;
+            height: 30px;
+            border: 3px solid #e9ecef;
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .image-error {
+             background: #f8d7da;
+             color: #721c24;
+         }
+
+         /* Mobile optimizations */
+         @media (max-width: 768px) {
+             .gallery-image-container {
+                 height: 180px; /* Smaller height on mobile */
+                 margin-bottom: 15px;
+             }
+             
+             .modal-content {
+                 max-height: 85vh; /* Reduce modal height on mobile */
+                 padding: 15px;
+             }
+             
+             .image-gallery {
+                 gap: 10px; /* Smaller gaps on mobile */
+             }
+             
+             .loading-spinner {
+                 width: 25px;
+                 height: 25px;
+                 border-width: 2px;
+             }
+             
+             .image-placeholder {
+                 font-size: 0.8rem;
+             }
+         }
+
+         @media (max-width: 480px) {
+             .gallery-image-container {
+                 height: 150px; /* Even smaller on very small screens */
+             }
+             
+             .modal-content {
+                 max-height: 80vh;
+                 padding: 10px;
+             }
+         }
+
+        .view-menu-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .view-menu-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(76, 61, 25, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { 
+                opacity: 0;
+                transform: scale(0.8) translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .image-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+                gap: 15px;
+            }
+            
+            .gallery-image-container {
+                height: 340px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 99vw;
+                max-height: 98vh;
+                padding: 10px;
+                border-radius: 15px;
+            }
+            
+            .modal-header {
+                margin-bottom: 10px;
+                padding-bottom: 8px;
+            }
+            
+            .modal-title {
+                font-size: 1.4rem;
+            }
+            
+            .close-modal {
+                font-size: 1.8rem;
+                width: 35px;
+                height: 35px;
+                padding: 5px;
+            }
+            
+            .image-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 12px;
+                padding: 8px;
+                max-height: calc(98vh - 75px);
+            }
+            
+            .gallery-image-container {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modal-content {
+                padding: 8px;
+                border-radius: 10px;
+            }
+            
+            .modal-header {
+                margin-bottom: 8px;
+                padding-bottom: 6px;
+            }
+            
+            .modal-title {
+                font-size: 1.2rem;
+            }
+            
+            .image-gallery {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                padding: 5px;
+                max-height: calc(98vh - 65px);
+            }
+            
+            .gallery-image-container {
+                height: 270px;
+            }
+            
+            .gallery-image {
+                border-radius: 8px;
+            }
+        }
+
+        /* Landscape orientation adjustments */
+        @media (max-height: 600px) and (orientation: landscape) {
+            .modal-content {
+                max-height: 98vh;
+                padding: 15px;
+            }
+            
+            .modal-header {
+                margin-bottom: 15px;
+                padding-bottom: 10px;
+            }
+            
+            .modal-title {
+                font-size: 1.4rem;
+            }
+            
+            .image-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                max-height: calc(98vh - 80px);
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -353,7 +692,7 @@
                                 <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
                             </svg>
                         </div>
-                        <h4 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Expert Chefs</h4>
+                        <h4 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Expert Team</h4>
                         <p class="text-palette1-b leading-relaxed">Skilled culinary masters trained in traditional Indonesian cooking methods and techniques</p>
                     </div>
                     
@@ -363,7 +702,7 @@
                                 <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
                             </svg>
                         </div>
-                        <h4 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Modern Standards</h4>
+                        <h4 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Certified</h4>
                         <p class="text-palette1-b leading-relaxed">Contemporary food safety and quality standards while maintaining traditional authenticity</p>
                     </div>
                 </div>
@@ -414,11 +753,81 @@
                                 Professional service staff
                             </li>
                         </ul>
-                        <div class="text-palette1-c font-semibold">Starting from IDR 150K/person</div>
+                        <div class="text-palette1-c font-semibold">Starting from IDR 250K/person</div>
                     </div>
 
                     <!-- Service 2 -->
-                    <div class="modern-card p-8 group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                     <div class="modern-card p-8 group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="w-20 h-20 bg-palette1-c rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Private Dining</h3>
+                        <p class="text-palette1-b mb-6 leading-relaxed">Intimate dining experiences featuring our signature Nusantara heritage recipes for special occasions.</p>
+                        <ul class="text-palette1-b space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Family gatherings
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Birthday celebrations
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Anniversary dinners
+                            </li>
+                        </ul>
+                        <div class="text-palette1-c font-semibold">By Invitation</div>
+                    </div>
+
+                    <!-- Service 3 -->
+                     <div class="modern-card p-8 group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="w-20 h-20 bg-palette1-a rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Meal Box Delivery</h3>
+                        <p class="text-palette1-b mb-6 leading-relaxed">Convenient meal box services featuring our authentic Nusantara recipes delivered fresh to your location.</p>
+                        <ul class="text-palette1-b space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Daily meal box options
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Bulk order discounts
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Fresh daily preparation
+                            </li>
+                        </ul>
+                        <div class="text-palette1-c font-semibold mb-4">Starting from IDR 35K/box</div>
+                        <button class="view-menu-btn" onclick="openMenuModal()">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path>
+                            </svg>
+                            View Menu Gallery
+                        </button>
+                    </div>
+
+                    <!-- Service 4 -->
+                     <div class="modern-card p-8 group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                         <div class="w-20 h-20 bg-palette1-b rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
@@ -447,69 +856,6 @@
                             </li>
                         </ul>
                         <div class="text-palette1-c font-semibold">Starting from IDR 75K/person</div>
-                    </div>
-
-                    <!-- Service 3 -->
-                     <div class="modern-card p-8 group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                        <div class="w-20 h-20 bg-palette1-d rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H3.862a2 2 0 01-1.995-1.858L1 7m18 0l-2-4H3l-2 4m18 0H1"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Mining Catering</h3>
-                        <p class="text-palette1-b mb-6 leading-relaxed">Catering services for mining operations, including special menus for miners and workers.</p>
-                        <ul class="text-palette1-b space-y-2 mb-6">
-                            <li class="flex items-center">
-                                <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Traditional ceremony catering
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Cultural festival menus
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Heritage event services
-                            </li>
-                        </ul>
-                        <div class="text-palette1-c font-semibold">Starting from IDR 125K/person</div>
-                    </div>
-                    <!-- Service 4 -->
-                    <div class="modern-card p-8 group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="w-20 h-20 bg-palette1-c rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Private Dining</h3>
-                        <p class="text-palette1-b mb-6 leading-relaxed">Intimate dining experiences featuring our signature Nusantara heritage recipes for special occasions.</p>
-                        <ul class="text-palette1-b space-y-2 mb-6">
-                            <li class="flex items-center">
-                                <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Family gatherings
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Birthday celebrations
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Anniversary dinners
-                            </li>
-                        </ul>
-                        <div class="text-palette1-c font-semibold">Starting from IDR 200K/person</div>
                     </div>
 
                     <!-- Service 5 -->
@@ -545,35 +891,35 @@
                     </div>
 
                     <!-- Service 6 -->
-                    <div class="modern-card p-8 group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        <div class="w-20 h-20 bg-palette1-a rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                     <div class="modern-card p-8 group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                        <div class="w-20 h-20 bg-palette1-d rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                                <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H3.862a2 2 0 01-1.995-1.858L1 7m18 0l-2-4H3l-2 4m18 0H1"></path>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Meal Box Delivery</h3>
-                        <p class="text-palette1-b mb-6 leading-relaxed">Convenient meal box services featuring our authentic Nusantara recipes delivered fresh to your location.</p>
+                        <h3 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Oil, Mining & Gas Catering</h3>
+                        <p class="text-palette1-b mb-6 leading-relaxed">Catering services for mining operations, including special menus for miners and workers.</p>
                         <ul class="text-palette1-b space-y-2 mb-6">
                             <li class="flex items-center">
                                 <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                Daily meal box options
+                                Traditional ceremony catering
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                Bulk order discounts
+                                Cultural festival menus
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-4 h-4 text-palette1-c mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                Fresh daily preparation
+                                Heritage event services
                             </li>
                         </ul>
-                        <div class="text-palette1-c font-semibold">Starting from IDR 45K/box</div>
+                        <div class="text-palette1-c font-semibold">Starting from IDR 125K/person</div>
                     </div>
                 </div>
             </div>
@@ -973,6 +1319,396 @@
              e.preventDefault();
              alert('Thank you for your inquiry! We will contact you soon.');
          });
+
+         // Advanced lazy loading system variables - declared before functions
+         let loadedImages = 0;
+         let totalImages = 0;
+         const maxConcurrentLoads = window.innerWidth <= 768 ? 6 : 6; // Load all 6 images on all devices
+         const imageQueue = [];
+         let isLoading = false;
+         
+         // Mobile optimization settings
+         const isMobile = window.innerWidth <= 768;
+         const imageTimeout = isMobile ? 15000 : 15000; // Same timeout for mobile
+         const retryAttempts = isMobile ? 2 : 2; // Same retries for mobile
+         
+         // Memory management for mobile
+         let memoryWarningShown = false;
+
+         // Modal functionality
+         function openMenuModal() {
+             const modal = document.getElementById('menuModal');
+             modal.classList.add('active');
+             document.body.style.overflow = 'hidden'; // Prevent background scrolling
+             
+             // Initialize progressive image loading for mobile optimization
+             setTimeout(() => {
+                 initializeImageLoading();
+             }, 100); // Small delay to ensure modal is fully rendered
+         }
+
+         function closeMenuModal() {
+             const modal = document.getElementById('menuModal');
+             modal.classList.remove('active');
+             document.body.style.overflow = 'auto'; // Restore scrolling
+             
+             // Clean up loaded images to free memory (mobile optimization)
+             const loadedImageElements = modal.querySelectorAll('.gallery-image');
+             loadedImageElements.forEach(img => {
+                 img.src = ''; // Clear image source to free memory
+                 img.remove(); // Remove from DOM
+             });
+             
+             // Reset placeholders
+             const placeholders = modal.querySelectorAll('.image-placeholder');
+             placeholders.forEach(placeholder => {
+                 placeholder.classList.remove('hidden', 'image-error');
+                 placeholder.innerHTML = `
+                     <div class="loading-spinner"></div>
+                     <div class="loading-text">Loading image...</div>
+                     <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                 `;
+             });
+             
+             // Reset loading state
+             loadedImages = 0;
+             totalImages = 0;
+             imageQueue.length = 0;
+             isLoading = false;
+         }
+
+         // Close modal when clicking outside the content
+         const menuModal = document.getElementById('menuModal');
+         if (menuModal) {
+             menuModal.addEventListener('click', function(e) {
+                 if (e.target === this) {
+                     closeMenuModal();
+                 }
+             });
+         }
+
+         // Close modal with Escape key
+         document.addEventListener('keydown', function(e) {
+             if (e.key === 'Escape') {
+                 closeMenuModal();
+             }
+         });
+
+         // Variables moved to top of script section
+         
+         function checkMemoryUsage() {
+             if (isMobile && 'memory' in performance) {
+                 const memInfo = performance.memory;
+                 const usedMemoryMB = memInfo.usedJSHeapSize / 1024 / 1024;
+                 const totalMemoryMB = memInfo.totalJSHeapSize / 1024 / 1024;
+                 
+                 // If using more than 80% of available memory, trigger cleanup
+                 if (usedMemoryMB / totalMemoryMB > 0.8 && !memoryWarningShown) {
+                     console.warn('High memory usage detected, triggering cleanup');
+                     memoryWarningShown = true;
+                     
+                     // Force cleanup of loaded images
+                     const loadedImgs = document.querySelectorAll('.gallery-image.loaded');
+                     loadedImgs.forEach((img, index) => {
+                         if (index > 2) { // Keep only first 3 images loaded
+                             img.src = '';
+                             img.classList.remove('loaded');
+                             const container = img.closest('.gallery-image-container');
+                             const placeholder = container.querySelector('.image-placeholder');
+                             placeholder.classList.remove('hidden');
+                             img.remove();
+                         }
+                     });
+                     
+                     // Reset memory warning after cleanup
+                     setTimeout(() => {
+                         memoryWarningShown = false;
+                     }, 5000);
+                 }
+             }
+         }
+
+         function loadImageProgressively(container, attempt = 0) {
+             if (isLoading && loadedImages >= maxConcurrentLoads) {
+                 imageQueue.push(container);
+                 return;
+             }
+
+             isLoading = true;
+             const placeholder = container.querySelector('.image-placeholder');
+             const progressElement = placeholder.querySelector('.loading-progress');
+             const imageSrc = container.dataset.src;
+             const imageAlt = container.dataset.alt;
+             
+             // Update progress indicator
+             if (progressElement) {
+                 progressElement.textContent = `Loading... (${loadedImages + 1}/${totalImages})`;
+             }
+
+             // Create image element
+             const img = document.createElement('img');
+             img.className = 'gallery-image';
+             img.alt = imageAlt;
+             
+             let timeoutId;
+             let hasLoaded = false;
+
+             function processNextImage() {
+                 setTimeout(() => {
+                     if (imageQueue.length > 0) {
+                         const nextContainer = imageQueue.shift();
+                         loadImageProgressively(nextContainer);
+                     } else {
+                         isLoading = false;
+                     }
+                 }, isMobile ? 200 : 100); // Longer delay on mobile
+             }
+
+             // Handle successful load
+              img.addEventListener('load', function() {
+                  if (hasLoaded) return;
+                  hasLoaded = true;
+                  clearTimeout(timeoutId);
+                  
+                  this.classList.add('loaded');
+                  placeholder.classList.add('hidden');
+                  loadedImages++;
+                  
+                  // Check memory usage after loading image
+                  if (isMobile) {
+                      setTimeout(checkMemoryUsage, 100);
+                  }
+                  
+                  processNextImage();
+              });
+
+             // Handle load error with retry logic
+              img.addEventListener('error', function() {
+                  if (hasLoaded) return;
+                  hasLoaded = true;
+                  clearTimeout(timeoutId);
+                  
+                  console.error(`Failed to load image: ${imageSrc} (attempt ${attempt + 1})`);
+                  
+                  if (attempt < retryAttempts) {
+                      // Retry loading
+                      console.log(`Retrying image load: ${imageSrc} (attempt ${attempt + 2})`);
+                      setTimeout(() => {
+                          loadImageProgressively(container, attempt + 1);
+                      }, 1000);
+                      return;
+                  }
+                  
+                  placeholder.innerHTML = `
+                      <div style="text-align: center; color: #721c24; font-size: 0.8rem;">
+                          <div style="margin-bottom: 5px;">❌</div>
+                          <div>Failed to load</div>
+                          <div style="font-size: 0.7rem; margin-top: 5px; opacity: 0.7;">
+                              ${imageAlt}
+                          </div>
+                      </div>
+                  `;
+                  placeholder.classList.add('image-error');
+                  loadedImages++;
+                  processNextImage();
+              });
+
+             // Timeout handler to prevent hanging
+             timeoutId = setTimeout(() => {
+                 if (hasLoaded) return;
+                 hasLoaded = true;
+                 
+                 if (attempt < retryAttempts) {
+                     // Retry on timeout
+                     setTimeout(() => {
+                         loadImageProgressively(container, attempt + 1);
+                     }, 1000);
+                     return;
+                 }
+                 
+                 placeholder.innerHTML = '<span style="color: #721c24;">Loading timeout</span>';
+                 placeholder.classList.add('image-error');
+                 loadedImages++;
+                 processNextImage();
+             }, imageTimeout);
+
+             // Add image to container and start loading
+             container.appendChild(img);
+             
+             // URL encode the image source to handle spaces in filenames
+             const encodedImageSrc = imageSrc.replace(/ /g, '%20');
+             console.log(`Loading image: ${encodedImageSrc}`);
+             
+             // Use smaller images on mobile for faster loading
+             if (isMobile && imageSrc.includes('public/assets/')) {
+                 // For mobile, we could implement image resizing here
+                 img.src = encodedImageSrc;
+             } else {
+                 img.src = encodedImageSrc;
+             }
+         }
+
+         // Initialize progressive loading when modal opens
+         function initializeImageLoading() {
+             const containers = document.querySelectorAll('.gallery-image-container');
+             loadedImages = 0;
+             totalImages = containers.length;
+             isLoading = false;
+             
+             // Load first batch of images
+             for (let i = 0; i < Math.min(maxConcurrentLoads, containers.length); i++) {
+                 loadImageProgressively(containers[i]);
+             }
+             
+             // Queue remaining images
+             for (let i = maxConcurrentLoads; i < containers.length; i++) {
+                 imageQueue.push(containers[i]);
+             }
+         }
+
+         // Enhanced image click handler for full-screen view
+         document.addEventListener('click', function(e) {
+             if (e.target.classList.contains('gallery-image')) {
+                 // Create full-screen overlay
+                 const overlay = document.createElement('div');
+                 overlay.style.cssText = `
+                     position: fixed;
+                     top: 0;
+                     left: 0;
+                     width: 100%;
+                     height: 100%;
+                     background: rgba(0,0,0,0.95);
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                     z-index: 2000;
+                     cursor: zoom-out;
+                     padding: 20px;
+                     box-sizing: border-box;
+                 `;
+                 
+                 // Create loading spinner
+                 const spinner = document.createElement('div');
+                 spinner.style.cssText = `
+                     width: 50px;
+                     height: 50px;
+                     border: 3px solid rgba(255,255,255,0.3);
+                     border-top: 3px solid white;
+                     border-radius: 50%;
+                     animation: spin 1s linear infinite;
+                 `;
+                 
+                 // Add spinner animation
+                 const style = document.createElement('style');
+                 style.textContent = `
+                     @keyframes spin {
+                         0% { transform: rotate(0deg); }
+                         100% { transform: rotate(360deg); }
+                     }
+                 `;
+                 document.head.appendChild(style);
+                 
+                 overlay.appendChild(spinner);
+                 document.body.appendChild(overlay);
+                 
+                 // Create large image
+                 const largeImg = document.createElement('img');
+                 largeImg.src = e.target.src;
+                 largeImg.style.cssText = `
+                     max-width: 100%;
+                     max-height: 100%;
+                     object-fit: contain;
+                     border-radius: 15px;
+                     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+                     opacity: 0;
+                     transition: opacity 0.3s ease;
+                 `;
+                 
+                 largeImg.addEventListener('load', function() {
+                     spinner.remove();
+                     this.style.opacity = '1';
+                 });
+                 
+                 largeImg.addEventListener('error', function() {
+                      spinner.remove();
+                      overlay.innerHTML = '<p style="color: white; font-size: 1.2rem; font-family: Inter, sans-serif; text-align: center;">Failed to load image</p>';
+                  });
+                 
+                 overlay.appendChild(largeImg);
+                 
+                 // Close on click or escape
+                 overlay.addEventListener('click', function(e) {
+                     if (e.target === overlay || e.target === largeImg) {
+                         document.body.removeChild(overlay);
+                         document.head.removeChild(style);
+                     }
+                 });
+                 
+                 document.addEventListener('keydown', function escapeHandler(e) {
+                     if (e.key === 'Escape') {
+                         if (document.body.contains(overlay)) {
+                             document.body.removeChild(overlay);
+                             document.head.removeChild(style);
+                         }
+                         document.removeEventListener('keydown', escapeHandler);
+                     }
+                 });
+             }
+         });
      </script>
+
+     <!-- Menu Modal -->
+     <div id="menuModal" class="modal">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h2 class="modal-title">Nasi Box Menu Gallery</h2>
+                 <button class="close-modal" onclick="closeMenuModal()">&times;</button>
+             </div>
+             <div class="image-gallery">
+                <div class="gallery-image-container" data-src="public/assets/nasi-box/menu nasi box preview-1.pdf.jpg" data-alt="Nasi Box Menu 1">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/nasi-box/menu nasi box preview-2.pdf.jpg" data-alt="Nasi Box Menu 2">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/nasi-box/menu nasi box preview-3.pdf.jpg" data-alt="Nasi Box Menu 3">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/nasi-box/menu nasi box preview-4.pdf.jpg" data-alt="Nasi Box Menu 4">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/nasi-box/menu nasi box preview-5.pdf.jpg" data-alt="Nasi Box Menu 5">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/nasi-box/menu nasi box preview-6.pdf.jpg" data-alt="Nasi Box Menu 6">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+            </div>
+         </div>
+     </div>
  </body>
  </html>

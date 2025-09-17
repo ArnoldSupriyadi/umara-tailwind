@@ -21,6 +21,13 @@ module.exports = {
            d: '#CFBB99',
            e: '#E5D7C4'
          },
+         palette2: {
+           a: '#896F36',
+           b: '#973B00',
+           c: '#CB9123',
+           d: '#FFF4DE',
+           e: '#572E12'
+         }
        },
       fontFamily: {
         'nunito': ['Nunito Sans', 'sans-serif']
