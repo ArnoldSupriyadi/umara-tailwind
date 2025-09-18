@@ -69,15 +69,15 @@
         }
     </style>
 </head>
-<body class="font-inter overflow-x-hidden" style="background: #E5D7C4;">
+<body class="font-inter overflow-x-hidden">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 solid-light">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <picture>
-                        <source srcset="public/assets/vector/-_umarahouse putih.png" type="image/png">
-                        <img src="public/assets/vector/-_umarahouse putih.png" alt="Rasa Umara" class="h-12">
+                        <source srcset="public/assets/vector/umara_black.svg" type="image/svg+xml">
+                        <img src="public/assets/vector/umara_black.svg" alt="Rasa Umara" class="h-12">
                     </picture>
                 </div>
                 <div class="hidden md:block">
@@ -109,14 +109,14 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
-        <div class="absolute inset-0 bg-[#4C3D19]/50"></div>
+    <section id="home" class="min-h-screen flex items-center relative overflow-hidden bg-amber-50">
+        <div class="absolute inset-0"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-12 gap-8 items-center">
                 <!-- Left Content - Asymmetric Layout -->
                 <div class="lg:col-span-7 space-y-8 animate-slide-up" data-aos="fade-right" data-aos-duration="1200">
                     <div class="space-y-6">
-                        <h1 class="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white leading-tight" data-aos="fade-up" data-aos-delay="200">
+                        <h1 class="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-palette2-e leading-tight" data-aos="fade-up" data-aos-delay="200">
                             Authentic
                             <span class="gradient-text block">Indonesian</span>
                             <span class="text-palette1-d">Flavors</span>
@@ -185,8 +185,8 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-[#E5D7C4] relative overflow-hidden">
-        <div class="absolute inset-0 bg-[#CFBB99]/20"></div>
+    <section id="about" class="py-20 relative overflow-hidden">
+        <div class="absolute"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 animate-fade-in" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="text-4xl md:text-6xl font-playfair font-bold gradient-text mb-6" data-aos="fade-up" data-aos-delay="200">
@@ -236,7 +236,7 @@
                             </div>
                         </div>
                         
-                        <div class="floating-card solid-dark rounded-3xl p-6 text-white">
+                        <div class="floating-card bg-amber-50 rounded-3xl p-6 text-palette2-e">
                             <div class="text-3xl mb-4">
                                 <i class="fas fa-award"></i>
                             </div>
@@ -244,20 +244,20 @@
                             <p class="text-amber-100">Recognized for culinary excellence</p>
                         </div>
                         
-                        <div class="bento-wide floating-card solid-dark rounded-3xl p-8 text-white">
+                        <div class="bento-wide floating-card bg-amber-50 rounded-3xl p-8 text-palette2-e">
                             <div class="flex items-center justify-between">
                                 <div>
-                                    <h4 class="text-2xl font-playfair font-bold mb-2">25+ Years</h4>
+                                    <h4 class="text-2xl font-playfair font-bold mb-2 text-palette2-e">25+ Years</h4>
                                     <p class="text-gray-300">Of culinary tradition and innovation</p>
                                 </div>
-                                <div class="text-4xl text-white">
+                                <div class="text-4xl text-palette2-e">
                                     <i class="fas fa-utensils"></i>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="floating-card solid-light rounded-3xl p-6">
-                            <div class="text-2xl text-white mb-4">
+                            <div class="text-2xl text-palette2-e mb-4">
                                 <i class="fas fa-leaf"></i>
                             </div>
                             <h4 class="text-lg font-semibold text-gray-800 mb-2">Sustainable</h4>
@@ -356,7 +356,7 @@
             <div class="grid md:grid-cols-3 gap-6 mt-16" data-aos="fade-up" data-aos-delay="600">
                 <div class="floating-card solid-dark rounded-2xl p-6 text-center" data-aos="zoom-in" data-aos-delay="700">
                     <div class="w-16 h-16 bg-[#889063] rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-utensils text-white text-xl"></i>
+                        <i class="fas fa-utensils text-palette2-e text-xl"></i>
                     </div>
                     <h4 class="text-lg font-semibold text-white mb-2">Open Kitchen</h4>
                     <p class="text-gray-300 text-sm">Watch our chefs create culinary masterpieces</p>
@@ -386,12 +386,11 @@
     </section>
 
     <!-- Contact & Reservation Section -->
-    <section id="contact" class="py-20 bg-[#4C3D19] text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-[#354024]/20"></div>
+    <section id="contact" class="py-20 text-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="text-4xl md:text-6xl font-playfair font-bold mb-6" data-aos="fade-up" data-aos-delay="200">
-                    Reserve Your <span class="gradient-text">Experience</span>
+                <h2 class="text-4xl md:text-6xl font-playfair font-bold mb-6 text-palette2-e" data-aos="fade-up" data-aos-delay="200">
+                    Reserve Your Experience
                 </h2>
                 <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="400">
                     Book your table and embark on an unforgettable culinary journey through authentic Indonesian flavors

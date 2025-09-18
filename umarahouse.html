@@ -9,6 +9,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
+        * {
+            letter-spacing: 1px;
+        },
         .hero-bg::before {
             content: '';
             position: absolute;
@@ -53,7 +56,7 @@
             gap: 1.5rem;
         }
         .feature-card {
-            background: rgba(254, 243, 199, 0.5);
+            background: #FFF4DE;
             border: 1px solid rgba(245, 158, 11, 0.2);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
@@ -124,8 +127,8 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-32 relative overflow-hidden" style="background: #fef3c7;">
-            <div class="absolute inset-0" style="background: rgba(245, 158, 11, 0.1);"></div>
+    <section id="about" class="py-32 relative overflow-hidden">
+            <div class="absolute inset-0"></div>
         <div class="container mx-auto px-4 relative z-10">
             <div class="asymmetric-grid items-center mb-20">
                 <div data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
@@ -140,10 +143,10 @@
                 <div class="relative" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
                     <!-- Main Image Card with 3D Effect -->
                     <div class="relative transform rotate-2 hover:rotate-0 transition-all duration-500 group">
-                        <div class="absolute inset-0 bg-gradient-to-br from-[#f59e0b] to-[#d97706] rounded-3xl transform translate-x-4 translate-y-4 opacity-30"></div>
-                        <div class="relative bg-white rounded-3xl p-6 shadow-2xl border border-[#fbbf24]/30">
+                        <div class="absolute inset-0 bg-amber-50 rounded-3xl transform translate-x-4 translate-y-4 opacity-30"></div>
+                        <div class="relative bg-white rounded-3xl p-6 shadow-2xl border border-palette2-a">
                             <img src="public/assets/umara-house/4.jpeg" alt="Garden Terrace" class="w-full h-80 object-cover rounded-2xl">
-                            <div class="absolute top-4 right-4 bg-gradient-to-r from-[#f59e0b] to-[#fbbf24] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                            <div class="absolute top-4 right-4 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
                                 Premium Dining
                             </div>
                         </div>
@@ -177,62 +180,62 @@
             
             <div class="bento-grid">
                 <div class="feature-card rounded-3xl p-8 text-center floating-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style="background: #f59e0b;">
-                        <i class="fas fa-palette text-2xl" style="color: #92400e;"></i>
+                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg bg-palette2-e">
+                        <i class="fas fa-palette text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #92400e;">Contemporary Design</h3>
+                    <h3 class="text-2xl font-bold mb-4">Contemporary Design</h3>
                     <p class="leading-relaxed" style="color: #d97706;">Thoughtfully designed interiors featuring warm wood tones, industrial elements, and sophisticated lighting that creates the perfect ambiance.</p>
                 </div>
                 
                 <div class="feature-card rounded-3xl p-8 text-center floating-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style="background: #fbbf24;">
-                        <i class="fas fa-utensils text-2xl" style="color: #92400e;"></i>
+                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg bg-palette2-e">
+                        <i class="fas fa-utensils text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #92400e;">Culinary Excellence</h3>
+                    <h3 class="text-2xl font-bold mb-4">Culinary Excellence</h3>
                     <p class="leading-relaxed" style="color: #d97706;">Exceptional cuisine crafted with premium ingredients and innovative techniques by our expert culinary team dedicated to perfection.</p>
                 </div>
                 
                 <div class="feature-card rounded-3xl p-8 text-center floating-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style="background: #d97706;">
-                        <i class="fas fa-wine-glass text-2xl" style="color: #92400e;"></i>
+                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg bg-palette2-e">
+                        <i class="fas fa-wine-glass text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #92400e;">Premium Experience</h3>
+                    <h3 class="text-2xl font-bold mb-4">Premium Experience</h3>
                     <p class="leading-relaxed" style="color: #d97706;">Intimate dining spaces perfect for business meetings, romantic dinners, and special celebrations in an atmosphere of refined elegance.</p>
                 </div>
                 
                 <!-- Premium Ambiance -->
-                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" style="background: #fbbf24; border-color: rgba(245, 158, 11, 0.3);" onmouseover="this.style.borderColor='rgba(245, 158, 11, 0.7)'" onmouseout="this.style.borderColor='rgba(245, 158, 11, 0.3)'" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style="background: #92400e;">
+                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" border-color: rgba(245, 158, 11, 0.3);" onmouseover="this.style.borderColor='rgba(245, 158, 11, 0.7)'" onmouseout="this.style.borderColor='rgba(245, 158, 11, 0.3)'" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform bg-palette2-e">
                         <i class="fas fa-crown text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #92400e;">Premium Ambiance</h3>
+                    <h3 class="text-2xl font-bold mb-4">Premium Ambiance</h3>
                     <p class="leading-relaxed" style="color: #d97706;">Luxurious interior design with carefully curated atmosphere for an elevated dining experience.</p>
                 </div>
 
                 <!-- Expert Culinary Team -->
-                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" style="background: #fef3c7; border-color: rgba(245, 158, 11, 0.3);" onmouseover="this.style.borderColor='rgba(245, 158, 11, 0.7)'" onmouseout="this.style.borderColor='rgba(245, 158, 11, 0.3)'">
-                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style="background: #d97706;">
+                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" border-color: rgba(245, 158, 11, 0.3);" onmouseover="this.style.borderColor='rgba(245, 158, 11, 0.7)'" onmouseout="this.style.borderColor='rgba(245, 158, 11, 0.3)'">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform bg-palette2-e">
                         <i class="fas fa-utensils text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #92400e;">Expert Culinary Team</h3>
+                    <h3 class="text-2xl font-bold mb-4">Expert Culinary Team</h3>
                     <p class="leading-relaxed" style="color: #d97706;">World-class chefs creating innovative dishes with the finest ingredients and authentic flavors.</p>
                 </div>
 
                 <!-- Private Events -->
-                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" style="background: #fbbf24; border-color: rgba(245, 158, 11, 0.3);" onmouseover="this.style.borderColor='rgba(245, 158, 11, 0.7)'" onmouseout="this.style.borderColor='rgba(245, 158, 11, 0.3)'">
-                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style="background: #92400e;">
+                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" border-color: rgba(245, 158, 11, 0.3);" onmouseover="this.style.borderColor='rgba(245, 158, 11, 0.7)'" onmouseout="this.style.borderColor='rgba(245, 158, 11, 0.3)'">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform bg-palette2-e">
                         <i class="fas fa-calendar-alt text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #92400e;">Private Events</h3>
+                    <h3 class="text-2xl font-bold mb-4">Private Events</h3>
                     <p class="leading-relaxed" style="color: #d97706;">Customizable private dining spaces perfect for business meetings, celebrations, and special occasions.</p>
                 </div>
 
                 <!-- Premium Service -->
-                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" style="background: #fef3c7; border-color: rgba(245, 158, 11, 0.3);" onmouseover="this.style.borderColor='rgba(245, 158, 11, 0.7)'" onmouseout="this.style.borderColor='rgba(245, 158, 11, 0.3)'">
-                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style="background: #d97706;">
+                <div class="feature-card p-8 rounded-3xl border transition-all duration-300 group" border-color: rgba(245, 158, 11, 0.3);" onmouseover="this.style.borderColor='rgba(245, 158, 11, 0.7)'" onmouseout="this.style.borderColor='rgba(245, 158, 11, 0.3)'">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform bg-palette2-e">
                         <i class="fas fa-concierge-bell text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #92400e;">Premium Service</h3>
+                    <h3 class="text-2xl font-bold mb-4">Premium Service</h3>
                     <p class="leading-relaxed" style="color: #d97706;">Attentive and professional staff dedicated to providing exceptional hospitality and personalized service.</p>
                 </div>
             </div>
@@ -244,8 +247,7 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-20" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="text-5xl md:text-6xl font-black mb-6">
-                    <span class="gradient-text">Our Dining</span>
-                    <span class="block" style="color: #4C3D19;">Spaces</span>
+                    <span class="text-palette2-e">Our <span style="color: #d97706;">Dining Spaces</span></span>
                 </h2>
                 <p class="text-xl max-w-2xl mx-auto" style="color: #354024;">Discover our beautifully designed dining areas, each offering a unique atmosphere for every occasion</p>
             </div>
@@ -255,7 +257,7 @@
                 <!-- Main Dining Area - Large Card -->
                 <div class="lg:col-span-2 feature-card rounded-3xl overflow-hidden floating-card cursor-pointer" onclick="openModal('public/assets/umara-house/1.jpeg', 'Main Dining Area')" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
                     <div class="h-80 relative" style="background-image: url('public/assets/umara-house/1.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                        <div class="absolute inset-0" style="background: rgba(245, 158, 11, 0.3);"></div>
+                        <div class="absolute inset-0"></div>
                         <div class="absolute bottom-6 left-6">
                             <h3 class="text-3xl font-black text-shadow mb-2" style="color: #E5D7C4;">Main Dining</h3>
                             <span class="backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold" style="background: rgba(207, 187, 153, 0.3); color: #E5D7C4;">40+ Seats</span>
@@ -274,7 +276,7 @@
                 <!-- Private Dining Room -->
                 <div class="feature-card rounded-3xl overflow-hidden floating-card cursor-pointer" onclick="openModal('public/assets/umara-house/2.jpeg', 'Private Dining Room')" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
                     <div class="h-64 relative" style="background-image: url('public/assets/umara-house/2.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                        <div class="absolute inset-0" style="background: rgba(245, 158, 11, 0.3);"></div>
+                        <div class="absolute inset-0"></div>
                         <div class="absolute top-4 right-4">
                             <span class="px-3 py-1 rounded-full text-sm font-semibold" style="background: #fbbf24; color: #92400e;">Private</span>
                         </div>
@@ -300,7 +302,7 @@
                 <!-- Conference Dining -->
                 <div class="feature-card rounded-3xl overflow-hidden floating-card cursor-pointer" onclick="openModal('public/assets/umara-house/3.jpeg', 'Conference Dining')">
                     <div class="h-64 relative" style="background-image: url('public/assets/umara-house/3.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                        <div class="absolute inset-0" style="background: rgba(245, 158, 11, 0.3);"></div>
+                        <div class="absolute inset-0"></div>
                         <div class="absolute bottom-4 left-4">
                             <h3 class="text-2xl font-bold text-shadow" style="color: #E5D7C4;">Conference Dining</h3>
                         </div>
@@ -321,7 +323,7 @@
                 <!-- Garden Terrace -->
                 <div class="feature-card rounded-3xl overflow-hidden floating-card cursor-pointer" onclick="openModal('public/assets/umara-house/4.jpeg', 'Garden Terrace')" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
                     <div class="h-64 relative" style="background-image: url('public/assets/umara-house/4.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                        <div class="absolute inset-0" style="background: rgba(245, 158, 11, 0.3);"></div>
+                        <div class="absolute inset-0"></div>
                         <div class="absolute bottom-4 left-4">
                             <h3 class="text-2xl font-bold text-shadow" style="color: #E5D7C4;">Garden Terrace</h3>
                         </div>
@@ -350,58 +352,58 @@
             <div class="text-center mb-20" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="text-5xl md:text-6xl font-black mb-6">
                     <span class="gradient-text">Contact &</span>
-                    <span class="block" style="color: #E5D7C4;">Reservations</span>
+                    <span class="block text-palette2-e">Reservations</span>
                 </h2>
-                <p class="text-xl max-w-2xl mx-auto" style="color: #CFBB99;">Get in touch with us to make a reservation or for any inquiries about our dining experiences</p>
+                <p class="text-xl max-w-2xl mx-auto">Get in touch with us to make a reservation or for any inquiries about our dining experiences</p>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <!-- Contact Information -->
                 <div class="space-y-8" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
-                    <div class="rounded-3xl p-6 floating-card" style="background: rgba(229, 215, 196, 0.1); border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
+                    <div class="rounded-3xl p-6 floating-card bg-amber-50" border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
                         <div class="flex items-start space-x-6">
                             <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: #f59e0b;">
                         <i class="fas fa-map-marker-alt text-xl text-white"></i>
                     </div>
                             <div>
-                                <h3 class="text-2xl font-bold mb-3" style="color: #E5D7C4;">Address</h3>
-                                <p class="text-lg leading-relaxed" style="color: #CFBB99;"><a href="https://maps.app.goo.gl/y6Vu7Puz1183KL3R8" target="_blank">Jl. Bendungan Hilir No.134, RT.12/RW.6, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10210</a></p>
+                                <h3 class="text-2xl font-bold mb-1 text-palette2-e">Address</h3>
+                                <p class="text-lg leading-relaxed"><a href="https://maps.app.goo.gl/y6Vu7Puz1183KL3R8" target="_blank">Jl. Bendungan Hilir No.134, RT.12/RW.6, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10210</a></p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="rounded-3xl p-6 floating-card" style="background: rgba(229, 215, 196, 0.1); border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
+                    <div class="rounded-3xl p-6 floating-card bg-amber-50" border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
                         <div class="flex items-start space-x-6">
                             <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: #fbbf24;">
                                 <i class="fas fa-phone text-xl text-white"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-bold mb-3" style="color: #E5D7C4;">Phone</h3>
-                                <p class="text-lg leading-relaxed" style="color: #CFBB99;"><a href="https://wa.me/6281222227495">+62-812‑2222‑7495</a></p>
+                                <h3 class="text-2xl font-bold mb-1 text-palette2-e">Phone</h3>
+                                <p class="text-lg leading-relaxed"><a href="https://wa.me/6281222227495">+62-812‑2222‑7495</a></p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="rounded-3xl p-6 floating-card" style="background: rgba(229, 215, 196, 0.1); border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
+                    <div class="rounded-3xl p-6 floating-card bg-amber-50" border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
                         <div class="flex items-start space-x-6">
                             <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: #f59e0b;">
                                 <i class="fas fa-envelope text-xl text-white"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-bold mb-1" style="color: #E5D7C4;">Email</h3>
-                                <p class="text-lg leading-relaxed" style="color: #CFBB99;">info@umarahouse.com</p>
+                                <h3 class="text-2xl font-bold mb-1 text-palette2-e">Email</h3>
+                                <p class="text-lg leading-relaxed">info@umarahouse.com</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="rounded-3xl p-6 floating-card" style="background: rgba(229, 215, 196, 0.1); border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
+                    <div class="rounded-3xl p-6 floating-card bg-amber-50" border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
                         <div class="flex items-start space-x-6">
                             <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: #d97706;">
                                 <i class="fas fa-clock text-xl text-white"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-bold mb-1" style="color: #E5D7C4;">Operating Hours</h3>
-                                <p class="text-lg leading-relaxed" style="color: #CFBB99;">
+                                <h3 class="text-2xl font-bold mb-1 text-palette2-e">Operating Hours</h3>
+                                <p class="text-lg leading-relaxed">
                                     Everyday: 11:00 AM - 10:00 PM
                                 </p>
                             </div>
@@ -410,39 +412,39 @@
                 </div>
                 
                 <!-- Reservation Form -->
-                <div class="rounded-3xl p-8 floating-card" style="background: rgba(229, 215, 196, 0.1); border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
-                    <h3 class="text-3xl font-bold mb-8" style="color: #E5D7C4;">Make a Reservation</h3>
+                <div class="rounded-3xl p-8 floating-card bg-amber-50" border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
+                    <h3 class="text-3xl font-bold mb-8 text-palette2-e">Make a Reservation</h3>
                     <form class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-sm font-semibold mb-3" style="color: #CFBB99;">Name</label>
+                                <label class="block text-sm font-semibold mb-3">Name</label>
                                 <input type="text" class="w-full px-6 py-4 border-2 rounded-2xl transition-all duration-300" style="background: rgba(229, 215, 196, 0.1); border-color: rgba(207, 187, 153, 0.5); color: #E5D7C4;" placeholder="Your Name" onfocus="this.style.borderColor='#889063'" onblur="this.style.borderColor='rgba(207, 187, 153, 0.5)'">
                             </div>
                             <div>
-                                <label class="block text-sm font-semibold mb-3" style="color: #CFBB99;">Phone</label>
+                                <label class="block text-sm font-semibold mb-3">Phone</label>
                                 <input type="tel" class="w-full px-6 py-4 border-2 rounded-2xl transition-all duration-300" style="background: rgba(229, 215, 196, 0.1); border-color: rgba(207, 187, 153, 0.5); color: #E5D7C4;" placeholder="Your Phone" onfocus="this.style.borderColor='#889063'" onblur="this.style.borderColor='rgba(207, 187, 153, 0.5)'">
                             </div>
                         </div>
                         
                         <div>
-                            <label class="block text-sm font-semibold mb-3" style="color: #CFBB99;">Email</label>
+                            <label class="block text-sm font-semibold mb-3">Email</label>
                             <input type="email" class="w-full px-6 py-4 border-2 rounded-2xl transition-all duration-300" style="background: rgba(229, 215, 196, 0.1); border-color: rgba(207, 187, 153, 0.5); color: #E5D7C4;" placeholder="Your Email" onfocus="this.style.borderColor='#889063'" onblur="this.style.borderColor='rgba(207, 187, 153, 0.5)'">
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-sm font-semibold mb-3" style="color: #CFBB99;">Date</label>
+                                <label class="block text-sm font-semibold mb-3">Date</label>
                                 <input type="date" class="w-full px-6 py-4 border-2 rounded-2xl transition-all duration-300" style="background: rgba(229, 215, 196, 0.1); border-color: rgba(207, 187, 153, 0.5); color: #E5D7C4;" onfocus="this.style.borderColor='#889063'" onblur="this.style.borderColor='rgba(207, 187, 153, 0.5)'">
                             </div>
                             <div>
-                                <label class="block text-sm font-semibold mb-3" style="color: #CFBB99;">Time</label>
+                                <label class="block text-sm font-semibold mb-3">Time</label>
                                 <input type="time" class="w-full px-6 py-4 border-2 rounded-2xl transition-all duration-300" style="background: rgba(229, 215, 196, 0.1); border-color: rgba(207, 187, 153, 0.5); color: #E5D7C4;" onfocus="this.style.borderColor='#889063'" onblur="this.style.borderColor='rgba(207, 187, 153, 0.5)'">
                             </div>
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-sm font-semibold mb-3" style="color: #CFBB99;">Guests</label>
+                                <label class="block text-sm font-semibold mb-3">Guests</label>
                                 <select class="w-full px-6 py-4 border-2 rounded-2xl transition-all duration-300" style="background: rgba(229, 215, 196, 0.1); border-color: rgba(207, 187, 153, 0.5); color: #E5D7C4;" onfocus="this.style.borderColor='#889063'" onblur="this.style.borderColor='rgba(207, 187, 153, 0.5)'">
                                     <option>1-2 People</option>
                                     <option>3-4 People</option>
@@ -451,7 +453,7 @@
                                 </select>
                             </div>
                             <div>
-                                <label class="block text-sm font-semibold mb-3" style="color: #CFBB99;">Dining Area</label>
+                                <label class="block text-sm font-semibold mb-3">Dining Area</label>
                                 <select class="w-full px-6 py-4 border-2 rounded-2xl transition-all duration-300" style="background: rgba(229, 215, 196, 0.1); border-color: rgba(207, 187, 153, 0.5); color: #E5D7C4;" onfocus="this.style.borderColor='#889063'" onblur="this.style.borderColor='rgba(207, 187, 153, 0.5)'">
                                     <option>Main Dining</option>
                                     <option>Private Dining</option>
@@ -462,7 +464,7 @@
                         </div>
                         
                         <div>
-                            <label class="block text-sm font-semibold mb-3" style="color: #CFBB99;">Special Requests</label>
+                            <label class="block text-sm font-semibold mb-3">Special Requests</label>
                             <textarea rows="4" class="w-full px-6 py-4 border-2 rounded-2xl transition-all duration-300" style="background: rgba(229, 215, 196, 0.1); border-color: rgba(207, 187, 153, 0.5); color: #E5D7C4;" placeholder="Any special requests or dietary requirements..." onfocus="this.style.borderColor='#889063'" onblur="this.style.borderColor='rgba(207, 187, 153, 0.5)'"></textarea>
                         </div>
                         
