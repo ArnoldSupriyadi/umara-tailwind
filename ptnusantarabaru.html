@@ -47,17 +47,168 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="bg-cover bg-center bg-no-repeat text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('public/assets/lumpang-emas-prapanca/1.jpeg'); background-size: cover; background-position: center;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-            <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
-                    Welcome to <span class="text-white">PT Rasa Nusantara Baru</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    We are committed to serving buffet dishes with high-quality ingredients.
-                </p>
+    <!-- Hero Section with Carousel -->
+    <section id="home" class="relative h-screen overflow-hidden">
+        <!-- Carousel Container -->
+        <div class="carousel-container relative w-full h-full">
+            <!-- Carousel Slides -->
+            <div class="carousel-slides flex transition-transform duration-700 ease-in-out h-full" id="carousel-slides">
+                <!-- Slide 1 -->
+                <div class="carousel-slide min-w-full h-full relative bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('public/assets/lumpang-emas-prapanca/IMAGE-WITH-FLOWERS/1.jpeg');">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white px-4 max-w-4xl mx-auto">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1200">
+                                Welcome to <span class="text-amber-300">PT Rasa Nusantara Baru</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                We are committed to serving buffet dishes with high-quality ingredients.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide min-w-full h-full relative bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('public/assets/lumpang-emas-prapanca/IMAGE-WITH-FLOWERS/2.jpeg');">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white px-4 max-w-4xl mx-auto">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1200">
+                                Authentic <span class="text-amber-300">Indonesian Cuisine</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                Experience the rich flavors of traditional Indonesian dishes in an elegant setting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-slide min-w-full h-full relative bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('public/assets/lumpang-emas-prapanca/IMAGE-WITH-FLOWERS/3.jpeg');">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white px-4 max-w-4xl mx-auto">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1200">
+                                Premium <span class="text-amber-300">Dining Experience</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                Indulge in our carefully crafted menu featuring the finest local ingredients.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-slide min-w-full h-full relative bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('public/assets/lumpang-emas-prapanca/IMAGE-WITH-FLOWERS/4.jpeg');">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white px-4 max-w-4xl mx-auto">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1200">
+                                Elegant <span class="text-amber-300">Atmosphere</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                Enjoy your meal in our beautifully decorated restaurant with floral arrangements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="carousel-slide min-w-full h-full relative bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('public/assets/lumpang-emas-prapanca/IMAGE-WITH-FLOWERS/5.jpeg');">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white px-4 max-w-4xl mx-auto">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1200">
+                                Fresh <span class="text-amber-300">Quality Ingredients</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                We source only the freshest ingredients to create memorable culinary experiences.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="carousel-slide min-w-full h-full relative bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('public/assets/lumpang-emas-prapanca/IMAGE-WITH-FLOWERS/6.jpeg');">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white px-4 max-w-4xl mx-auto">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1200">
+                                Traditional <span class="text-amber-300">Recipes</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                Discover authentic flavors passed down through generations of Indonesian cooking.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 7 -->
+                <div class="carousel-slide min-w-full h-full relative bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('public/assets/lumpang-emas-prapanca/IMAGE-WITH-FLOWERS/7.jpeg');">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white px-4 max-w-4xl mx-auto">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1200">
+                                Exceptional <span class="text-amber-300">Service</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                Our dedicated team ensures every guest receives personalized attention and care.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 8 -->
+                <div class="carousel-slide min-w-full h-full relative bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('public/assets/lumpang-emas-prapanca/IMAGE-WITH-FLOWERS/8.jpeg');">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white px-4 max-w-4xl mx-auto">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1200">
+                                Cultural <span class="text-amber-300">Heritage</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                Celebrating Indonesia's rich culinary heritage in every dish we serve.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 9 -->
+                <div class="carousel-slide min-w-full h-full relative bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('public/assets/lumpang-emas-prapanca/IMAGE-WITH-FLOWERS/9.jpeg');">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white px-4 max-w-4xl mx-auto">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1200">
+                                Memorable <span class="text-amber-300">Moments</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                Create lasting memories with family and friends in our welcoming environment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 10 -->
+                <div class="carousel-slide min-w-full h-full relative bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('public/assets/lumpang-emas-prapanca/IMAGE-WITH-FLOWERS/10.jpeg');">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white px-4 max-w-4xl mx-auto">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1200">
+                                Culinary <span class="text-amber-300">Excellence</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                Where tradition meets innovation in every carefully prepared dish.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Navigation Arrows -->
+            <button class="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all duration-300 z-10" onclick="prevSlide()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button class="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all duration-300 z-10" onclick="nextSlide()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+
+            <!-- Dots Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300" onclick="currentSlide(1)"></button>
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300" onclick="currentSlide(2)"></button>
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300" onclick="currentSlide(3)"></button>
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300" onclick="currentSlide(4)"></button>
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300" onclick="currentSlide(5)"></button>
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300" onclick="currentSlide(6)"></button>
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300" onclick="currentSlide(7)"></button>
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300" onclick="currentSlide(8)"></button>
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300" onclick="currentSlide(9)"></button>
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300" onclick="currentSlide(10)"></button>
             </div>
         </div>
     </section>
@@ -211,8 +362,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-lg font-semibold text-palette2-e mb-2">Phone</h3>
-                                <p class="text-gray-600">+62 21 1234 5678<br>+62 812 3456 7890</p>
+                                <h3 class="text-lg font-semibold text-palette2-e">Phone</h3>
+                                <p class="text-gray-600"><a href="https://wa.me/6281222227496">+62-812‑2222‑7496</a></p>
                             </div>
                         </div>
 
@@ -333,6 +484,101 @@
         });
     </script>
     
+    <!-- Carousel JavaScript -->
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const totalSlides = slides.length;
+        const carouselSlides = document.getElementById('carousel-slides');
+
+        // Update carousel position
+        function updateCarousel() {
+            const translateX = -currentSlideIndex * 100;
+            carouselSlides.style.transform = `translateX(${translateX}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                if (index === currentSlideIndex) {
+                    dot.classList.add('bg-opacity-100');
+                    dot.classList.remove('bg-opacity-50');
+                } else {
+                    dot.classList.add('bg-opacity-50');
+                    dot.classList.remove('bg-opacity-100');
+                }
+            });
+        }
+
+        // Next slide function
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        // Previous slide function
+        function prevSlide() {
+            currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        // Go to specific slide
+        function currentSlide(n) {
+            currentSlideIndex = n - 1;
+            updateCarousel();
+        }
+
+        // Auto-play carousel
+        let autoPlayInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+        // Pause auto-play on hover
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayInterval);
+        });
+
+        carouselContainer.addEventListener('mouseleave', () => {
+            autoPlayInterval = setInterval(nextSlide, 5000);
+        });
+
+        // Initialize carousel
+        updateCarousel();
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+            }
+        });
+
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+
+        carouselContainer.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        carouselContainer.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextSlide(); // Swipe left - next slide
+                } else {
+                    prevSlide(); // Swipe right - previous slide
+                }
+            }
+        }
+    </script>
+
     <!-- AOS JavaScript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
