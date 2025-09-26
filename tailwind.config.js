@@ -27,10 +27,23 @@ module.exports = {
            c: '#CB9123',
            d: '#FFF4DE',
            e: '#572E12'
+         },
+         body: {
+          a: '#F5F4F4',
+         },
+         umara: {
+          a: '#886F35',
+          b: '#FFF9F9',
+          c: '#D3902A',
+          d: '#1F4F35',
          }
+         
        },
       fontFamily: {
-        'nunito': ['Nunito Sans', 'sans-serif']
+        'nunito': ['Nunito Sans', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
+        'merriweather': ['Merriweather', 'serif'],
+        'playfair': ['Playfair Display', 'serif']
       }
     }
   },
