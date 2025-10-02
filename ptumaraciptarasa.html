@@ -570,7 +570,7 @@
     <section id="home" class="relative min-h-screen flex items-center overflow-hidden">
         <!-- Background with UCR Image -->
         <div class="absolute inset-0">
-            <img src="public/assets/ucr/1.png" alt="Heritage Cuisine" class="w-full h-full object-cover">
+            <img src="public/assets/ucr/bg-banner-1.jpg" alt="Heritage Cuisine" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-palette1-a/80"></div>
         </div>
         
@@ -591,7 +591,7 @@
                         <span class="text-white">Through Authentic Recipes</span>
                     </h1>
                     <p class="text-xl lg:text-2xl mb-8 text-palette1-e leading-relaxed">
-                        We pride in our Nusantara Heritage recipes, bringing traditional Indonesian flavors to modern catering excellence since 2014
+                        We pride in our Nusantara Heritage recipes, bringing traditional Indonesian flavors to modern catering excellence since 2018
                     </p>
                     <div class="flex flex-col sm:flex-row gap-6">
                         <a href="#services" class="btn-modern text-white text-center">
@@ -604,8 +604,8 @@
                 </div>
                 
                 <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="modern-card p-8 floating">
-                        <img src="public/assets/ucr/2.png" alt="Traditional Cooking" class="w-full h-64 object-cover rounded-2xl mb-6">
+                    <div class="modern-card p-4 floating">
+                        <img src="public/assets/ucr/bg-banner-2.png" alt="Traditional Cooking" class="w-full h-64 object-cover rounded-2xl mb-6">
                         <h3 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Traditional Excellence</h3>
                         <p class="text-palette1-b mb-4">Authentic recipes passed down through generations, perfected for modern dining experiences.</p>    
                     </div>
@@ -629,8 +629,12 @@
 
                 <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
                     <div data-aos="fade-right" data-aos-duration="1000">
-                        <div class="image-overlay">
-                            <img src="public/assets/ucr/3.png" alt="Heritage Cooking" class="w-full h-96 object-cover rounded-3xl">
+                        <div class="image-overlay relative">
+                            <img src="public/assets/ucr/selada-ayam-bali.jpg" alt="Heritage Cooking" class="w-full h-96 object-cover rounded-3xl">
+                            <div class="absolute bottom-4 right-4 bg-transparent bg-opacity-60 text-white px-4 py-2 rounded-lg">
+                                <span class="text-lg font-semibold">Salada Ayam Bali</span>
+                                <p class="text-sm">by Umara</p>
+                            </div>
                         </div>
                     </div>
                     
@@ -660,32 +664,47 @@
                 <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-duration="1000">
                     <div class="modern-card p-8 text-center">
                         <div class="w-20 h-20 bg-palette1-a rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
+                            <img src="public/assets/icon/recipes.svg" alt="Authentic Recipes" class="w-10 h-10">
                         </div>
                         <h4 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Authentic Recipes</h4>
                         <p class="text-palette1-b leading-relaxed">Traditional recipes preserved and perfected through generations of culinary expertise</p>
+                        <button class="view-menu-btn bg-palette1-a text-white px-6 py-3 rounded-lg hover:bg-palette1-b transition-colors duration-300 flex
+                        items-center space-x-2 font-semibold" onclick="openOurRecipesModal()">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path>
+                            </svg>
+                            <span>Our Recipes</span>
+                        </button>
                     </div>
                     
                     <div class="modern-card p-8 text-center">
                         <div class="w-20 h-20 bg-palette1-b rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
-                            </svg>
+                            <img src="public/assets/icon/team-work.svg" alt="Expert Team" class="w-10 h-10">
                         </div>
                         <h4 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Expert Team</h4>
                         <p class="text-palette1-b leading-relaxed">Skilled culinary masters trained in traditional Indonesian cooking methods and techniques</p>
+                        <button class="view-menu-btn bg-palette1-a text-white px-6 py-3 rounded-lg hover:bg-palette1-b transition-colors duration-300 flex
+                        items-center space-x-2 font-semibold" onclick="openOurTeamModal()">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path>
+                            </svg>
+                            <span>Our Team</span>
+                        </button>
                     </div>
                     
                     <div class="modern-card p-8 text-center">
                         <div class="w-20 h-20 bg-palette1-c rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
-                            </svg>
+                            <img src="public/assets/icon/certificate.svg" alt="Certified" class="w-10 h-10">
                         </div>
                         <h4 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Certified</h4>
                         <p class="text-palette1-b leading-relaxed">Contemporary food safety and quality standards while maintaining traditional authenticity</p>
+                        <button class="view-menu-btn bg-palette1-a text-white px-6 py-3 rounded-lg hover:bg-palette1-b transition-colors duration-300 flex
+                        items-center space-x-2 font-semibold" onclick="openOurCertificateModal()">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path>
+                            </svg>
+                            <span>Our Certificate</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -991,37 +1010,29 @@
                 <!-- Trust Badges -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                     <div class="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50">
-                        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
+                        <div class="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="public/assets/icon/iso.svg" alt="ISO Certified" class="w-12 h-12">
                         </div>
                         <h3 class="font-semibold text-slate-800 mb-2">ISO Certified</h3>
                         <p class="text-sm text-slate-600">International quality standards</p>
                     </div>
                     <div class="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50">
-                        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                            </svg>
+                        <div class="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="public/assets/icon/haccp.png" alt="HACCP" class="w-12 h-12">
                         </div>
                         <h3 class="font-semibold text-slate-800 mb-2">HACCP</h3>
                         <p class="text-sm text-slate-600">Food safety management</p>
                     </div>
                     <div class="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50">
-                        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
+                        <div class="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="public/assets/icon/halal.svg" alt="Halal Certified" class="w-12 h-12">
                         </div>
                         <h3 class="font-semibold text-slate-800 mb-2">Halal Certified</h3>
                         <p class="text-sm text-slate-600">Islamic dietary compliance</p>
                     </div>
                     <div class="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50">
-                        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
+                        <div class="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="public/assets/icon/bpom.svg" alt="BPOM" class="w-12 h-12">
                         </div>
                         <h3 class="font-semibold text-slate-800 mb-2">BPOM</h3>
                         <p class="text-sm text-slate-600">Government approved</p>
@@ -1076,9 +1087,7 @@
                                 Wedding - 3000+ pax, and already registered in 50+ buildings
                             </p>
                         </div>
-                    </div>
-
-                    
+                    </div>     
 
                     <!-- 2020 -->
                     <div class="timeline-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
@@ -1912,12 +1921,6 @@
 
          // Mining image loading functions
          function loadMiningImageProgressively(container, attempt = 0) {
-             if (miningIsLoading && miningLoadedImages >= maxConcurrentLoads) {
-                 miningImageQueue.push(container);
-                 return;
-             }
-
-             miningIsLoading = true;
              const placeholder = container.querySelector('.image-placeholder');
              const progressElement = placeholder.querySelector('.loading-progress');
              const imageSrc = container.dataset.src;
@@ -1945,17 +1948,6 @@
              let timeoutId;
              let hasLoaded = false;
 
-             function processNextMiningImage() {
-                 setTimeout(() => {
-                     if (miningImageQueue.length > 0) {
-                         const nextContainer = miningImageQueue.shift();
-                         loadMiningImageProgressively(nextContainer);
-                     } else {
-                         miningIsLoading = false;
-                     }
-                 }, isMobile ? 200 : 100); // Longer delay on mobile
-             }
-
              // Handle successful load
               img.addEventListener('load', function() {
                   if (hasLoaded) return;
@@ -1977,8 +1969,6 @@
                   if (isMobile) {
                       setTimeout(checkMemoryUsage, 100);
                   }
-                  
-                  processNextMiningImage();
               });
 
              // Handle load error with retry logic
@@ -2009,7 +1999,6 @@
                   `;
                   placeholder.classList.add('image-error');
                   miningLoadedImages++;
-                  processNextMiningImage();
               });
 
              // Timeout handler to prevent hanging
@@ -2028,7 +2017,6 @@
                  placeholder.innerHTML = '<span style="color: #721c24;">Loading timeout</span>';
                  placeholder.classList.add('image-error');
                  miningLoadedImages++;
-                 processNextMiningImage();
              }, imageTimeout);
 
              // Add image to container and start loading
@@ -2039,19 +2027,15 @@
          // Initialize mining progressive loading when modal opens
          function initializeMiningImageLoading() {
              const containers = document.querySelectorAll('#miningModal .gallery-image-container');
-             miningLoadedImages = 0;
              miningTotalImages = containers.length;
-             miningIsLoading = false;
+             miningLoadedImages = 0;
              
-             // Load first batch of images
-             for (let i = 0; i < Math.min(maxConcurrentLoads, containers.length); i++) {
-                 loadMiningImageProgressively(containers[i]);
-             }
-             
-             // Queue remaining images
-             for (let i = maxConcurrentLoads; i < containers.length; i++) {
-                 miningImageQueue.push(containers[i]);
-             }
+             // Load all images immediately for better user experience
+             containers.forEach((container, index) => {
+                 setTimeout(() => {
+                     loadMiningImageProgressively(container);
+                 }, index * 100); // Stagger loading by 100ms
+             });
          }
 
          // Enhanced image click handler for full-screen view
@@ -2208,14 +2192,14 @@
              async loadCertificates() {
                  // Certificate images from the certificate folder
                  this.certificates = [
-                     { src: 'public/assets/certificate/BPOM.jpeg', alt: 'BPOM Certification', title: 'BPOM' },
-                     { src: 'public/assets/certificate/halal-certificated.jpg', alt: 'Halal Certification', title: 'HALAL' },
-                     { src: 'public/assets/certificate/iso-22000-2018.jpg', alt: 'ISO 22000 Certification', title: 'ISO 22000' },
-                     { src: 'public/assets/certificate/iso-9001-2015.jpg', alt: 'ISO 9001 Certification', title: 'ISO 9001' },
-                     { src: 'public/assets/certificate/hacapp-&-gmp.jpeg', alt: 'HACCP & GMP Certification', title: 'HACCP & GMP' },
-                     { src: 'public/assets/certificate/iso-45001-2018.jpg', alt: 'ISO 45001 Certification', title: 'ISO 45001' },
-                     { src: 'public/assets/certificate/eas-iso-14001-2015.jpg', alt: 'ISO 14001 Certification', title: 'ISO 14001' },
-                     { src: 'public/assets/certificate/P2K3-JAKARTA.jpg', alt: 'P2K3 Jakarta Certification', title: 'P2K3 Jakarta' }
+                     { src: 'public/assets/ucr/certificate/BPOM.jpeg', alt: 'BPOM Certification', title: 'BPOM' },
+                     { src: 'public/assets/ucr/certificate/halal-certificated.jpg', alt: 'Halal Certification', title: 'HALAL' },
+                     { src: 'public/assets/ucr/certificate/iso-22000-2018.jpg', alt: 'ISO 22000 Certification', title: 'ISO 22000' },
+                     { src: 'public/assets/ucr/certificate/iso-9001-2015.jpg', alt: 'ISO 9001 Certification', title: 'ISO 9001' },
+                     { src: 'public/assets/ucr/certificate/hacapp-&-gmp.jpeg', alt: 'HACCP & GMP Certification', title: 'HACCP & GMP' },
+                     { src: 'public/assets/ucr/certificate/iso-45001-2018.jpg', alt: 'ISO 45001 Certification', title: 'ISO 45001' },
+                     { src: 'public/assets/ucr/certificate/eas-iso-14001-2015.jpg', alt: 'ISO 14001 Certification', title: 'ISO 14001' },
+                     { src: 'public/assets/ucr/certificate/P2K3-JAKARTA.jpg', alt: 'P2K3 Jakarta Certification', title: 'P2K3 Jakarta' }
                  ];
              }
 
@@ -2521,14 +2505,6 @@
                         <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
                     </div>
                 </div>
-                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/4.jpg"
-                    data-alt="Private Event 4">
-                    <div class="image-placeholder">
-                        <div class="loading-spinner"></div>
-                        <div class="loading-text">Loading image...</div>
-                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
-                    </div>
-                </div>
                 <div class="gallery-image-container" data-src="public/assets/ucr-private-event/6.jpg"
                     data-alt="Private Event 6">
                     <div class="image-placeholder">
@@ -2547,30 +2523,6 @@
                 </div>
                 <div class="gallery-image-container" data-src="public/assets/ucr-private-event/8.jpg"
                     data-alt="Private Event 8">
-                    <div class="image-placeholder">
-                        <div class="loading-spinner"></div>
-                        <div class="loading-text">Loading image...</div>
-                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
-                    </div>
-                </div>
-                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/9.jpg"
-                    data-alt="Private Event 9">
-                    <div class="image-placeholder">
-                        <div class="loading-spinner"></div>
-                        <div class="loading-text">Loading image...</div>
-                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
-                    </div>
-                </div>
-                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/10.jpg"
-                    data-alt="Private Event 10">
-                    <div class="image-placeholder">
-                        <div class="loading-spinner"></div>
-                        <div class="loading-text">Loading image...</div>
-                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
-                    </div>
-                </div>
-                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/11.jpg"
-                    data-alt="Private Event 11">
                     <div class="image-placeholder">
                         <div class="loading-spinner"></div>
                         <div class="loading-text">Loading image...</div>
@@ -2665,7 +2617,7 @@
                         <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
                     </div>
                 </div>
-                <div class="gallery-image-container" data-src="public/assets/ucr-mining-event/5.jpg" data-alt="Mining Event 5">
+                <div class="gallery-image-container" data-src="public/assets/ucr-mining-event/5.jpeg" data-alt="Mining Event 5">
                     <div class="image-placeholder">
                         <div class="loading-spinner"></div>
                         <div class="loading-text">Loading image...</div>
@@ -2678,6 +2630,13 @@
                         <div class="loading-text">Loading image...</div>
                         <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
                     </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-mining-event/7.jpeg" data-alt="Mining Event 7">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>         
                 </div>
             </div>
          </div>
@@ -2711,6 +2670,13 @@
                         <div class="loading-text">Loading image...</div>
                         <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
                     </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-coorporate-event/10.jpg" data-alt="Corporate Event 3">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>          
                 </div>
             </div>
          </div>
@@ -2775,6 +2741,20 @@
                                   class="lazy-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-0">
                          </div>
                      </div>
+
+                    <!-- Image 5 -->
+                    <div class="group cursor-pointer image-item" onclick="openImageViewer('public/assets/ucr-goverment/9.jpg')"
+                        style="animation-delay: 
+                    0.4s;">
+                        <div class="aspect-square overflow-hidden rounded-lg bg-gray-100 relative">
+                            <div class="image-placeholder absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
+                                <div class="loading-spinner w-8 h-8 border-4 border-gray-300 border-t-palette1-a rounded-full animate-spin">
+                                </div>
+                            </div>
+                            <img data-src="public/assets/ucr-goverment/9.jpg" alt="Government Catering Event 5"
+                                class="lazy-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-0">
+                        </div>
+                    </div>
                  </div>
              </div>
          </div>
@@ -2864,6 +2844,40 @@
                  </svg>
              </button>
              <img id="viewerImage" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl">
+         </div>
+     </div>
+
+     <!-- Certificate Modal -->
+     <div id="certificateModal" class="modal fixed inset-0 bg-black bg-opacity-90 z-50 items-center justify-center p-4 hidden" style="backdrop-filter: blur(8px);">
+         <div class="bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden shadow-2xl" style="animation: zoomIn 0.3s ease-out;">
+             <!-- Modal Header -->
+             <div class="flex items-center justify-between p-6 border-b border-gray-200">
+                 <div>
+                     <h2 class="text-2xl font-bold text-gray-800 font-playfair">Our Certificates</h2>
+                     <p class="text-gray-600 mt-1">Quality certifications and standards compliance</p>
+                 </div>
+                 <button onclick="closeCertificateModal()" class="w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:text-gray-800 transition-all duration-200">
+                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                     </svg>
+                 </button>
+             </div>
+             
+             <!-- Modal Content -->
+             <div class="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+                 <!-- Loading State -->
+                 <div id="certificateLoading" class="flex items-center justify-center py-12">
+                     <div class="flex items-center space-x-3">
+                         <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-palette1-a"></div>
+                         <span class="text-gray-600">Loading certificates...</span>
+                     </div>
+                 </div>
+                 
+                 <!-- Certificate Gallery -->
+                 <div id="certificateGallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+                     <!-- Certificate images will be loaded here -->
+                 </div>
+             </div>
          </div>
      </div>
 
@@ -3465,6 +3479,438 @@
              `;
              document.head.appendChild(style);
          }
-     </script>
+
+         // Certificate Modal Functions
+         function openRecipesModal() {
+             openCertificateModal();
+         }
+
+         function openCertificateModal() {
+             const modal = document.getElementById('certificateModal');
+             modal.classList.remove('hidden');
+             modal.classList.add('flex');
+             document.body.style.overflow = 'hidden';
+             
+             // Load certificate images
+             loadCertificateImages();
+         }
+
+         function closeCertificateModal() {
+             const modal = document.getElementById('certificateModal');
+             modal.classList.add('hidden');
+             modal.classList.remove('flex');
+             document.body.style.overflow = 'auto';
+         }
+
+         function loadCertificateImages() {
+             const gallery = document.getElementById('certificateGallery');
+             const loading = document.getElementById('certificateLoading');
+             
+             // Show loading state
+             loading.classList.remove('hidden');
+             gallery.classList.add('hidden');
+             
+             // Certificate images list
+             const certificateImages = [
+                 'BPOM.jpeg',
+                 'HALAL-KAN.jpg',
+                 'P2K3-JAKARTA.jpg',
+                 'Surat Keterangan SMK3 - UCR.pdf.jpg',
+                 'eas-iso-14001-2015.jpg',
+                 'hacapp-&-gmp.jpeg',
+                 'halal-certificated.jpg',
+                 'halal.jpeg',
+                 'ias-14001-2015.jpeg',
+                 'ias-14001-2018.jpeg',
+                 'iso-22000-2018.jpg',
+                 'iso-22000.jpeg',
+                 'iso-45001-2018.jpg',
+                 'iso-45001.jpeg',
+                 'iso-9001-2015.jpg',
+                 'iso-9001.jpeg',
+                 'iso.jpeg',
+                 'iso22000.jpeg',
+                 'nkv.jpeg'
+             ];
+             
+             // Clear existing content
+             gallery.innerHTML = '';
+             
+             // Load images with staggered delay
+             certificateImages.forEach((imageName, index) => {
+                 setTimeout(() => {
+                     const imageContainer = document.createElement('div');
+                     imageContainer.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer';
+                     
+                     const img = document.createElement('img');
+                     img.src = `./public/assets/ucr/certificate/${imageName}`;
+                     img.alt = `Certificate ${index + 1}`;
+                     img.className = 'w-full h-48 object-cover';
+                     img.loading = 'lazy';
+                     
+                     // Add click handler to open in image viewer
+                     img.onclick = () => openImageViewer(img.src, img.alt);
+                     
+                     const titleContainer = document.createElement('div');
+                     titleContainer.className = 'p-4';
+                     
+                     const title = document.createElement('h3');
+                     title.className = 'text-sm font-semibold text-gray-800 truncate';
+                     title.textContent = imageName.replace(/\.(jpg|jpeg|png)$/i, '').replace(/[-_]/g, ' ');
+                     
+                     titleContainer.appendChild(title);
+                     imageContainer.appendChild(img);
+                     imageContainer.appendChild(titleContainer);
+                     gallery.appendChild(imageContainer);
+                     
+                     // Animate image appearance
+                     setTimeout(() => {
+                         imageContainer.style.opacity = '1';
+                         imageContainer.style.transform = 'translateY(0)';
+                     }, 50);
+                     
+                     // Hide loading and show gallery after first few images
+                     if (index === 2) {
+                         loading.classList.add('hidden');
+                         gallery.classList.remove('hidden');
+                     }
+                 }, index * 100);
+             });
+           }
+
+           // Our Recipes Modal Functions
+           function openOurRecipesModal() {
+               const modal = document.getElementById('ourRecipesModal');
+               modal.classList.remove('hidden');
+               modal.classList.add('flex');
+               document.body.style.overflow = 'hidden';
+               
+               // Load recipe images
+               loadOurRecipesImages();
+           }
+
+           function closeOurRecipesModal() {
+               const modal = document.getElementById('ourRecipesModal');
+               modal.classList.add('hidden');
+               modal.classList.remove('flex');
+               document.body.style.overflow = 'auto';
+           }
+
+           function loadOurRecipesImages() {
+               const gallery = document.getElementById('ourRecipesGallery');
+               const loading = document.getElementById('ourRecipesLoading');
+               
+               // Show loading state
+               loading.classList.remove('hidden');
+               gallery.classList.add('hidden');
+               
+               // Recipe images list from authentic-recipes folder
+               const recipeImages = [
+                   { name: 'Lidah Cabai Hijau.png', title: 'Lidah Cabai Hijau' },
+                   { name: 'Nasi Nusantara.jpg', title: 'Nasi Nusantara' },
+                   { name: 'Salmon.jpg', title: 'Salmon' },
+                   { name: 'Selada Ayam Bali.jpg', title: 'Selada Ayam Bali' },
+                   { name: 'Tekwan.jpg', title: 'Tekwan' }
+               ];
+               
+               // Clear existing content
+               gallery.innerHTML = '';
+               
+               // Load images with staggered delay
+               recipeImages.forEach((recipe, index) => {
+                   setTimeout(() => {
+                       const imageContainer = document.createElement('div');
+                       imageContainer.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer';
+                       
+                       const img = document.createElement('img');
+                       img.src = `./public/assets/ucr/authentic-recipes/${recipe.name}`;
+                       img.alt = recipe.title;
+                       img.className = 'w-full h-48 object-cover';
+                       img.loading = 'lazy';
+                       
+                       // Add click handler to open in image viewer
+                       img.onclick = () => openImageViewer(img.src, img.alt);
+                       
+                       const titleContainer = document.createElement('div');
+                       titleContainer.className = 'p-4';
+                       
+                       const title = document.createElement('h3');
+                       title.className = 'text-sm font-semibold text-gray-800 truncate';
+                       title.textContent = recipe.title;
+                       
+                       const description = document.createElement('p');
+                       description.className = 'text-xs text-gray-600 mt-1';
+                       description.textContent = 'Traditional Indonesian Recipe';
+                       
+                       titleContainer.appendChild(title);
+                       titleContainer.appendChild(description);
+                       imageContainer.appendChild(img);
+                       imageContainer.appendChild(titleContainer);
+                       gallery.appendChild(imageContainer);
+                       
+                       // Animate image appearance
+                       setTimeout(() => {
+                           imageContainer.style.opacity = '1';
+                           imageContainer.style.transform = 'translateY(0)';
+                       }, 50);
+                       
+                       // Hide loading and show gallery after first image
+                       if (index === 0) {
+                           loading.classList.add('hidden');
+                           gallery.classList.remove('hidden');
+                       }
+                   }, index * 100);
+               });
+           }
+
+           // Our Team Modal Functions
+           function openOurTeamModal() {
+               const modal = document.getElementById('ourTeamModal');
+               modal.classList.remove('hidden');
+               modal.classList.add('flex');
+               document.body.style.overflow = 'hidden';
+               
+               // Load team images
+               loadOurTeamImages();
+           }
+
+           function closeOurTeamModal() {
+               const modal = document.getElementById('ourTeamModal');
+               modal.classList.add('hidden');
+               modal.classList.remove('flex');
+               document.body.style.overflow = 'auto';
+           }
+
+           function loadOurTeamImages() {
+               const gallery = document.getElementById('ourTeamGallery');
+               const loading = document.getElementById('ourTeamLoading');
+               
+               // Show loading state
+               loading.classList.remove('hidden');
+               gallery.classList.add('hidden');
+               
+               // Team images list (correct expert team images)
+               const teamImages = [
+                   '1.jpg',
+                   '2.jpg'
+               ];
+               
+               // Clear existing content
+               gallery.innerHTML = '';
+               
+               // Load images with staggered delay
+               teamImages.forEach((imageName, index) => {
+                   setTimeout(() => {
+                       const imageContainer = document.createElement('div');
+                       imageContainer.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer';
+                       
+                       const img = document.createElement('img');
+                       img.src = `./public/assets/ucr/expert-team/${imageName}`;
+                       img.alt = `Team Member ${index + 1}`;
+                       img.className = 'w-full h-48 object-cover';
+                       img.loading = 'lazy';
+                       
+                       // Add click handler to open in image viewer
+                       img.onclick = () => openImageViewer(img.src, img.alt);
+                       
+                       const titleContainer = document.createElement('div');
+                       titleContainer.className = 'p-4';
+                       
+                       const title = document.createElement('h3');
+                       title.className = 'text-sm font-semibold text-gray-800 truncate';
+                       title.textContent = `Team Member ${index + 1}`;
+                       
+                       titleContainer.appendChild(title);
+                       imageContainer.appendChild(img);
+                       imageContainer.appendChild(titleContainer);
+                       gallery.appendChild(imageContainer);
+                       
+                       // Animate image appearance
+                       setTimeout(() => {
+                           imageContainer.style.opacity = '1';
+                           imageContainer.style.transform = 'translateY(0)';
+                       }, 50);
+                       
+                       // Hide loading and show gallery after first image
+                       if (index === 0) {
+                           loading.classList.add('hidden');
+                           gallery.classList.remove('hidden');
+                       }
+                   }, index * 100);
+               });
+           }
+
+           // Our Certificate Modal Functions
+          function openOurCertificateModal() {
+              const modal = document.getElementById('ourCertificateModal');
+              modal.classList.remove('hidden');
+              modal.classList.add('flex');
+              document.body.style.overflow = 'hidden';
+              
+              // Load certificate images
+              loadOurCertificateImages();
+          }
+
+          function closeOurCertificateModal() {
+              const modal = document.getElementById('ourCertificateModal');
+              modal.classList.add('hidden');
+              modal.classList.remove('flex');
+              document.body.style.overflow = 'auto';
+          }
+
+          function loadOurCertificateImages() {
+              const gallery = document.getElementById('ourCertificateGallery');
+              const loading = document.getElementById('ourCertificateLoading');
+              
+              // Show loading state
+              loading.classList.remove('hidden');
+              gallery.classList.add('hidden');
+              
+              // Certificate images list
+              const certificateImages = [
+                  'BPOM.jpeg',
+                  'HALAL-KAN.jpg',
+                  'P2K3-JAKARTA.jpg',
+                  'Surat Keterangan SMK3 - UCR.pdf.jpg',
+                  'eas-iso-14001-2015.jpg',
+                  'hacapp-&-gmp.jpeg',
+                  'halal-certificated.jpg',
+                  'halal.jpeg',
+                  'ias-14001-2015.jpeg',
+                  'ias-14001-2018.jpeg',
+                  'iso-22000-2018.jpg',
+                  'iso-22000.jpeg',
+                  'iso-45001-2018.jpg',
+                  'iso-45001.jpeg',
+                  'iso-9001-2015.jpg',
+                  'iso-9001.jpeg',
+                  'iso.jpeg',
+                  'iso22000.jpeg',
+                  'nkv.jpeg'
+              ];
+              
+              // Clear existing content
+              gallery.innerHTML = '';
+              
+              // Load images with staggered delay
+              certificateImages.forEach((imageName, index) => {
+                  setTimeout(() => {
+                      const imageContainer = document.createElement('div');
+                      imageContainer.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer';
+                      
+                      const img = document.createElement('img');
+                      img.src = `./public/assets/ucr/certificate/${imageName}`;
+                      img.alt = `Certificate ${index + 1}`;
+                      img.className = 'w-full h-48 object-cover';
+                      img.loading = 'lazy';
+                      
+                      // Add click handler to open in image viewer
+                      img.onclick = () => openImageViewer(img.src, img.alt);
+                      
+                      const titleContainer = document.createElement('div');
+                      titleContainer.className = 'p-4';
+                      
+                      const title = document.createElement('h3');
+                      title.className = 'text-sm font-semibold text-gray-800 truncate';
+                      title.textContent = imageName.replace(/\.(jpg|jpeg|png)$/i, '').replace(/[-_]/g, ' ');
+                      
+                      titleContainer.appendChild(title);
+                      imageContainer.appendChild(img);
+                      imageContainer.appendChild(titleContainer);
+                      gallery.appendChild(imageContainer);
+                      
+                      // Animate image appearance
+                      setTimeout(() => {
+                          imageContainer.style.opacity = '1';
+                          imageContainer.style.transform = 'translateY(0)';
+                      }, 50);
+                      
+                      // Hide loading and show gallery after first few images
+                      if (index === 2) {
+                          loading.classList.add('hidden');
+                          gallery.classList.remove('hidden');
+                      }
+                  }, index * 100);
+              });
+          }
+      </script>
+
+     <!-- Our Team Modal -->
+      <div id="ourTeamModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+          <div class="bg-white rounded-lg max-w-6xl w-full max-h-[90vh] overflow-hidden">
+              <!-- Modal Header -->
+              <div class="flex justify-between items-center p-6 border-b">
+                  <h2 class="text-2xl font-bold text-gray-800 font-playfair">Our Team</h2>
+                  <button onclick="closeOurTeamModal()" class="text-gray-500 hover:text-gray-700 text-2xl font-bold">
+                      &times;
+                  </button>
+              </div>
+              
+              <!-- Modal Content -->
+              <div class="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+                  <!-- Loading State -->
+                  <div id="ourTeamLoading" class="text-center py-12">
+                      <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-palette1-a"></div>
+                      <p class="mt-4 text-gray-600">Loading team photos...</p>
+                  </div>
+                  
+                  <!-- Team Gallery -->
+                  <div id="ourTeamGallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                      <!-- Team images will be loaded here dynamically -->
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Our Recipes Modal -->
+     <div id="ourRecipesModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+         <div class="bg-white rounded-lg max-w-6xl w-full max-h-[90vh] overflow-hidden">
+             <div class="flex justify-between items-center p-6 border-b">
+                 <h2 class="text-2xl font-bold text-gray-800">Our Authentic Recipes</h2>
+                 <button onclick="closeOurRecipesModal()" class="text-gray-500 hover:text-gray-700 text-2xl font-bold">
+                     &times;
+                 </button>
+             </div>
+             <div class="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+                 <!-- Loading State -->
+                 <div id="ourRecipesLoading" class="flex justify-center items-center py-12">
+                     <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-palette1-a"></div>
+                     <span class="ml-3 text-gray-600">Loading recipes...</span>
+                 </div>
+                 
+                 <!-- Recipes Gallery -->
+                 <div id="ourRecipesGallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 hidden">
+                     <!-- Recipe images will be loaded here dynamically -->
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <!-- Our Certificate Modal -->
+     <div id="ourCertificateModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+         <div class="bg-white rounded-lg max-w-6xl w-full max-h-[90vh] overflow-hidden">
+             <!-- Modal Header -->
+             <div class="flex justify-between items-center p-6 border-b">
+                 <h2 class="text-2xl font-bold text-gray-800 font-playfair">Our Certificates</h2>
+                 <button onclick="closeOurCertificateModal()" class="text-gray-500 hover:text-gray-700 text-2xl font-bold">
+                     &times;
+                 </button>
+             </div>
+             
+             <!-- Modal Content -->
+             <div class="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+                 <!-- Loading State -->
+                 <div id="ourCertificateLoading" class="text-center py-12">
+                     <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-palette1-a"></div>
+                     <p class="mt-4 text-gray-600">Loading certificates...</p>
+                 </div>
+                 
+                 <!-- Certificate Gallery -->
+                 <div id="ourCertificateGallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                     <!-- Certificate images will be loaded here dynamically -->
+                 </div>
+             </div>
+         </div>
+     </div>
  </body>
  </html>
