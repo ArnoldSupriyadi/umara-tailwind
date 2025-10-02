@@ -36,7 +36,13 @@ module.exports = {
           b: '#FFF9F9',
           c: '#D3902A',
           d: '#1F4F35',
-         }
+         },
+         umk: {
+          a: '#2F2F2F',
+          b: '#F5F4F4',
+          c: '#D3902A',
+          d: '#1F4F35',
+         },
          
        },
       fontFamily: {

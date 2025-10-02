@@ -736,6 +736,12 @@
                             </li>
                         </ul>
                         <div class="text-palette1-c font-semibold"></div>
+                        <button class="view-menu-btn bg-palette1-a text-white px-6 py-3 rounded-lg hover:bg-palette1-b transition-colors duration-300 flex items-center space-x-2 font-semibold" onclick="openWeddingGallery()">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path>
+                            </svg>
+                            <span>View Wedding Gallery</span>             
+                        </button>
                     </div>
 
                     <!-- Service 2 -->
@@ -768,6 +774,13 @@
                             </li>
                         </ul>
                         <div class="text-palette1-c font-semibold"></div>
+                        <button class="view-menu-btn bg-palette1-a text-white px-6 py-3 rounded-lg hover:bg-palette1-b transition-colors duration-300 flex
+                        items-center space-x-2 font-semibold" onclick="openPrivateDiningGallery()">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path>
+                            </svg>
+                            <span>View Private Dining Gallery</span>
+                        </button>
                     </div>
 
                     <!-- Service 3 -->
@@ -804,7 +817,7 @@
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path>
                             </svg>
-                            View Menu Gallery
+                            View Meal Box Gallery
                         </button>
                     </div>
 
@@ -876,6 +889,12 @@
                             </li>
                         </ul>
                         <div class="text-palette1-c font-semibold"></div>
+                        <button class="view-menu-btn" onclick="openGovernmentGallery()">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path>
+                            </svg>
+                            View Government Gallery               
+                        </button>
                     </div>
 
                     <!-- Service 6 -->
@@ -2478,6 +2497,138 @@
          </div>
      </div>
 
+     <!-- Private Event Modal -->
+    <div id="privateEventModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Private Event Gallery</h2>
+                <button class="close-modal" onclick="closePrivateEventModal()">&times;</button>
+            </div>
+            <div class="image-gallery">
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/1.jpg"
+                    data-alt="Private Event 1">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/2.jpg"
+                    data-alt="Private Event 2">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/4.jpg"
+                    data-alt="Private Event 4">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/6.jpg"
+                    data-alt="Private Event 6">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/7.jpg"
+                    data-alt="Private Event 7">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/8.jpg"
+                    data-alt="Private Event 8">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/9.jpg"
+                    data-alt="Private Event 9">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/10.jpg"
+                    data-alt="Private Event 10">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/11.jpg"
+                    data-alt="Private Event 11">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/12.jpg"
+                    data-alt="Private Event 12">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/13.jpg"
+                    data-alt="Private Event 13">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/14.jpg"
+                    data-alt="Private Event 14">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/15.jpg"
+                    data-alt="Private Event 15">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/16.jpg"
+                    data-alt="Private Event 16">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                <div class="gallery-image-container" data-src="public/assets/ucr-private-event/17.jpg"
+                    data-alt="Private Event 17">
+                    <div class="image-placeholder">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Loading image...</div>
+                        <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
      <!-- Mining Event Modal -->
      <div id="miningModal" class="modal">
          <div class="modal-content">
@@ -2564,5 +2715,756 @@
             </div>
          </div>
      </div>
+
+     <!-- Government Gallery Modal -->
+     <div id="governmentGalleryModal" class="modal fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4" style="backdrop-filter: blur(5px);">
+         <div class="modal-content bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden" style="animation: zoomIn 0.3s ease-out;">
+             <!-- Modal Header -->
+             <div class="flex justify-between items-center p-6 border-b border-gray-200">
+                 <h2 class="text-2xl font-bold text-palette1-a">Government Catering Gallery</h2>
+                 <button onclick="closeGovernmentGallery()" class="text-gray-500 hover:text-gray-700 transition-colors duration-200">
+                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                     </svg>
+                 </button>
+             </div>
+             
+             <!-- Modal Body -->
+             <div class="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="governmentImageGrid">
+                     <!-- Image 1 -->
+                     <div class="group cursor-pointer image-item" onclick="openImageViewer('public/assets/ucr-goverment/DSC00160.jpg')" style="animation-delay: 0.1s;">
+                         <div class="aspect-square overflow-hidden rounded-lg bg-gray-100 relative">
+                             <div class="image-placeholder absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
+                                 <div class="loading-spinner w-8 h-8 border-4 border-gray-300 border-t-palette1-a rounded-full animate-spin"></div>
+                             </div>
+                             <img data-src="public/assets/ucr-goverment/DSC00160.jpg" alt="Government Catering Event 1" 
+                                  class="lazy-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-0">
+                         </div>
+                     </div>
+                     
+                     <!-- Image 2 -->
+                     <div class="group cursor-pointer image-item" onclick="openImageViewer('public/assets/ucr-goverment/DSC00182.jpg')" style="animation-delay: 0.2s;">
+                         <div class="aspect-square overflow-hidden rounded-lg bg-gray-100 relative">
+                             <div class="image-placeholder absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
+                                 <div class="loading-spinner w-8 h-8 border-4 border-gray-300 border-t-palette1-a rounded-full animate-spin"></div>
+                             </div>
+                             <img data-src="public/assets/ucr-goverment/DSC00182.jpg" alt="Government Catering Event 2" 
+                                  class="lazy-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-0">
+                         </div>
+                     </div>
+                     
+                     <!-- Image 3 -->
+                     <div class="group cursor-pointer image-item" onclick="openImageViewer('public/assets/ucr-goverment/DSC00197.jpg')" style="animation-delay: 0.3s;">
+                         <div class="aspect-square overflow-hidden rounded-lg bg-gray-100 relative">
+                             <div class="image-placeholder absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
+                                 <div class="loading-spinner w-8 h-8 border-4 border-gray-300 border-t-palette1-a rounded-full animate-spin"></div>
+                             </div>
+                             <img data-src="public/assets/ucr-goverment/DSC00197.jpg" alt="Government Catering Event 3" 
+                                  class="lazy-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-0">
+                         </div>
+                     </div>
+                     
+                     <!-- Image 4 -->
+                     <div class="group cursor-pointer image-item" onclick="openImageViewer('public/assets/ucr-goverment/DSC00218.jpg')" style="animation-delay: 0.4s;">
+                         <div class="aspect-square overflow-hidden rounded-lg bg-gray-100 relative">
+                             <div class="image-placeholder absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
+                                 <div class="loading-spinner w-8 h-8 border-4 border-gray-300 border-t-palette1-a rounded-full animate-spin"></div>
+                             </div>
+                             <img data-src="public/assets/ucr-goverment/DSC00218.jpg" alt="Government Catering Event 4" 
+                                  class="lazy-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-0">
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <!-- Wedding Gallery Modal -->
+     <div id="weddingGalleryModal" class="modal fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4" style="backdrop-filter: blur(5px);">
+         <div class="modal-content bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden" style="animation: zoomIn 0.3s ease-out;">
+             <!-- Modal Header -->
+             <div class="flex justify-between items-center p-6 border-b border-gray-200">
+                 <h2 class="text-2xl font-bold text-palette1-a">Wedding Catering Gallery</h2>
+                 <button onclick="closeWeddingGallery()" class="text-gray-500 hover:text-gray-700 transition-colors duration-200">
+                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                     </svg>
+                 </button>
+             </div>
+             
+             <!-- Modal Body -->
+             <div class="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="weddingImageGrid">
+                     <!-- Image 1 - DSC00787.jpg -->
+                     <div class="group cursor-pointer image-item" onclick="openImageViewer('public/assets/ucr-wedding-catering/DSC00787.jpg')" style="animation-delay: 0.1s;">
+                         <div class="overflow-hidden rounded-lg bg-gray-100 relative" style="aspect-ratio: 4/3;">
+                             <div class="image-placeholder absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
+                                 <div class="loading-spinner w-8 h-8 border-4 border-gray-300 border-t-palette1-a rounded-full animate-spin"></div>
+                             </div>
+                             <img data-src="public/assets/ucr-wedding-catering/DSC00787.jpg" alt="Wedding Catering Event 1" 
+                                  class="lazy-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-0">
+                         </div>
+                     </div>
+                     
+                     <!-- Image 2 - DSC_0575.jpg -->
+                     <div class="group cursor-pointer image-item" onclick="openImageViewer('public/assets/ucr-wedding-catering/DSC_0575.jpg')" style="animation-delay: 0.2s;">
+                         <div class="overflow-hidden rounded-lg bg-gray-100 relative" style="aspect-ratio: 4/3;">
+                             <div class="image-placeholder absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
+                                 <div class="loading-spinner w-8 h-8 border-4 border-gray-300 border-t-palette1-a rounded-full animate-spin"></div>
+                             </div>
+                             <img data-src="public/assets/ucr-wedding-catering/DSC_0575.jpg" alt="Wedding Catering Event 2" 
+                                  class="lazy-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-0">
+                         </div>
+                     </div>
+                     
+                     <!-- Image 3 - DSC_0576.jpg -->
+                     <div class="group cursor-pointer image-item" onclick="openImageViewer('public/assets/ucr-wedding-catering/DSC_0576.jpg')" style="animation-delay: 0.3s;">
+                         <div class="overflow-hidden rounded-lg bg-gray-100 relative" style="aspect-ratio: 4/3;">
+                             <div class="image-placeholder absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
+                                 <div class="loading-spinner w-8 h-8 border-4 border-gray-300 border-t-palette1-a rounded-full animate-spin"></div>
+                             </div>
+                             <img data-src="public/assets/ucr-wedding-catering/DSC_0576.jpg" alt="Wedding Catering Event 3" 
+                                  class="lazy-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-0">
+                         </div>
+                     </div>
+                     
+                     <!-- Image 4 - DSC_0596.jpg -->
+                     <div class="group cursor-pointer image-item" onclick="openImageViewer('public/assets/ucr-wedding-catering/DSC_0596.jpg')" style="animation-delay: 0.4s;">
+                         <div class="overflow-hidden rounded-lg bg-gray-100 relative" style="aspect-ratio: 4/3;">
+                             <div class="image-placeholder absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
+                                 <div class="loading-spinner w-8 h-8 border-4 border-gray-300 border-t-palette1-a rounded-full animate-spin"></div>
+                             </div>
+                             <img data-src="public/assets/ucr-wedding-catering/DSC_0596.jpg" alt="Wedding Catering Event 4" 
+                                  class="lazy-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-0">
+                         </div>
+                     </div>
+                     
+                     <!-- Image 5 - DSC_0645.jpg -->
+                     <div class="group cursor-pointer image-item" onclick="openImageViewer('public/assets/ucr-wedding-catering/DSC_0645.jpg')" style="animation-delay: 0.5s;">
+                         <div class="overflow-hidden rounded-lg bg-gray-100 relative" style="aspect-ratio: 4/3;">
+                             <div class="image-placeholder absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
+                                 <div class="loading-spinner w-8 h-8 border-4 border-gray-300 border-t-palette1-a rounded-full animate-spin"></div>
+                             </div>
+                             <img data-src="public/assets/ucr-wedding-catering/DSC_0645.jpg" alt="Wedding Catering Event 5" 
+                                  class="lazy-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-0">
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <!-- Image Viewer Modal -->
+     <div id="imageViewerModal" class="modal fixed inset-0 bg-black bg-opacity-90 z-60 flex items-center justify-center p-4" style="backdrop-filter: blur(8px);">
+         <div class="relative max-w-full max-h-full" style="animation: zoomIn 0.3s ease-out;">
+             <button onclick="closeImageViewer()" class="absolute -top-4 -right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-800 hover:bg-white transition-all duration-200 shadow-lg z-10">
+                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                 </svg>
+             </button>
+             <img id="viewerImage" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl">
+         </div>
+     </div>
+
+     <script>
+         // Private Event Modal Variables
+         let privateEventLoadedImages = 0;
+         let privateEventTotalImages = 0;
+         let privateEventImageQueue = [];
+         let privateEventIsLoading = false;
+
+         function openPrivateEventModal() {
+             const modal = document.getElementById('privateEventModal');
+             modal.classList.add('active');
+             document.body.style.overflow = 'hidden'; // Prevent background scrolling
+             
+             // Initialize image loading with a small delay
+             setTimeout(() => {
+                 initializePrivateEventImageLoading();
+             }, 100); // Small delay to ensure modal is fully rendered
+         }
+
+         // Alias function for private dining gallery button
+         function openPrivateDiningGallery() {
+             openPrivateEventModal();
+         }
+
+         function closePrivateEventModal() {
+             const modal = document.getElementById('privateEventModal');
+             modal.classList.remove('active');
+             document.body.style.overflow = 'auto'; // Restore scrolling
+             
+             // Clean up loaded images to free memory (mobile optimization)
+             const loadedImageElements = modal.querySelectorAll('.gallery-image');
+             loadedImageElements.forEach(img => {
+                 img.src = ''; // Clear image source to free memory
+                 img.remove(); // Remove from DOM
+             });
+             
+             // Reset placeholders
+             const placeholders = modal.querySelectorAll('.image-placeholder');
+             placeholders.forEach(placeholder => {
+                 placeholder.classList.remove('hidden', 'image-error');
+                 placeholder.innerHTML = `
+                     <div class="loading-spinner"></div>
+                     <div class="loading-text">Loading image...</div>
+                     <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+                 `;
+             });
+             
+             // Reset private event loading state
+             privateEventLoadedImages = 0;
+             privateEventTotalImages = 0;
+             privateEventImageQueue.length = 0;
+             privateEventIsLoading = false;
+         }
+
+         // Private Event image loading functions
+         function initializePrivateEventImageLoading() {
+             const galleryContainers = document.querySelectorAll('#privateEventModal .gallery-image-container');
+             privateEventTotalImages = galleryContainers.length;
+             privateEventLoadedImages = 0;
+             
+             // Load all images immediately for better user experience
+             galleryContainers.forEach((container, index) => {
+                 setTimeout(() => {
+                     loadPrivateEventImageProgressively(container);
+                 }, index * 100); // Stagger loading by 100ms
+             });
+         }
+
+         function loadPrivateEventImageProgressively(container) {
+             const placeholder = container.querySelector('.image-placeholder');
+             const imageSrc = container.getAttribute('data-src');
+             const imageAlt = container.getAttribute('data-alt');
+             
+             // Create image element
+             const img = document.createElement('img');
+             img.className = 'gallery-image w-full h-full object-cover cursor-pointer transition-all duration-300 hover:scale-105';
+             img.alt = imageAlt;
+             img.style.opacity = '0';
+             
+             let hasLoaded = false;
+             
+             // Set timeout for slow connections
+             const timeoutId = setTimeout(() => {
+                 if (!hasLoaded) {
+                     placeholder.classList.add('image-error');
+                     placeholder.innerHTML = `
+                         <div class="text-red-500 text-center">
+                             <div class="text-2xl mb-2">⚠️</div>
+                             <div class="text-sm">Failed to load image</div>
+                             <button onclick="retryPrivateEventImage(this)" class="mt-2 px-3 py-1 bg-red-500 text-white rounded text-xs hover:bg-red-600">Retry</button>
+                         </div>
+                     `;
+                 }
+             }, isMobile ? 15000 : 10000);
+
+             // Handle successful load
+              img.addEventListener('load', function() {
+                  if (hasLoaded) return;
+                  hasLoaded = true;
+                  clearTimeout(timeoutId);
+                  
+                  this.classList.add('loaded');
+                  placeholder.classList.add('hidden');
+                  container.appendChild(this);
+                  
+                  // Fade in effect
+                  setTimeout(() => {
+                      this.style.opacity = '1';
+                  }, 50);
+                  
+                  privateEventLoadedImages++;
+                  
+                  // Check memory usage after loading image
+                  if (isMobile) {
+                      setTimeout(checkMemoryUsage, 100);
+                  }
+              });
+
+             // Handle load error with retry logic
+              img.addEventListener('error', function() {
+                  if (hasLoaded) return;
+                  hasLoaded = true;
+                  clearTimeout(timeoutId);
+                  
+                  placeholder.classList.add('image-error');
+                  placeholder.innerHTML = `
+                      <div class="text-red-500 text-center">
+                          <div class="text-2xl mb-2">⚠️</div>
+                          <div class="text-sm">Failed to load image</div>
+                          <button onclick="retryPrivateEventImage(this)" class="mt-2 px-3 py-1 bg-red-500 text-white rounded text-xs hover:bg-red-600">Retry</button>
+                      </div>
+                  `;
+              });
+
+             // Add click handler for image viewer
+             img.addEventListener('click', function() {
+                 openImageViewer(this.src, this.alt);
+             });
+             
+             // Start loading
+             img.src = imageSrc;
+         }
+
+         function retryPrivateEventImage(button) {
+             const container = button.closest('.gallery-image-container');
+             const placeholder = container.querySelector('.image-placeholder');
+             
+             // Reset placeholder
+             placeholder.classList.remove('image-error');
+             placeholder.innerHTML = `
+                 <div class="loading-spinner"></div>
+                 <div class="loading-text">Loading image...</div>
+                 <div class="loading-progress" style="font-size: 0.7rem; opacity: 0.7; margin-top: 5px;"></div>
+             `;
+             
+             // Retry loading
+             setTimeout(() => {
+                 loadPrivateEventImageProgressively(container);
+             }, 500);
+         }
+
+         // Government Gallery Modal Variables
+         let governmentModalOpen = false;
+         let governmentLazyImages = [];
+         let governmentImageObserver = null;
+
+         function openGovernmentGallery() {
+             const modal = document.getElementById('governmentGalleryModal');
+             const modalContent = modal.querySelector('.modal-content');
+             
+             // Add smooth fade-in animation
+             modal.style.animation = 'fadeIn 0.3s ease-out';
+             modalContent.style.animation = 'zoomIn 0.3s ease-out';
+             
+             modal.classList.remove('hidden');
+             modal.classList.add('active');
+             document.body.style.overflow = 'hidden';
+             governmentModalOpen = true;
+             
+             // Initialize lazy loading after modal is shown
+             setTimeout(() => {
+                 initializeGovernmentLazyLoading();
+                 animateImageItems();
+             }, 100);
+         }
+
+         function closeGovernmentGallery() {
+             const modal = document.getElementById('governmentGalleryModal');
+             const modalContent = modal.querySelector('.modal-content');
+             
+             // Add smooth fade-out animation
+             modal.style.animation = 'fadeOut 0.3s ease-out';
+             modalContent.style.animation = 'zoomOut 0.3s ease-out';
+             
+             setTimeout(() => {
+                 modal.classList.add('hidden');
+                 modal.classList.remove('active');
+                 document.body.style.overflow = 'auto';
+                 governmentModalOpen = false;
+                 
+                 // Clean up lazy loading observer
+                 if (governmentImageObserver) {
+                     governmentImageObserver.disconnect();
+                 }
+                 
+                 // Reset images for next time
+                 resetGovernmentImages();
+             }, 300);
+         }
+
+         function openImageViewer(imageSrc) {
+             const modal = document.getElementById('imageViewerModal');
+             const modalContent = modal.querySelector('div');
+             const viewerImage = document.getElementById('viewerImage');
+             
+             // Add smooth animations
+             modal.style.animation = 'fadeIn 0.3s ease-out';
+             modalContent.style.animation = 'zoomIn 0.3s ease-out';
+             
+             viewerImage.src = imageSrc;
+             modal.classList.remove('hidden');
+         }
+
+         function closeImageViewer() {
+             const modal = document.getElementById('imageViewerModal');
+             const modalContent = modal.querySelector('div');
+             
+             // Add smooth fade-out animation
+             modal.style.animation = 'fadeOut 0.3s ease-out';
+             modalContent.style.animation = 'zoomOut 0.3s ease-out';
+             
+             setTimeout(() => {
+                 modal.classList.add('hidden');
+             }, 300);
+         }
+
+         // Initialize lazy loading for government gallery images
+         function initializeGovernmentLazyLoading() {
+             governmentLazyImages = document.querySelectorAll('#governmentImageGrid .lazy-image');
+             
+             // Create intersection observer for lazy loading
+             if ('IntersectionObserver' in window) {
+                 governmentImageObserver = new IntersectionObserver((entries, observer) => {
+                     entries.forEach(entry => {
+                         if (entry.isIntersecting) {
+                             const img = entry.target;
+                             const placeholder = img.parentElement.querySelector('.image-placeholder');
+                             
+                             // Load the image
+                             loadGovernmentImage(img, placeholder);
+                             observer.unobserve(img);
+                         }
+                     });
+                 }, {
+                     rootMargin: '50px 0px',
+                     threshold: 0.1
+                 });
+
+                 // Observe all lazy images
+                 governmentLazyImages.forEach(img => {
+                     governmentImageObserver.observe(img);
+                 });
+             } else {
+                 // Fallback for browsers without IntersectionObserver
+                 governmentLazyImages.forEach(img => {
+                     const placeholder = img.parentElement.querySelector('.image-placeholder');
+                     loadGovernmentImage(img, placeholder);
+                 });
+             }
+         }
+
+         // Load individual government image with smooth transition
+         function loadGovernmentImage(img, placeholder) {
+             const imageSrc = img.getAttribute('data-src');
+             
+             // Create a new image to preload
+             const newImg = new Image();
+             
+             newImg.onload = function() {
+                 // Image loaded successfully
+                 img.src = imageSrc;
+                 img.style.transition = 'opacity 0.5s ease-in-out';
+                 img.style.opacity = '1';
+                 
+                 // Hide placeholder with fade out
+                 placeholder.style.transition = 'opacity 0.3s ease-out';
+                 placeholder.style.opacity = '0';
+                 
+                 setTimeout(() => {
+                     placeholder.style.display = 'none';
+                 }, 300);
+             };
+             
+             newImg.onerror = function() {
+                 // Handle image load error
+                 placeholder.innerHTML = `
+                     <div class="text-gray-400 text-center">
+                         <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                         </svg>
+                         <p class="text-sm">Failed to load image</p>
+                     </div>
+                 `;
+                 placeholder.classList.remove('animate-pulse');
+                 placeholder.classList.add('image-error');
+             };
+             
+             // Start loading the image
+             newImg.src = imageSrc;
+         }
+
+         // Reset images for next modal opening
+         function resetGovernmentImages() {
+             governmentLazyImages.forEach(img => {
+                 const placeholder = img.parentElement.querySelector('.image-placeholder');
+                 
+                 // Reset image
+                 img.src = '';
+                 img.style.opacity = '0';
+                 
+                 // Reset placeholder
+                 placeholder.style.display = 'flex';
+                 placeholder.style.opacity = '1';
+                 placeholder.classList.remove('image-error');
+                 placeholder.classList.add('animate-pulse');
+                 placeholder.innerHTML = `
+                     <div class="loading-spinner w-8 h-8 border-4 border-gray-300 border-t-palette1-a rounded-full animate-spin"></div>
+                 `;
+             });
+         }
+
+         // Animate image items with staggered effect
+         function animateImageItems() {
+             const imageItems = document.querySelectorAll('#governmentImageGrid .image-item');
+             
+             imageItems.forEach((item, index) => {
+                 item.style.opacity = '0';
+                 item.style.transform = 'translateY(20px)';
+                 item.style.transition = 'all 0.5s ease-out';
+                 
+                 setTimeout(() => {
+                     item.style.opacity = '1';
+                     item.style.transform = 'translateY(0)';
+                 }, index * 100 + 200); // Staggered animation
+             });
+         }
+
+         // Close modals when clicking outside
+         document.getElementById('governmentGalleryModal').addEventListener('click', function(e) {
+             if (e.target === this) {
+                 closeGovernmentGallery();
+             }
+         });
+
+         document.getElementById('imageViewerModal').addEventListener('click', function(e) {
+             if (e.target === this) {
+                 closeImageViewer();
+             }
+         });
+
+         // Close modals with Escape key
+         document.addEventListener('keydown', function(e) {
+             if (e.key === 'Escape') {
+                 if (governmentModalOpen) {
+                     closeGovernmentGallery();
+                 } else {
+                     closeImageViewer();
+                 }
+             }
+         });
+
+         // Wedding Gallery Modal Variables
+         let weddingModalOpen = false;
+         let weddingLazyImages = [];
+         let weddingImageObserver = null;
+
+         function openWeddingGallery() {
+             const modal = document.getElementById('weddingGalleryModal');
+             const modalContent = modal.querySelector('.modal-content');
+             
+             // Add smooth fade-in animation
+             modal.style.animation = 'fadeIn 0.3s ease-out';
+             modalContent.style.animation = 'zoomIn 0.3s ease-out';
+             
+             modal.classList.remove('hidden');
+             modal.classList.add('active');
+             document.body.style.overflow = 'hidden';
+             weddingModalOpen = true;
+             
+             // Initialize lazy loading after modal is shown
+             setTimeout(() => {
+                 initializeWeddingLazyLoading();
+                 animateWeddingImageItems();
+             }, 100);
+         }
+
+         function closeWeddingGallery() {
+             const modal = document.getElementById('weddingGalleryModal');
+             const modalContent = modal.querySelector('.modal-content');
+             
+             // Add smooth fade-out animation
+             modal.style.animation = 'fadeOut 0.3s ease-out';
+             modalContent.style.animation = 'zoomOut 0.3s ease-out';
+             
+             setTimeout(() => {
+                 modal.classList.add('hidden');
+                 modal.classList.remove('active');
+                 document.body.style.overflow = 'auto';
+                 weddingModalOpen = false;
+                 
+                 // Clean up lazy loading observer
+                 if (weddingImageObserver) {
+                     weddingImageObserver.disconnect();
+                 }
+                 
+                 // Reset images for next time
+                 resetWeddingImages();
+             }, 300);
+         }
+
+         // Initialize lazy loading for wedding gallery images
+         function initializeWeddingLazyLoading() {
+             weddingLazyImages = document.querySelectorAll('#weddingImageGrid .lazy-image');
+             
+             // Create intersection observer for lazy loading
+             if ('IntersectionObserver' in window) {
+                 weddingImageObserver = new IntersectionObserver((entries, observer) => {
+                     entries.forEach(entry => {
+                         if (entry.isIntersecting) {
+                             const img = entry.target;
+                             const placeholder = img.parentElement.querySelector('.image-placeholder');
+                             
+                             // Load the image
+                             loadWeddingImage(img, placeholder);
+                             observer.unobserve(img);
+                         }
+                     });
+                 }, {
+                     rootMargin: '50px 0px',
+                     threshold: 0.1
+                 });
+
+                 // Observe all lazy images
+                 weddingLazyImages.forEach(img => {
+                     weddingImageObserver.observe(img);
+                 });
+             } else {
+                 // Fallback for browsers without IntersectionObserver
+                 weddingLazyImages.forEach(img => {
+                     const placeholder = img.parentElement.querySelector('.image-placeholder');
+                     loadWeddingImage(img, placeholder);
+                 });
+             }
+         }
+
+         // Load individual wedding image with smooth transition
+         function loadWeddingImage(img, placeholder) {
+             const imageSrc = img.getAttribute('data-src');
+             
+             // Create a new image to preload
+             const newImg = new Image();
+             
+             newImg.onload = function() {
+                 // Image loaded successfully
+                 img.src = imageSrc;
+                 img.style.transition = 'opacity 0.5s ease-in-out';
+                 img.style.opacity = '1';
+                 
+                 // Hide placeholder with fade out
+                 placeholder.style.transition = 'opacity 0.3s ease-out';
+                 placeholder.style.opacity = '0';
+                 
+                 setTimeout(() => {
+                     placeholder.style.display = 'none';
+                 }, 300);
+             };
+             
+             newImg.onerror = function() {
+                 // Handle image load error
+                 placeholder.innerHTML = `
+                     <div class="text-gray-400 text-center">
+                         <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                         </svg>
+                         <p class="text-sm">Failed to load image</p>
+                     </div>
+                 `;
+                 placeholder.classList.remove('animate-pulse');
+                 placeholder.classList.add('image-error');
+             };
+             
+             // Start loading the image
+             newImg.src = imageSrc;
+         }
+
+         // Reset wedding images for next modal opening
+         function resetWeddingImages() {
+             weddingLazyImages.forEach(img => {
+                 const placeholder = img.parentElement.querySelector('.image-placeholder');
+                 
+                 // Reset image
+                 img.src = '';
+                 img.style.opacity = '0';
+                 
+                 // Reset placeholder
+                 placeholder.style.display = 'flex';
+                 placeholder.style.opacity = '1';
+                 placeholder.classList.remove('image-error');
+                 placeholder.classList.add('animate-pulse');
+                 placeholder.innerHTML = `
+                     <div class="loading-spinner w-8 h-8 border-4 border-gray-300 border-t-palette1-a rounded-full animate-spin"></div>
+                 `;
+             });
+         }
+
+         // Animate wedding image items with staggered effect
+         function animateWeddingImageItems() {
+             const imageItems = document.querySelectorAll('#weddingImageGrid .image-item');
+             
+             imageItems.forEach((item, index) => {
+                 item.style.opacity = '0';
+                 item.style.transform = 'translateY(20px)';
+                 item.style.transition = 'all 0.5s ease-out';
+                 
+                 setTimeout(() => {
+                     item.style.opacity = '1';
+                     item.style.transform = 'translateY(0)';
+                 }, index * 100 + 200); // Staggered animation
+             });
+         }
+
+         // Close wedding modal when clicking outside
+         document.getElementById('weddingGalleryModal').addEventListener('click', function(e) {
+             if (e.target === this) {
+                 closeWeddingGallery();
+             }
+         });
+
+         // Update escape key handler to include wedding modal
+         document.addEventListener('keydown', function(e) {
+             if (e.key === 'Escape') {
+                 if (weddingModalOpen) {
+                     closeWeddingGallery();
+                 } else if (governmentModalOpen) {
+                     closeGovernmentGallery();
+                 } else {
+                     closeImageViewer();
+                 }
+             }
+         });
+
+         // Add CSS animations if not already present
+         if (!document.getElementById('governmentModalStyles')) {
+             const style = document.createElement('style');
+             style.id = 'governmentModalStyles';
+             style.textContent = `
+                 @keyframes fadeIn {
+                     from { opacity: 0; }
+                     to { opacity: 1; }
+                 }
+                 
+                 @keyframes fadeOut {
+                     from { opacity: 1; }
+                     to { opacity: 0; }
+                 }
+                 
+                 @keyframes zoomIn {
+                     from { 
+                         opacity: 0; 
+                         transform: scale(0.8); 
+                     }
+                     to { 
+                         opacity: 1; 
+                         transform: scale(1); 
+                     }
+                 }
+                 
+                 @keyframes zoomOut {
+                     from { 
+                         opacity: 1; 
+                         transform: scale(1); 
+                     }
+                     to { 
+                         opacity: 0; 
+                         transform: scale(0.8); 
+                     }
+                 }
+                 
+                 .modal.active {
+                     display: flex !important;
+                 }
+                 
+                 .image-item {
+                     opacity: 0;
+                     transform: translateY(20px);
+                 }
+             `;
+             document.head.appendChild(style);
+         }
+     </script>
  </body>
  </html>

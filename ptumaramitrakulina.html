@@ -6,23 +6,6 @@
     <title>PT Umara Mitra Kulina - Professional Catering Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'palette1': {
-                            'a': '#4C3D19',
-                            'b': '#354024',
-                            'c': '#889063',
-                            'd': '#CFBB99',
-                            'e': '#E5D7C4'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -50,30 +33,39 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-gradient-to-br from-palette1-a to-palette1-b text-white py-32">
-        <div class="container mx-auto px-4">
+    <section id="home" class="py-32 relative overflow-hidden"  style="background-image: url('public/assets/bg/bg.png'); background-size: cover; background-position: center;">
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/10"></div>
+        <div class="container mx-auto px-4 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-up" data-aos-duration="1000">
-                    <h1 class="text-5xl font-bold mb-6 leading-tight" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
-                        Professional <span class="text-palette1-d">Catering</span> Solutions
+                <!-- Left Column - Content -->
+                <div class="lg:col-span-1" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="text-5xl font-bold mb-6 leading-tight text-black" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+                        Professional Catering Solutions
                     </h1>
-                    <p class="text-xl text-palette1-e mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <p class="text-xl mb-8 leading-relaxed text-black" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                         Delivering exceptional food services across industries with uncompromising quality and reliability.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
                         <button class="bg-white text-palette1-a px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                             Our Services
                         </button>
-                        <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-palette1-a transition-colors">
+                        <button class="border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-palette1-a transition-colors">
                             Contact Us
                         </button>
                     </div>
-                </div>
-                <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-                    <img src="public/assets/umara-mitra-kulina/image-1.png" alt="Professional Kitchen" class="rounded-2xl shadow-2xl">
-                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
+                    <!-- Stats Card -->
+                    <div class="mt-8 bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg inline-block border border-white/20" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
                         <div class="text-palette1-a text-3xl font-bold">10,000+</div>
                         <div class="text-gray-600">Meals Daily</div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Image -->
+                <div class="lg:col-span-1 relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+                        <img src="public/assets/vector/image-sample.png" alt="Professional Kitchen" class="w-full h-auto object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
                 </div>
             </div>
@@ -92,14 +84,14 @@
 
             <!-- Manufacturing & Institutional -->
             <div class="mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <div class="bg-gradient-to-r from-palette1-a to-palette1-b text-white p-8 rounded-t-2xl" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">
+                <div class="bg-gradient-to-r from-palette1-a to-palette1-b p-8 rounded-t-2xl" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">
                     <h3 class="text-3xl font-bold mb-4">MANUFACTURE & INSTITUTIONAL</h3>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 bg-white shadow-xl rounded-b-2xl overflow-hidden">
                     <div class="p-8" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
                         <img src="public/assets/umara-mitra-kulina/image-2.png" alt="Manufacturing Catering" class="w-full h-64 object-cover rounded-lg mb-6">
                     </div>
-                    <div class="p-8 bg-palette1-a text-white flex flex-col justify-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
+                    <div class="p-8 bg-palette1-a flex flex-col justify-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
                         <ul class="space-y-4 text-lg">
                             <li class="flex items-center">
                                 <span class="w-2 h-2 bg-white rounded-full mr-4"></span>
@@ -120,14 +112,14 @@
 
             <!-- Oil, Mining, Gas -->
             <div class="mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <div class="bg-gradient-to-r from-palette1-a to-palette1-b text-white p-8 rounded-t-2xl" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="500">
+                <div class="bg-gradient-to-r from-palette1-a to-palette1-b p-8 rounded-t-2xl" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="500">
                     <h3 class="text-3xl font-bold mb-4">OIL, MINING, GAS</h3>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 bg-white shadow-xl rounded-b-2xl overflow-hidden">
                     <div class="p-8" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">
                         <img src="public/assets/umara-mitra-kulina/image-3.png" alt="Oil & Gas Catering" class="w-full h-64 object-cover rounded-lg mb-6">
                     </div>
-                    <div class="p-8 bg-palette1-a text-white flex flex-col justify-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
+                    <div class="p-8 bg-palette1-a flex flex-col justify-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
                         <ul class="space-y-4 text-lg">
                             <li class="flex items-center">
                                 <span class="w-2 h-2 bg-white rounded-full mr-4"></span>
@@ -148,14 +140,14 @@
 
             <!-- Healthcare -->
             <div class="mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                <div class="bg-gradient-to-r from-palette1-a to-palette1-b text-white p-8 rounded-t-2xl" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="600">
+                <div class="bg-gradient-to-r from-palette1-a to-palette1-b p-8 rounded-t-2xl" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="600">
                     <h3 class="text-3xl font-bold mb-4">HEALTHCARE</h3>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 bg-white shadow-xl rounded-b-2xl overflow-hidden">
                     <div class="p-8" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">
                         <img src="public/assets/umara-mitra-kulina/image-1.png" alt="Healthcare Catering" class="w-full h-64 object-cover rounded-lg mb-6">
                     </div>
-                    <div class="p-8 bg-palette1-a text-white flex flex-col justify-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">
+                    <div class="p-8 bg-palette1-a flex flex-col justify-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">
                         <ul class="space-y-4 text-lg">
                             <li class="flex items-center">
                                 <span class="w-2 h-2 bg-white rounded-full mr-4"></span>
@@ -180,7 +172,7 @@
     <section id="kitchen" class="py-20 bg-gray-100">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
-                <div class="inline-block bg-palette1-a text-white px-8 py-3 rounded-full text-lg font-semibold mb-6" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                <div class="inline-block bg-palette1-a px-8 py-3 rounded-full text-lg font-semibold mb-6" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
                     OUR KITCHEN
                 </div>
                 <h2 class="text-4xl font-bold text-gray-800 mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">State-of-the-Art Facilities</h2>
@@ -197,7 +189,7 @@
                     <div class="bg-white p-8 rounded-xl shadow-lg">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 bg-palette1-a rounded-lg flex items-center justify-center mr-4">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
@@ -210,7 +202,7 @@
                     <div class="bg-white p-8 rounded-xl shadow-lg">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 bg-palette1-a rounded-lg flex items-center justify-center mr-4">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path>
                                     <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path>
                                 </svg>
