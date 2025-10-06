@@ -28,17 +28,90 @@
             }
         }
     </script>
+    <style>
+        .timeline-panel {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease-in-out;
+        }
+        
+        .timeline-panel.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .timeline-tab {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .timeline-tab:hover {
+            transform: translateY(-2px);
+        }
+        
+        .timeline-tab.active {
+            transform: translateY(-2px);
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .timeline-panel.active .bg-gradient-to-br {
+            animation: slideInUp 0.6s ease-out forwards;
+        }
+        
+        .timeline-panel.active .bg-gradient-to-br:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+        
+        .timeline-panel.active .bg-gradient-to-br:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        
+        /* Glass effect */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        /* Smooth transitions */
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu-enter {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        
+        .mobile-menu-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    </style>
 </head>
 <body class="font-inter bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-lg sticky top-0 z-50">
+    <!-- Floating Header -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-xl">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
                     <picture>
                         <source srcset="public/assets/images/converted_black_again.svg" type="image/svg+xml">
-                        <img src="public/assets/images/converted_black_again.svg" alt="PT Laukita Bersama Indonesia" class="w-24 h-16">
+                        <img src="public/assets/images/converted_black_again.svg" alt="PT Laukita Bersama Indonesia" class="w-20 h-12 md:w-24 md:h-16">
                     </picture>
                 </div>
 
@@ -46,63 +119,86 @@
                 <nav class="hidden lg:flex items-center space-x-8">
                     <a href="#home" class="text-gray-700 hover:text-brand-primary font-medium transition-colors">Home</a>
                     <a href="#about" class="text-gray-700 hover:text-brand-primary font-medium transition-colors">About</a>
-                    <a href="#services" class="text-gray-700 hover:text-brand-primary font-medium transition-colors">Services</a>
-                    <a href="#products" class="text-gray-700 hover:text-brand-primary font-medium transition-colors">Products</a>
-                    <a href="#process" class="text-gray-700 hover:text-brand-primary font-medium transition-colors">Process</a>
-                    <a href="#contact" class="bg-brand-primary text-white px-6 py-2 rounded-lg hover:bg-brand-secondary transition-colors">Contact Us</a>
+                    <a href="#services" class="text-gray-700 hover:text-brand-primary font-medium transition-colors">Service</a>
+                    <a href="#products" class="text-gray-700 hover:text-brand-primary font-medium transition-colors">Product</a>
+                    <a href="#process" class="text-gray-700 hover:text-brand-primary font-medium transition-colors">Development</a>
+                    <a href="#contact" class="bg-brand-primary text-white px-6 py-2 rounded-full hover:bg-brand-secondary transition-colors">Contact Us</a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <button class="lg:hidden text-gray-700">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-700 p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
             </div>
+
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200/50 shadow-lg z-40">
+            <nav class="flex flex-col space-y-1 p-4 mx-4">
+                <a href="#home" class="text-gray-700 hover:text-brand-primary hover:bg-gray-50 font-medium transition-colors px-4 py-3 rounded-lg">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-brand-primary hover:bg-gray-50 font-medium transition-colors px-4 py-3 rounded-lg">About</a>
+                <a href="#services" class="text-gray-700 hover:text-brand-primary hover:bg-gray-50 font-medium transition-colors px-4 py-3 rounded-lg">Service</a>
+                <a href="#products" class="text-gray-700 hover:text-brand-primary hover:bg-gray-50 font-medium transition-colors px-4 py-3 rounded-lg">Product</a>
+                <a href="#process" class="text-gray-700 hover:text-brand-primary hover:bg-gray-50 font-medium transition-colors px-4 py-3 rounded-lg">Development</a>
+                <a href="#contact" class="bg-brand-primary text-white px-4 py-3 rounded-lg hover:bg-brand-secondary transition-colors text-center font-medium">Contact Us</a>
+            </nav>
         </div>
     </header>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="lg:hidden hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-30"></div>
+
     <!-- Hero Section -->
-    <section id="home" class="bg-gradient-to-br from-brand-primary to-brand-secondary text-white py-32">
-        <div class="container mx-auto px-4 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right" data-aos-duration="1000">
-                    <h1 class="text-5xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
-                        Professional <span class="text-brand-gold">Manufacturing</span> Solutions
-                    </h1>
-                    <p class="text-xl text-brand-light mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
-                        Leading toll manufacturing and white label services provider, delivering exceptional quality and innovation since 2014.
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-white" style="background-image: url('public/assets/laukkita-bersama/bg-mega-mendung.svg'); background-size: 50% auto; background-position: left; background-repeat: repeat-y;">
+        <!-- Content -->
+        <div class="relative z-10 container mx-auto px-4 lg:px-8 pt-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
+                <!-- Left Column - Text Content -->
+                <div class="w-full pr-0 lg:pr-8" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="mb-6" data-aos="fade-up" data-aos-delay="200">
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-gray-800">
+                            Frozen • Retort • Pasteurization
+                            <span class="block text-brand-gold mt-2">Manufacturing Excellence</span>
+                        </h1>
+                    </div>
+                    
+                    <p class="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+                        As a leading toll manufacturing and white label partner since 2014, LBI delivers cutting-edge frozen, retort, and pasteurized food solutions — combining quality, safety, and innovation for the future of culinary manufacturing.
                     </p>
+                    
                     <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="600">
-                        <button class="bg-white text-brand-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                            Our Services
-                        </button>
-                        <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-brand-primary transition-colors">
+                        <a href="#services" class="inline-block bg-brand-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-brand-secondary transition-all duration-300 hover:scale-105 text-center">
+                            Explore Now
+                        </a>
+                        <a href="#contact" class="inline-block border-2 border-brand-primary text-brand-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-brand-primary hover:text-white transition-all duration-300 hover:scale-105 text-center">
                             Get Quote
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div class="relative" data-aos="fade-left" data-aos-duration="1000">
-                    <img src="public/assets/laukkita-bersama/WhatsApp Image 2025-09-05 at 15.47.26.jpeg" alt="Manufacturing Facility" class="rounded-2xl shadow-2xl" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="800">
-                        <div class="text-brand-primary text-3xl font-bold">10+</div>
-                        <div class="text-gray-600">Years Experience</div>
-                    </div>
+
+                <!-- Right Column - Image Content -->
+                <div class="w-full pl-0 lg:pl-8" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-3xl shadow-2xl">
+                        <img src="public/assets/laukkita-bersama/LBI_Manufacture.jpg" 
+                             alt="Manufacturing Facility" 
+                             class="w-full h-[600px] object-cover object-center hover:scale-105 transition-transform duration-700">
+                        </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-10 bg-white" style="background-image: url('public/assets/laukkita-bersama/hero-bg-lbi.svg'); background-size: 50% auto; background-position:top right; background-repeat: no-repeat;">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right" data-aos-duration="1000">
-                    <div class="mb-8" data-aos="fade-up" data-aos-delay="200">
-                        <div class="text-6xl lg:text-8xl font-bold text-brand-gold mb-4" data-aos="zoom-in" data-aos-delay="300">LBI</div>
-                        <h2 class="text-3xl font-bold text-gray-800 mb-2" data-aos="fade-up" data-aos-delay="400">PT LAUKITA BERSAMA</h2>
-                        <h3 class="text-xl font-semibold text-gray-600" data-aos="fade-up" data-aos-delay="500">INDONESIA</h3>
-                    </div>
                     <p class="text-lg text-gray-700 mb-6 leading-relaxed" data-aos="fade-up" data-aos-delay="600">
                         <strong>PT Laukita Bersama Indonesia</strong>, founded in 2014, provides comprehensive toll manufacturing and white label services designed to enhance manufacturing processes and accelerate business growth.
                     </p>
@@ -140,90 +236,320 @@
                     </div>
                 </div>
                 <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-                    <img src="public/assets/laukkita-bersama/WhatsApp Image 2025-09-05 at 15.47.27.jpeg" alt="Production Line" class="rounded-2xl shadow-lg" data-aos="zoom-in" data-aos-delay="600">
+                    <video 
+                        src="public/assets/laukkita-bersama/videos/UMARA-OFFLINE.mp4" 
+                        class="w-full h-auto rounded-2xl shadow-lg"
+                        controls
+                        preload="metadata"
+                        poster="public/assets/laukkita-bersama/pabrik.jpg"
+                        aria-label="Umara Company Overview Video"
+                        playsinline>
+                        <p class="text-center text-gray-600 p-8 bg-gray-100 rounded-2xl">
+                            Your browser doesn't support HTML5 video. 
+                            <a href="public/assets/laukkita-bersama/videos/UMARA-OFFLINE.mp4" class="text-brand-primary underline">
+                                Download the video instead
+                            </a>
+                        </p>
+                    </video>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-brand-light">
+    <!-- Group Company Section -->
+    <section class="py-20 bg-gray-100">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="text-4xl font-bold text-brand-dark mb-4" data-aos="fade-up" data-aos-delay="200">Why Choose Us?</h2>
-                <p class="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="400">Excellence in every aspect of manufacturing</p>
+                <h2 class="text-4xl font-bold text-brand-dark mb-4" data-aos="fade-up" data-aos-delay="200">UMARA GROUP</h2>
+                <p class="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="400">Integrated food solutions ecosystem</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-xl flex items-center justify-center mb-6" data-aos="zoom-in" data-aos-delay="400">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-brand-dark">Uncompromised Quality</h3>
-                    <p class="text-gray-600">Rigorous quality control and assurance processes ensure every product meets the highest standards.</p>
-                </div>
+            <div class="bg-white p-8 lg:p-12 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right" data-aos-delay="200">
+                        <h3 class="text-3xl font-bold text-brand-primary mb-8" data-aos="fade-up" data-aos-delay="300">Group Timeline</h3>
+                        
+                        <!-- Modern Tab-Style Timeline -->
+                        <div class="timeline-container">
+                            <!-- Year Navigation Tabs -->
+                            <div class="flex flex-wrap gap-2 mb-8 p-2 bg-gray-50 rounded-2xl overflow-x-auto" data-aos="fade-up" data-aos-delay="400">
+                                <button class="timeline-tab active px-3 md:px-4 py-2 rounded-xl font-semibold text-xs md:text-sm transition-all duration-300 bg-brand-primary text-white shadow-lg whitespace-nowrap" data-year="2018">2018</button>
+                                <button class="timeline-tab px-3 md:px-4 py-2 rounded-xl font-semibold text-xs md:text-sm transition-all duration-300 bg-white text-gray-600 hover:bg-brand-primary/10 hover:text-brand-primary whitespace-nowrap" data-year="2019">2019</button>
+                                <button class="timeline-tab px-3 md:px-4 py-2 rounded-xl font-semibold text-xs md:text-sm transition-all duration-300 bg-white text-gray-600 hover:bg-brand-primary/10 hover:text-brand-primary whitespace-nowrap" data-year="2023">2023</button>
+                                <button class="timeline-tab px-3 md:px-4 py-2 rounded-xl font-semibold text-xs md:text-sm transition-all duration-300 bg-white text-gray-600 hover:bg-brand-primary/10 hover:text-brand-primary whitespace-nowrap" data-year="2024">2024</button>
+                                <button class="timeline-tab px-3 md:px-4 py-2 rounded-xl font-semibold text-xs md:text-sm transition-all duration-300 bg-white text-gray-600 hover:bg-brand-primary/10 hover:text-brand-primary relative whitespace-nowrap" data-year="2025">
+                                    2025
+                                    <span class="absolute -top-1 -right-1 w-2 h-2 md:w-3 md:h-3 bg-brand-gold rounded-full animate-pulse"></span>
+                                </button>
+                            </div>
 
-                <!-- Service 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-gradient-to-br from-brand-accent to-yellow-500 rounded-xl flex items-center justify-center mb-6" data-aos="zoom-in" data-aos-delay="500">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-brand-dark">Culinary Expertise</h3>
-                    <p class="text-gray-600">Experienced and skillful chefs bringing innovation and tradition together.</p>
-                </div>
+                            <!-- Timeline Content Cards -->
+                            <div class="timeline-content relative min-h-[300px]">
+                                <!-- 2018 Content -->
+                                <div class="timeline-panel active" data-year="2018" data-aos="fade-up" data-aos-delay="500">
+                                    <div class="grid gap-4">
+                                        <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-4 md:p-6 rounded-2xl border border-green-200 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
+                                            <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                                                <div class="w-10 h-10 md:w-12 md:h-12 bg-green-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                                    <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <h4 class="text-lg md:text-xl font-bold text-green-800">BPOM Certificate</h4>
+                                                    <p class="text-green-600 text-xs md:text-sm">Food & Drug Administration</p>
+                                                </div>
+                                            </div>
+                                            <p class="text-gray-700 text-sm md:text-base">Official certification ensuring our products meet Indonesian food safety standards and regulations.</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- Service 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6" data-aos="zoom-in" data-aos-delay="600">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-brand-dark">Flexibility</h3>
-                    <p class="text-gray-600">Tailored solutions designed to meet diverse client needs and requirements.</p>
-                </div>
+                                <!-- 2019 Content -->
+                                <div class="timeline-panel" data-year="2019" data-aos="fade-up" data-aos-delay="500">
+                                    <div class="grid gap-4">
+                                        <div class="bg-gradient-to-br from-emerald-50 to-teal-50 p-4 md:p-6 rounded-2xl border border-emerald-200 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
+                                            <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                                                <div class="w-10 h-10 md:w-12 md:h-12 bg-emerald-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                                    <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <h4 class="text-lg md:text-xl font-bold text-emerald-800">Halal Certificate</h4>
+                                                    <p class="text-emerald-600 text-xs md:text-sm">Islamic Food Standards</p>
+                                                </div>
+                                            </div>
+                                            <p class="text-gray-700 text-sm md:text-base">Certified halal products meeting Islamic dietary requirements, expanding our market reach to Muslim consumers.</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- Service 4 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="500">
-                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6" data-aos="zoom-in" data-aos-delay="700">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-brand-dark">Scalability</h3>
-                    <p class="text-gray-600">Ability to handle increasing production volumes efficiently and effectively.</p>
-                </div>
+                                <!-- 2023 Content -->
+                                <div class="timeline-panel" data-year="2023" data-aos="fade-up" data-aos-delay="500">
+                                    <div class="grid gap-4">
+                                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 md:p-6 rounded-2xl border border-blue-200 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
+                                            <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                                                <div class="w-10 h-10 md:w-12 md:h-12 bg-blue-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                                    <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <h4 class="text-lg md:text-xl font-bold text-blue-800">ISO Certifications</h4>
+                                                    <p class="text-blue-600 text-xs md:text-sm">International Standards</p>
+                                                </div>
+                                            </div>
+                                            <div class="space-y-2">
+                                                <div class="flex items-center gap-2">
+                                                    <div class="w-2 h-2 bg-blue-400 rounded-full flex-shrink-0"></div>
+                                                    <span class="text-gray-700 text-xs md:text-sm">ISO 45000 - Occupational Health & Safety</span>
+                                                </div>
+                                                <div class="flex items-center gap-2">
+                                                    <div class="w-2 h-2 bg-blue-400 rounded-full flex-shrink-0"></div>
+                                                    <span class="text-gray-700 text-xs md:text-sm">ISO 14000 - Environmental Management</span>
+                                                </div>
+                                                <div class="flex items-center gap-2">
+                                                    <div class="w-2 h-2 bg-blue-400 rounded-full flex-shrink-0"></div>
+                                                    <span class="text-gray-700 text-xs md:text-sm">ISO 22000 - Food Safety Management</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-4 md:p-6 rounded-2xl border border-purple-200 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
+                                            <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                                                <div class="w-10 h-10 md:w-12 md:h-12 bg-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                                    <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <h4 class="text-lg md:text-xl font-bold text-purple-800">HACCP & GMP</h4>
+                                                    <p class="text-purple-600 text-xs md:text-sm">Food Safety Standards</p>
+                                                </div>
+                                            </div>
+                                            <p class="text-gray-700 text-sm md:text-base">Advanced food safety protocols and good manufacturing practices ensuring product quality.</p>
+                                        </div>
 
-                <!-- Service 5 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="600">
-                    <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center mb-6" data-aos="zoom-in" data-aos-delay="800">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-brand-dark">Sustainable Practices</h3>
-                    <p class="text-gray-600">Environmental responsibility through low emission gas (CNG) and waste water treatment systems.</p>
-                </div>
+                                        <div class="bg-gradient-to-br from-orange-50 to-red-50 p-4 md:p-6 rounded-2xl border border-orange-200 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
+                                            <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                                                <div class="w-10 h-10 md:w-12 md:h-12 bg-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                                    <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <h4 class="text-lg md:text-xl font-bold text-orange-800">NKV Certificate</h4>
+                                                    <p class="text-orange-600 text-xs md:text-sm">Veterinary Control Number</p>
+                                                </div>
+                                            </div>
+                                            <p class="text-gray-700 text-sm md:text-base">Official veterinary certification for animal-based food products ensuring health compliance.</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- Service 6 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="700">
-                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6" data-aos="zoom-in" data-aos-delay="900">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                            <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-                        </svg>
+                                <!-- 2024 Content -->
+                                <div class="timeline-panel" data-year="2024" data-aos="fade-up" data-aos-delay="500">
+                                    <div class="grid gap-4">
+                                        <div class="bg-gradient-to-br from-yellow-50 to-amber-50 p-4 md:p-6 rounded-2xl border border-yellow-200 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
+                                            <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                                                <div class="w-10 h-10 md:w-12 md:h-12 bg-yellow-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                                    <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <h4 class="text-lg md:text-xl font-bold text-yellow-800">Global Partnership</h4>
+                                                    <p class="text-yellow-600 text-xs md:text-sm">Strategic Alliance</p>
+                                                </div>
+                                            </div>
+                                            <p class="text-gray-700 text-sm md:text-base">Strategic partnership with CJ Foods, expanding our international presence and market capabilities.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 2025 Content -->
+                                <div class="timeline-panel" data-year="2025" data-aos="fade-up" data-aos-delay="500">
+                                    <div class="grid gap-4">
+                                        <div class="bg-gradient-to-br from-brand-gold/20 to-brand-primary/20 p-4 md:p-6 rounded-2xl border-2 border-brand-gold/30 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 relative overflow-hidden">
+                                            <div class="absolute top-0 right-0 w-16 h-16 md:w-20 md:h-20 bg-brand-gold/10 rounded-full -translate-y-8 md:-translate-y-10 translate-x-8 md:translate-x-10"></div>
+                                            <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                                                <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-brand-gold to-brand-primary rounded-2xl flex items-center justify-center flex-shrink-0">
+                                                    <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <h4 class="text-lg md:text-xl font-bold text-brand-primary">Future Expansion</h4>
+                                                    <p class="text-brand-accent text-xs md:text-sm">Growth & Innovation</p>
+                                                </div>
+                                            </div>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center gap-3">
+                                                    <div class="w-2 h-2 bg-brand-gold rounded-full animate-pulse flex-shrink-0"></div>
+                                                    <span class="text-gray-700 text-xs md:text-sm">First Shipment to Jeddah (Arab Saudi) for Umrah</span>
+                                                </div>
+                                                <div class="flex items-center gap-3">
+                                                    <div class="w-2 h-2 bg-brand-primary rounded-full animate-pulse flex-shrink-0"></div>
+                                                    <span class="text-gray-700 text-xs md:text-sm">FSSC 22000 Certification (In Progress)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 text-brand-dark">Innovation</h3>
-                    <p class="text-gray-600">Continuous improvement and adoption of latest manufacturing technologies.</p>
+                    <div class="text-center" data-aos="fade-left" data-aos-delay="400">
+                        <div class="bg-gradient-to-br from-brand-light to-brand-gold/20 p-6 md:p-8 rounded-2xl border border-brand-gold/30">
+                            <h4 class="text-xl md:text-2xl font-bold text-brand-dark mb-6">Integrated Food Solutions</h4>
+                            
+                            <!-- Two Column Grid Layout -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-6">
+                                <!-- Left Side Image -->
+                                <div class="flex justify-center" data-aos="fade-right" data-aos-delay="600">
+                                    <picture>
+                                        <source srcset="public/assets/laukkita-bersama/1.jpg" type="image/svg+xml">
+                                        <img src="public/assets/laukkita-bersama/1.jpg" alt="UMARA GROUP - Food Manufacturing" class="w-full max-w-xs md:max-w-sm lg:max-w-md rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">                  
+                                    </picture>
+                                </div>
+                                
+                                <!-- Right Side Image -->
+                                <div class="flex justify-center" data-aos="fade-left" data-aos-delay="800">
+                                    <picture>
+                                        <source srcset="public/assets/laukkita-bersama/2.jpg" type="image/svg+xml">
+                                        <img src="public/assets/laukkita-bersama/2.jpg" alt="UMARA GROUP - Food Distribution" class="w-full max-w-xs md:max-w-sm lg:max-w-md rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">                  
+                                    </picture>
+                                </div>
+                            </div>
+                            
+                            <!-- Description Text -->
+                            <p class="text-gray-600 leading-relaxed text-sm md:text-base" data-aos="fade-up" data-aos-delay="1000">From manufacturing to retail, catering to distribution - we provide comprehensive food industry solutions under one unified group.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 
     <!-- Products & Services Section -->
     <section id="products" class="py-20 bg-white">
@@ -243,6 +569,7 @@
                         <h4 class="text-xl font-semibold text-gray-800 mb-4" data-aos="fade-up" data-aos-delay="300">For F&B Customers</h4>
                         <p class="text-gray-700 leading-relaxed mb-6" data-aos="fade-up" data-aos-delay="400">
                             LBI provides comprehensive B2B frozen and retort packaged Work-In-Progress & ready-to-eat finished goods for F&B customers including hotels, restaurants, and cafes. Our trusted OEM manufacturing partners include Hangry Food, Harvest, Iemaya Group, and Dapur Solo.
+                            We also handle large quantity long-term contract OEM orders from major clients including CJ Food Korea.
                         </p>
                         <div class="grid grid-cols-2 gap-4" data-aos="fade-up" data-aos-delay="500">
                             <div class="bg-blue-50 p-4 rounded-lg text-center border border-blue-200">
@@ -258,52 +585,44 @@
                     </div>
                 </div>
 
-                <!-- White Label Manufacturing -->
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="lg:order-2" data-aos="fade-left" data-aos-duration="1000">
-                        <h3 class="text-3xl font-bold text-brand-primary mb-6" data-aos="fade-up" data-aos-delay="200">White Label Manufacturing</h3>
-                        <h4 class="text-xl font-semibold text-gray-800 mb-4" data-aos="fade-up" data-aos-delay="300">Fast Moving Consumer Goods (FMCG)</h4>
-                        <p class="text-gray-700 leading-relaxed mb-6" data-aos="fade-up" data-aos-delay="400">
-                            LBI provides production outsourcing for frozen food products and retort packaging solutions. We recently secured large quantity long-term contract OEM orders from major clients including CJ Food Korea.
-                        </p>
-                        <div class="grid grid-cols-2 gap-4" data-aos="fade-up" data-aos-delay="500">
-                            <div class="bg-orange-50 p-4 rounded-lg text-center border border-orange-200">
-                                <div class="text-orange-600 font-semibold">FMCG Products</div>
-                            </div>
-                            <div class="bg-yellow-50 p-4 rounded-lg text-center border border-yellow-200">
-                                <div class="text-yellow-600 font-semibold">Ready Meals</div>
-                            </div>
-                        </div>
+                <!-- Development Process Section -->
+                <div class="bg-gradient-to-r from-brand-primary to-brand-secondary text-white rounded-3xl p-8 lg:p-12" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="text-center mb-16">
+                        <h3 class="text-3xl lg:text-4xl font-bold mb-4" data-aos="fade-up" data-aos-delay="200">DEVELOPMENT PROCESS</h3>
+                        <p class="text-xl text-brand-light" data-aos="fade-up" data-aos-delay="400">Our systematic approach to manufacturing excellence</p>
                     </div>
-                    <div class="lg:order-1 relative" data-aos="fade-right" data-aos-duration="1000">
-                        <img src="public/assets/laukkita-bersama/WhatsApp Image 2025-09-05 at 15.52.50.jpeg" alt="White Label Manufacturing" class="rounded-2xl shadow-lg">
-                    </div>
-                </div>
 
-                <!-- WIP Manufacturing -->
-                <div class="bg-brand-light p-8 lg:p-12 rounded-2xl" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="grid lg:grid-cols-2 gap-8 items-center">
-                        <div data-aos="fade-right" data-aos-delay="200">
-                            <h3 class="text-3xl font-bold text-brand-primary mb-6" data-aos="fade-up" data-aos-delay="300">WIP Manufacturing for Affiliates</h3>
-                            <p class="text-gray-700 leading-relaxed mb-6" data-aos="fade-up" data-aos-delay="400">
-                                LBI supports sister companies within Umara Group by producing Work-In-Progress modular food materials including sauces and dishes for UMK, UCR, SMI, and RNB.
-                            </p>
-                            <div class="grid grid-cols-3 gap-4" data-aos="fade-up" data-aos-delay="500">
-                                <div class="bg-green-50 p-4 rounded-lg text-center border border-green-200">
-                                    <div class="text-green-600 font-semibold text-sm">Sauces</div>
-                                </div>
-                                <div class="bg-blue-50 p-4 rounded-lg text-center border border-blue-200">
-                                    <div class="text-blue-600 font-semibold text-sm">Spices</div>
-                                </div>
-                                <div class="bg-purple-50 p-4 rounded-lg text-center border border-purple-200">
-                                    <div class="text-purple-600 font-semibold text-sm">Ready Dishes</div>
-                                </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Step 1 -->
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl border border-white border-opacity-20" data-aos="fade-up" data-aos-delay="200">
+                            <div class="bg-white text-brand-primary w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4" data-aos="zoom-in" data-aos-delay="400">1</div>
+                            <h4 class="text-xl font-bold mb-4">Client Consultation</h4>
+                            <p class="text-brand-light mb-4">Initial discussion and requirement analysis</p>
+                            <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                                <h5 class="font-semibold mb-2">Product Discussion</h5>
+                                <div class="bg-white text-brand-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">2</div>
                             </div>
                         </div>
-                        <div class="text-center" data-aos="fade-left" data-aos-delay="600">
-                            <div class="bg-white p-8 rounded-xl shadow-lg">
-                                <h4 class="text-2xl font-bold text-brand-dark mb-4">Umara Group Integration</h4>
-                                <p class="text-gray-600">Seamless collaboration across all group companies</p>
+
+                        <!-- Step 3 -->
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl border border-white border-opacity-20" data-aos="fade-up" data-aos-delay="400">
+                            <div class="bg-white text-brand-primary w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4" data-aos="zoom-in" data-aos-delay="600">3</div>
+                            <h4 class="text-xl font-bold mb-4">Kitchen Trial</h4>
+                            <p class="text-brand-light mb-4">Recipe development and testing</p>
+                            <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                                <h5 class="font-semibold mb-2">Panel Test</h5>
+                                <div class="bg-white text-brand-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">4</div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl border border-white border-opacity-20" data-aos="fade-up" data-aos-delay="600">
+                            <div class="bg-white text-brand-primary w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4" data-aos="zoom-in" data-aos-delay="800">5</div>
+                            <h4 class="text-xl font-bold mb-4">Bulk Production</h4>
+                            <p class="text-brand-light mb-4">Large scale trial and optimization</p>
+                            <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                                <h5 class="font-semibold mb-2">Mass Production</h5>
+                                <div class="bg-white text-brand-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">6</div>
                             </div>
                         </div>
                     </div>
@@ -312,96 +631,290 @@
         </div>
     </section>
 
-    <!-- Development Process Section -->
-    <section id="process" class="py-20 bg-gradient-to-r from-brand-primary to-brand-secondary text-white">
+    <!-- Infrastructure Section -->
+    <section id="infrastructure" class="py-20 bg-white">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="text-4xl lg:text-5xl font-bold mb-4" data-aos="fade-up" data-aos-delay="200">DEVELOPMENT PROCESS</h2>
-                <p class="text-xl text-brand-light" data-aos="fade-up" data-aos-delay="400">Our systematic approach to manufacturing excellence</p>
+                <h2 class="text-4xl lg:text-5xl font-bold text-brand-dark mb-4" data-aos="fade-up" data-aos-delay="200">INFRASTRUCTURE</h2>
+                <p class="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="400">State-of-the-art facilities for manufacturing excellence</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Step 1 -->
-                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl border border-white border-opacity-20" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-white text-brand-primary w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4" data-aos="zoom-in" data-aos-delay="400">1</div>
-                    <h3 class="text-xl font-bold mb-4">Client Consultation</h3>
-                    <p class="text-brand-light mb-4">Initial discussion and requirement analysis</p>
-                    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
-                        <h4 class="font-semibold mb-2">Product Discussion</h4>
-                        <div class="bg-white text-brand-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">2</div>
+            <!-- Facilities Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Vegetable Washing & Drying Machine -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="public/assets/laukkita-bersama/WhatsApp Image 2025-09-05 at 15.47.26.jpeg" alt="Vegetable Washing & Drying Machine" class="w-full h-48 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <h3 class="text-white font-bold text-lg">VEGETABLE WASHING & DRYING MACHINE</h3>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Step 3 -->
-                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl border border-white border-opacity-20" data-aos="fade-up" data-aos-delay="400">
-                    <div class="bg-white text-brand-primary w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4" data-aos="zoom-in" data-aos-delay="600">3</div>
-                    <h3 class="text-xl font-bold mb-4">Kitchen Trial</h3>
-                    <p class="text-brand-light mb-4">Recipe development and testing</p>
-                    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
-                        <h4 class="font-semibold mb-2">Panel Test</h4>
-                        <div class="bg-white text-brand-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">4</div>
+                <!-- Multivac & Opics Vacuum Skinpack -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative">
+                        <img src="public/assets/laukkita-bersama/WhatsApp Image 2025-09-05 at 15.47.27.jpeg" alt="Multivac & Opics Vacuum Skinpack" class="w-full h-48 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <h3 class="text-white font-bold text-lg">MULTIVAC & OPICS VACUUM SKINPACK</h3>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Step 5 -->
-                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl border border-white border-opacity-20" data-aos="fade-up" data-aos-delay="600">
-                    <div class="bg-white text-brand-primary w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4" data-aos="zoom-in" data-aos-delay="800">5</div>
-                    <h3 class="text-xl font-bold mb-4">Bulk Production</h3>
-                    <p class="text-brand-light mb-4">Large scale trial and optimization</p>
-                    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
-                        <h4 class="font-semibold mb-2">Mass Production</h4>
-                        <div class="bg-white text-brand-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">6</div>
+                <!-- Multivac Thermoforming Pack -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative">
+                        <img src="public/assets/laukkita-bersama/WhatsApp Image 2025-09-05 at 15.48.41.jpeg" alt="Multivac Thermoforming Pack" class="w-full h-48 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <h3 class="text-white font-bold text-lg">MULTIVAC THERMOFORMING PACK</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- In House Lab -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative">
+                        <img src="public/assets/laukkita-bersama/LBI_Manufacture.jpg" alt="In House Lab" class="w-full h-48 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <h3 class="text-white font-bold text-lg">IN HOUSE LAB</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metal Detector -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
+                    <div class="relative">
+                        <img src="public/assets/laukkita-bersama/pabrik.jpg" alt="Metal Detector" class="w-full h-48 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <h3 class="text-white font-bold text-lg">METAL DETECTOR</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cooking Mixer -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="700">
+                    <div class="relative">
+                        <img src="public/assets/laukkita-bersama/pabrik2.jpg" alt="Cooking Mixer" class="w-full h-48 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <h3 class="text-white font-bold text-lg">COOKING MIXER</h3>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Group Company Section -->
-    <section class="py-20 bg-gray-100">
+    <!-- Quality Management Section -->
+    <section id="quality" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="text-4xl font-bold text-brand-dark mb-4" data-aos="fade-up" data-aos-delay="200">UMARA GROUP</h2>
-                <p class="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="400">Integrated food solutions ecosystem</p>
+                <h2 class="text-4xl lg:text-5xl font-bold text-brand-dark mb-4" data-aos="fade-up" data-aos-delay="200">QUALITY MANAGEMENT</h2>
+                <p class="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="400">LBI QMS (Quality Management System)</p>
             </div>
 
-            <div class="bg-white p-8 lg:p-12 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-duration="1000">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div data-aos="fade-right" data-aos-delay="200">
-                        <h3 class="text-3xl font-bold text-brand-primary mb-6" data-aos="fade-up" data-aos-delay="300">Group Timeline</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="400">
-                                <div class="bg-brand-primary text-white px-4 py-2 rounded-full text-sm font-semibold">Est. 2013</div>
-                                <span class="text-gray-700 font-medium">Restaurant Chain</span>
+            <!-- Quality Management Tabs -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
+                <!-- Tab Navigation -->
+                <div class="border-b border-gray-200">
+                    <nav class="flex flex-wrap" aria-label="Quality Management Tabs">
+                        <button class="quality-tab-btn active px-6 py-4 text-sm font-medium text-gray-500 hover:text-brand-primary border-b-2 border-transparent hover:border-brand-primary transition-all duration-300 focus:outline-none focus:text-brand-primary focus:border-brand-primary" data-tab="food-safety">
+                            Food Safety & HACCP
+                        </button>
+                        <button class="quality-tab-btn px-6 py-4 text-sm font-medium text-gray-500 hover:text-brand-primary border-b-2 border-transparent hover:border-brand-primary transition-all duration-300 focus:outline-none focus:text-brand-primary focus:border-brand-primary" data-tab="internal-audit">
+                            Internal Audit
+                        </button>
+                        <button class="quality-tab-btn px-6 py-4 text-sm font-medium text-gray-500 hover:text-brand-primary border-b-2 border-transparent hover:border-brand-primary transition-all duration-300 focus:outline-none focus:text-brand-primary focus:border-brand-primary" data-tab="supplier-control">
+                            Supplier Control
+                        </button>
+                        <button class="quality-tab-btn px-6 py-4 text-sm font-medium text-gray-500 hover:text-brand-primary border-b-2 border-transparent hover:border-brand-primary transition-all duration-300 focus:outline-none focus:text-brand-primary focus:border-brand-primary" data-tab="document-training">
+                            Document & Training
+                        </button>
+                        <button class="quality-tab-btn px-6 py-4 text-sm font-medium text-gray-500 hover:text-brand-primary border-b-2 border-transparent hover:border-brand-primary transition-all duration-300 focus:outline-none focus:text-brand-primary focus:border-brand-primary" data-tab="certification">
+                            Certification
+                        </button>
+                    </nav>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="p-8">
+                    <!-- Food Safety & HACCP Tab -->
+                    <div class="quality-tab-content active" id="food-safety">
+                        <div class="grid lg:grid-cols-2 gap-12 items-start">
+                            <div>
+                                <h3 class="text-2xl font-bold text-brand-primary mb-6">Food Safety & HACCP System</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">CCP Monitoring</h4>
+                                            <p class="text-gray-600">Cooking, chilling, metal detection</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">Temperature Logs</h4>
+                                            <p class="text-gray-600">Product traceability</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">Daily GMP & Hygiene Checks</h4>
+                                            <p class="text-gray-600">Comprehensive quality control</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="500">
-                                <div class="bg-brand-primary text-white px-4 py-2 rounded-full text-sm font-semibold">Est. 2014</div>
-                                <span class="text-gray-700 font-medium">Premium Caterer & Holding Company</span>
-                            </div>
-                            <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="600">
-                                <div class="bg-brand-accent text-white px-4 py-2 rounded-full text-sm font-semibold">Est. 2016</div>
-                                <span class="text-gray-700 font-medium">Manufacturing (LBI)</span>
-                            </div>
-                            <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="700">
-                                <div class="bg-brand-primary text-white px-4 py-2 rounded-full text-sm font-semibold">Est. 2020</div>
-                                <span class="text-gray-700 font-medium">Sales and Distributor</span>
-                            </div>
-                            <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="800">
-                                <div class="bg-brand-primary text-white px-4 py-2 rounded-full text-sm font-semibold">Est. 2021</div>
-                                <span class="text-gray-700 font-medium">Industrial Caterer</span>
+                            <div class="grid grid-cols-2 gap-4">
+                                <img src="public/assets/laukkita-bersama/WhatsApp Image 2025-09-05 at 15.47.26.jpeg" alt="Quality Control" class="rounded-lg shadow-md">
+                                <img src="public/assets/laukkita-bersama/WhatsApp Image 2025-09-05 at 15.47.27.jpeg" alt="Food Safety" class="rounded-lg shadow-md">
                             </div>
                         </div>
                     </div>
-                    <div class="text-center" data-aos="fade-left" data-aos-delay="400">
-                        <div class="bg-gradient-to-br from-brand-light to-brand-gold/20 p-8 rounded-2xl border border-brand-gold/30">
-                            <h4 class="text-2xl font-bold text-brand-dark mb-4">Integrated Food Solutions</h4>
-                            <p class="text-gray-600 leading-relaxed">From manufacturing to retail, catering to distribution - we provide comprehensive food industry solutions under one unified group.</p>
+
+                    <!-- Internal Audit Tab -->
+                    <div class="quality-tab-content hidden" id="internal-audit">
+                        <div class="grid lg:grid-cols-2 gap-12 items-start">
+                            <div>
+                                <h3 class="text-2xl font-bold text-brand-primary mb-6">Internal Audit & Verification</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">Periodic Factory Audits</h4>
+                                            <p class="text-gray-600">QA, production, sanitation</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">Mock Recall & Traceability</h4>
+                                            <p class="text-gray-600">Validation processes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <img src="public/assets/laukkita-bersama/WhatsApp Image 2025-09-05 at 15.48.41.jpeg" alt="Internal Audit" class="rounded-lg shadow-md">
+                                <img src="public/assets/laukkita-bersama/LBI_Manufacture.jpg" alt="Verification" class="rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Supplier Control Tab -->
+                    <div class="quality-tab-content hidden" id="supplier-control">
+                        <div class="grid lg:grid-cols-2 gap-12 items-start">
+                            <div>
+                                <h3 class="text-2xl font-bold text-brand-primary mb-6">Supplier & Raw Material Control</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">Approved Supplier Program</h4>
+                                            <p class="text-gray-600">Certified supplier network</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">Incoming Material Inspection</h4>
+                                            <p class="text-gray-600">Visual, temperature, document based on spec</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <img src="public/assets/laukkita-bersama/pabrik.jpg" alt="Supplier Control" class="rounded-lg shadow-md">
+                                <img src="public/assets/laukkita-bersama/pabrik2.jpg" alt="Material Control" class="rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document & Training Tab -->
+                    <div class="quality-tab-content hidden" id="document-training">
+                        <div class="grid lg:grid-cols-2 gap-12 items-start">
+                            <div>
+                                <h3 class="text-2xl font-bold text-brand-primary mb-6">Document & Training Management</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">QMS Documents</h4>
+                                            <p class="text-gray-600">Controlled with review cycle</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">Routine Staff Training</h4>
+                                            <p class="text-gray-600">Food safety and SOPs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <img src="public/assets/laukkita-bersama/WhatsApp Image 2025-09-05 at 15.47.26.jpeg" alt="Document Management" class="rounded-lg shadow-md">
+                                <img src="public/assets/laukkita-bersama/WhatsApp Image 2025-09-05 at 15.47.27.jpeg" alt="Training" class="rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certification Tab -->
+                    <div class="quality-tab-content hidden" id="certification">
+                        <div class="grid lg:grid-cols-2 gap-12 items-start">
+                            <div>
+                                <h3 class="text-2xl font-bold text-brand-primary mb-6">Certification & Compliance</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">BPOM Halal Certified</h4>
+                                            <p class="text-gray-600">Indonesian food safety standards</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">HACCP Implemented</h4>
+                                            <p class="text-gray-600">Hazard analysis critical control points</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">FSSC 22000</h4>
+                                            <p class="text-gray-600">In progress, targeted certification: 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <img src="public/assets/laukkita-bersama/WhatsApp Image 2025-09-05 at 15.48.41.jpeg" alt="Certification" class="rounded-lg shadow-md">
+                                <img src="public/assets/laukkita-bersama/LBI_Manufacture.jpg" alt="Compliance" class="rounded-lg shadow-md">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Our Customers Section -->
+    <section id="customers" class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-4xl lg:text-5xl font-bold text-brand-dark mb-4" data-aos="fade-up" data-aos-delay="200">OUR CUSTOMERS</h2>
+                <p class="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="400">Trusted partners across various industries</p>
+            </div>
+
+            <!-- Customer Logos -->
+            <div class="bg-gray-50 rounded-2xl p-8 lg:p-12" data-aos="fade-up" data-aos-duration="1000">
+                <img src="public/assets/laukkita-bersama/customers.png" alt="Our Customers" class="w-full h-auto rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-brand-primary text-white">
@@ -409,7 +922,7 @@
             <div class="grid lg:grid-cols-2 gap-12">
                 <div data-aos="fade-right" data-aos-duration="1000">
                     <h2 class="text-4xl lg:text-5xl font-bold mb-8" data-aos="fade-up" data-aos-delay="200">Ready to Partner with Us?</h2>
-                    <p class="text-xl text-blue-100 mb-8" data-aos="fade-up" data-aos-delay="400">Let's discuss how our toll manufacturing and white label services can help grow your business.</p>
+                    <p class="text-xl text-blue-100 mb-8" data-aos="fade-up" data-aos-delay="400">Let's discuss how our food manufacturing and white label services can help grow your business.</p>
 
                     <div class="space-y-6">
                         <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="500">
@@ -418,7 +931,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
-                            <span class="text-lg">info@laukitabersama.co.id</span>
+                            <span class="text-lg">info@laukitabersama.com</span>
                         </div>
                         <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="600">
                             <div class="bg-white text-brand-primary p-3 rounded-full">
@@ -435,7 +948,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                 </svg>
                             </div>
-                            <span class="text-lg">Jakarta, Indonesia</span>
+                            <span class="text-lg"><a href="https://maps.app.goo.gl/6w6mGygpoLPSihTL9" target="_blank">Curug Kulon, Curug, Tangerang Regency, Banten 15810</a></span>
                         </div>
                     </div>
                 </div>
@@ -489,7 +1002,7 @@
                             <img src="public/assets/images/pt-lauk-kita-bersama.svg" alt="PT Laukita Bersama Indonesia" class="w-24 h-16">
                         </picture>
                     </div>
-                    <p class="text-gray-400 leading-relaxed">Providing toll manufacturing and white label services since 2014.</p>
+                    <p class="text-gray-400 leading-relaxed">Providing food manufacturing and white label services since 2014.</p>
                 </div>
 
                 <div data-aos="fade-up" data-aos-delay="200">
@@ -550,6 +1063,62 @@
             offset: 100
         });
 
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                mobileOverlay.classList.toggle('hidden');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+                
+                // Prevent body scroll when menu is open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Close mobile menu when clicking on overlay
+            mobileOverlay.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                mobileOverlay.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    mobileOverlay.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-xl');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-xl');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -562,6 +1131,82 @@
                     });
                 }
             });
+        });
+
+        // Quality Management Tabs functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.quality-tab-btn');
+            const tabContents = document.querySelectorAll('.quality-tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active', 'text-brand-primary', 'border-brand-primary');
+                        btn.classList.add('text-gray-500', 'border-transparent');
+                    });
+                    
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        content.classList.add('hidden');
+                    });
+
+                    // Add active class to clicked button
+                    this.classList.add('active', 'text-brand-primary', 'border-brand-primary');
+                    this.classList.remove('text-gray-500', 'border-transparent');
+
+                    // Show target content
+                    const targetContent = document.getElementById(targetTab);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                        targetContent.classList.remove('hidden');
+                    }
+                });
+            });
+        });
+
+        // Timeline Tabs functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineTabs = document.querySelectorAll('.timeline-tab');
+            const timelinePanels = document.querySelectorAll('.timeline-panel');
+
+            timelineTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetYear = this.getAttribute('data-year');
+
+                    // Remove active class from all tabs
+                    timelineTabs.forEach(t => {
+                        t.classList.remove('active', 'bg-brand-primary', 'text-white', 'shadow-lg');
+                        t.classList.add('bg-white', 'text-gray-600');
+                    });
+
+                    // Remove active class from all panels
+                    timelinePanels.forEach(panel => {
+                        panel.classList.remove('active');
+                        panel.style.display = 'none';
+                    });
+
+                    // Add active class to clicked tab
+                    this.classList.add('active', 'bg-brand-primary', 'text-white', 'shadow-lg');
+                    this.classList.remove('bg-white', 'text-gray-600');
+
+                    // Show target panel with animation
+                    const targetPanel = document.querySelector(`[data-year="${targetYear}"].timeline-panel`);
+                    if (targetPanel) {
+                        targetPanel.style.display = 'block';
+                        setTimeout(() => {
+                            targetPanel.classList.add('active');
+                        }, 50);
+                    }
+                });
+            });
+
+            // Initialize first tab as active
+            if (timelineTabs.length > 0) {
+                timelineTabs[0].click();
+            }
         });
     </script>
 </body>

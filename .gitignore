@@ -13,4 +13,10 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Large files
 public/umara-compro/*.pptx
+public/assets/laukkita-bersama/videos/
+*.mp4
+*.mov
+*.avi
+*.mkv
