@@ -1,24 +1,39 @@
 @config "../tailwind.config.js";
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/* jangan pakai lagi: @tailwind base/components/utilities */
-
-@layer base {
-  body {
-    @apply font-nunito;
-  }
-}
-
-/* utilitas custommu tetap boleh */
-.btn-primary {
-  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
-}
-.card {
-  @apply bg-white rounded-lg shadow-md p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300;
-}
+/* Navigation Links */
 .nav-link {
-  @apply text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md;
+  @apply relative text-black hover:text-yellow-600 transition-colors duration-300 px-5;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile Navigation Links */
+.mobile-nav-link {
+  @apply block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300;
+}
+
+/* Custom Utility Classes */
+.btn-primary {
+  @apply bg-gradient-to-r from-amber-500 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105;
+}
+
+.card {
+  @apply bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl hover:shadow-2xl transition-all duration-500 hover:scale-105;
 }
 
 /* CSS biasa kamu tetap oke */
@@ -31,7 +46,7 @@
 }
 
 .bg-branding {
-  background-color: #ce8131;
+  background-color: #886f35;
 }
 
 header {
@@ -54,7 +69,6 @@ main {
 
 .title-footer {
   letter-spacing: 1px;
-  color: #ce8131;
 }
 
 .title-footer2 {
@@ -63,10 +77,260 @@ main {
 }
 
 .swiper-pagination-bullet {
-  background-color: #d1d5db; /* abu-abu */
-  opacity: 1; /* kalau mau penuh */
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #ce8131 !important; /* biru Tailwind (blue-500) */
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  transform: scale(1.2);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+/* Tab Navigation Styles */
+.tab-btn {
+  @apply px-8 py-4 rounded-full font-semibold transition-all duration-300 bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 hover:shadow-lg transform hover:scale-105;
+  background-color: #b5914a;
+}
+
+.tab-btn.active {
+  @apply text-white shadow-lg;
+  background: linear-gradient(to right, #91521d, #a85f23);
+}
+
+.tab-content {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced hover effects for cards */
+.tab-content .card:hover {
+  @apply bg-white/15 border-amber-400/30;
+}
+
+.tab-content .card:hover .bg-gradient-to-r {
+  @apply scale-110;
+}
+
+.tab-content .card:hover button {
+  @apply shadow-xl scale-105;
+}
+
+/* Highlights Tab Navigation Styles */
+.highlights-tab-content {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.highlights-tab-content.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Enhanced hover effects for highlights tab content */
+.highlights-tab-content .card:hover {
+  @apply bg-white/15 border-amber-400/30;
+}
+
+.highlights-tab-content .card:hover .bg-gradient-to-r {
+  @apply scale-110;
+}
+
+.highlights-tab-content .card:hover button {
+  @apply shadow-xl scale-105;
+}
+
+/* Highlights Section - Clean Modern Design */
+.highlights-card {
+  @apply transition-all duration-500 ease-out;
+}
+
+.highlights-card:hover {
+  @apply transform scale-105 shadow-2xl;
+}
+
+.highlights-icon {
+  @apply transition-all duration-300 ease-out;
+}
+
+.highlights-card:hover .highlights-icon {
+  @apply transform scale-110;
+}
+
+/* Clean Background Animations */
+@keyframes float-clean {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+    opacity: 0.4;
+  }
+}
+
+.float-clean {
+  animation: float-clean 6s ease-in-out infinite;
+}
+
+/* Enhanced Card Shadows */
+.card-shadow-clean {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card-shadow-clean:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15),
+    0 25px 25px -12px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient Text Animation */
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradient-text-clean {
+  background: linear-gradient(-45deg, #f59e0b, #ea580c, #dc2626, #7c3aed);
+  background-size: 400% 400%;
+  animation: gradient-shift 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button Enhancements */
+.btn-clean {
+  @apply transition-all duration-300 ease-out;
+}
+
+.btn-clean:hover {
+  @apply transform scale-105 shadow-xl;
+}
+
+/* Carousel Styles */
+.carousel-container {
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+/* Content Area Styles */
+.carousel-content-area {
+  position: relative;
+  min-height: 300px;
+}
+
+.carousel-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.carousel-content.active {
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+  pointer-events: auto;
+}
+
+/* Navigation Buttons */
+.carousel-prev,
+.carousel-next {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .carousel-content-area {
+    min-height: 250px;
+  }
+  
+  .carousel-slide img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-content-area {
+    min-height: 200px;
+  }
+  
+  .carousel-slide img {
+    height: 300px;
+  }
+  
+  .carousel-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .carousel-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Business Divisions Background */
+.business-divisions-bg {
+  /* background-color: #B6914B; */
+  background-image: url("../public/assets/bg/BG-WEBFIX-UG.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }

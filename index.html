@@ -15,429 +15,673 @@
     <title>Home - Umara Group</title>
   </head>
   <body class="font-inter">
-    <header class="bg-amber-100 text-white">
-      <nav class="container mx-auto py-2 sm:px-6 lg:px-8 relative">
-        <div class="flex h-16 items-center justify-between">
-          <!-- Left: Brand -->
-          <a href="/" class="flex items-center gap-2 md:hidden">
-            <img src="public/assets/images/logo-umara.svg" alt="Umara Group" class="h-10 w-auto" />
-            <span class="sr-only">Umara Group</span>
-          </a>
-
-          <!-- Center: Desktop Nav -->
-          <div class="hidden md:flex items-center justify-center flex-1">
-            <ul class="flex items-center gap-5">
-              <li><a href="about.html" class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">About Us</a></li>
-              <li><a href="news-event.html" class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">News Events</a></li>
-              <li>
-                <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium hover:text-white"><img src="public/assets/images/logo-umara.svg" alt="Umara Group" class="h-14 w-auto" /></a>
-              </li>
-              <li><a href="our-promotions.html" class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">Promotions</a></li>
-              <li><a href="contact.html" class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">Contact Us</a></li>
-            </ul>
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+      <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          
+          <!-- Logo Section -->
+          <div class="flex-shrink-0">
+            <a href="index.html" class="flex items-center group">
+              <img 
+                src="public/assets/vector/LOGO-UMARA-GROUP.png" 
+                alt="Umara Group" 
+                class="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
           </div>
 
-          <!-- Right: Actions (placeholder) -->
-          <div class="hidden md:flex items-center gap-3">
-            <!-- contoh tombol/login kalau perlu -->
-            <!-- <a class="rounded-md px-3 py-2 text-sm hover:bg-white/5 hover:text-white" href="#">Login</a> -->
+          <!-- Desktop Navigation Menu -->
+          <div class="hidden lg:flex items-center space-x-1">
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="news-event.html" class="nav-link">News & Events</a>
+            <a href="our-promotions.html" class="nav-link">Promotions</a>
+            <a href="contact.html" class="nav-link">Contact</a>
           </div>
 
-          <!-- Mobile menu button -->
+          <!-- Mobile Menu Button -->
           <button
-            id="nav-toggle"
-            class="md:hidden inline-flex items-center justify-center bg-amber rounded-md p-2 text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
-            aria-controls="nav-mobile"
+            id="mobile-menu-button"
+            class="lg:hidden inline-flex items-center justify-center p-2 rounded-xl text-black hover:text-amber-600 hover:bg-amber-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
             aria-expanded="false"
-            type="button"
+            aria-label="Toggle navigation menu"
           >
-            <span class="sr-only">Open main menu</span>
-            <!-- icon open -->
-            <svg id="icon-open" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+            <svg id="menu-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-            <!-- icon close -->
-            <svg id="icon-close" class="h-6 w-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+            <svg id="close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        <!-- Mobile Nav -->
-        <div id="nav-mobile" class="md:hidden hidden absolute top-full left-0 right-0 bg-amber-100 border-t border-white/10 z-50 shadow-lg">
-          <ul class="flex flex-col items-center gap-1 py-3">
-            <!-- pakai text-base agar nyaman di mobile -->
-            <li class="w-full max-w-sm">
-              <a href="about.html" class="block rounded-md px-3 py-2 text-base font-medium text-white bg-gray-900 text-center">About</a>
-            </li>
-            <li class="w-full max-w-sm">
-              <a href="news-event.html" class="block rounded-md px-3 py-2 text-base font-medium hover:bg-white/5 hover:text-white text-center">News & Event</a>
-            </li>
-            <li class="w-full max-w-sm">
-              <a href="our-promotions.html" class="block rounded-md px-3 py-2 text-base font-medium hover:bg-white/5 hover:text-white text-center">Promotions</a>
-            </li>
-            <li class="w-full max-w-sm">
-              <a href="contact.html" class="block rounded-md px-3 py-2 text-base font-medium hover:bg-white/5 hover:text-white text-center">Contact</a>
-            </li>
-          </ul>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden">
+          <div class="px-2 pt-2 pb-6 space-y-2 bg-white border-t border-gray-100">
+            <a href="about.html" class="mobile-nav-link">About Us</a>
+            <a href="news-event.html" class="mobile-nav-link">News & Events</a>
+            <a href="our-promotions.html" class="mobile-nav-link">Promotions</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+          </div>
         </div>
       </nav>
     </header>
 
+    <!-- Add padding to body to account for fixed header -->
+    <div class="pt-20"></div>
+
     <main class="text-white">
       <!-- SECTION CAROUSEL -->
-      <section id="carousel" class="w-full" data-aos="fade-in" data-aos-duration="1000">
-        <!-- Swiper -->
-        <div class="swiper hero-swiper">
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide relative overflow-hidden group">
-              <img src="public/assets/images/Umara-00189.jpg" loading="lazy" alt="Umara Group Excellence" class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover transition-transform duration-700" />
-              <!-- Gradient Overlay -->
-              <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
-              <!-- Text Overlay -->
-              <div class="absolute inset-0 flex items-center justify-start text-white p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
-                <div class="max-w-xl sm:max-w-2xl animate-fade-in-up">
-                  <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight font-merriweather">
-                    Building Dreams,<br>
-                    <span class="text-white">Creating Futures</span>
-                  </h3>
-                  <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 leading-relaxed mb-4 sm:mb-6">
-                    Discover exceptional residential and commercial developments that redefine modern living
-                  </p>
-                  <div class="flex flex-col sm:flex-row gap-4">
-                    <button class="inline-block px-4 py-2 sm:px-6 sm:py-3 bg-[#AD314B] rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base">
-                      Get in Touch
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 2 -->
-
-            <!-- Slide 3 -->
-
-            <!-- Slide 4 -->
-            <div class="swiper-slide relative overflow-hidden group">
-              <img src="public/assets/images/Umara-House-1.jpg" loading="lazy" alt="Umara Residential Excellence" class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover transition-transform duration-700" />
-              <!-- Gradient Overlay -->
-              <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-transparent to-black/50"></div>
-              <!-- Text Overlay -->
-              <div class="absolute inset-0 flex items-center justify-start text-white p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
-                <div class="max-w-xl sm:max-w-2xl animate-fade-in-up">
-                  <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
-                    <span class="text-white">Contemporary</span><br>
-                    Architecture
-                  </h3>
-                  <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 leading-relaxed mb-4 sm:mb-6">
-                    Innovative designs that blend functionality with aesthetic excellence
-                  </p>
-                  <div class="flex flex-col sm:flex-row gap-4">
-                    <button class="inline-block px-4 py-2 sm:px-6 sm:py-3 bg-[#D3902A] rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base">
-                      Get in Touch
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 5 -->
-            <div class="swiper-slide relative overflow-hidden group">
-              <img src="public/assets/images/Lumpang-Emas-bintaro-1.jpg" loading="lazy" alt="Lumpang Emas Bintaro" class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover transition-transform duration-700" />
-              <!-- Gradient Overlay -->
-              <div class="absolute inset-0 bg-gradient-to-l from-black/70 via-black/40 to-transparent"></div>
-              <!-- Text Overlay -->
-              <div class="absolute inset-0 flex items-center justify-end text-white p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
-                <div class="max-w-xl sm:max-w-2xl text-right animate-fade-in-up">
-                  <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
-                    Golden Dining in<br>
-                    <span class="text-white">Bintaro</span>
-                  </h3>
-                  <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 leading-relaxed mb-4 sm:mb-6">
-                    Premium restaurant experience in the heart of South Jakarta's most sought-after area
-                  </p>
-                  <div class="flex flex-col sm:flex-row gap-4 justify-end">
-                    <button class="px-4 py-2 sm:px-6 sm:py-3 bg-[#D3902A] rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base">
-                      Get in Touch
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 6 -->          
+      <section class="w-full py-16 px-4 md:px-8 lg:px-12" style="background-image: url('public/assets/bg/BG-WEBFIX-UG-2.png'); background-size: cover; background-position: center;">
+        <div class="max-w-8xl mx-auto">
+          <!-- Two Column Layout - Image takes more space -->
+          <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center" data-aos="fade-up" data-aos-duration="800">
             
-            
-            <!-- Slide 7 -->
-             
+            <!-- Left Column - Content (1 column out of 4) -->
+            <div class="lg:col-span-1 space-y-8">
+              <!-- Section Header -->
+              <div>
+                <h2 class="text-4xl md:text-5xl font-light text-white mb-6">
+                  Umara <span class="font-bold bg-[#91521D] bg-clip-text text-transparent">Group</span>
+                </h2>
+                <p class="text-xl leading-relaxed mb-8">
+                  Explore our journey through moments that define our excellence and commitment across all our business divisions.
+                </p>
+              </div>
 
-            <!-- Slide 8 -->
-            <div class="swiper-slide relative overflow-hidden group">
-              <img src="public/assets/images/Lumpang-Emas-signature-2.jpg" loading="lazy" alt="Lumpang Emas Excellence" class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover transition-transform duration-700" />
-              <!-- Gradient Overlay -->
-              <div class="absolute inset-0 bg-gradient-to-l from-black/70 via-black/40 to-transparent"></div>
-              <!-- Text Overlay -->
-              <div class="absolute inset-0 flex items-center justify-end text-white p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
-                <div class="max-w-xl sm:max-w-2xl text-right animate-fade-in-up">
-                  <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
-                    <span class="text-white">Signature</span><br>
-                    Series
-                  </h3>
-                  <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 leading-relaxed mb-4 sm:mb-6">
-                    Exclusive luxury developments that define premium living standards
+              <!-- Dynamic Content Area -->
+              <div class="carousel-content-area">
+                <!-- Content for Slide 1 -->
+                <div class="carousel-content active" id="content-0">
+                  <h3 class="text-2xl font-semibold mb-4 text-[#91521D]">Excellence in Service</h3>
+                  <p class="leading-relaxed mb-6 font-light text-sm">
+                    We are committed to delivering quality experiences across all our business divisions. Our dedication to excellence ensures that every interaction with our brand exceeds expectations and creates lasting value for our clients.
                   </p>
-                  <div class="flex flex-col sm:flex-row gap-4 justify-end">
-                    <button class="px-4 py-2 sm:px-6 sm:py-3 bg-[#D3902A] rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base">
-                      Get in Touch
-                    </button>
+                  <div class="flex items-center space-x-4">
+                    <div class="w-12 h-1 bg-gradient-to-r from-[#91521D] to-[#A85F23]"></div>
+                    <span class="text-sm font-medium">SLIDE 1 OF 9</span>
+                  </div>
+                </div>
+
+                <!-- Content for Slide 2 -->
+                <div class="carousel-content" id="content-1">
+                  <h3 class="text-2xl font-semibold mb-4">Culinary Innovation</h3>
+                  <p class="leading-relaxed mb-6 text-sm">
+                    Creating memorable dining experiences with authentic flavors that celebrate Indonesian culinary heritage. Our innovative approach combines traditional recipes with modern techniques to deliver exceptional taste.
+                  </p>
+                  <div class="flex items-center space-x-4">
+                    <div class="w-12 h-1 bg-gradient-to-r from-[#91521D] to-[#A85F23]"></div>
+                    <span class="text-sm font-medium">SLIDE 2 OF 9</span>
+                  </div>
+                </div>
+
+                <!-- Content for Slide 3 -->
+                <div class="carousel-content" id="content-2">
+                  <h3 class="text-2xl font-semibold mb-4">Premium Catering</h3>
+                  <p class="leading-relaxed mb-6 text-sm">
+                    Professional catering services for every occasion, from intimate gatherings to large corporate events. We bring the same level of excellence and attention to detail to every event we serve.
+                  </p>
+                  <div class="flex items-center space-x-4">
+                    <div class="w-12 h-1 bg-gradient-to-r from-[#91521D] to-[#A85F23]"></div>
+                    <span class="text-sm font-medium">SLIDE 3 OF 9</span>
+                  </div>
+                </div>
+
+                <!-- Content for Slide 4 -->
+                <div class="carousel-content" id="content-3">
+                  <h3 class="text-2xl font-semibold mb-4">Quality Ingredients</h3>
+                  <p class="leading-relaxed mb-6 text-sm">
+                    Sourcing the finest ingredients for exceptional taste. We work directly with trusted suppliers and local farmers to ensure freshness, quality, and sustainability in every dish we create.
+                  </p>
+                  <div class="flex items-center space-x-4">
+                    <div class="w-12 h-1 bg-gradient-to-r from-[#91521D] to-[#A85F23]"></div>
+                    <span class="text-sm font-medium">SLIDE 4 OF 9</span>
+                  </div>
+                </div>
+
+                <!-- Content for Slide 5 -->
+                <div class="carousel-content" id="content-4">
+                  <h3 class="text-2xl font-semibold mb-4">Modern Facilities</h3>
+                  <p class="leading-relaxed mb-6 text-sm">
+                    State-of-the-art facilities ensuring food safety and quality. Our modern kitchens and equipment meet international standards, allowing us to maintain consistency and excellence in every meal.
+                  </p>
+                  <div class="flex items-center space-x-4">
+                    <div class="w-12 h-1 bg-gradient-to-r from-[#91521D] to-[#A85F23]"></div>
+                    <span class="text-sm font-medium">SLIDE 5 OF 9</span>
+                  </div>
+                </div>
+
+                <!-- Content for Slide 6 -->
+                <div class="carousel-content" id="content-5">
+                  <h3 class="text-2xl font-semibold mb-4">Team Excellence</h3>
+                  <p class="leading-relaxed mb-6 text-sm">
+                    Dedicated professionals committed to your satisfaction. Our experienced team brings passion, expertise, and attention to detail to every project, ensuring exceptional results every time.
+                  </p>
+                  <div class="flex items-center space-x-4">
+                    <div class="w-12 h-1 bg-gradient-to-r from-[#91521D] to-[#A85F23]"></div>
+                    <span class="text-sm font-medium">SLIDE 6 OF 9</span>
+                  </div>
+                </div>
+
+                <!-- Content for Slide 7 -->
+                <div class="carousel-content" id="content-6">
+                  <h3 class="text-2xl font-semibold mb-4">Event Catering</h3>
+                  <p class="leading-relaxed mb-6 text-sm">
+                    Making your special events memorable with exceptional service. From weddings to corporate functions, we provide comprehensive catering solutions that leave lasting impressions.
+                  </p>
+                  <div class="flex items-center space-x-4">
+                    <div class="w-12 h-1 bg-gradient-to-r from-[#91521D] to-[#A85F23]"></div>
+                    <span class="text-sm font-medium">SLIDE 7 OF 9</span>
+                  </div>
+                </div>
+
+                <!-- Content for Slide 8 -->
+                <div class="carousel-content" id="content-7">
+                  <h3 class="text-2xl font-semibold mb-4">Corporate Solutions</h3>
+                  <p class="leading-relaxed mb-6 text-sm">
+                    Tailored solutions for corporate dining and events. We understand the unique needs of businesses and provide customized catering services that enhance your corporate image and employee satisfaction.
+                  </p>
+                  <div class="flex items-center space-x-4">
+                    <div class="w-12 h-1 bg-gradient-to-r from-[#91521D] to-[#A85F23]"></div>
+                    <span class="text-sm font-medium">SLIDE 8 OF 9</span>
+                  </div>
+                </div>
+
+                <!-- Content for Slide 9 -->
+                <div class="carousel-content" id="content-8">
+                  <h3 class="text-2xl font-semibold mb-4">Sustainable Practices</h3>
+                  <p class="leading-relaxed mb-6">
+                    Committed to environmental responsibility and sustainability. We implement eco-friendly practices throughout our operations, from sourcing to packaging, contributing to a better future for our community.
+                  </p>
+                  <div class="flex items-center space-x-4">
+                    <div class="w-12 h-1 bg-gradient-to-r from-[#91521D] to-[#A85F23]"></div>
+                    <span class="text-sm font-medium">SLIDE 9 OF 9</span>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Slide 9 -->
-            <div class="swiper-slide relative overflow-hidden group">
-              <img src="public/assets/rasa-umara/4.jpeg" loading="lazy" alt="Rasa Umara Cikarang Development" class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover transition-transform duration-700" />
-              <!-- Gradient Overlay -->
-              <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-transparent to-black/50"></div>
-              <!-- Text Overlay -->
-              <div class="absolute inset-0 flex items-center justify-start text-white p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
-                <div class="max-w-xl sm:max-w-2xl animate-fade-in-up">
-                  <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                    <span class="text-white">Modern Living</span><br>
-                    in Cikarang
-                  </h3>
-                  <p class="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 leading-relaxed mb-6">
-                    Strategic location with contemporary design for the modern family lifestyle
-                  </p>
-                  <div class="flex flex-col sm:flex-row gap-4">
-                    <button class="px-6 py-3 bg-[#D3902A] rounded-lg font-semibold transition-all duration-300">
-                      Get in Touch
-                    </button>
-                  </div>
-                </div>
+              <!-- Navigation Controls -->
+              <div class="flex items-center space-x-4">
+                <button class="carousel-prev bg-white border-2 border-gray-300 hover:border-[#91521D] text-gray-700 hover:text-[#91521D] p-3 rounded-full transition-all duration-300 hover:scale-110" id="prevBtn">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                  </svg>
+                </button>
+                <button class="carousel-next bg-white border-2 border-gray-300 hover:border-[#91521D] text-gray-700 hover:text-[#91521D] p-3 rounded-full transition-all duration-300 hover:scale-110" id="nextBtn">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <div class="flex-1 h-px bg-gray-300"></div>
+                <span class="text-sm  font-medium">Navigate Gallery</span>
               </div>
             </div>
 
-            <!-- Slide 10 -->
-            <div class="swiper-slide relative overflow-hidden group">
-              <img src="public/assets/laukkita-bersama/pabrik.jpg" loading="lazy" alt="Lauk Kita Bersama Manufacturing" class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover object-top transition-transform duration-700" />
-              <!-- Gradient Overlay -->
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-              <!-- Text Overlay -->
-              <div class="absolute inset-0 flex items-center justify-end text-white p-6 sm:p-8 md:p-12 lg:p-16">
-                <div class="max-w-4xl text-end animate-fade-in-up">
-                  <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                    <span class="text-white">Innovative</span><br>
-                    Food Manufacturing
-                  </h3>
-                  <p class="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 leading-relaxed mb-6">
-                    Leading the industry with cutting-edge technology and uncompromising quality standards in food production
-                  </p>
-                  <div class="flex flex-col sm:flex-row gap-4 justify-end">
-                    <button class="px-6 py-3 bg-[#8A1E40] rounded-lg font-semibold transition-all duration-300">
-                      Get in Touch
-                    </button>
+            <!-- Right Column - Carousel (3 columns out of 4) -->
+            <div class="lg:col-span-3 relative w-full" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+              <div class="carousel-container overflow-hidden rounded-2xl shadow-2xl bg-white w-full">
+                <div class="carousel-track flex transition-transform duration-500 ease-in-out" id="carouselTrack">
+                  <!-- Slide 1 -->
+                  <div class="carousel-slide min-w-full relative">
+                    <img src="public/assets/carousel/1.jpg" alt="Gallery Image 1" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
+                  </div>
+                  
+                  <!-- Slide 2 -->
+                  <div class="carousel-slide min-w-full relative">
+                    <img src="public/assets/carousel/2.jpg" alt="Gallery Image 2" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
+                  </div>
+                  
+                  <!-- Slide 3 -->
+                  <div class="carousel-slide min-w-full relative">
+                    <img src="public/assets/carousel/3.jpg" alt="Gallery Image 3" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
+                  </div>
+                  
+                  <!-- Slide 4 -->
+                  <div class="carousel-slide min-w-full relative">
+                    <img src="public/assets/carousel/4.jpg" alt="Gallery Image 4" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
+                  </div>
+                  
+                  <!-- Slide 5 -->
+                  <div class="carousel-slide min-w-full relative">
+                    <img src="public/assets/carousel/5.jpeg" alt="Gallery Image 5" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
+                  </div>
+                  
+                  <!-- Slide 6 -->
+                  <div class="carousel-slide min-w-full relative">
+                    <img src="public/assets/carousel/6.jpg" alt="Gallery Image 6" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
+                  </div>
+                  
+                  <!-- Slide 7 -->
+                  <div class="carousel-slide min-w-full relative">
+                    <img src="public/assets/carousel/7.jpg" alt="Gallery Image 7" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
+                  </div>
+                  
+                  <!-- Slide 8 -->
+                  <div class="carousel-slide min-w-full relative">
+                    <img src="public/assets/carousel/8.jpg" alt="Gallery Image 8" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
+                  </div>
+                  
+                  <!-- Slide 9 -->
+                  <div class="carousel-slide min-w-full relative">
+                    <img src="public/assets/carousel/9.jpg" alt="Gallery Image 9" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
                   </div>
                 </div>
               </div>
-            </div>
-
-            <!-- Slide 11 -->
-            <div class="swiper-slide relative overflow-hidden group">
-              <img src="public/assets/laukkita-bersama/LBI_Manufacture.jpg" loading="lazy" alt="Lauk Kita Bersama Manufacturing" class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover transition-transform duration-700" />
-              <!-- Gradient Overlay -->
-              <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
-              <!-- Text Overlay -->
-              <div class="absolute inset-0 flex items-center justify-start text-white p-6 sm:p-8 md:p-12 lg:p-16">
-                <div class="max-w-2xl animate-fade-in-up">
-                  <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                    <span class="text-white">Quality</span><br>
-                    Food Production
-                  </h3>
-                  <p class="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 leading-relaxed mb-6">
-                    State-of-the-art manufacturing facilities ensuring the highest quality standards
-                  </p>
-                  <div class="flex flex-col sm:flex-row gap-4">
-                    <button class="px-6 py-3 bg-[#8A1E40] rounded-lg font-semibold transition-all duration-300">
-                      Get in Touch
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 12 -->
-            <div class="swiper-slide relative overflow-hidden group">
-              <img src="public/assets/umara-mitra-kulina/alat-pabrik-2.jpg" loading="lazy" alt="Umara Mitra Kulina Manufacturing Equipment" class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover transition-transform duration-700" />
-              <!-- Gradient Overlay -->
-              <div class="absolute inset-0 bg-gradient-to-l from-black/70 via-black/40 to-transparent"></div>
-              <!-- Text Overlay -->
-              <div class="absolute inset-0 flex items-center justify-end text-white p-6 sm:p-8 md:p-12 lg:p-16">
-                <div class="max-w-2xl text-right animate-fade-in-up">
-                  <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                    <span class="text-white">Advanced</span><br>
-                    Manufacturing
-                  </h3>
-                  <p class="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 leading-relaxed mb-6">
-                    Cutting-edge equipment and technology for superior food processing solutions
-                  </p>
-                  <div class="flex flex-col sm:flex-row gap-4 justify-end">
-                    <button class="px-6 py-3 bg-[#8A1E40] rounded-lg font-semibold transition-all duration-300">
-                      Get in Touch
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 13 -->
-            <div class="swiper-slide relative overflow-hidden group">
-              <img src="public/assets/images/Thumbnail web2.jpg" loading="lazy" alt="Umara Mitra Kulina Manufacturing Equipment"
-                class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover transition-transform duration-700" />
-              <!-- Gradient Overlay -->
-              <div class="absolute inset-0 bg-gradient-to-l from-black/70 via-black/40 to-transparent"></div>
-              <!-- Text Overlay -->
-              <div class="absolute inset-0 flex items-center justify-end text-white p-6 sm:p-8 md:p-12 lg:p-16">
-                <div class="max-w-2xl text-right animate-fade-in-up">
-                  <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                    <span class="text-white">Advanced</span><br>
-                    Manufacturing
-                  </h3>
-                  <p class="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 leading-relaxed mb-6">
-                    Cutting-edge equipment and technology for superior food processing solutions
-                  </p>
-                  <div class="flex flex-col sm:flex-row gap-4 justify-end">
-                    <button class="px-6 py-3 bg-[#EB2129] rounded-lg font-semibold transition-all duration-300">
-                      Get in Touch
-                    </button>
-                  </div>
-                </div>
-              </div>      
             </div>
           </div>
-
-          <!-- Navigation arrows -->
-          <div class="swiper-button-next !text-white !text-lg sm:!text-2xl !w-10 !h-10 sm:!w-12 sm:!h-12 !bg-white/20 !backdrop-blur-md !border !border-white/30 !rounded-full !transition-all !duration-300 !shadow-lg after:!text-sm sm:after:!text-lg after:!font-bold !right-2 sm:!right-4"></div>
-          <div class="swiper-button-prev !text-white !text-lg sm:!text-2xl !w-10 !h-10 sm:!w-12 sm:!h-12 !bg-white/20 !backdrop-blur-md !border !border-white/30 !rounded-full !transition-all !duration-300 !shadow-lg after:!text-sm sm:after:!text-lg after:!font-bold !left-2 sm:!left-4"></div>
-
-          <!-- Enhanced Pagination -->
-          <div class="swiper-pagination !bottom-4 sm:!bottom-6 md:!bottom-8"></div>
         </div>
       </section>
       <!-- END OF SECTION CAROUSEL -->
 
-      <!-- SECTION BRANDING OVERVIEW -->
-      <section id="branding-overview" class="w-full py-12 px-8 md:px-2 lg:px-12 bg-blue-300">
-        <div class="w-full flex justify-center mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
-            <div>
-              <h2 class="text-4xl font-bold mb-4 text-center" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">BRAND OVERVIEW</h2>
-              <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">We are a leading brand in the industry, known for our quality products and exceptional customer service.</p>
+      <!-- BUSINESS DIVISIONS SECTION -->
+      <section class="w-full py-16 px-4 md:px-8 lg:px-12 business-divisions-bg">
+          <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+              <h2 class="text-4xl md:text-5xl font-light text-white mb-4">
+                Our <span class="font-bold bg-gradient-to-r from-[#91521D] to-[#A85F23] bg-clip-text text-transparent">Business Units</span>
+              </h2>
+              <p class="text-xl text-white max-w-3xl mx-auto leading-relaxed">
+                Discover our comprehensive range of services across multiple industries, delivering excellence in every sector
+              </p>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <div class="flex flex-wrap justify-center mb-8 bg-white/40 backdrop-blur-md rounded-2xl p-2 shadow-lg border border-gray-200/50" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+              <button class="tab-btn active px-6 py-3 mx-1 mb-2 rounded-xl font-medium transition-all duration-300 text-sm md:text-base" data-tab="restaurant">
+                Rasa Nusantara Baru
+              </button>
+              <button class="tab-btn px-6 py-3 mx-1 mb-2 rounded-xl font-medium transition-all duration-300 text-sm md:text-base" data-tab="catering">
+                Umara Catering
+              </button>
+              <button class="tab-btn px-6 py-3 mx-1 mb-2 rounded-xl font-medium transition-all duration-300 text-sm md:text-base" data-tab="industry">
+                Umara Mitra Kulina
+              </button>
+              <button class="tab-btn px-6 py-3 mx-1 mb-2 rounded-xl font-medium transition-all duration-300 text-sm md:text-base" data-tab="manufacturing">
+                Laukita Bersama
+              </button>
+              <button class="tab-btn px-6 py-3 mx-1 mb-2 rounded-xl font-medium transition-all duration-300 text-sm md:text-base" data-tab="quality">
+                Laukita Niaga
+              </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content-container">
+              <!-- Restaurant & Bar Tab -->
+              <div class="tab-content active" id="restaurant" data-aos="fade-up" data-aos-duration="600">
+                <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl border border-white/20">
+                  <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 md:order-1">
+                      <div class="w-24 h-24 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <img src="public/assets/images/pt-nusantara-baru.svg" alt="PT Nusantara Baru" class="w-16 h-16 object-contain filter brightness-0 invert" />
+                      </div>
+                      <h3 class="text-3xl md:text-4xl font-light text-gray-800 mb-4">
+                        <span class="font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">Restaurant</span> & Bar
+                      </h3>
+                      <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Experience exceptional dining with our premium restaurant and bar services. We deliver lightning-fast performance and optimization for unforgettable culinary experiences.
+                      </p>
+                      <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="px-4 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Fine Dining</span>
+                        <span class="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Bar Services</span>
+                        <span class="px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Event Hosting</span>
+                      </div>
+                      <a href="ptnusantarabaru.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Learn More
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="order-1 md:order-2">
+                      <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-orange-400/20 rounded-3xl transform rotate-3"></div>
+                        <div class="relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 border border-amber-200/50">
+                          <div class="text-center">
+                            <div class="w-32 h-32 bg-gradient-to-br from-amber-500 to-orange-500 rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl">
+                              <img src="public/assets/images/pt-nusantara-baru.svg" alt="Restaurant Icon" class="w-20 h-20 object-contain filter brightness-0 invert" />
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Rasa Nusantara Baru</h4>
+                            <p class="text-gray-600">Exceptional service and quality</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Premium Catering Tab -->
+              <div class="tab-content" id="catering" data-aos="fade-up" data-aos-duration="600">
+                <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl border border-white/20">
+                  <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                      <div class="w-24 h-24 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <img src="public/assets/vector/ucr-logo-white.png" alt="UCR Logo" class="w-16 h-16 object-contain" />
+                      </div>
+                      <h3 class="text-3xl md:text-4xl font-light text-gray-800 mb-4">
+                        <span class="font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Premium</span> Catering
+                      </h3>
+                      <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Trusted by thousands of customers worldwide, our premium catering services deliver exceptional culinary experiences for every occasion.
+                      </p>
+                      <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium">Corporate Events</span>
+                        <span class="px-4 py-2 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">Weddings</span>
+                        <span class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">Private Parties</span>
+                      </div>
+                      <a href="ptumaraciptarasa.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Learn More
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                      </a>
+                    </div>
+                    <div>
+                      <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-3xl transform -rotate-3"></div>
+                        <div class="relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 border border-emerald-200/50">
+                          <div class="text-center">
+                            <div class="w-32 h-32 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl">
+                              <img src="public/assets/vector/ucr-logo-white.png" alt="Catering Icon" class="w-20 h-20 object-contain" />
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Umara Catering</h4>
+                            <p class="text-gray-600">Worldwide customer satisfaction</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Industry Catering Tab -->
+              <div class="tab-content" id="industry" data-aos="fade-up" data-aos-duration="600">
+                <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl border border-white/20">
+                  <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 md:order-1">
+                      <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <img src="public/assets/images/pt-umara-mitra-kulina.svg" alt="Umara Mitra Kulina" class="w-16 h-16 object-contain filter brightness-0 invert" />
+                      </div>
+                      <h3 class="text-3xl md:text-4xl font-light text-gray-800 mb-4">
+                        <span class="font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Industry</span> Catering
+                      </h3>
+                      <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Customizable solutions for your industrial needs. We provide comprehensive catering services tailored to meet the unique requirements of various industries.
+                      </p>
+                      <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Industrial Sites</span>
+                        <span class="px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Mining Operations</span>
+                        <span class="px-4 py-2 bg-cyan-100 text-cyan-800 rounded-full text-sm font-medium">Corporate Facilities</span>
+                      </div>
+                      <a href="ptumaramitrakulina.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Learn More
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="order-1 md:order-2">
+                      <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-indigo-400/20 rounded-3xl transform rotate-3"></div>
+                        <div class="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 border border-blue-200/50">
+                          <div class="text-center">
+                            <div class="w-32 h-32 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl">
+                              <img src="public/assets/images/pt-umara-mitra-kulina.svg" alt="Industry Icon" class="w-20 h-20 object-contain filter brightness-0 invert" />
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Umara Mitra Kulina</h4>
+                            <p class="text-gray-600">Tailored for your industry needs</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Food Manufacturing Tab -->
+              <div class="tab-content" id="manufacturing" data-aos="fade-up" data-aos-duration="600">
+                <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl border border-white/20">
+                  <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                      <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <img src="public/assets/images/pt-lauk-kita-bersama.svg" alt="Lauk Kita Bersama" class="w-16 h-16 object-contain filter brightness-0 invert" />
+                      </div>
+                      <h3 class="text-3xl md:text-4xl font-light text-gray-800 mb-4">
+                        <span class="font-bold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">Food</span> Manufacturing
+                      </h3>
+                      <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Highly rated by our community, our food manufacturing division delivers exceptional quality products with state-of-the-art production facilities and rigorous quality control.
+                      </p>
+                      <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Quality Control</span>
+                        <span class="px-4 py-2 bg-violet-100 text-violet-800 rounded-full text-sm font-medium">Mass Production</span>
+                        <span class="px-4 py-2 bg-fuchsia-100 text-fuchsia-800 rounded-full text-sm font-medium">Food Safety</span>
+                      </div>
+                      <a href="ptlaukkitabersama.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Learn More
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                      </a>
+                    </div>
+                    <div>
+                      <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-violet-400/20 rounded-3xl transform -rotate-3"></div>
+                        <div class="relative bg-gradient-to-br from-purple-50 to-violet-50 rounded-3xl p-8 border border-purple-200/50">
+                          <div class="text-center">
+                            <div class="w-32 h-32 bg-gradient-to-br from-purple-500 to-violet-500 rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl">
+                              <img src="public/assets/images/pt-lauk-kita-bersama.svg" alt="Manufacturing Icon" class="w-20 h-20 object-contain filter brightness-0 invert" />
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Laukita Bersama Indonesia</h4>
+                            <p class="text-gray-600">Exceptional quality standards</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Growing & Quality Tab -->
+              <div class="tab-content" id="quality" data-aos="fade-up" data-aos-duration="600">
+                <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl border border-white/20">
+                  <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 md:order-1">
+                      <div class="w-24 h-24 bg-gradient-to-br from-rose-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <img src="public/assets/images/pt-laukita-niaga.svg" alt="Laukita Niaga" class="w-16 h-16 object-contain filter brightness-0 invert" />
+                      </div>
+                      <h3 class="text-3xl md:text-4xl font-light text-gray-800 mb-4">
+                        <span class="font-bold bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">Food</span> & Distribution
+                      </h3>
+                      <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Continuously expanding and improving our services. We focus on sustainable growth while maintaining the highest quality standards across all our operations.
+                      </p>
+                      <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="px-4 py-2 bg-rose-100 text-rose-800 rounded-full text-sm font-medium">Sustainable Growth</span>
+                        <span class="px-4 py-2 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">Quality Assurance</span>
+                        <span class="px-4 py-2 bg-red-100 text-red-800 rounded-full text-sm font-medium">Innovation</span>
+                      </div>
+                      <a href="ptlaukkitaniaga.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Learn More
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="order-1 md:order-2">
+                      <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-rose-400/20 to-pink-400/20 rounded-3xl transform rotate-3"></div>
+                        <div class="relative bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border border-rose-200/50">
+                          <div class="text-center">
+                            <div class="w-32 h-32 bg-gradient-to-br from-rose-500 to-pink-500 rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl">
+                              <img src="public/assets/images/pt-laukita-niaga.svg" alt="Quality Icon" class="w-20 h-20 object-contain filter brightness-0 invert" />
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Laukita Niaga Indonesia</h4>
+                            <p class="text-gray-600">Expanding with excellence</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <!-- END OF BUSINESS DIVISIONS SECTION -->
+      </section>
+
+      <!-- SECTION HIGHLIGHTS -->
+      <section id="highlights" class="py-20 bg-gray-50 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0">
+          <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute top-20 left-10 w-auto h-40 opacity-20">
+            <img src="public/assets/bg/AWAN-03.png" alt="Cloud decoration" class="w-full h-full object-cover rounded-full">
+            </div>
+            <div class="absolute bottom-20 right-10 w-52 h-auto opacity-30">
+              <img src="public/assets/bg/AWAN-03.png" alt="Cloud decoration" class="w-full h-full object-cover rounded-full">      
+            </div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-emerald-50 rounded-full opacity-20"></div>
+          </div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+          <!-- Section Header -->
+          <div class="text-center mb-20" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+              HIGHLIGHTS
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Discover our achievements and certifications that make us the leading catering company in Indonesia
+            </p>
+          </div>
+
+          <!-- Statistics Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <!-- Events Card -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="100">
+              <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-100">
+                <div class="text-center">
+                  <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent mb-3">+10,000</h3>
+                  <p class="text-xl font-semibold text-amber-600 mb-3">Successful Events</p>
+                  <p class="text-gray-500 text-sm leading-relaxed">From intimate gatherings to large-scale corporate functions</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience Card -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="200">
+              <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-100">
+                <div class="text-center">
+                  <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent mb-3">+15</h3>
+                  <p class="text-xl font-semibold text-emerald-600 mb-3">Years Experience</p>
+                  <p class="text-gray-500 text-sm leading-relaxed">Mastering the art of exceptional dining experiences</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certification Card -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="300">
+              <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-100">
+                <div class="text-center">
+                  <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent mb-3">HACCP</h3>
+                  <p class="text-xl font-semibold text-blue-600 mb-3">Halal Certified</p>
+                  <p class="text-gray-500 text-sm leading-relaxed">Highest standards of food safety and religious compliance</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Facilities Card -->
+            <div class="group relative" data-aos="fade-up" data-aos-delay="400">
+              <div class="bg-[#c49f54]
+              rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-100">
+                <div class="text-center">
+                  <div class="w-20 h-20 mx-auto mb-6 bg-[#9c5821] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent mb-3 text-white">3</h3>
+                  <p class="text-xl font-semibold text-white mb-3">Central Kitchens</p>
+                  <p class="text-white text-sm leading-relaxed">State-of-the-art facilities with modern technology</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Highlights -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="500">
+            <!-- Quality Assurance -->
+            <div class="group relative">
+              <div class="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-rose-100 h-full">
+                <div class="flex items-start space-x-4">
+                  <div class="w-16 h-16 bg-gradient-to-r from-rose-500 to-pink-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-3">Quality Assurance</h4>
+                    <p class="text-gray-600 leading-relaxed">Every dish is prepared with meticulous attention to detail, ensuring consistent quality and taste that exceeds expectations.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Innovation -->
+            <div class="group relative">
+              <div class="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-cyan-100 h-full">
+                <div class="flex items-start space-x-4">
+                  <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-3">Innovation</h4>
+                    <p class="text-gray-600 leading-relaxed">Continuously evolving our culinary techniques and service methods to stay ahead of industry trends and customer expectations.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sustainability -->
+            <div class="group relative">
+              <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-green-100 h-full">
+                <div class="flex items-start space-x-4">
+                  <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-3">Sustainability</h4>
+                    <p class="text-gray-600 leading-relaxed">Committed to environmentally responsible practices, from sourcing ingredients to waste management and packaging solutions.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- END OF SECTION BRANDING OVERVIEW -->
-
-        <!-- 5 COLUMN GRID SECTION -->
-        <section class="w-full py-12 px-8 md:px-2 lg:px-12">
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <!-- Grid Item 1 -->
-            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-              <div class="w-36 h-36 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <img src="public/assets/images/pt-nusantara-baru.svg" alt="PT Lauk Kita Bersama" class="w-32 h-32 object-contain" />
-              </div>
-              <h3 class="font-merriweather font-semibold mb-4">RESTAURANT <br />& BAR</h3>
-              <p class="text-sm flex-grow flex items-baseline justify-center">Lightning fast performance and optimization</p>
-              <a href="ptnusantarabaru.html" class="bg-amber-200 hover:bg-amber-300 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 text-sm mt-auto">Learn More</a>
-            </div>
-
-            <!-- Grid Item 2 -->
-            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
-              <div class="w-36 h-36 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <img src="public/assets/vector/ucr-logo-white.png" alt="" class="w-32 h-32 object-contain" />
-              </div>
-              <h3 class="font-merriweather font-semibold mb-4">PREMIUM <br />CATERING</h3>
-              <p class="text-sm flex-grow flex items-baseline justify-center">Trusted by thousands of customers worldwide</p>
-              <a href="ptumaraciptarasa.html" class="bg-amber-200 hover:bg-amber-300 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 text-sm mt-auto">Learn More</a>
-            </div>
-
-            <!-- Grid Item 3 -->
-            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-              <div class="w-36 h-36 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <img src="public/assets/images/pt-umara-mitra-kulina.svg" alt="" class="w-32 h-32 object-contain" />
-              </div>
-              <h3 class="font-merriweather font-semibold mb-4">INDUSTRY<br />CATERING</h3>
-              <p class="text-sm flex-grow flex items-baseline justify-center">Customizable solutions for your needs</p>
-              <a href="ptumaramitrakulina.html" class="bg-amber-200 hover:bg-amber-300 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 text-sm mt-auto">Learn More</a>
-            </div>
-
-            <!-- Grid Item 4 -->
-            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="800">
-              <div class="w-36 h-36 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <img src="public/assets/images/pt-lauk-kita-bersama.svg" alt="" class="w-20 h-auto object-contain" />
-              </div>
-              <h3 class="font-merriweather font-semibold mb-4">FOOD<br /> MANUFACTURING</h3>
-              <p class="text-sm flex-grow flex items-baseline justify-center">Highly rated by our community</p>
-              <a href="ptlaukkitabersama.html" class="bg-amber-200 hover:bg-amber-300 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 text-sm mt-auto">Learn More</a>
-            </div>
-
-            <!-- Grid Item 5 -->
-            <div class="bg-branding rounded-lg shadow-md p-6 text-center flex flex-col h-full" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">
-              <div class="w-36 h-36 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <img src="public/assets/images/pt-laukita-niaga.svg" alt="" class="w-32 h-32 object-contain" />
-              </div>
-              <h3 class="font-merriweather font-semibold mb-4">
-                GROWING & <br />
-                QUALITY
-              </h3>
-              <p class="text-sm mb-6 flex-grow">Continuously expanding and improving</p>
-              <a href="ptlaukkitaniaga.html" class="bg-amber-200 hover:bg-amber-300 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 text-sm mt-auto">Learn More</a>
-            </div>
-
-            
-          </div>
-        </section>
-        <!-- END OF 5 COLUMN GRID SECTION -->
       </section>
-
-      <!-- SECTION HIGHlights -->
-      <section id="highlights" class="py-16 bg-gray-900 text-white">
-        <div class="container mx-auto px-4">
-          <div class="higlights" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <h1 class="text-4xl font-bold text-center">HIGHLIGHTS</h1>
-          </div>
-
-          <!-- 4 COLUMN GRID -->
-          <div class="flex flex-wrap lg:flex-nowrap gap-8 justify-center items-center mt-12">
-            <!-- Grid Item 1 -->
-            <div class="p-8 text-center flex flex-col h-full" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
-              <h1 class="text-3xl font-bold mb-4">+10.000</h1>
-              <p class="text-lg font-medium">Event</p>
-            </div>
-
-            <!-- Grid Item 2 -->
-            <div class="p-8 text-center flex flex-col h-full" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-              <h1 class="text-3xl font-bold mb-4">+15 Years</h1>
-              <p class="text-lg font-medium">Experience</p>
-            </div>
-
-            <!-- Grid Item 3 -->
-            <div class="p-8 text-center flex flex-col h-full" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">
-              <h1 class="text-3xl font-bold mb-4">HACPP</h1>
-              <p class="text-lg font-medium">Halal Certified</p>
-            </div>
-
-            <!-- Grid Item 4 -->
-            <div class="p-8 text-center flex flex-col h-full" data-aos="fade-left" data-aos-duration="800" data-aos-delay="1000">
-              <h1 class="text-3xl font-bold mb-4">3</h1>
-              <p class="text-lg font-medium">Central Kitchen</p>
-            </div>
-          </div>
-          <!-- END OF 4 COLUMN GRID -->
-        </div>
-      </section>
-      <!-- END OF SECTION HIGHlights -->
+      <!-- END OF SECTION HIGHLIGHTS -->
 
       <!-- SECTION OUR CLIENT -->
       <section id="our-client" class="py-16 bg-white">
@@ -875,7 +1119,7 @@
       <!-- END OF SECTION OUR CLIENT -->
 
       <!-- SECTION RESERVATION -->
-      <section id="booking" class="py-16 bg-gray-900 text-white">
+      <section id="booking" class="py-16 text-black">
         <div class="container mx-auto px-4">
           <div class="higlights" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <h2 class="text-4xl font-bold text-center">RESERVATION</h2>
@@ -934,13 +1178,15 @@
       <!-- END OF SECTION RESERVATION -->
     </main>
 
-    <footer class="bg-[#283f42] text-white pt-12 pb-4">
+    <footer class="bg-[#232121] text-white pt-12 pb-4">
       <div class="container mx-auto px-4">
         <!-- Footer Content -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <!-- Company Info -->
           <div class="title-footer" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
-            <h3 class="text-xl font-bold mb-4">Umara Group</h3>
+            <picture>
+              <img src="public/assets/vector/logo_umara_group_white.png" alt="Umara Group" class="h-auto w-24 mb-5">
+            </picture>
             <p class="text-gray-300 mb-4">Umara Catering serves the food industry with excellence</p>
             <div class="flex space-x-4">
              
@@ -1195,21 +1441,7 @@
           }
         });
 
-        // Add progress indicator
-        const progressBar = document.createElement('div');
-        progressBar.className = 'swiper-progress-bar fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 z-50 transition-all duration-300';
-        progressBar.style.width = '0%';
-        document.body.appendChild(progressBar);
-
-        // Update progress bar
-        swiper.on('autoplayTimeLeft', function (s, time, progress) {
-          progressBar.style.width = (1 - progress) * 100 + '%';
-        });
-
-        // Reset progress on slide change
-        swiper.on('slideChange', function () {
-          progressBar.style.width = '0%';
-        });
+        // Swiper initialization without progress bar
       });
     </script>
 
@@ -1285,10 +1517,260 @@
         }
       }
 
-      /* Progress Bar Enhancement */
-      .swiper-progress-bar {
-        box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
-      }
     </style>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+      // Mobile menu toggle functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', function() {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            
+            // Toggle menu visibility
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle icons
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+            
+            // Update aria-expanded
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+          });
+
+          // Close mobile menu when clicking on a link
+          const mobileLinks = mobileMenu.querySelectorAll('a');
+          mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+              mobileMenu.classList.add('hidden');
+              menuIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+          });
+
+          // Close mobile menu when clicking outside
+          document.addEventListener('click', function(event) {
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+              mobileMenu.classList.add('hidden');
+              menuIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              mobileMenuButton.setAttribute('aria-expanded', 'false');
+            }
+          });
+        }
+
+        // Tab Navigation Functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and contents
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding content
+            this.classList.add('active');
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+              targetContent.classList.add('active');
+            }
+          });
+        });
+
+        // Highlights Tab Navigation Functionality
+        const highlightsTabButtons = document.querySelectorAll('.highlights-tab-btn');
+        const highlightsTabContents = document.querySelectorAll('.highlights-tab-content');
+
+        highlightsTabButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and contents
+            highlightsTabButtons.forEach(btn => {
+              btn.classList.remove('active');
+              btn.classList.remove('bg-gradient-to-r', 'from-amber-500', 'to-orange-500', 'shadow-lg');
+              btn.classList.add('bg-white/10', 'backdrop-blur-sm', 'border', 'border-white/20');
+            });
+            highlightsTabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding content
+            this.classList.add('active');
+            this.classList.remove('bg-white/10', 'backdrop-blur-sm', 'border', 'border-white/20');
+            this.classList.add('bg-gradient-to-r', 'from-amber-500', 'to-orange-500', 'shadow-lg');
+            
+            const targetContent = document.getElementById(targetTab + '-content');
+            if (targetContent) {
+              targetContent.classList.add('active');
+            }
+          });
+        });
+
+        // Carousel Functionality
+        const carouselTrack = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const contentElements = document.querySelectorAll('.carousel-content');
+        
+        let currentSlide = 0;
+        const totalSlides = 9;
+        let isTransitioning = false;
+        let transitionTimeout = null;
+        
+        function updateCarousel() {
+          if (isTransitioning) return; // Prevent overlapping transitions
+          
+          isTransitioning = true;
+          const translateX = -currentSlide * 100;
+          carouselTrack.style.transform = `translateX(${translateX}%)`;
+          
+          // Update content synchronization
+          contentElements.forEach((content, index) => {
+            if (index === currentSlide) {
+              content.classList.add('active');
+            } else {
+              content.classList.remove('active');
+            }
+          });
+          
+          // Clear any existing timeout
+          if (transitionTimeout) {
+            clearTimeout(transitionTimeout);
+          }
+          
+          // Reset transition flag after animation completes
+          transitionTimeout = setTimeout(() => {
+            isTransitioning = false;
+          }, 500); // Match CSS transition duration
+        }
+        
+        function nextSlide() {
+          if (isTransitioning) return; // Prevent rapid clicks
+          currentSlide = (currentSlide + 1) % totalSlides;
+          updateCarousel();
+        }
+        
+        function prevSlide() {
+          if (isTransitioning) return; // Prevent rapid clicks
+          currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+          updateCarousel();
+        }
+        
+        function goToSlide(slideIndex) {
+          if (isTransitioning || slideIndex === currentSlide) return; // Prevent unnecessary transitions
+          currentSlide = slideIndex;
+          updateCarousel();
+        }
+        
+        // Event listeners
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        
+        // Auto-play functionality
+        let autoPlayInterval = setInterval(nextSlide, 5000);
+        
+        function resetAutoPlay() {
+          clearInterval(autoPlayInterval);
+          autoPlayInterval = setInterval(nextSlide, 5000);
+        }
+        
+        // Pause auto-play on hover
+        const carouselContainer = document.querySelector('.carousel-container');
+        const carouselContentArea = document.querySelector('.carousel-content-area');
+        
+        if (carouselContainer) {
+          carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayInterval);
+          });
+          
+          carouselContainer.addEventListener('mouseleave', () => {
+            resetAutoPlay();
+          });
+        }
+        
+        if (carouselContentArea) {
+          carouselContentArea.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayInterval);
+          });
+          
+          carouselContentArea.addEventListener('mouseleave', () => {
+            resetAutoPlay();
+          });
+        }
+        
+        // Keyboard navigation with debouncing
+        let keyboardTimeout = null;
+        document.addEventListener('keydown', (e) => {
+          if (isTransitioning) return; // Prevent keyboard navigation during transitions
+          
+          if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            if (keyboardTimeout) clearTimeout(keyboardTimeout);
+            keyboardTimeout = setTimeout(() => {
+              prevSlide();
+              resetAutoPlay();
+            }, 50);
+          } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            if (keyboardTimeout) clearTimeout(keyboardTimeout);
+            keyboardTimeout = setTimeout(() => {
+              nextSlide();
+              resetAutoPlay();
+            }, 50);
+          }
+        });
+        
+        // Touch/swipe support for mobile with improved handling
+        let startX = 0;
+        let endX = 0;
+        let isSwiping = false;
+        
+        if (carouselContainer) {
+          carouselContainer.addEventListener('touchstart', (e) => {
+            if (isTransitioning) return;
+            startX = e.touches[0].clientX;
+            isSwiping = true;
+          });
+          
+          carouselContainer.addEventListener('touchmove', (e) => {
+            if (!isSwiping || isTransitioning) return;
+            e.preventDefault(); // Prevent scrolling while swiping
+          });
+          
+          carouselContainer.addEventListener('touchend', (e) => {
+            if (!isSwiping || isTransitioning) return;
+            
+            endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+            
+            if (Math.abs(diff) > 50) { // Minimum swipe distance
+              if (diff > 0) {
+                nextSlide();
+              } else {
+                prevSlide();
+              }
+              resetAutoPlay();
+            }
+            
+            isSwiping = false;
+          });
+          
+          carouselContainer.addEventListener('touchcancel', () => {
+            isSwiping = false;
+          });
+        }
+        
+        // Initialize carousel
+        updateCarousel();
+      });
+    </script>
   </body>
 </html>
