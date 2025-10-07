@@ -1553,6 +1553,9 @@
   .bg-gray-300 {
     background-color: var(--color-gray-300);
   }
+  .bg-gray-700 {
+    background-color: var(--color-gray-700);
+  }
   .bg-gray-800 {
     background-color: var(--color-gray-800);
   }
@@ -2435,6 +2438,9 @@
   .whitespace-nowrap {
     white-space: nowrap;
   }
+  .text-\[\#915\] {
+    color: #915;
+  }
   .text-\[\#91521D\] {
     color: #91521D;
   }
@@ -2443,6 +2449,9 @@
   }
   .text-\[\#889063\] {
     color: #889063;
+  }
+  .text-\[\#\] {
+    color: #;
   }
   .text-\[\#d97706\] {
     color: #d97706;
@@ -2806,6 +2815,9 @@
   .ease-out {
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
+  }
+  .will-change-transform {
+    will-change: transform;
   }
   .text-shadow-palette2-e {
     --tw-text-shadow-color: #572E12;
