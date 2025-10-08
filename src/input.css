@@ -301,7 +301,7 @@ main {
   .carousel-content-area {
     min-height: 250px;
   }
-  
+
   .carousel-slide img {
     height: 350px;
   }
@@ -311,15 +311,15 @@ main {
   .carousel-content-area {
     min-height: 200px;
   }
-  
+
   .carousel-slide img {
     height: 300px;
   }
-  
+
   .carousel-content h3 {
     font-size: 1.5rem;
   }
-  
+
   .carousel-content p {
     font-size: 0.9rem;
   }
@@ -328,7 +328,7 @@ main {
 /* Business Divisions Background */
 .business-divisions-bg {
   /* background-color: #B6914B; */
-  background-image: url("../public/assets/bg/BG-WEBFIX-UG.png");
+  background-image: url("../public/assets/bg/BG-WEBFIX-UG.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

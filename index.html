@@ -73,7 +73,7 @@
     <main class="text-white">
       <!-- SECTION CAROUSEL -->
       <section class="w-full py-16 px-4 md:px-8 lg:px-12 bg-gray-50">
-        <div class="max-w-8xl mx-auto">
+        <div class="max-w-8xl mx-auto relative">
           <!-- Two Column Layout - Image takes more space -->
           <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center" data-aos="fade-up" data-aos-duration="800">
             
@@ -219,52 +219,50 @@
 
             <!-- Right Column - Carousel (3 columns out of 4) -->
             <div class="lg:col-span-3 relative w-full" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
-              <div class="carousel-container overflow-hidden rounded-2xl shadow-2xl bg-white w-full relative">
-                <div class="carousel-track flex transition-transform duration-500 ease-in-out will-change-transform" id="carouselTrack">
-                  <!-- Slide 1 -->
-                  <div class="carousel-slide min-w-full relative flex-shrink-0">
-                    <img src="public/assets/carousel/1.jpg" alt="Gallery Image 1" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
-                  </div>
-                  
-                  <!-- Slide 2 -->
-                  <div class="carousel-slide min-w-full relative flex-shrink-0">
-                    <img src="public/assets/carousel/2.jpg" alt="Gallery Image 2" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
-                  </div>
-                  
-                  <!-- Slide 3 -->
-                  <div class="carousel-slide min-w-full relative flex-shrink-0">
-                    <img src="public/assets/carousel/3.jpg" alt="Gallery Image 3" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
-                  </div>
-                  
-                  <!-- Slide 4 -->
-                  <div class="carousel-slide min-w-full relative flex-shrink-0">
-                    <img src="public/assets/carousel/4.jpg" alt="Gallery Image 4" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
-                  </div>
-                  
-                  <!-- Slide 5 -->
-                  <div class="carousel-slide min-w-full relative flex-shrink-0">
-                    <img src="public/assets/carousel/5.jpeg" alt="Gallery Image 5" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
-                  </div>
-                  
-                  <!-- Slide 6 -->
-                  <div class="carousel-slide min-w-full relative flex-shrink-0">
-                    <img src="public/assets/carousel/6.jpg" alt="Gallery Image 6" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
-                  </div>
-                  
-                  <!-- Slide 7 -->
-                  <div class="carousel-slide min-w-full relative flex-shrink-0">
-                    <img src="public/assets/carousel/7.jpg" alt="Gallery Image 7" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
-                  </div>
-                  
-                  <!-- Slide 8 -->
-                  <div class="carousel-slide min-w-full relative flex-shrink-0">
-                    <img src="public/assets/carousel/8.jpg" alt="Gallery Image 8" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
-                  </div>
-                  
-                  <!-- Slide 9 -->
-                  <div class="carousel-slide min-w-full relative flex-shrink-0">
-                    <img src="public/assets/carousel/9.jpg" alt="Gallery Image 9" class="w-full h-96 md:h-[600px] lg:h-[700px] object-cover">
-                  </div>
+              <div class="carousel-container relative overflow-hidden rounded-2xl shadow-2xl w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] 2xl:h-[700px]">
+                <!-- Slide 1 -->
+                <div class="carousel-slide absolute inset-0 opacity-100 transition-opacity duration-700 ease-in-out" data-slide="0">
+                  <img src="public/assets/carousel/1.jpg" alt="Gallery Image 1" class="w-full h-full object-cover object-center" loading="eager">
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out" data-slide="1">
+                  <img src="public/assets/carousel/2.jpg" alt="Gallery Image 2" class="w-full h-full object-cover object-center" loading="lazy">
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out" data-slide="2">
+                  <img src="public/assets/carousel/3.jpg" alt="Gallery Image 3" class="w-full h-full object-cover object-center" loading="lazy">
+                </div>
+                
+                <!-- Slide 4 -->
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out" data-slide="3">
+                  <img src="public/assets/carousel/4.jpg" alt="Gallery Image 4" class="w-full h-full object-cover object-center" loading="lazy">
+                </div>
+                
+                <!-- Slide 5 -->
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out" data-slide="4">
+                  <img src="public/assets/carousel/5.jpeg" alt="Gallery Image 5" class="w-full h-full object-cover object-center" loading="lazy">
+                </div>
+                
+                <!-- Slide 6 -->
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out" data-slide="5">
+                  <img src="public/assets/carousel/6.jpg" alt="Gallery Image 6" class="w-full h-full object-cover object-center" loading="lazy">
+                </div>
+                
+                <!-- Slide 7 -->
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out" data-slide="6">
+                  <img src="public/assets/carousel/7.jpg" alt="Gallery Image 7" class="w-full h-full object-cover object-center" loading="lazy">
+                </div>
+                
+                <!-- Slide 8 -->
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out" data-slide="7">
+                  <img src="public/assets/carousel/8.jpg" alt="Gallery Image 8" class="w-full h-full object-cover object-center" loading="lazy">
+                </div>
+                
+                <!-- Slide 9 -->
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out" data-slide="8">
+                  <img src="public/assets/carousel/9.jpg" alt="Gallery Image 9" class="w-full h-full object-cover object-center" loading="lazy">
                 </div>
               </div>
             </div>
@@ -287,20 +285,20 @@
             </div>
 
             <!-- Navigation Tabs -->
-            <div class="flex flex-wrap justify-center mb-8 bg-white/40 backdrop-blur-md rounded-2xl p-2 shadow-lg border border-gray-200/50" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-              <button class="tab-btn active px-6 py-3 mx-1 mb-2 rounded-xl font-medium transition-all duration-300 text-sm md:text-base" data-tab="restaurant">
+            <div class="grid grid-cols-1 md:flex md:flex-wrap md:justify-center gap-2 mb-8 bg-white/40 backdrop-blur-md rounded-2xl p-2 shadow-lg border border-gray-200/50" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+              <button class="tab-btn active px-4 py-3 rounded-xl font-medium transition-all duration-300 text-xs md:text-base md:mx-1 md:mb-2" data-tab="restaurant">
                 Rasa Nusantara Baru
               </button>
-              <button class="tab-btn px-6 py-3 mx-1 mb-2 rounded-xl font-medium transition-all duration-300 text-sm md:text-base" data-tab="catering">
+              <button class="tab-btn px-4 py-3 rounded-xl font-medium transition-all duration-300 text-xs md:text-base md:mx-1 md:mb-2" data-tab="catering">
                 Umara Catering
               </button>
-              <button class="tab-btn px-6 py-3 mx-1 mb-2 rounded-xl font-medium transition-all duration-300 text-sm md:text-base" data-tab="industry">
+              <button class="tab-btn px-4 py-3 rounded-xl font-medium transition-all duration-300 text-xs md:text-base md:mx-1 md:mb-2" data-tab="industry">
                 Umara Mitra Kulina
               </button>
-              <button class="tab-btn px-6 py-3 mx-1 mb-2 rounded-xl font-medium transition-all duration-300 text-sm md:text-base" data-tab="manufacturing">
+              <button class="tab-btn px-4 py-3 rounded-xl font-medium transition-all duration-300 text-xs md:text-base md:mx-1 md:mb-2" data-tab="manufacturing">
                 Laukita Bersama
               </button>
-              <button class="tab-btn px-6 py-3 mx-1 mb-2 rounded-xl font-medium transition-all duration-300 text-sm md:text-base" data-tab="quality">
+              <button class="tab-btn px-4 py-3 rounded-xl font-medium transition-all duration-300 text-xs md:text-base md:mx-1 md:mb-2" data-tab="quality">
                 Laukita Niaga
               </button>
             </div>
@@ -312,11 +310,11 @@
                 <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl border border-white/20">
                   <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div class="order-2 md:order-1">
-                      <div class="w-24 h-24 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                      <div class="w-24 h-24 bg-gradient-to-r from-yellow-400 to-yellow-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                         <img src="public/assets/images/pt-nusantara-baru.svg" alt="PT Nusantara Baru" class="w-16 h-16 object-contain filter brightness-0 invert" />
                       </div>
                       <h3 class="text-3xl md:text-4xl font-light text-gray-800 mb-4">
-                        <span class="font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">Restaurant</span> & Bar
+                        <span class="font-bold bg-gradient-to-r from-yellow-400 to-yellow-700 bg-clip-text text-transparent">Restaurant</span> & Bar
                       </h3>
                       <p class="text-lg text-gray-600 leading-relaxed mb-6">
                         Experience exceptional dining with our premium restaurant and bar services. We deliver lightning-fast performance and optimization for unforgettable culinary experiences.
@@ -326,7 +324,7 @@
                         <span class="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Bar Services</span>
                         <span class="px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Event Hosting</span>
                       </div>
-                      <a href="ptnusantarabaru.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                      <a href="ptnusantarabaru.html" class="inline-flex items-center px-8 py-4 bg-yellow-800 hover:bg-yellow-500 font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                         Learn More
                         <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -338,7 +336,7 @@
                         <div class="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-orange-400/20 rounded-3xl transform rotate-3"></div>
                         <div class="relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 border border-amber-200/50">
                           <div class="text-center">
-                            <div class="w-32 h-32 bg-gradient-to-br from-amber-500 to-orange-500 rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl">
+                            <div class="w-32 h-32 bg-gradient-to-r from-yellow-400 to-yellow-700 rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl">
                               <img src="public/assets/images/pt-nusantara-baru.svg" alt="Restaurant Icon" class="w-20 h-20 object-contain filter brightness-0 invert" />
                             </div>
                             <h4 class="text-xl font-semibold text-gray-800 mb-2">Rasa Nusantara Baru</h4>
@@ -356,11 +354,11 @@
                 <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl border border-white/20">
                   <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div>
-                      <div class="w-24 h-24 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                      <div class="w-24 h-24 bg-gradient-to-r from-yellow-400 to-yellow-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                         <img src="public/assets/vector/ucr-logo-white.png" alt="UCR Logo" class="w-16 h-16 object-contain" />
                       </div>
                       <h3 class="text-3xl md:text-4xl font-light text-gray-800 mb-4">
-                        <span class="font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Premium</span> Catering
+                        <span class="font-bold bg-gradient-to-r from-yellow-400 to-yellow-700 bg-clip-text text-transparent">Premium</span> Catering
                       </h3>
                       <p class="text-lg text-gray-600 leading-relaxed mb-6">
                         Trusted by thousands of customers worldwide, our premium catering services deliver exceptional culinary experiences for every occasion.
@@ -370,7 +368,7 @@
                         <span class="px-4 py-2 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">Weddings</span>
                         <span class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">Private Parties</span>
                       </div>
-                      <a href="ptumaraciptarasa.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                      <a href="ptumaraciptarasa.html" class="inline-flex items-center px-8 py-4 bg-yellow-800 hover:bg-yellow-500 font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                         Learn More
                         <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -379,10 +377,10 @@
                     </div>
                     <div>
                       <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-3xl transform -rotate-3"></div>
-                        <div class="relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 border border-emerald-200/50">
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-orange-400/20 rounded-3xl transform -rotate-3"></div>
+                        <div class="relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 border border-amber-200/50">
                           <div class="text-center">
-                            <div class="w-32 h-32 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl">
+                            <div class="w-32 h-32 bg-gradient-to-r from-yellow-400 to-yellow-700 rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl">
                               <img src="public/assets/vector/ucr-logo-white.png" alt="Catering Icon" class="w-20 h-20 object-contain" />
                             </div>
                             <h4 class="text-xl font-semibold text-gray-800 mb-2">Umara Catering</h4>
@@ -400,11 +398,11 @@
                 <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl border border-white/20">
                   <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div class="order-2 md:order-1">
-                      <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                      <div class="w-24 h-24 bg-gradient-to-r from-yellow-400 to-yellow-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                         <img src="public/assets/images/pt-umara-mitra-kulina.svg" alt="Umara Mitra Kulina" class="w-16 h-16 object-contain filter brightness-0 invert" />
                       </div>
                       <h3 class="text-3xl md:text-4xl font-light text-gray-800 mb-4">
-                        <span class="font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Industry</span> Catering
+                        <span class="font-bold bg-gradient-to-r from-yellow-400 to-yellow-700 bg-clip-text text-transparent">Industry</span> Catering
                       </h3>
                       <p class="text-lg text-gray-600 leading-relaxed mb-6">
                         Customizable solutions for your industrial needs. We provide comprehensive catering services tailored to meet the unique requirements of various industries.
@@ -414,7 +412,7 @@
                         <span class="px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Mining Operations</span>
                         <span class="px-4 py-2 bg-cyan-100 text-cyan-800 rounded-full text-sm font-medium">Corporate Facilities</span>
                       </div>
-                      <a href="ptumaramitrakulina.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                      <a href="ptumaramitrakulina.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-700 hover:from-yellow-500 hover:to-yellow-800 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                         Learn More
                         <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -423,10 +421,10 @@
                     </div>
                     <div class="order-1 md:order-2">
                       <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-indigo-400/20 rounded-3xl transform rotate-3"></div>
-                        <div class="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 border border-blue-200/50">
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-orange-400/20 rounded-3xl transform rotate-3"></div>
+                        <div class="relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 border border-blue-200/50">
                           <div class="text-center">
-                            <div class="w-32 h-32 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl">
+                            <div class="w-32 h-32 bg-gradient-to-r from-yellow-400 to-yellow-700 rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl">
                               <img src="public/assets/images/pt-umara-mitra-kulina.svg" alt="Industry Icon" class="w-20 h-20 object-contain filter brightness-0 invert" />
                             </div>
                             <h4 class="text-xl font-semibold text-gray-800 mb-2">Umara Mitra Kulina</h4>
@@ -467,8 +465,8 @@
                     </div>
                     <div>
                       <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-violet-400/20 rounded-3xl transform -rotate-3"></div>
-                        <div class="relative bg-gradient-to-br from-purple-50 to-violet-50 rounded-3xl p-8 border border-purple-200/50">
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-orange-400/20 rounded-3xl transform -rotate-3"></div>
+                        <div class="relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 border border-amber-200/50">
                           <div class="text-center">
                             <div class="w-32 h-32 bg-gradient-to-br from-purple-500 to-violet-500 rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl">
                               <img src="public/assets/images/pt-lauk-kita-bersama.svg" alt="Manufacturing Icon" class="w-20 h-20 object-contain filter brightness-0 invert" />
@@ -533,7 +531,7 @@
       </section>
 
       <!-- SECTION HIGHLIGHTS -->
-      <section id="highlights" class="py-20 bg-gray-50 relative overflow-hidden">
+      <section id="highlights" class="py-20 relative overflow-hidden">
         <!-- Background Pattern -->
         <div class="absolute inset-0">
           <div class="absolute top-0 left-0 w-full h-full">
@@ -562,48 +560,48 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <!-- Events Card -->
             <div class="group relative" data-aos="fade-up" data-aos-delay="100">
-              <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-100">
+              <div class="bg-[#c49f54] rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-100">
                 <div class="text-center">
-                  <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div class="w-20 h-20 mx-auto mb-6 bg-[#9c5821] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                     </svg>
                   </div>
-                  <h3 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent mb-3">+10,000</h3>
-                  <p class="text-xl font-semibold text-amber-600 mb-3">Successful Events</p>
-                  <p class="text-gray-500 text-sm leading-relaxed">From intimate gatherings to large-scale corporate functions</p>
+                  <h3 class="text-4xl md:text-5xl font-bold bg-clip-text mb-3">+10,000</h3>
+                  <p class="text-xl font-semibold mb-3">Successful Events</p>
+                  <p class="text-sm leading-relaxed">From intimate gatherings to large-scale corporate functions</p>
                 </div>
               </div>
             </div>
 
             <!-- Experience Card -->
             <div class="group relative" data-aos="fade-up" data-aos-delay="200">
-              <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-100">
+              <div class="bg-[#c49f54] rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-100">
                 <div class="text-center">
-                  <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div class="w-20 h-20 mx-auto mb-6 bg-[#9c5821] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                   </div>
-                  <h3 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent mb-3">+15</h3>
-                  <p class="text-xl font-semibold text-emerald-600 mb-3">Years Experience</p>
-                  <p class="text-gray-500 text-sm leading-relaxed">Mastering the art of exceptional dining experiences</p>
+                  <h3 class="text-4xl md:text-5xl font-bold bg-clip-text mb-3">+15</h3>
+                  <p class="text-xl font-semibold mb-3">Years Experience</p>
+                  <p class="text-sm leading-relaxed">Mastering the art of exceptional dining experiences</p>
                 </div>
               </div>
             </div>
 
             <!-- Certification Card -->
             <div class="group relative" data-aos="fade-up" data-aos-delay="300">
-              <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-100">
+              <div class="bg-[#c49f54] rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-100">
                 <div class="text-center">
-                  <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div class="w-20 h-20 mx-auto mb-6 bg-[#9c5821] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
                     </svg>
                   </div>
-                  <h3 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent mb-3">HACCP</h3>
-                  <p class="text-xl font-semibold text-blue-600 mb-3">Halal Certified</p>
-                  <p class="text-gray-500 text-sm leading-relaxed">Highest standards of food safety and religious compliance</p>
+                  <h3 class="text-3xl md:text-4xl font-bold bg-clip-text mb-3">HACCP</h3>
+                  <p class="text-xl font-semibold  mb-3">Halal Certified</p>
+                  <p class="text-sm leading-relaxed">Highest standards of food safety and religious compliance</p>
                 </div>
               </div>
             </div>
@@ -618,9 +616,9 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                     </svg>
                   </div>
-                  <h3 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent mb-3 text-white">3</h3>
-                  <p class="text-xl font-semibold text-white mb-3">Central Kitchens</p>
-                  <p class="text-white text-sm leading-relaxed">State-of-the-art facilities with modern technology</p>
+                  <h3 class="text-4xl md:text-5xl font-bold bg-clip-text mb-3">3</h3>
+                  <p class="text-xl font-semibold mb-3">Central Kitchens</p>
+                  <p class="text-sm leading-relaxed">State-of-the-art facilities with modern technology</p>
                 </div>
               </div>
             </div>
@@ -630,16 +628,16 @@
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="500">
             <!-- Quality Assurance -->
             <div class="group relative">
-              <div class="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-rose-100 h-full">
+              <div class="bg-[#cd9666] rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-rose-100 h-full">
                 <div class="flex items-start space-x-4">
-                  <div class="w-16 h-16 bg-gradient-to-r from-rose-500 to-pink-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div class="w-16 h-16 bg-[#9c5821] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                   </div>
                   <div>
-                    <h4 class="text-2xl font-bold text-gray-800 mb-3">Quality Assurance</h4>
-                    <p class="text-gray-600 leading-relaxed">Every dish is prepared with meticulous attention to detail, ensuring consistent quality and taste that exceeds expectations.</p>
+                    <h4 class="text-2xl font-bold mb-3">Quality Assurance</h4>
+                    <p class="leading-relaxed">Every dish is prepared with meticulous attention to detail, ensuring consistent quality and taste that exceeds expectations.</p>
                   </div>
                 </div>
               </div>
@@ -647,16 +645,16 @@
 
             <!-- Innovation -->
             <div class="group relative">
-              <div class="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-cyan-100 h-full">
+              <div class="bg-[#cd9666] rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-cyan-100 h-full">
                 <div class="flex items-start space-x-4">
-                  <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div class="w-16 h-16 bg-[#9c5821] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                   </div>
                   <div>
-                    <h4 class="text-2xl font-bold text-gray-800 mb-3">Innovation</h4>
-                    <p class="text-gray-600 leading-relaxed">Continuously evolving our culinary techniques and service methods to stay ahead of industry trends and customer expectations.</p>
+                    <h4 class="text-2xl font-bold mb-3">Innovation</h4>
+                    <p class="leading-relaxed">Continuously evolving our culinary techniques and service methods to stay ahead of industry trends and customer expectations.</p>
                   </div>
                 </div>
               </div>
@@ -664,16 +662,16 @@
 
             <!-- Sustainability -->
             <div class="group relative">
-              <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-green-100 h-full">
+              <div class="bg-[#cd9666] rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-green-100 h-full">
                 <div class="flex items-start space-x-4">
-                  <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div class="w-16 h-16 bg-[#9c5821] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
                     </svg>
                   </div>
                   <div>
-                    <h4 class="text-2xl font-bold text-gray-800 mb-3">Sustainability</h4>
-                    <p class="text-gray-600 leading-relaxed">Committed to environmentally responsible practices, from sourcing ingredients to waste management and packaging solutions.</p>
+                    <h4 class="text-2xl font-bold  mb-3">Sustainability</h4>
+                    <p class=" leading-relaxed">Committed to environmentally responsible practices, from sourcing ingredients to waste management and packaging solutions.</p>
                   </div>
                 </div>
               </div>
@@ -684,432 +682,509 @@
       <!-- END OF SECTION HIGHLIGHTS -->
 
       <!-- SECTION OUR CLIENT -->
-      <section id="our-client" class="py-16 bg-white">
+      <section id="our-client" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-          <div class="higlights" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <h2 class="text-4xl font-bold text-center text-black">OUR CLIENT</h2>
+          <!-- Section Header -->
+          <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <h2 class="text-5xl font-bold text-gray-800 mb-4">Our Trusted Clients</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              We are proud to serve prestigious organizations and institutions worldwide, 
+              delivering exceptional culinary experiences that exceed expectations.
+            </p>
+            <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-700 mx-auto mt-6 rounded-full"></div>
           </div>
 
-          <!-- 1 COLUMN GRID -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-10 gap-4 sm:gap-6 lg:gap-8 mt-12">
+          <!-- Client Logos Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 lg:gap-8">
             
             <!-- Grid Item 1 -->
-            <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/kelurga-besar-istana-presiden.png" alt="Client 1" class="w-full h-auto object-contain max-h-16 sm:max-h-20">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/kelurga-besar-istana-presiden.png" alt="Keluarga Besar Istana Presiden" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 2 -->
-            <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/Amman.png" alt="Client 2" class="w-full h-auto object-contain max-h-16 sm:max-h-20">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/Amman.png" alt="Amman" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 3 -->
-            <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/imp.png" alt="Client 3" class="w-full h-auto object-contain max-h-16 sm:max-h-20">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/imp.png" alt="IMP" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 4 -->
-            <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/angkasapura.png" alt="Client 4" class="w-full h-auto object-contain max-h-16 sm:max-h-20">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="250">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/angkasapura.png" alt="Angkasapura" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 5 -->
-            <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/goto.png" alt="Client 5" class="w-full h-auto object-contain max-h-16 sm:max-h-20">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/goto.png" alt="GoTo" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
             
             <!-- Grid Item 6 -->
-            <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/Kementerian-BUMN.png" alt="Client 6" class="w-full h-auto object-contain max-h-16 sm:max-h-20">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="350">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/Kementerian-BUMN.png" alt="Kementerian BUMN" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 7 -->
-            <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/kementrian-lingkungan-hidup.png" alt="Client 7" class="w-full h-auto object-contain max-h-16 sm:max-h-20">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/kementrian-lingkungan-hidup.png" alt="Kementerian Lingkungan Hidup" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 8 -->
-            <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/kementrian-kelautan-perikanan.png" alt="Client 8" class="w-full h-auto object-contain max-h-16 sm:max-h-20">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="450">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/kementrian-kelautan-perikanan.png" alt="Kementerian Kelautan dan Perikanan" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 9 -->
-            <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/bluescope.png" alt="Client 9" class="w-full h-auto object-contain max-h-16 sm:max-h-20">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/bluescope.png" alt="BlueScope" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 10 -->
-            <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/garduda-indonesia.png" alt="Client 10" class="w-full h-auto object-contain max-h-16 sm:max-h-20">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="550">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/garduda-indonesia.png" alt="Garuda Indonesia" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 11 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/setjen-mpr-ri.png" alt="Client 1" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/setjen-mpr-ri.png" alt="Setjen MPR RI" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 12 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/bkpm.png" alt="Client 1" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="650">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/bkpm.png" alt="BKPM" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 13 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/kominfo.png" alt="Client 1" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/kominfo.png" alt="Kominfo" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 14 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/pertamina.png" alt="Client 1" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="750">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/pertamina.png" alt="Pertamina" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 15 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/wika.png" alt="Client 1" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/wika.png" alt="Wika" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 16 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/waskita.png" alt="Client 1" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="850">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/waskita.png" alt="Waskita" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 17 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/adhi.png" alt="Client 1" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/adhi.png" alt="Adhi" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 18 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/pama.png" alt="Client 1" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/pama.png" alt="Pama" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 19 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/indosiar.png" alt="Client 1" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/indosiar.png" alt="Indosiar" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 20 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/Unilever.png" alt="Client 20" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="250">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/Unilever.png" alt="Unilever" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 21 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/BNI.png" alt="Client 21" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/BNI.png" alt="BNI" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 22 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/BRI.png" alt="Client 22" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="350">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/BRI.png" alt="BRI" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 23 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/Telkomsel.png" alt="Client 23" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/Telkomsel.png" alt="Telkomsel" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 24 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/mandiri.png" alt="Client 24" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="450">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/mandiri.png" alt="Mandiri" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 25 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/honda.png" alt="Client 25" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/honda.png" alt="Honda" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 26 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/shopee.png" alt="Client 26" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="550">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/shopee.png" alt="Shopee" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 27 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/astra-internasional.png" alt="Client 27" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/astra-internasional.png" alt="Astra International" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 28 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/antam.png" alt="Client 28" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="650">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/antam.png" alt="Antam" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 29 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/telkom.png" alt="Client 29" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/telkom.png" alt="Telkom" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 30 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/asian-games-2018.png" alt="Client 30" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="750">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/asian-games-2018.png" alt="Asian Games 2018" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 31 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/BI.png" alt="Client 31" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/BI.png" alt="Bank Indonesia" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 32 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/ojk.png" alt="Client 32" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="850">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/ojk.png" alt="OJK" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 33 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/pgn.png" alt="Client 33" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/pgn.png" alt="PGN" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 34 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/mnc.png" alt="Client 34" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/mnc.png" alt="MNC" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 35 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/sctv.png" alt="Client 35" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/sctv.png" alt="SCTV" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 36 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/olx.png" alt="Client 36" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="250">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/olx.png" alt="OLX" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 37 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/j&t.png" alt="Client 37" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/j&t.png" alt="J&T" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 38 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/bridgestone.png" alt="Client 38" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="350">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/bridgestone.png" alt="Bridgestone" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 39 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/castrol.png" alt="Client 39" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/castrol.png" alt="Castrol" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 40 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/total.png" alt="Client 40" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="450">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/total.png" alt="Total" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 41 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/bp.png" alt="Client 41" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/bp.png" alt="BP" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 42 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/vico.png" alt="Client 42" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="550">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/vico.png" alt="Vico" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 43 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/medco_energi.png" alt="Client 43" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/medco_energi.png" alt="Medco Energi" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 44 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/basf.png" alt="Client 44" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="650">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/basf.png" alt="BASF" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 45 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/bhpbilliton.png" alt="Client 45" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/bhpbilliton.png" alt="BHP Billiton" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 46 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/trinseo.png" alt="Client 46" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="750">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/trinseo.png" alt="Trinseo" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 47 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/trakindo-cat.png" alt="Client 47" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/trakindo-cat.png" alt="Trakindo CAT" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 48 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/Badak_LNG.png" alt="Client 48" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="850">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/Badak_LNG.png" alt="Badak LNG" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 49 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/skk_migas.png" alt="Client 49" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/skk_migas.png" alt="SKK Migas" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 50 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/sucofindo.png" alt="Client 50" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/sucofindo.png" alt="Sucofindo" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 51 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/world_water_council.png" alt="Client 51" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/world_water_council.png" alt="World Water Council" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 52 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/the_world_bank.png" alt="Client 52" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="250">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/the_world_bank.png" alt="The World Bank" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 53 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/us_department.png" alt="Client 53" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/us_department.png" alt="US Department" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 54 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/canadian_embassy.png" alt="Client 54" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="350">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/canadian_embassy.png" alt="Canadian Embassy" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 55 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/Government-of-the-Netherlands.png" alt="Client 55" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/Government-of-the-Netherlands.png" alt="Government of the Netherlands" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 56 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/British_Council.png" alt="Client 56" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="450">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/British_Council.png" alt="British Council" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 57 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/goethe_institut.png" alt="Client 57" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/goethe_institut.png" alt="Goethe Institut" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 58 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/erasmus-hius.png" alt="Client 58" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="550">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/erasmus-hius.png" alt="Erasmus Huis" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 59 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/ui.png" alt="Client 59" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/ui.png" alt="UI" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 60 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/nurul-fikri.png" alt="Client 60" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="650">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/nurul-fikri.png" alt="Nurul Fikri" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 61 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/elevenia.png" alt="Client 61" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/elevenia.png" alt="Elevenia" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 62 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/G20.png" alt="Client 62" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="750">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/G20.png" alt="G20" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 63 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/R20.png" alt="Client 63" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/R20.png" alt="R20" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 64 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/HPM.png" alt="Client 64" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="850">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/HPM.png" alt="HPM" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 65 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/PONXX.png" alt="Client 65" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/PONXX.png" alt="PONXX" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 66 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/seabank.png" alt="Client 66" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/seabank.png" alt="SeaBank" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 67 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/Polri.png" alt="Client 67" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/Polri.png" alt="Polri" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 68 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/asean.png" alt="Client 68" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="250">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/asean.png" alt="ASEAN" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 69 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/jiexpo.png" alt="Client 69" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/jiexpo.png" alt="JIExpo" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
             <!-- Grid Item 70 -->
-            <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center" data-aos="fade-right"
-              data-aos-duration="800" data-aos-delay="400">
-              <img src="public/assets/clients/kementrian_perhubungan.png" alt="Client 70" class="w-full h-auto object-contain">
+            <div class="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 hover:border-amber-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="350">
+              <div class="p-6 flex items-center justify-center h-24">
+                <img src="public/assets/clients/kementrian_perhubungan.png" alt="Kementrian Perhubungan" class="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+              </div>
             </div>
 
           </div>
@@ -1119,60 +1194,229 @@
       <!-- END OF SECTION OUR CLIENT -->
 
       <!-- SECTION RESERVATION -->
-      <section id="booking" class="py-16 text-black">
-        <div class="container mx-auto px-4">
-          <div class="higlights" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <h2 class="text-4xl font-bold text-center">RESERVATION</h2>
+      <section id="booking" class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-4 max-w-7xl">
+          
+          <!-- Section Header -->
+          <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-[#9c5821] rounded-full mb-6">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V7a1 1 0 00-1 1v9a1 1 0 001 1h8a1 1 0 001-1V8a1 1 0 00-1-1h-1"></path>
+              </svg>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Make a Reservation</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Ready to experience exceptional catering? Fill out the form below and our team will get back to you within 24 hours.
+            </p>
           </div>
 
-          <form action="" class="max-w-2xl mx-auto mt-8 bg-white rounded-lg shadow-lg p-6 md:p-8 text-gray-800" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-            <div class="space-y-6">
-              <div>
-                <label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-                <input type="text" id="fullName" name="fullName" required 
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-200 transition-colors">
-              </div>
-              
-              <div>
-                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                <input type="email" id="email" name="email" required 
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-200 transition-colors">
-              </div>
-              
-              <div>
-                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" required 
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-200 transition-colors">
-              </div>
-              
-              <div>
-                <label for="specialRequest" class="block text-sm font-medium text-gray-700 mb-2">Special Request</label>
-                <textarea id="specialRequest" name="specialRequest" rows="6" 
-                    placeholder="Please describe your catering needs, event details, special requirements, or any other information..." 
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-200 transition-colors resize-vertical"></textarea>
+          <!-- Two Column Layout -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
+            <!-- Left Column - Reservation Form -->
+            <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+              <div class="p-8 md:p-10">
+                
+                <form action="" method="POST" class="space-y-8">
+                  
+                  <!-- Personal Information Section -->
+                  <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-gray-900 border-b border-gray-100 pb-3">
+                      Personal Information
+                    </h3>
+                    
+                    <!-- Full Name -->
+                    <div class="form-group">
+                      <label for="fullName" class="block text-sm font-medium text-gray-700 mb-3">
+                        Full Name <span class="text-red-500">*</span>
+                      </label>
+                      <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName" 
+                        required 
+                        class="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-300 placeholder-gray-400"
+                        placeholder="Enter your full name"
+                      >
+                    </div>
+                    
+                    <!-- Email Address -->
+                    <div class="form-group">
+                      <label for="email" class="block text-sm font-medium text-gray-700 mb-3">
+                        Email Address <span class="text-red-500">*</span>
+                      </label>
+                      <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        class="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-300 placeholder-gray-400"
+                        placeholder="Enter your email address"
+                      >
+                    </div>
+                    
+                    <!-- Phone Number -->
+                    <div class="form-group">
+                      <label for="phone" class="block text-sm font-medium text-gray-700 mb-3">
+                        Phone Number <span class="text-red-500">*</span>
+                      </label>
+                      <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        required 
+                        class="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-300 placeholder-gray-400"
+                        placeholder="Enter your phone number"
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Event Details Section -->
+                  <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-gray-900 border-b border-gray-100 pb-3">
+                      Event Details
+                    </h3>
+                    
+                    <!-- Special Request -->
+                    <div class="form-group">
+                      <label for="specialRequest" class="block text-sm font-medium text-gray-700 mb-3">
+                        Tell us about your event
+                      </label>
+                      <textarea 
+                        id="specialRequest" 
+                        name="specialRequest" 
+                        rows="5" 
+                        class="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-300 placeholder-gray-400 resize-vertical"
+                        placeholder="Event type, date, number of guests, dietary requirements, and special requests..."
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <!-- Terms and Actions Section -->
+                  <div class="border-t border-gray-100 pt-6 space-y-6">
+                    
+                    <!-- Terms Checkbox -->
+                    <div class="form-group">
+                      <label class="flex items-start space-x-3 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          name="terms" 
+                          required 
+                          class="mt-1 h-5 w-5 text-amber-600 focus:ring-amber-500 border-gray-300 rounded transition-colors"
+                        >
+                        <span class="text-sm text-gray-600 leading-relaxed">
+                          I agree to the 
+                          <a href="#" class="text-amber-600 hover:text-amber-700 underline font-medium">Terms and Conditions</a> 
+                          and 
+                          <a href="#" class="text-amber-600 hover:text-amber-700 underline font-medium">Privacy Policy</a>.
+                        </span>
+                      </label>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                      <button 
+                        type="reset" 
+                        class="flex-1 px-6 py-4 border-2 border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 font-semibold"
+                      >
+                        Reset Form
+                      </button>
+                      <button 
+                        type="submit" 
+                        class="flex-1 px-6 py-4  bg-yellow-800 rounded-xl hover:bg-yellow-500 hover:text-black transition-all duration-300 font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                      >
+                        Submit Request
+                      </button>
+                    </div>
+                    
+                  </div>
+                  
+                </form>
+                
               </div>
             </div>
             
-            <div class="border-t border-gray-200 pt-6 mt-8">
-              <div class="mb-6">
-                <label class="flex items-start">
-                  <input type="checkbox" name="terms" required class="mr-3 h-4 w-4 text-blue-200 focus:ring-blue-200 border-gray-300 rounded mt-1">
-                  <span class="text-sm text-gray-600">I agree to the <a href="#" class="text-blue-200 hover:text-blue-300 underline">Terms and Conditions</a> and <a href="#" class="text-blue-200 hover:text-blue-300 underline">Privacy Policy</a>. I understand that this is a booking inquiry and final confirmation will be provided by Umara Group.</span>
-                </label>
+            <!-- Right Column - Contact Information -->
+            <div class="space-y-8" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+              
+              <!-- Contact Info Card -->
+              <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-10">
+                <div class="text-center mb-8">
+                  <div class="inline-flex items-center justify-center w-16 h-16 bg-[#9c5821] rounded-full mb-4">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-2">Get in Touch</h3>
+                  <p class="text-gray-600">We're here to help you create the perfect catering experience</p>
+                </div>
+                
+                <div class="space-y-6">
+                  
+                  <!-- Phone -->
+                  <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-[#9c5821] rounded-xl flex items-center justify-center">
+                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-900 mb-1">Phone</h4>
+                      <p class="text-gray-600">021-80600900</p>
+                      <p class="text-sm text-gray-500">Available 24/7 for inquiries</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Email -->
+                  <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-[#9c5821] rounded-xl flex items-center justify-center">
+                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
+                      <p class="text-gray-600">info@umaragroup.com</p>
+                      <p class="text-sm text-gray-500">We'll respond within 24 hours</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Location -->
+                  <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-[#9c5821] rounded-xl flex items-center justify-center">
+                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-900 mb-1">Location</h4>
+                      <p class="text-gray-600">Jakarta, Indonesia</p>
+                      <p class="text-sm text-gray-500">Serving Jakarta and surrounding areas</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Business Hours -->
+                  <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-[#9c5821] rounded-xl flex items-center justify-center">
+                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-900 mb-1">Business Hours</h4>
+                      <p class="text-gray-600">Mon - Fri: 8:00 AM - 6:00 PM</p>
+                      <p class="text-gray-600">Sat - Sun: 9:00 AM - 5:00 PM</p>
+                    </div>
+                  </div>
+                  
+                </div>
               </div>
               
-              <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button type="reset" 
-                        class="px-8 py-3 border-2 border-blue-200 text-blue-200 rounded-lg hover:bg-blue-200 hover:text-white transition-colors font-semibold">
-                  Reset Form
-                </button>
-                <button type="submit" 
-                        class="px-8 py-3 bg-blue-200 text-white rounded-lg hover:bg-blue-300 transition-colors font-semibold shadow-lg">
-                  Submit Booking Request
-                </button>
-              </div>
             </div>
-          </form>
+            
+          </div>
+          
         </div>
       </section>
       <!-- END OF SECTION RESERVATION -->
@@ -1187,7 +1431,6 @@
             <picture>
               <img src="public/assets/vector/logo_umara_group_white.png" alt="Umara Group" class="h-auto w-24 mb-5">
             </picture>
-            <p class="text-gray-300 mb-4">Umara Catering serves the food industry with excellence</p>
             <div class="flex space-x-4">
              
             </div>
@@ -1248,13 +1491,8 @@
 
         <!-- Footer Bottom -->
         <div class="border-t border-gray-700 pt-8">
-          <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="flex flex-col md:flex-row justify-center items-center">
             <p class="text-gray-300 mb-4 md:mb-0">Copyright © 2025 Umara Group. All Rights Reserved.</p>
-            <div class="flex space-x-6">
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">Cookie Policy</a>
-            </div>
           </div>
         </div>
       </div>
@@ -1614,8 +1852,8 @@
           });
         });
 
-        // Carousel Functionality
-        const carouselTrack = document.getElementById('carouselTrack');
+        // Carousel Functionality - New Opacity-Based Approach
+        const carouselSlides = document.querySelectorAll('.carousel-slide');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         const contentElements = document.querySelectorAll('.carousel-content');
@@ -1624,18 +1862,22 @@
         const totalSlides = 9;
         let isTransitioning = false;
         let transitionTimeout = null;
-        let resizeTimeout = null;
         
         function updateCarousel() {
           if (isTransitioning) return; // Prevent overlapping transitions
           
           isTransitioning = true;
           
-          // Force reflow to ensure proper positioning on smaller screens
-          carouselTrack.offsetHeight;
-          
-          const translateX = -currentSlide * 100;
-          carouselTrack.style.transform = `translateX(${translateX}%)`;
+          // Hide all slides
+          carouselSlides.forEach((slide, index) => {
+            if (index === currentSlide) {
+              slide.style.opacity = '1';
+              slide.style.zIndex = '10';
+            } else {
+              slide.style.opacity = '0';
+              slide.style.zIndex = '1';
+            }
+          });
           
           // Update content synchronization
           contentElements.forEach((content, index) => {
@@ -1654,7 +1896,7 @@
           // Reset transition flag after animation completes
           transitionTimeout = setTimeout(() => {
             isTransitioning = false;
-          }, 500); // Match CSS transition duration
+          }, 700); // Match CSS transition duration
         }
         
         function nextSlide() {
@@ -1689,7 +1931,6 @@
         
         // Pause auto-play on hover
         const carouselContainer = document.querySelector('.carousel-container');
-        const carouselContentArea = document.querySelector('.carousel-content-area');
         
         if (carouselContainer) {
           carouselContainer.addEventListener('mouseenter', () => {
@@ -1701,106 +1942,22 @@
           });
         }
         
-        if (carouselContentArea) {
-          carouselContentArea.addEventListener('mouseenter', () => {
-            clearInterval(autoPlayInterval);
-          });
-          
-          carouselContentArea.addEventListener('mouseleave', () => {
-            resetAutoPlay();
-          });
-        }
-        
-        // Keyboard navigation with debouncing
-        let keyboardTimeout = null;
-        document.addEventListener('keydown', (e) => {
-          if (isTransitioning) return; // Prevent keyboard navigation during transitions
-          
-          if (e.key === 'ArrowLeft') {
-            e.preventDefault();
-            if (keyboardTimeout) clearTimeout(keyboardTimeout);
-            keyboardTimeout = setTimeout(() => {
-              prevSlide();
-              resetAutoPlay();
-            }, 50);
-          } else if (e.key === 'ArrowRight') {
-            e.preventDefault();
-            if (keyboardTimeout) clearTimeout(keyboardTimeout);
-            keyboardTimeout = setTimeout(() => {
-              nextSlide();
-              resetAutoPlay();
-            }, 50);
-          }
-        });
-        
-        // Touch/swipe support for mobile with improved handling
-        let startX = 0;
-        let endX = 0;
-        let isSwiping = false;
-        
-        if (carouselContainer) {
-          carouselContainer.addEventListener('touchstart', (e) => {
-            if (isTransitioning) return;
-            startX = e.touches[0].clientX;
-            isSwiping = true;
-          });
-          
-          carouselContainer.addEventListener('touchmove', (e) => {
-            if (!isSwiping || isTransitioning) return;
-            e.preventDefault(); // Prevent scrolling while swiping
-          });
-          
-          carouselContainer.addEventListener('touchend', (e) => {
-            if (!isSwiping || isTransitioning) return;
-            
-            endX = e.changedTouches[0].clientX;
-            const diff = startX - endX;
-            
-            if (Math.abs(diff) > 50) { // Minimum swipe distance
-              if (diff > 0) {
-                nextSlide();
-              } else {
-                prevSlide();
-              }
-              resetAutoPlay();
-            }
-            
-            isSwiping = false;
-          });
-          
-          carouselContainer.addEventListener('touchcancel', () => {
-            isSwiping = false;
-          });
-        }
-        
         // Initialize carousel
         updateCarousel();
         
         // Handle viewport changes and orientation changes
         function handleResize() {
-          if (resizeTimeout) {
-            clearTimeout(resizeTimeout);
-          }
-          
-          resizeTimeout = setTimeout(() => {
-            // Reset carousel position to prevent stuck slides
-            isTransitioning = false;
-            if (transitionTimeout) {
-              clearTimeout(transitionTimeout);
-            }
-            
-            // Force recalculation of carousel dimensions
-            carouselTrack.style.transform = 'translateX(0%)';
-            setTimeout(() => {
-              updateCarousel();
-            }, 50);
-          }, 250);
+          // For opacity-based carousel, we don't need complex resize handling
+          // Just ensure the current slide is properly displayed
+          setTimeout(() => {
+            updateCarousel();
+          }, 100);
         }
         
         // Listen for resize and orientation change events
         window.addEventListener('resize', handleResize);
         window.addEventListener('orientationchange', () => {
-          setTimeout(handleResize, 100); // Delay for orientation change
+          setTimeout(handleResize, 200); // Delay for orientation change
         });
         
         // Handle visibility change (when switching between tabs/apps)
