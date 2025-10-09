@@ -26,8 +26,7 @@
 
         /* Modern Card Styles */
         .modern-card {
-            background: var(--white);
-            border: 2px solid var(--light);
+            /* border: 2px solid var(--light); */
             border-radius: 24px;
             box-shadow: var(--shadow-soft);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -563,7 +562,7 @@
         <!-- Background with UCR Image -->
         <div class="absolute inset-0">
             <img src="public/assets/ucr/bg-banner-1.jpg" alt="Heritage Cuisine" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-[#E1C55A]/40"></div>
+            <div class="absolute inset-0 bg-[#E1C55A]/50"></div>
         </div>
         
         <!-- Floating Elements -->
@@ -572,18 +571,15 @@
                 <div data-aos="fade-right" data-aos-duration="1000">
                     <h1 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight font-playfair">
                         <span class="text-white">Preserving</span><br>
-                        <span class="text-[#091C3A]">Nusantara Heritage</span><br>
+                        <span class="text-[#4C3D19]">Nusantara Heritage</span><br>
                         <span class="text-white">Through Authentic Recipes</span>
                     </h1>
                     <p class="text-xl lg:text-2xl mb-8 text-white leading-relaxed">
                         We pride in our Nusantara Heritage recipes, bringing traditional Indonesian flavors to modern catering excellence since 2018
                     </p>
                     <div class="flex flex-col sm:flex-row gap-6">
-                        <a href="#services" class="btn-modern text-white text-center">
+                        <a href="#services" class="view-menu-btn text-white text-center">
                             Explore Our Services
-                        </a>
-                        <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white hover:text-palette1-a transition-all duration-300 text-center">
-                            Book Now
                         </a>
                     </div>
                 </div>
@@ -600,7 +596,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-[#E1C55A]">
+    <section id="about" class="py-24 bg-[#E1D5A6]">
         <div class="container mx-auto px-6">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-20" data-aos="fade-up">
@@ -632,13 +628,13 @@
                         </p>
                         
                         <div class="grid grid-cols-2 gap-6">
-                            <div class="modern-card bg-amber-50 p-6 text-center">
-                                <div class="text-4xl font-bold text-[#010713] mb-2 font-playfair">10+</div>
-                                <div class="text-palette1-b font-medium">Years of Excellence</div>
+                            <div class="modern-card bg-[#4C3D19] p-6 text-center">
+                                <div class="text-4xl font-bold text-white mb-2 font-playfair">10+</div>
+                                <div class="text-white font-medium">Years of Excellence</div>
                             </div>
-                            <div class="modern-card bg-amber-50 p-6 text-center">
-                                <div class="text-4xl font-bold text-[#010713] mb-2 font-playfair">100+</div>
-                                <div class="text-palette1-b font-medium">Heritage Recipes</div>
+                            <div class="modern-card bg-[#4C3D19] p-6 text-center">
+                                <div class="text-4xl font-bold text-white mb-2 font-playfair">100+</div>
+                                <div class="text-white font-medium">Heritage Recipes</div>
                             </div>
                         </div>
                     </div>
@@ -647,10 +643,10 @@
                 <!-- Features Grid -->
                 <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-duration="1000">
                     <div class="modern-card bg-amber-50 p-8 text-center">
-                        <div class="w-20 h-20 bg-[#113361] rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-[#4C3D19] rounded-2xl mx-auto mb-6 flex items-center justify-center">
                             <img src="public/assets/icon/recipes.svg" alt="Authentic Recipes" class="w-10 h-10">
                         </div>
-                        <h4 class="text-2xl font-bold text-[#113361] mb-4 font-playfair">Authentic Recipes</h4>
+                        <h4 class="text-2xl font-bold text-[#4C3D19] mb-4 font-playfair">Authentic Recipes</h4>
                         <p class="text-palette1-b leading-relaxed">Traditional recipes preserved and perfected through generations of culinary expertise</p>
                         <button class="view-menu-btn bg-palette1-a text-white px-6 py-3 rounded-lg hover:bg-palette1-b transition-colors duration-300 flex
                         items-center space-x-2 font-semibold" onclick="openOurRecipesModal()">
@@ -662,7 +658,7 @@
                     </div>
                     
                     <div class="modern-card bg-amber-50 p-8 text-center">
-                        <div class="w-20 h-20 bg-palette1-b rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-[#4C3D19] rounded-2xl mx-auto mb-6 flex items-center justify-center">
                             <img src="public/assets/icon/team-work.svg" alt="Expert Team" class="w-10 h-10">
                         </div>
                         <h4 class="text-2xl font-bold text-[#010713] mb-4 font-playfair">Expert Team</h4>
@@ -677,7 +673,7 @@
                     </div>
                     
                     <div class="modern-card bg-amber-50 p-8 text-center">
-                        <div class="w-20 h-20 bg-palette1-c rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-[#4C3D19]  rounded-2xl mx-auto mb-6 flex items-center justify-center">
                             <img src="public/assets/icon/certificate.svg" alt="Certified" class="w-10 h-10">
                         </div>
                         <h4 class="text-2xl font-bold text-[#010713] mb-4 font-playfair">Certified</h4>
@@ -696,7 +692,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-24 bg-white">
+    <section id="services" class="py-24 bg-[#E1D5A6]" style="background-image: url('public/assets/bg/BG-UCR.jpg'); background-size: cover; background-position: center;">
         <div class="container mx-auto px-6">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-20" data-aos="fade-up">
@@ -956,7 +952,7 @@
                         <span class="text-sm font-medium text-slate-600 tracking-wide uppercase">Certifications & Standards</span>
                     </div>
                     <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 leading-tight">
-                        Our <span class="bg-gradient-to-r from-palette1-c to-palette1-d bg-clip-text text-transparent">Certifications</span>
+                        Our <span class="bg-palette2-e bg-clip-text text-transparent">Certifications</span>
                     </h2>
                     <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
                         Committed to excellence with internationally recognized certifications ensuring quality, safety, and halal compliance in every aspect of our operations.
@@ -1164,7 +1160,7 @@
          <div class="container mx-auto px-6">
              <div class="max-w-7xl mx-auto">
                  <div class="text-center mb-20" data-aos="fade-up">
-                     <h2 class="text-5xl lg:text-6xl font-bold text-palette1-a mb-6 font-playfair">
+                     <h2 class="text-5xl lg:text-6xl font-bold text-palette2-e mb-6 font-playfair">
                          Get In <span class="gradient-text">Touch</span>
                      </h2>
                      <p class="text-xl text-palette1-b max-w-4xl mx-auto leading-relaxed">
