@@ -86,14 +86,6 @@
             50% { transform: translateY(-20px); }
         }
 
-        /* Gradient Text */
-        .gradient-text {
-            background: var(--gradient-accent);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
         /* Modern Timeline */
         .timeline-item {
             position: relative;
@@ -571,7 +563,7 @@
         <!-- Background with UCR Image -->
         <div class="absolute inset-0">
             <img src="public/assets/ucr/bg-banner-1.jpg" alt="Heritage Cuisine" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-[#879063]/80"></div>
+            <div class="absolute inset-0 bg-[#E1C55A]/40"></div>
         </div>
         
         <!-- Floating Elements -->
@@ -580,10 +572,10 @@
                 <div data-aos="fade-right" data-aos-duration="1000">
                     <h1 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight font-playfair">
                         <span class="text-white">Preserving</span><br>
-                        <span class="gradient-text">Nusantara Heritage</span><br>
+                        <span class="text-[#091C3A]">Nusantara Heritage</span><br>
                         <span class="text-white">Through Authentic Recipes</span>
                     </h1>
-                    <p class="text-xl lg:text-2xl mb-8 text-palette1-e leading-relaxed">
+                    <p class="text-xl lg:text-2xl mb-8 text-white leading-relaxed">
                         We pride in our Nusantara Heritage recipes, bringing traditional Indonesian flavors to modern catering excellence since 2018
                     </p>
                     <div class="flex flex-col sm:flex-row gap-6">
@@ -597,7 +589,7 @@
                 </div>
                 
                 <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="modern-card p-4 floating">
+                    <div class="modern-card bg-amber-50 p-4 floating">
                         <img src="public/assets/ucr/bg-banner-2.png" alt="Traditional Cooking" class="w-full h-64 object-cover rounded-2xl mb-6">
                         <h3 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Traditional Excellence</h3>
                         <p class="text-palette1-b mb-4">Authentic recipes passed down through generations, perfected for modern dining experiences.</p>    
@@ -608,11 +600,11 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-palette1-e">
+    <section id="about" class="py-24 bg-[#E1C55A]">
         <div class="container mx-auto px-6">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-20" data-aos="fade-up">
-                    <h2 class="text-5xl lg:text-6xl font-bold text-palette1-a mb-6 font-playfair">
+                    <h2 class="text-5xl lg:text-6xl font-bold text-[#010713] mb-6 font-playfair">
                         Our <span class="gradient-text">Heritage Story</span>
                     </h2>
                     <p class="text-xl text-palette1-b max-w-4xl mx-auto leading-relaxed">
@@ -631,7 +623,7 @@
                     </div>
                     
                     <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                        <h3 class="text-3xl font-bold text-palette1-a mb-8 font-playfair">Nusantara Heritage Recipes</h3>
+                        <h3 class="text-3xl font-bold text-[#010713] mb-8 font-playfair">Nusantara Heritage Recipes</h3>
                         <p class="text-palette1-b mb-6 leading-relaxed text-lg">
                             PT Umara Cipta Rasa was established as a business unit of Umara Nikmat Boga, dedicated to preserving and sharing the rich culinary heritage of Nusantara. Our recipes have been passed down through generations, carefully maintained to ensure authenticity while meeting modern standards.
                         </p>
@@ -640,12 +632,12 @@
                         </p>
                         
                         <div class="grid grid-cols-2 gap-6">
-                            <div class="modern-card p-6 text-center">
-                                <div class="text-4xl font-bold text-palette1-a mb-2 font-playfair">10+</div>
+                            <div class="modern-card bg-amber-50 p-6 text-center">
+                                <div class="text-4xl font-bold text-[#010713] mb-2 font-playfair">10+</div>
                                 <div class="text-palette1-b font-medium">Years of Excellence</div>
                             </div>
-                            <div class="modern-card p-6 text-center">
-                                <div class="text-4xl font-bold text-palette1-a mb-2 font-playfair">100+</div>
+                            <div class="modern-card bg-amber-50 p-6 text-center">
+                                <div class="text-4xl font-bold text-[#010713] mb-2 font-playfair">100+</div>
                                 <div class="text-palette1-b font-medium">Heritage Recipes</div>
                             </div>
                         </div>
@@ -654,11 +646,11 @@
 
                 <!-- Features Grid -->
                 <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="modern-card p-8 text-center">
-                        <div class="w-20 h-20 bg-palette1-a rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                    <div class="modern-card bg-amber-50 p-8 text-center">
+                        <div class="w-20 h-20 bg-[#113361] rounded-2xl mx-auto mb-6 flex items-center justify-center">
                             <img src="public/assets/icon/recipes.svg" alt="Authentic Recipes" class="w-10 h-10">
                         </div>
-                        <h4 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Authentic Recipes</h4>
+                        <h4 class="text-2xl font-bold text-[#113361] mb-4 font-playfair">Authentic Recipes</h4>
                         <p class="text-palette1-b leading-relaxed">Traditional recipes preserved and perfected through generations of culinary expertise</p>
                         <button class="view-menu-btn bg-palette1-a text-white px-6 py-3 rounded-lg hover:bg-palette1-b transition-colors duration-300 flex
                         items-center space-x-2 font-semibold" onclick="openOurRecipesModal()">
@@ -669,11 +661,11 @@
                         </button>
                     </div>
                     
-                    <div class="modern-card p-8 text-center">
+                    <div class="modern-card bg-amber-50 p-8 text-center">
                         <div class="w-20 h-20 bg-palette1-b rounded-2xl mx-auto mb-6 flex items-center justify-center">
                             <img src="public/assets/icon/team-work.svg" alt="Expert Team" class="w-10 h-10">
                         </div>
-                        <h4 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Expert Team</h4>
+                        <h4 class="text-2xl font-bold text-[#010713] mb-4 font-playfair">Expert Team</h4>
                         <p class="text-palette1-b leading-relaxed">Skilled culinary masters trained in traditional Indonesian cooking methods and techniques</p>
                         <button class="view-menu-btn bg-palette1-a text-white px-6 py-3 rounded-lg hover:bg-palette1-b transition-colors duration-300 flex
                         items-center space-x-2 font-semibold" onclick="openOurTeamModal()">
@@ -684,11 +676,11 @@
                         </button>
                     </div>
                     
-                    <div class="modern-card p-8 text-center">
+                    <div class="modern-card bg-amber-50 p-8 text-center">
                         <div class="w-20 h-20 bg-palette1-c rounded-2xl mx-auto mb-6 flex items-center justify-center">
                             <img src="public/assets/icon/certificate.svg" alt="Certified" class="w-10 h-10">
                         </div>
-                        <h4 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Certified</h4>
+                        <h4 class="text-2xl font-bold text-[#010713] mb-4 font-playfair">Certified</h4>
                         <p class="text-palette1-b leading-relaxed">Contemporary food safety and quality standards while maintaining traditional authenticity</p>
                         <button class="view-menu-btn bg-palette1-a text-white px-6 py-3 rounded-lg hover:bg-palette1-b transition-colors duration-300 flex
                         items-center space-x-2 font-semibold" onclick="openOurCertificateModal()">
@@ -718,7 +710,7 @@
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Service 1 -->
-                    <div class="modern-card p-8 group bg-amber-50" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="modern-card bg-amber-50 p-8" data-aos="fade-up" data-aos-duration="1000">
                         <div class="w-20 h-20 bg-palette2-e rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                             <picture>
                                 <img src="public/assets/icon/wedding-catering.svg" alt="Wedding Catering" class="w-24 h-auto p-4">
@@ -756,7 +748,7 @@
                     </div>
 
                     <!-- Service 2 -->
-                     <div class="modern-card p-8 group bg-amber-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                     <div class="modern-card p-8 bg-amber-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                         <div class="w-20 h-20 bg-palette2-e rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                             <picture>
                                 <img src="public/assets/icon/private-dining.svg" alt="" class="w-24 h-auto p-4">
@@ -795,7 +787,7 @@
                     </div>
 
                     <!-- Service 3 -->
-                     <div class="modern-card p-8 group bg-amber-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                     <div class="modern-card p-8 bg-amber-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                         <div class="w-20 h-20 bg-palette2-e rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                             <picture>
                                 <img src="public/assets/icon/meal-box.svg" alt="" class="w-24 h-auto p-3">
@@ -833,7 +825,7 @@
                     </div>
 
                     <!-- Service 4 -->
-                     <div class="modern-card p-8 group bg-amber-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                     <div class="modern-card p-8 bg-amber-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                         <div class="w-20 h-20 bg-palette2-e rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                             <picture>
                                 <img src="public/assets/icon/corporate.svg" alt="" class="w-24 h-auto p-4">
@@ -871,7 +863,7 @@
                     </div>
 
                     <!-- Service 5 -->
-                     <div class="modern-card p-8 group bg-amber-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                     <div class="modern-card p-8 bg-amber-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                         <div class="w-20 h-20 bg-palette2-e rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                             <picture>
                                 <img src="public/assets/icon/goverment.svg" alt="" class="w-24 h-auto p-4">
@@ -909,7 +901,7 @@
                     </div>
 
                     <!-- Service 6 -->
-                     <div class="modern-card p-8 group bg-amber-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                     <div class="modern-card p-8 bg-amber-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                         <div class="w-20 h-20 bg-palette2-e rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                             <picture>
                                 <img src="public/assets/icon/mining.svg" alt="" class="w-24 h-auto p-3">
@@ -1001,29 +993,29 @@
 
                 <!-- Trust Badges -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <div class="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50">
-                        <div class="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="text-center p-6 bg-amber-50 backdrop-blur-sm rounded-2xl border border-slate-200/50">
+                        <div class="w-24 h-24 bg-palette2-e rounded-full flex items-center justify-center mx-auto mb-4">
                             <img src="public/assets/icon/iso.svg" alt="ISO Certified" class="w-12 h-12">
                         </div>
                         <h3 class="font-semibold text-slate-800 mb-2">ISO Certified</h3>
                         <p class="text-sm text-slate-600">International quality standards</p>
                     </div>
-                    <div class="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50">
-                        <div class="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="text-center p-6 bg-amber-50 backdrop-blur-sm rounded-2xl border border-slate-200/50">
+                        <div class="w-24 h-24 bg-palette2-e rounded-full flex items-center justify-center mx-auto mb-4">
                             <img src="public/assets/icon/haccp.png" alt="HACCP" class="w-12 h-12">
                         </div>
                         <h3 class="font-semibold text-slate-800 mb-2">HACCP</h3>
                         <p class="text-sm text-slate-600">Food safety management</p>
                     </div>
-                    <div class="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50">
-                        <div class="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="text-center p-6 bg-amber-50 backdrop-blur-sm rounded-2xl border border-slate-200/50">
+                        <div class="w-24 h-24 bg-palette2-e rounded-full flex items-center justify-center mx-auto mb-4">
                             <img src="public/assets/icon/halal.svg" alt="Halal Certified" class="w-12 h-12">
                         </div>
                         <h3 class="font-semibold text-slate-800 mb-2">Halal Certified</h3>
                         <p class="text-sm text-slate-600">Islamic dietary compliance</p>
                     </div>
-                    <div class="text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50">
-                        <div class="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="text-center p-6 bg-amber-50 backdrop-blur-sm rounded-2xl border border-slate-200/50">
+                        <div class="w-24 h-24 bg-palette2-e rounded-full flex items-center justify-center mx-auto mb-4">
                             <img src="public/assets/icon/bpom.svg" alt="BPOM" class="w-12 h-12">
                         </div>
                         <h3 class="font-semibold text-slate-800 mb-2">BPOM</h3>
@@ -1052,10 +1044,10 @@
                     <!-- 2018 -->
                     <div class="timeline-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                         <div class="timeline-dot"></div>
-                        <div class="modern-card p-8 ml-8">
+                        <div class="modern-card bg-amber-50 p-8 ml-8">
                             <div class="flex items-center mb-4">
                                 <span class="text-3xl font-bold text-palette1-a font-playfair mr-4">2018</span>
-                                <span class="bg-palette1-c text-white px-4 py-2 rounded-full text-sm font-semibold">ASIAN Games 2018</span>
+                                <span class="bg-palette2-e text-white px-4 py-2 rounded-full text-sm font-semibold">ASIAN Games 2018</span>
                             </div>
                             <p class="text-palette1-b leading-relaxed text-lg">
                                 Selected as Official Catering to provide 5,000 meals per day, demonstrating our consistency and quality standards.
@@ -1066,10 +1058,10 @@
                     <!-- 2019 -->
                     <div class="timeline-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                         <div class="timeline-dot"></div>
-                        <div class="modern-card p-8 ml-8">
+                        <div class="modern-card bg-amber-50 p-8 ml-8">
                             <div class="flex items-center mb-4">
                                 <span class="text-3xl font-bold text-palette1-a font-playfair mr-4">2019</span>
-                                <span class="bg-palette1-c text-white px-4 py-2 rounded-full text-sm font-semibold">Airplane Catering</span>
+                                <span class="bg-palette2-e text-white px-4 py-2 rounded-full text-sm font-semibold">Airplane Catering</span>
                             </div>
                             <p class="text-palette1-b leading-relaxed text-lg">
                                 Support Citilink to cater 1.200 meals/day for Citilink Passengers
@@ -1080,10 +1072,10 @@
                     <!-- 2020 -->
                     <div class="timeline-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                         <div class="timeline-dot"></div>
-                        <div class="modern-card p-8 ml-8">
+                        <div class="modern-card bg-amber-50 p-8 ml-8">
                             <div class="flex items-center mb-4">
                                 <span class="text-3xl font-bold text-palette1-a font-playfair mr-4">2020</span>
-                                <span class="bg-palette1-c text-white px-4 py-2 rounded-full text-sm font-semibold">2.3 Million Plates</span>
+                                <span class="bg-palette2-e text-white px-4 py-2 rounded-full text-sm font-semibold">2.3 Million Plates</span>
                             </div>
                             <p class="text-palette1-b leading-relaxed text-lg">
                                 Through the years 2018-2020 Umara Catering has already Served many events
@@ -1094,10 +1086,10 @@
                     <!-- 2021 -->
                     <div class="timeline-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                         <div class="timeline-dot"></div>
-                        <div class="modern-card p-8 ml-8">
+                        <div class="modern-card bg-amber-50 p-8 ml-8">
                             <div class="flex items-center mb-4">
                                 <span class="text-3xl font-bold text-palette1-a font-playfair mr-4">2021</span>
-                                <span class="bg-palette1-c text-white px-4 py-2 rounded-full text-sm font-semibold">New Normal Era</span>
+                                <span class="bg-palette2-e text-white px-4 py-2 rounded-full text-sm font-semibold">New Normal Era</span>
                             </div>
                             <p class="text-palette1-b leading-relaxed text-lg">
                                 Implementing Health Protocols, qualifying to serve Corporate - 40+ new corporate account Wedding - 3000+ pax, and already registered in 50+ buildings Private – weekly private events
@@ -1109,10 +1101,10 @@
                     <!-- 2022 -->
                     <div class="timeline-item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
                         <div class="timeline-dot"></div>
-                        <div class="modern-card p-8 ml-8">
+                        <div class="modern-card bg-amber-50 p-8 ml-8">
                             <div class="flex items-center mb-4">
                                 <span class="text-3xl font-bold text-palette1-a font-playfair mr-4">2022</span>
-                                <span class="bg-palette1-c text-white px-4 py-2 rounded-full text-sm font-semibold">Award Recognition</span>
+                                <span class="bg-palette2-e text-white px-4 py-2 rounded-full text-sm font-semibold">Award Recognition</span>
                             </div>
                             <p class="text-palette1-b leading-relaxed text-lg">
                                 Official Catering for G20 - U20 and M20, Won An Award of "Kategori Jasa Boga/Catering - Jakarta Tourism Awards 2022".
@@ -1123,10 +1115,10 @@
                     <!-- 2023 -->
                     <div class="timeline-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
                         <div class="timeline-dot"></div>
-                        <div class="modern-card p-8 ml-8">
+                        <div class="modern-card bg-amber-50 p-8 ml-8">
                             <div class="flex items-center mb-4">
                                 <span class="text-3xl font-bold text-palette1-a font-playfair mr-4">2023</span>
-                                <span class="bg-palette1-c text-white px-4 py-2 rounded-full text-sm font-semibold">BP Gathering</span>
+                                <span class="bg-palette2-e text-white px-4 py-2 rounded-full text-sm font-semibold">BP Gathering</span>
                             </div>
                             <p class="text-palette1-b leading-relaxed text-lg">
                                 Growth the numbers of corporate clients, particularly in BUMN, Mining, Oil and Gas also BP Gathering - 2000 pax at Tribrata
@@ -1137,10 +1129,10 @@
                     <!-- 2024 -->
                     <div class="timeline-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
                         <div class="timeline-dot"></div>
-                        <div class="modern-card p-8 ml-8">
+                        <div class="modern-card bg-amber-50 p-8 ml-8">
                             <div class="flex items-center mb-4">
                                 <span class="text-3xl font-bold text-palette1-a font-playfair mr-4">2024</span>
-                                <span class="bg-palette1-c text-white px-4 py-2 rounded-full text-sm font-semibold">Corporate Gathering</span>
+                                <span class="bg-palette2-e text-white px-4 py-2 rounded-full text-sm font-semibold">Corporate Gathering</span>
                             </div>
                             <p class="text-palette1-b leading-relaxed text-lg">
                                 Singtel 1000 pax set menu, PHE Gathering 5000 pax, HPM 6000 pax, HUT Bareskrim 5000 pax, ASIA - Kebaktian Nasional “Everyone of Asia” 3000 pax,Garuda Indonesia Halal Bi Halal 3000 pax, HUT PGN 3000 pax, Alliance Indonesia 8000 pax
@@ -1151,10 +1143,10 @@
                     <!-- 2025 -->
                     <div class="timeline-item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
                         <div class="timeline-dot"></div>
-                        <div class="modern-card p-8 ml-8">
+                        <div class="modern-card bg-amber-50 p-8 ml-8">
                             <div class="flex items-center mb-4">
                                 <span class="text-3xl font-bold text-palette1-a font-playfair mr-4">2025</span>
-                                <span class="bg-palette1-c text-white px-4 py-2 rounded-full text-sm font-semibold">Future Vision</span>
+                                <span class="bg-palette2-e text-white px-4 py-2 rounded-full text-sm font-semibold">Future Vision</span>
                             </div>
                             <h3 class="text-2xl font-bold text-palette1-a mb-4 font-playfair">Continuing Excellence</h3>
                             <p class="text-palette1-b leading-relaxed text-lg">
@@ -1182,7 +1174,7 @@
 
                  <div class="grid lg:grid-cols-2 gap-16 items-start">
                      <!-- Contact Form -->
-                     <div class="modern-card p-10" data-aos="fade-right" data-aos-duration="1000">
+                     <div class="modern-card bg-amber-50 p-10" data-aos="fade-right" data-aos-duration="1000">
                          <h3 class="text-3xl font-bold text-palette1-a mb-8 font-playfair">Book Your Event</h3>
                          <form class="space-y-6">
                              <div class="grid md:grid-cols-2 gap-6">
@@ -1225,24 +1217,24 @@
                      <!-- Contact Information -->
                      <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                          <div class="space-y-8">
-                             <div class="modern-card p-8">
+                             <div class="modern-card bg-amber-50 p-8">
                                  <h3 class="text-3xl font-bold text-palette1-a mb-8 font-playfair">Contact Information</h3>
                                  <div class="space-y-6">
                                      <div class="flex items-start space-x-4">
-                                         <div class="w-16 h-16 bg-palette1-a rounded-2xl flex items-center justify-center flex-shrink-0">
+                                         <div class="w-16 h-16 bg-palette2-e rounded-2xl flex items-center justify-center flex-shrink-0">
                                              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
                                              </svg>
                                          </div>
                                          <div>
                                              <h4 class="text-xl font-bold text-palette1-a mb-2">Address</h4>
-                                             <p class="text-palette1-b leading-relaxed"><a href="https://maps.app.goo.gl/623AP13kDd4o1v1N9" target="_blank">Jl. Intan RSPP Utara No.23B Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota
-                                            Jakarta 12430
+                                             <p class="text-palette1-b leading-relaxed"><a href="https://maps.app.goo.gl/YC4n6zPsfpeXsECR8" target="_blank">Jl. H. Mandor No.34 FG, RT.16/RW.2, Cilandak Bar., Kec. Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta
+                                            12430
                                             </a></p>
                                          </div>
                                      </div>
                                      <div class="flex items-start space-x-4">
-                                         <div class="w-16 h-16 bg-palette1-b rounded-2xl flex items-center justify-center flex-shrink-0">
+                                         <div class="w-16 h-16 bg-palette2-e rounded-2xl flex items-center justify-center flex-shrink-0">
                                              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                                              </svg>
@@ -1253,36 +1245,34 @@
                                          </div>
                                      </div>
 
-                                    <!-- <div class="flex items-start space-x-4"> -->
-                                        <!-- <div class="w-16 h-16 bg-palette1-b rounded-2xl flex items-center justify-center flex-shrink-0"> -->
-                                            <!-- <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"> -->
-                                                <!-- <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0  -->
-                                                <!-- 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>                                       -->
-                                            <!-- </svg> -->
-                                        <!-- </div> -->
-                                        <!-- <div> -->
-                                            <!-- <h4 class="text-xl font-bold text-palette1-a mb-2">Corporate, Goverment & BUMN</h4> -->
-                                            <!-- <p class="text-palette1-b leading-relaxed"><a href="https://wa.me/6281211117704" target="_blank">+62-812‑1111‑7704</a> For Goverment & BUMN</p> -->
-                                            <!-- <p class="text-palette1-b leading-relaxed"><a href="https://wa.me/6281211117705" target="_blank">+62-812‑1111‑7705</a> For Corporate & Others</p> -->
-                                        <!-- </div>                            -->
-                                    <!-- </div> -->
-<!--                                       -->
                                      <div class="flex items-start space-x-4">
-                                         <div class="w-16 h-16 bg-palette1-c rounded-2xl flex items-center justify-center flex-shrink-0">
-                                             <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                                                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                         <div class="w-16 h-16 bg-palette2-e rounded-2xl flex items-center justify-center flex-shrink-0">
+                                             <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                 <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                                                 <path d="M8 12h8M8 8h8M8 16h8" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
                                              </svg>
                                          </div>
                                          <div>
-                                             <h4 class="text-xl font-bold text-palette1-a mb-2">Email</h4>
-                                             <p class="text-palette1-b leading-relaxed">info@umaraciptarasa.com</p>
+                                             <h4 class="text-xl font-bold text-palette1-a mb-2">For More Information</h4>
+                                             <p class="text-palette1-b leading-relaxed"><a href="https://linktr.ee/umaracatering" target="_blank">https://linktr.ee/umaracatering</a></p>
                                          </div>
                                      </div>
+
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-16 h-16 bg-palette2-e rounded-2xl flex items-center justify-center flex-shrink-0">
+                                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-xl font-bold text-palette1-a mb-2">Email</h4>
+                                            <p class="text-palette1-b leading-relaxed">info@umaracatering.com</p>
+                                        </div>                              </div>
                                  </div>
                              </div>
 
-                             <div class="modern-card p-8">
+                             <div class="modern-card bg-amber-50 p-8">
                                  <h4 class="text-2xl font-bold text-palette1-a mb-6 font-playfair">Why Choose Us?</h4>
                                  <ul class="space-y-4 text-palette1-b">
                                      <li class="flex items-center">
@@ -1321,7 +1311,7 @@
 
 
      <!-- Footer -->
-     <footer class="bg-palette1-a text-white pt-20 pb-5">
+     <footer class="bg-[#010713] text-white pt-20 pb-5">
          <div class="container mx-auto px-6">
              <div class="max-w-7xl mx-auto">
                  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
