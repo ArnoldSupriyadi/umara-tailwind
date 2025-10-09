@@ -43,6 +43,10 @@ module.exports = {
           c: '#D3902A',
           d: '#1F4F35',
          },
+         'card-umara-group': {
+          'brown-dark': '#8C3F0E',
+          'brown-light': '#CE8736',
+         },
          
        },
       fontFamily: {

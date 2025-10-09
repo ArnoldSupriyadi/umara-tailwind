@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair
+    +Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Careers - Umara Group</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white">
+        <nav class="container mx-auto py-2 sm:px-6 lg:px-8 relative">
+            <div class="flex h-16 items-center justify-between">
+                <!-- Left: Brand -->
+                <a href="/" class="flex items-center gap-2 md:hidden">
+                    <img src="public/assets/images/logo-umara.svg" alt="Umara Group" class="h-10 w-auto" />
+                    <span class="sr-only">Umara Group</span>
+                </a>
+                <!-- Center: Desktop Nav -->
+                <div class="hidden md:flex items-center justify-center flex-1">
+                    <ul class="flex items-center gap-5">
+                        <li><a href="about.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">About</a>
+                        </li>
+                        <li><a href="news-event.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">News</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium hover:text-white"><img
+                                    src="public/assets/images/logo-umara.svg" alt="Umara Group" class="h-14 w-auto" /></a>
+                        </li>
+                        <li><a href="careers.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">Careers</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Mobile menu button -->
+                <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center bg-amber rounded-md p-2 text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 
+          focus:ring-offset-gray-800 focus:ring-indigo-500" aria-controls="nav-mobile" aria-expanded="false" type="button">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- icon open -->
+                    <svg id="icon-open" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5" aria-hidden="true">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <!-- icon close -->
+                    <svg id="icon-close" class="h-6 w-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5" aria-hidden="true">
+                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Nav -->
+            <div id="nav-mobile"
+                class="md:hidden hidden absolute top-full left-0 right-0 bg-amber-100 border-t border-white/10 z-50 shadow-lg">
+                <ul class="flex flex-col items-center gap-1 py-3">
+                    <!-- pakai text-base agar nyaman di mobile -->
+                    <li class="w-full max-w-sm">
+                        <a href="about.html"
+                            class="block rounded-md px-3 py-2 text-base font-medium text-white bg-gray-900 text-center">About</a>
+                    </li>
+                    <li class="w-full max-w-sm">
+                        <a href="news-event.html"
+                            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-white/5 hover:text-white text-center">News</a>
+                    </li>
+                    <li class="w-full max-w-sm">
+                        <a href="careers.html"
+                            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-white/5 hover:text-white text-center">Careers</a>
+                    </li>
+                    <li class="w-full max-w-sm">
+                        <a href="contact.html"
+                            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-white/5 hover:text-white text-center">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white py-20" style="background-image: url('public/assets/bg/UG-BACKGROUND-WEB-ABOUT.jpg'); background-size: cover; position: center center;">
+            <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+                <h1 class="text-card-umara-group-brown-dark text-4xl md:text-5xl font-bold mb-4 font-['Playfair_Display']">Careers at <span class="text-card-umara-group-brown-light">Umara Group</span></h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto font-['Inter']">Join our passionate team and grow with us. We offer exciting opportunities across our diverse culinary brands.</p>
+            </div>
+        </section>
+        <!-- APPLICANTS SECTION -->
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                
+                <div class="text-center mb-12" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4 font-['Playfair_Display']">Join Our Team</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto font-['Inter']">Discover exciting career opportunities across our diverse culinary brands and grow with us.</p>
+                </div>
+
+                <!-- Brand Categories -->
+                <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Umara Cipta Rasa -->
+                    <div class=" rounded-lg p-6 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="300">
+                        <img src="public/assets/careers/careers.jpg" alt="umara-group" class="w-full h-full object-cover rounded-t-lg">                  
+                    </div>
+                    
+                    <!-- Rasa Nusantara Baru -->
+                    <div class="rounded-lg p-6 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="400">
+                        <img src="public/assets/careers/careers.jpg" alt="umara-group" class="w-full h-full object-cover rounded-t-lg">
+                    </div>
+
+                    <!-- Umara Mitra Kulina -->
+                    <div class="rounded-lg p-6 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="500">
+                        <img src="public/assets/careers/careers.jpg" alt="umara-group" class="w-full h-full object-cover rounded-t-lg">
+                    </div>
+                </section>
+            </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#131313] text-white pt-12 pb-4">
+        <div class="container mx-auto px-4">
+          <!-- Footer Content -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+            <!-- Company Info -->
+            <div class="title-footer">
+              <picture>
+                <img src="public/assets/images/logo-umara.svg" alt="">
+              </picture>
+            </div>
+            <!-- Quick Links -->
+            <div class="title-footer">
+              <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+                <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                <li><a href="#highlights" class="text-gray-300 hover:text-white transition-colors">Highlights</a></li>
+                <li><a href="#our-client" class="text-gray-300 hover:text-white transition-colors">Our Clients</a></li>
+              </ul>
+            </div>
+            <!-- Services -->
+            <div class="title-footer">
+              <h3 class="text-xl font-bold mb-4">Our Services</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Corporate Catering</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Event Catering</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Wedding Catering</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Food Delivery</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Meal Planning</a></li>
+              </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="title-footer">
+              <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+              <div class="space-y-3">
+                <div class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 mt-1 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <p class="text-gray-300">Jakarta, Indonesia</p>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 
+      18 2 12.18 2 5V3z"
+                    ></path>
+                  </svg>
+                  <p class="text-gray-300"><a href="tel:02180600900">021-80600900</a></p>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                  </svg>
+                  <p class="text-gray-300">info@umaragroup.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Footer Bottom -->
+          <div class="border-t border-white pt-8">
+            <div class="flex flex-col md:flex-row justify-center items-center">
+              <p class="text-gray-300 mb-4 md:mb-0">Copyright © 2025 Umara Group. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+    <!-- Mobile Navigation Script -->
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navMobile = document.getElementById('nav-mobile');
+        const iconOpen = document.getElementById('icon-open');
+        const iconClose = document.getElementById('icon-close');
+        navToggle.addEventListener('click', () => {
+            navMobile.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+    </script>
+</body>
