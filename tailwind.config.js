@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./*.html", "./src/**/*.{html,js}", "./public/**/*.{html,js}"],
+  safelist: ['bg-gradient-to-r', 'from-brand-burgundy', 'to-brand-darkBurgundy', 'bg-brand-burgundy'],
   theme: {
     extend: {
       colors: {
@@ -47,8 +48,15 @@ module.exports = {
           'brown-dark': '#8C3F0E',
           'brown-light': '#CE8736',
          },
+         brand: {
+          burgundy: '#8B1C3D',
+          darkBurgundy: '#3D0F14',
+         },
          
        },
+      backgroundImage: {
+        'brand-burgundy': 'linear-gradient(to right, #8B1C3D, #3D0F14)',
+      },
       fontFamily: {
         'nunito': ['Nunito Sans', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],

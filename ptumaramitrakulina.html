@@ -6,6 +6,26 @@
     <title>PT Umara Mitra Kulina - Professional Catering Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Responsive carousel heights */
+        .carousel-responsive {
+            height: 440px; /* Desktop default */
+        }
+        
+        /* Tablet viewport */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .carousel-responsive {
+                height: 350px;
+            }
+        }
+        
+        /* Mobile viewport */
+        @media (max-width: 768px) {
+            .carousel-responsive {
+                height: 250px;
+            }
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -130,9 +150,29 @@
                     </div>
 
                     <div class="grid grid-cols-1 lg:grid-cols-2">
-                        <!-- Image Section -->
+                        <!-- Image Carousel Section -->
                         <div class="relative overflow-hidden p-6" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">
-                            <img src="public/assets/umara-mitra-kulina/UMK6.png" alt="Manufacturing Catering" class="w-full h-48 lg:h-56 object-cover rounded-lg hover:scale-105 transition-transform duration-500 shadow-lg">
+                            <div class="relative w-full rounded-lg overflow-hidden shadow-lg carousel-responsive">
+                                <!-- Carousel Images -->
+                                <div class="carousel-container relative w-full h-full">
+                                    <img id="carousel-img-1" src="public/assets/umara-mitra-kulina/1.jpg" alt="Manufacturing Catering 1" class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                                    <img id="carousel-img-2" src="public/assets/umara-mitra-kulina/2.jpg" alt="Manufacturing Catering 2" class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                                    <img id="carousel-img-3" src="public/assets/umara-mitra-kulina/3.jpg" alt="Manufacturing Catering 3" class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                                    <img id="carousel-img-4" src="public/assets/umara-mitra-kulina/4.jpg" alt="Manufacturing Catering 4" class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                                    <img id="carousel-img-5" src="public/assets/umara-mitra-kulina/5.jpg" alt="Manufacturing Catering 5" class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                                    <img id="carousel-img-6" src="public/assets/umara-mitra-kulina/6.jpg" alt="Manufacturing Catering 6" class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0">
+                                </div>
+                                
+                                <!-- Carousel Indicators -->
+                                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                                    <div class="carousel-indicator w-2 h-2 rounded-full bg-white/80 cursor-pointer transition-all duration-300 active" data-slide="0"></div>
+                                    <div class="carousel-indicator w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all duration-300" data-slide="1"></div>
+                                    <div class="carousel-indicator w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all duration-300" data-slide="2"></div>
+                                    <div class="carousel-indicator w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all duration-300" data-slide="3"></div>
+                                    <div class="carousel-indicator w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all duration-300" data-slide="4"></div>
+                                    <div class="carousel-indicator w-2 h-2 rounded-full bg-white/40 cursor-pointer transition-all duration-300" data-slide="5"></div>
+                                </div>
+                            </div>
                         </div>
                         
                         <!-- Content Section -->
@@ -325,37 +365,36 @@
                     </div>
                 </div>
                 
-                <div class="bg-white p-8 rounded-2xl shadow-xl" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="600">Request Quote</h3>
-                    <form class="space-y-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
-                            <div data-aos="fade-right" data-aos-duration="1200" data-aos-delay="1200">
+                <div class="bg-white p-8 rounded-2xl shadow-xl">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Request Quote</h3>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
                                 <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-palette1-a focus:border-transparent" placeholder="Your Name">
                             </div>
-                            <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="1200">
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Company</label>
-                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-palette1-a focus:border-transparent" placeholder="Company Name">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-palette1-a focus:border-transparent" placeholder="Using 62">
                             </div>
                         </div>
-                        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400">
+                        <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
                             <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-palette1-a focus:border-transparent" placeholder="your@email.com">
                         </div>
-                        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1600">
+                        <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
                             <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-palette1-a focus:border-transparent">
                                 <option>Select Service Type</option>
                                 <option>Manufacturing & Institutional</option>
-                                <option>Oil, Mining, Gas</option>
-                                <option>Healthcare</option>
+                                <option>Others</option>
                             </select>
                         </div>
-                        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1800">
+                        <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
                             <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-palette1-a focus:border-transparent" placeholder="Tell us about your catering needs..."></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-gradient-to-r from-[#B8946B] to-[#E8DDC9] text-[#67281F] px-8 py-4 rounded-lg font-semibold hover:from-[#E8DDC9] hover:to-[#B8946B] transition-colors shadow-lg" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="2000">
+                        <button type="submit" class="w-full bg-gradient-to-r from-[#B8946B] to-[#E8DDC9] text-[#67281F] px-8 py-4 rounded-lg font-semibold hover:from-[#E8DDC9] hover:to-[#B8946B] transition-colors shadow-lg">
                             Send Request
                         </button>
                     </form>
@@ -383,17 +422,14 @@
                     <h4 class="text-lg font-semibold mb-4">Services</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="#" class="hover:text-white transition-colors">Manufacturing Catering</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Oil & Gas Services</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Healthcare Catering</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Corporate Events</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Company</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Our Kitchen</a></li>
+                        <li><a href="#home" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#kitchen" class="hover:text-white transition-colors">Our Kitchen</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Quality Standards</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
                     </ul>
@@ -422,10 +458,55 @@
     <script>
         // Initialize AOS
         AOS.init({
-            duration: 1000,
+            duration:1000,
             once: true,
             offset: 100
         });
+
+        // Carousel functionality
+        let currentSlide = 0;
+        const totalSlides = 6;
+        const carouselImages = document.querySelectorAll('.carousel-image');
+        const carouselIndicators = document.querySelectorAll('.carousel-indicator');
+
+        function showSlide(index) {
+            // Hide all images
+            carouselImages.forEach(img => {
+                img.style.opacity = '0';
+            });
+            
+            // Remove active class from all indicators
+            carouselIndicators.forEach(indicator => {
+                indicator.classList.remove('active');
+                indicator.style.backgroundColor = 'rgba(255, 255, 255, 0.4)';
+            });
+            
+            // Show current image
+            carouselImages[index].style.opacity = '1';
+            
+            // Activate current indicator
+            carouselIndicators[index].classList.add('active');
+            carouselIndicators[index].style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Auto-play carousel every 2 seconds
+        setInterval(nextSlide, 2000);
+
+        // Add click functionality to indicators
+        carouselIndicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
+        // Initialize first slide
+        showSlide(0);
         
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
