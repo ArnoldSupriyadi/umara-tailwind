@@ -98,28 +98,185 @@
         <!-- APPLICANTS SECTION -->
         <section class="py-16 bg-gray-100">
             <div class="container mx-auto px-4">
-                
-                <div class="text-center mb-12" data-aos="fade-up" data-aos-delay="200">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4 font-['Playfair_Display']">Join Our Team</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto font-['Inter']">Discover exciting career opportunities across our diverse culinary brands and grow with us.</p>
+                <div class="text-center mb-6" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="text-3xl font-bold text-[#CE8131] mb-2 font-['Playfair_Display']">Lowongan Pekerjaan</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto font-['Inter']">Temukan dan filter peluang kerja berdasarkan perusahaan.</p>
                 </div>
 
-                <!-- Brand Categories -->
-                <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    <!-- Umara Cipta Rasa -->
-                    <div class=" rounded-lg p-6 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="300">
-                        <img src="public/assets/careers/careers.jpg" alt="umara-group" class="w-full h-full object-cover rounded-t-lg">                  
+                <!-- Filter Bar -->
+                <div class="bg-white rounded-xl border border-gray-200 p-4 mb-6">
+                    <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                        <!-- Left: Search + Filters -->
+                        <div class="flex flex-col lg:flex-row lg:items-center gap-3 w-full">
+                            <div class="flex-1">
+                                <input type="text" placeholder="Cari lowongan yang Anda inginkan..." class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#8D4105]"/>
+                            </div>
+                            <div class="w-full lg:w-64">
+                                <select id="companyFilter" class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#8D4105]">
+                                    <option>Semua Perusahaan</option>
+                                    <option>PT Rasa Nusantara Baru</option>
+                                    <option>Umara Catering</option>
+                                    <option>PT Umara Mitra Kuiina</option>
+                                    <option>PT Laukita Niaga</option>
+                                    <option>PT Laukita Bersama Indonesia</option>
+                                </select>
+                            </div>
+                            <button class="bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-5 py-2 hover:brightness-110 transition">Cari</button>
+                        </div>
+                        <!-- Right: Count + Toggle -->
+                        <div class="flex items-center justify-between lg:justify-end gap-4">
+                            <div id="jobsCount" class="text-sm font-semibold text-gray-700">(0) Jobs available</div>
+                        </div>
                     </div>
-                    
-                    <!-- Rasa Nusantara Baru -->
-                    <div class="rounded-lg p-6 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="400">
-                        <img src="public/assets/careers/careers.jpg" alt="umara-group" class="w-full h-full object-cover rounded-t-lg">
-                    </div>
+                </div>
 
-                    <!-- Umara Mitra Kulina -->
-                    <div class="rounded-lg p-6 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="500">
-                        <img src="public/assets/careers/careers.jpg" alt="umara-group" class="w-full h-full object-cover rounded-t-lg">
-                    </div>
+                <!-- Job Cards -->
+                <section id="jobsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card: Rasa Nusantara Baru -->
+                    <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="PT Rasa Nusantara Baru">
+                        <div class="p-4">
+                            <div class="flex items-center gap-3">
+                                <img src="public/assets/images/logo-umara.svg" alt="PT Rasa Nusantara Baru" class="h-8"/>
+                            </div>
+                            <h3 class="mt-4 text-lg font-semibold">QC Piping & Mechanic - RNB</h3>
+                            <p class="text-sm text-gray-600">PT Rasa Nusantara Baru</p>
+                            <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                <li>Production and Manufacturing • Semua</li>
+                                <li>Batas Lamar: 01 Maret 2026</li>
+                            </ul>
+                        </div>
+                        <div class="flex items-center justify-between px-4 py-3 border-t bg-[#F9F7F4]">
+                            <a href="#" class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-2 py-2 hover:brightness-110 transition">See Detail
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="#" class="inline-flex items-center justify-center outline outline-1-[#8D4105] text-[#8D4105] px-4 py-2 rounded-md hover:bg-[#8D4105] hover:text-white transition">Lamar</a>
+                        </div>
+                    </article>
+
+                    <!-- Card: Umara Catering -->
+                    <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="Umara Catering">
+                        <div class="p-4">
+                            <div class="flex items-center gap-3">
+                                <img src="public/assets/images/logo-umara.svg" alt="Umara Catering" class="h-8"/>
+                            </div>
+                            <h3 class="mt-4 text-lg font-semibold">Quality Assurance Staff</h3>
+                            <p class="text-sm text-gray-600">Umara Catering</p>
+                            <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                <li>Engineering • Semua</li>
+                                <li>Batas Lamar: 01 Maret 2026</li>
+                            </ul>
+                        </div>
+                        <div class="flex items-center justify-between px-4 py-3 border-t bg-[#F9F7F4]">
+                            <a href="#" class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-4 py-2 hover:brightness-110 transition">See Detail
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="#" class="inline-flex items-center justify-center border border-[#8D4105] text-[#8D4105] px-4 py-2 rounded-md hover:bg-[#8D4105] hover:text-white transition">Lamar</a>
+                        </div>
+                    </article>
+
+                    <!-- Card: Umara Mitra Kuiina -->
+                    <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="PT Umara Mitra Kuiina">
+                        <div class="p-4">
+                            <div class="flex items-center gap-3">
+                                <img src="public/assets/images/logo-umara.svg" alt="PT Umara Mitra Kuiina" class="h-8"/>
+                            </div>
+                            <h3 class="mt-4 text-lg font-semibold">QC Blasting & Painting</h3>
+                            <p class="text-sm text-gray-600">PT Umara Mitra Kuiina</p>
+                            <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                <li>Production and Manufacturing • Semua</li>
+                                <li>Batas Lamar: 01 Maret 2026</li>
+                            </ul>
+                        </div>
+                        <div class="flex items-center justify-between px-4 py-3 border-t bg-[#F9F7F4]">
+                            <a href="#" class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-4 py-2 hover:brightness-110 transition">See Detail
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="#" class="inline-flex items-center justify-center border border-[#8D4105] text-[#8D4105] px-4 py-2 rounded-md hover:bg-[#8D4105] hover:text-white transition">Lamar</a>
+                        </div>
+                    </article>
+
+                    <!-- Card: Laukita Niaga -->
+                    <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="PT Laukita Niaga">
+                        <div class="p-4">
+                            <div class="flex items-center gap-3">
+                                <img src="public/assets/images/logo-umara.svg" alt="PT Laukita Niaga" class="h-8"/>
+                            </div>
+                            <h3 class="mt-4 text-lg font-semibold">Production Supervisor</h3>
+                            <p class="text-sm text-gray-600">PT Laukita Niaga</p>
+                            <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                <li>Production and Manufacturing • Semua</li>
+                                <li>Batas Lamar: 10 Mei 2026</li>
+                            </ul>
+                        </div>
+                        <div class="flex items-center justify-between px-4 py-3 border-t bg-[#F9F7F4]">
+                            <a href="#" class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-4 py-2 hover:brightness-110 transition">See Detail
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="#" class="inline-flex items-center justify-center border border-[#8D4105] text-[#8D4105] px-4 py-2 rounded-md hover:bg-[#8D4105] hover:text-white transition">Lamar</a>
+                        </div>
+                    </article>
+
+                    <!-- Card: Laukita Bersama Indonesia -->
+                    <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="PT Laukita Bersama Indonesia">
+                        <div class="p-4">
+                            <div class="flex items-center gap-3">
+                                <img src="public/assets/images/logo-umara.svg" alt="PT Laukita Bersama Indonesia" class="h-8"/>
+                            </div>
+                            <h3 class="mt-4 text-lg font-semibold">R&D Technologist</h3>
+                            <p class="text-sm text-gray-600">PT Laukita Bersama Indonesia</p>
+                            <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                <li>Engineering • Semua</li>
+                                <li>Batas Lamar: 20 Juni 2026</li>
+                            </ul>
+                        </div>
+                        <div class="flex items-center justify-between px-4 py-3 border-t bg-[#F9F7F4]">
+                            <a href="#" class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-4 py-2 hover:brightness-110 transition">See Detail
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="#" class="inline-flex items-center justify-center border border-[#8D4105] text-[#8D4105] px-4 py-2 rounded-md hover:bg-[#8D4105] hover:text-white transition">Lamar</a>
+                        </div>
+                    </article>
+
+                    <!-- Duplicate some cards for grid feel -->
+                    <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="Umara Catering">
+                        <div class="p-4">
+                            <div class="flex items-center gap-3">
+                                <img src="public/assets/images/logo-umara.svg" alt="Umara Catering" class="h-8"/>
+                            </div>
+                            <h3 class="mt-4 text-lg font-semibold">Event Operations Lead</h3>
+                            <p class="text-sm text-gray-600">Umara Catering</p>
+                            <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                <li>Operations • Semua</li>
+                                <li>Batas Lamar: 30 April 2026</li>
+                            </ul>
+                        </div>
+                        <div class="flex items-center justify-between px-4 py-3 border-t bg-[#F9F7F4]">
+                            <a href="#" class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-4 py-2 hover:brightness-110 transition">See Detail
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="#" class="inline-flex items-center justify-center border border-[#8D4105] text-[#8D4105] px-4 py-2 rounded-md hover:bg-[#8D4105] hover:text-white transition">Lamar</a>
+                        </div>
+                    </article>
+
+                    <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="PT Rasa Nusantara Baru">
+                        <div class="p-4">
+                            <div class="flex items-center gap-3">
+                                <img src="public/assets/images/logo-umara.svg" alt="PT Rasa Nusantara Baru" class="h-8"/>
+                            </div>
+                            <h3 class="mt-4 text-lg font-semibold">Kitchen Supervisor</h3>
+                            <p class="text-sm text-gray-600">PT Rasa Nusantara Baru</p>
+                            <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                <li>Culinary • Semua</li>
+                                <li>Batas Lamar: 17 Mei 2026</li>
+                            </ul>
+                        </div>
+                        <div class="flex items-center justify-between px-4 py-3 border-t bg-[#F9F7F4]">
+                            <a href="#" class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-4 py-2 hover:brightness-110 transition">See Detail
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="#" class="inline-flex items-center justify-center border border-[#8D4105] text-[#8D4105] px-4 py-2 rounded-md hover:bg-[#8D4105] hover:text-white transition">Lamar</a>
+                        </div>
+                    </article>
                 </section>
             </div>
     </main>
@@ -214,6 +371,28 @@
             navMobile.classList.toggle('hidden');
             iconOpen.classList.toggle('hidden');
             iconClose.classList.toggle('hidden');
+        });
+    </script>
+    <!-- Jobs Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const companyFilter = document.getElementById('companyFilter');
+            const cards = Array.from(document.querySelectorAll('.job-card'));
+            const countEl = document.getElementById('jobsCount');
+
+            const updateView = () => {
+                const selected = companyFilter ? companyFilter.value : 'Semua Perusahaan';
+                let visible = 0;
+                cards.forEach(card => {
+                    const match = selected === 'Semua Perusahaan' || card.dataset.company === selected;
+                    card.classList.toggle('hidden', !match);
+                    if (match) visible++;
+                });
+                if (countEl) countEl.textContent = `(${visible}) Jobs available`;
+            };
+
+            if (companyFilter) companyFilter.addEventListener('change', updateView);
+            updateView();
         });
     </script>
 </body>

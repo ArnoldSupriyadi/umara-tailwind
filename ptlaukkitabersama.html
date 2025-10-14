@@ -110,8 +110,8 @@
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
                     <picture>
-                        <source srcset="public/assets/images/converted_black_again.svg" type="image/svg+xml">
-                        <img src="public/assets/images/converted_black_again.svg" alt="PT Laukita Bersama Indonesia" class="w-20 h-12 md:w-24 md:h-16">
+                        <source srcset="public/assets/laukkita-bersama/LBI-Logo.png" type="image/svg+xml">
+                        <img src="public/assets/laukkita-bersama/LBI-Logo.png" alt="PT Laukita Bersama Indonesia" class="w-28 h-auto md:w-24 md:h-auto">
                     </picture>
                 </div>
 
@@ -191,6 +191,51 @@
         </div>
     </section>
 
+    <!-- Certified Full-Screen Modal (Reusable) -->
+    <div id="certifiedModal" class="fixed inset-0 bg-black/80 hidden z-50 items-center justify-center p-4" style="backdrop-filter: blur(6px);" onclick="closeCertifiedModal()">
+        <div class="relative max-w-5xl w-full mx-auto" onclick="event.stopPropagation()">
+            <img id="certifiedModalImg" src="" alt="" class="w-full h-[80vh] md:h-[85vh] object-contain bg-white rounded-xl shadow-2xl" />
+
+            <!-- Close Button -->
+            <button onclick="closeCertifiedModal()" class="absolute top-3 right-3 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center text-gray-700 hover:text-black shadow transition">
+                ✕
+            </button>
+
+            <!-- Optional Caption -->
+            <div id="certifiedModalCaption" class="mt-3 text-center text-white/90 text-sm"></div>
+        </div>
+    </div>
+
+    <script>
+        function openCertifiedModal(src, alt) {
+            const modal = document.getElementById('certifiedModal');
+            const img = document.getElementById('certifiedModalImg');
+            const caption = document.getElementById('certifiedModalCaption');
+            if (!modal || !img) return;
+            img.src = src;
+            img.alt = alt || '';
+            if (caption) caption.textContent = alt || '';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeCertifiedModal() {
+            const modal = document.getElementById('certifiedModal');
+            if (!modal) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Close with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeCertifiedModal();
+            }
+        });
+    </script>
+
     <!-- About Section -->
     <section id="about" class="py-10 bg-white" style="background-image: url('public/assets/laukkita-bersama/hero-bg-lbi.svg'); background-size: 50% auto; background-position:top right; background-repeat: no-repeat;">
         <div class="container mx-auto px-4 lg:px-8">
@@ -267,7 +312,7 @@
                     <div class="rounded-3xl p-[3px] bg-gradient-to-br from-brand-burgundy to-brand-darkBurgundy" data-aos="fade-up"
                         data-aos-delay="200">
                         <img src="public/assets/laukkita-bersama/structure.jpg" alt="Structure"
-                            class="w-full h-auto rounded-2xl shadow-xl">
+                            class="w-full h-auto rounded-2xl shadow-xl p-2">
                     </div>
                 </div>
             </section>
@@ -514,18 +559,30 @@
                     <div class="relative" data-aos="fade-left" data-aos-duration="1000">
                         <div id="oemCarousel" class="relative overflow-hidden rounded-2xl shadow-lg">
                             <div class="relative w-full h-80 md:h-96 lg:h-[28rem]">
-                                <img src="public/assets/laukkita-bersama/pabrik/QC-&-RnD-1.jpg" alt="OEM Manufacturing - QC & RnD 1" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 
+                                <img src="public/assets/laukkita-bersama/pabrik/QC-&-RnD-1.jpg" alt="QC & RnD" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 
                                 transition-opacity duration-700">
-                                <img src="public/assets/laukkita-bersama/pabrik/QC-&-RnD-2.jpg" alt="OEM Manufacturing - QC & RnD 2" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 
+                                <img src="public/assets/laukkita-bersama/pabrik/QC-&-RnD-2.jpg" alt="QC & RnD" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 
                                 transition-opacity duration-700">
-                                <img src="public/assets/laukkita-bersama/pabrik/QC-&-RnD-3.jpg" alt="OEM Manufacturing - QC & RnD 3" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 
+                                <img src="public/assets/laukkita-bersama/pabrik/QC-&-RnD-3.jpg" alt="QC & RnD" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 
                                 transition-opacity duration-700">
-                                <img src="public/assets/laukkita-bersama/pabrik/Area Sealing 2.jpg" alt="OEM Manufacturing - Area Sealing 2" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 transition-opacity duration-700">
-                                <img src="public/assets/laukkita-bersama/pabrik/Area Sealing.jpg" alt="OEM Manufacturing - Area Sealing" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 transition-opacity duration-700">
-                                <img src="public/assets/laukkita-bersama/pabrik/Loading-2.jpeg" alt="OEM Manufacturing - Loading 2" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 transition-opacity duration-700">
-                                <img src="public/assets/laukkita-bersama/pabrik/Loading.jpg" alt="OEM Manufacturing - Loading" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 transition-opacity duration-700">
-                                <img src="public/assets/laukkita-bersama/pabrik/Pengolahan-Air.jpg" alt="OEM Manufacturing - Loading" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 
-                                transition-opacity duration-700">
+                                <img src="public/assets/laukkita-bersama/pabrik/Area Sealing 2.jpg" alt="Area Sealing" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 transition-opacity duration-700">
+                                <img src="public/assets/laukkita-bersama/pabrik/Area Sealing.jpg" alt="Area Sealing" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 transition-opacity duration-700">
+                                <img src="public/assets/laukkita-bersama/pabrik/Loading-2.jpeg" alt="Area Loading" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 transition-opacity duration-700">
+                                <img src="public/assets/laukkita-bersama/pabrik/Loading.jpg" alt="Area Loading" class="slide absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 transition-opacity duration-700">
+                                <img src="public/assets/laukkita-bersama/pabrik/Pengolahan-Air.jpg" alt="Water Treatment" class="slide absolute inset-0 w-full 
+                                h-full object-cover rounded-2xl opacity-0 transition-opacity duration-700">
+                                <img src="public/assets/laukkita-bersama/pabrik/Preapare-Room.jpg" alt="Prepare Room" class="slide absolute inset-0 w-full 
+                                h-full object-cover rounded-2xl opacity-0 transition-opacity duration-700">
+                                <img src="public/assets/laukkita-bersama/pabrik/Preapare-Room-2.jpg" alt="Prepare Room" class="slide absolute inset-0 w-full 
+                                h-full object-cover rounded-2xl opacity-0 transition-opacity duration-700">
+                                <img src="public/assets/laukkita-bersama/pabrik/Control-Room.jpg" alt="Control Room" class="slide absolute inset-0 w-full 
+                                h-full object-cover rounded-2xl opacity-0 transition-opacity duration-700">
+                                <img src="public/assets/laukkita-bersama/pabrik/Production-room.jpg" alt="Production Room" class="slide absolute inset-0 w-full 
+                                h-full object-cover rounded-2xl opacity-0 transition-opacity duration-700">
+                                <!-- Bottom-right caption overlay -->
+                                <div id="oemCaption" class="absolute bottom-3 right-3 z-20 bg-black/60 text-white px-3 py-1 rounded-md text-xs sm:text-sm md:text-base shadow backdrop-blur">
+                                    OEM Manufacturing
+                                </div>
                             </div>
                             <!-- Optional indicators -->
                             <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
@@ -545,6 +602,7 @@
                                 if (!carousel) return;
                                 const slides = carousel.querySelectorAll('.slide');
                                 const dots = carousel.querySelectorAll('.dot');
+                                const caption = carousel.querySelector('#oemCaption');
                                 let index = 0;
                                 const showSlide = (i) => {
                                     slides.forEach((s, si) => {
@@ -556,6 +614,10 @@
                                         d.style.width = di === i ? '8px' : '6px';
                                         d.style.height = di === i ? '8px' : '6px';
                                     });
+                                    if (caption) {
+                                        const current = slides[i];
+                                        caption.textContent = current && current.alt ? current.alt : 'OEM Manufacturing';
+                                    }
                                 };
                                 if (slides.length) {
                                     showSlide(index);
@@ -574,6 +636,71 @@
                         </script>
                     </div>
                 </div>
+
+                <!-- Certified Section -->
+                <section id="certified" class="py-16 bg-white">
+                    <div class="container mx-auto px-4 lg:px-8">
+                        <!-- Header -->
+                        <div class="text-center mb-10" data-aos="fade-up" data-aos-duration="800">
+                            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">Our Certified</h2>
+                            <p class="text-gray-600 mt-3">Certification documents that ensure compliance with quality and food safety.
+                            </p>
+                        </div>
+                        <!-- Grid of certificates -->
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+                        <!-- HAS Status -->
+                            <a href="#" onclick="openCertifiedModal('public/assets/laukkita-bersama/certified/HASStatus-PT-LBI-Daging-Olahan-300dpi.jpg','HAS Status Certificate'); return false;"
+                                class="group block rounded-xl overflow-hidden border border-[#debe9d] bg-[#F7F3EF] hover:shadow-md transition">
+                                <img src="public/assets/laukkita-bersama/certified/HASStatus-PT-LBI-Daging-Olahan-300dpi.jpg"
+                                    alt="HAS Status Certificate" class="w-full h-40  md:h-44 object-cover group-hover:scale-[1.02] transition-transform 
+                            duration-300" />
+                                <div class="px-3 py-2 text-center text-sm text-brand-dark">HAS Status</div>
+                            </a>
+                            <!-- HACCP -->
+                            <a href="#"
+                                onclick="openCertifiedModal('public/assets/laukkita-bersama/certified/HACCP-794604.jpg','HACCP Certificate'); return false;"
+                                class="group block rounded-xl overflow-hidden border border-[#debe9d] bg-[#F7F3EF] hover:shadow-md transition">
+                                <img src="public/assets/laukkita-bersama/certified/HACCP-794604.jpg" alt="HACCP Certificate" class="w-full h-40 md:h-44 object-cover 
+                group-hover:scale-[1.02] transition-transform duration-300" />
+                                <div class="px-3 py-2 text-center text-sm text-brand-dark">HACCP</div>
+                            </a>
+                            <!-- ISO 22000 -->
+                            <a href="#" onclick="openCertifiedModal('public/assets/laukkita-bersama/certified/ISO-22000-2018.jpg','ISO 22000:2018 Certificate'); return false;
+                " class="group block rounded-xl overflow-hidden border border-[#debe9d] bg-[#F7F3EF] hover:shadow-md transition">
+                                <img src="public/assets/laukkita-bersama/certified/ISO-22000-2018.jpg" alt="ISO 22000:2018 Certificate"
+                                    class="w-full h-40 md:h-44 
+                object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+                                <div class="px-3 py-2 text-center text-sm text-brand-dark">ISO 22000:2018</div>
+                            </a>
+                            <!-- ISO 14001 / 10004 -->
+                            <a href="#"
+                                onclick="openCertifiedModal('public/assets/laukkita-bersama/certified/QA-ID-14001-10004.jpg','ISO 14001 Certificate'); return false;"
+                                class="group block rounded-xl overflow-hidden border border-[#debe9d] bg-[#F7F3EF] hover:shadow-md transition">
+                                <img src="public/assets/laukkita-bersama/certified/QA-ID-14001-10004.jpg" alt="ISO 14001 Certificate"
+                                    class="w-full h-40 md:h-44 object-cover 
+                group-hover:scale-[1.02] transition-transform duration-300" />
+                                <div class="px-3 py-2 text-center text-sm text-brand-dark">ISO 14001</div>
+                            </a>
+                            <!-- ISO 45001 / 10001 -->
+                            <a href="#"
+                                onclick="openCertifiedModal('public/assets/laukkita-bersama/certified/QA-ID-45001-10001.jpg','ISO 45001 Certificate'); return false;"
+                                class="group block rounded-xl overflow-hidden border border-[#debe9d] bg-[#F7F3EF] hover:shadow-md transition">
+                                <img src="public/assets/laukkita-bersama/certified/QA-ID-45001-10001.jpg" alt="ISO 45001 Certificate"
+                                    class="w-full h-40 md:h-44 object-cover 
+                group-hover:scale-[1.02] transition-transform duration-300" />
+                                <div class="px-3 py-2 text-center text-sm text-brand-dark">ISO 45001</div>
+                            </a>
+                            <!-- CPPOB -->
+                            <a href="#" onclick="openCertifiedModal('public/assets/laukkita-bersama/certified/Sertifikat-CPPOB-Pangan-Olahan.jpg','CPPOB Pangan Olahan Certificate'); return false;"
+                                class="group block rounded-xl overflow-hidden border border-[#debe9d] bg-[#F7F3EF] hover:shadow-md transition">
+                                <img src="public/assets/laukkita-bersama/certified/Sertifikat-CPPOB-Pangan-Olahan.jpg"
+                                    alt="CPPOB Pangan Olahan Certificate" class="w-full 
+                h-40 md:h-44 object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+                                <div class="px-3 py-2 text-center text-sm text-brand-dark">CPPOB</div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
 
                 <!-- Development Process Section -->
                 <div class="bg-gradient-to-r from-brand-primary to-brand-secondary rounded-3xl p-8 lg:p-12" data-aos="fade-up" data-aos-duration="1000">
