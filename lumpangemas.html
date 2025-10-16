@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumpang Emas Signature - Premium Dining Experience</title>
     <link href="./dist/output.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script>
@@ -57,9 +58,9 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body>
     <!-- Header -->
-    <header class="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-200/50">
+    <header class="sticky top-0 z-50 bg-[#4f290e]">
         <div class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
@@ -71,10 +72,10 @@
                 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-amber-600 transition-colors font-medium smooth-scroll">Home</a>
-                    <a href="#menu" class="text-gray-700 hover:text-amber-600 transition-colors font-medium smooth-scroll">Menu</a>
-                    <a href="#rooms" class="text-gray-700 hover:text-amber-600 transition-colors font-medium smooth-scroll">VIP Rooms</a>
-                    <a href="#contact" class="text-gray-700 hover:text-amber-600 transition-colors font-medium smooth-scroll">Contact</a>
+                    <a href="#home" class="text-[#C9A53D] hover:text-amber-600 transition-colors font-medium smooth-scroll">Home</a>
+                    <a href="#menu" class="text-[#C9A53D] hover:text-amber-600 transition-colors font-medium smooth-scroll">Menu</a>
+                    <a href="#rooms" class="text-[#C9A53D] hover:text-amber-600 transition-colors font-medium smooth-scroll">VIP Rooms</a>
+                    <a href="#contact" class="text-[#C9A53D] hover:text-amber-600 transition-colors font-medium smooth-scroll">Contact</a>
                 </nav>
                 
                 <!-- Mobile Menu Button -->
@@ -101,28 +102,28 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen bg-amber-50 pt-20">
+    <section id="home" class="relative pt-10" style="background-image: url('public/assets/lumpang-emas-prapanca/bg-signature.jpg'); background-size: cover;">
         <div class="relative container mx-auto px-4 py-8 lg:py-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-5rem)]">
                 <!-- Left Side - Content -->
                 <div class="max-w-xl mx-auto lg:mx-0 text-center lg:text-left" data-aos="fade-right" data-aos-duration="1000">
                     <div class="mb-8 lg:mb-12">
-                        <img src="public/assets/vector/lumpang prapanca_by Umara hitam.png" alt="Lumpang Emas Logo" class="w-full h-auto max-w-2xl mx-auto lg:mx-0 object-contain" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200" loading="lazy">
+                        <img src="public/assets/lumpang-emas-prapanca/logo-signature.png" alt="Lumpang Emas Logo" class="w-full h-auto max-w-2xl mx-auto lg:mx-0 object-contain" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200" loading="lazy">
                     </div>
                     
-                    <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-palette2-e mb-6 leading-tight" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                         Premium Dining Experience
                     </h1>
                     
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">
+                    <p class="text-lg text-white mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">
                         Discover authentic Indonesian cuisine in our elegant VIP rooms with exceptional service and ambiance.
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        <a href="#rooms" class="bg-palette2-b text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full text-base lg:text-lg font-semibold hover:bg-amber-700 transition-colors text-center smooth-scroll">
+                        <a href="#rooms" class="bg-gradient-to-b from-[#efd266] to-[#b9932f] text-[#562E12] px-6 lg:px-8 py-3 lg:py-4 rounded-full text-base lg:text-lg font-semibold hover:bg-amber-700 transition-colors text-center smooth-scroll">
                             Explore VIP Rooms
                         </a>
-                        <a href="https://wa.me/6281222227496" target="_blank" class="border-2 border-palette2-b text-palette2-b px-6 lg:px-8 py-3 lg:py-4 rounded-full text-base lg:text-lg font-semibold hover:bg-amber-600 hover:text-white transition-colors text-center">
+                        <a href="https://wa.me/6281222227496" target="_blank" class="border-2 border-[#efd266] text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full text-base lg:text-lg font-semibold hover:bg-amber-600 hover:text-white transition-colors text-center">
                             Reserved Now
                         </a>
                     </div>
@@ -205,27 +206,20 @@
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-12 lg:py-24 relative overflow-hidden">
-        <!-- Background with gradient and pattern -->
-        <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-amber-50"></div>
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-20 left-10 w-32 h-32 bg-amber-400 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-20 right-10 w-40 h-40 bg-orange-300 rounded-full blur-3xl"></div>
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-amber-200 to-orange-200 rounded-full blur-3xl opacity-30"></div>
-        </div>
-        
+    <section id="menu" class="py-12 lg:py-24 relative overflow-hidden" style="background-image: url('public/assets/lumpang-emas-prapanca/BG-SIGNATURE-OUR.jpg'); background-size: cover;">
+
         <div class="container mx-auto px-4 relative z-10">
             <!-- Modern Header with improved typography -->
             <div class="text-center mb-12 lg:mb-20" data-aos="fade-up" data-aos-duration="1000">
-                <div class="inline-flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 bg-amber-300 rounded-2xl mb-4 lg:mb-6 shadow-lg" data-aos="zoom-in" data-aos-duration="800">
-                    <svg class="w-6 h-6 lg:w-8 lg:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="inline-flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 bg-[#C9A53D]  rounded-2xl mb-4 lg:mb-6 shadow-lg" data-aos="zoom-in" data-aos-duration="800">
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 text-" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                     </svg>
                 </div>
-                <h2 class="text-3xl md:text-5xl lg:text-7xl font-black text-palette2-e bg-clip-text mb-4 lg:mb-6 tracking-tight" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+                <h2 class="text-3xl md:text-5xl lg:text-7xl font-black text-[#C9A53D] bg-clip-text mb-4 lg:mb-6 tracking-tight" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                     Our Menu
                 </h2>
-                <p class="text-base md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light px-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <p class="text-base md:text-xl lg:text-2xl text-white max-w-4xl mx-auto leading-relaxed font-light px-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                     Discover our exquisite collection of authentic Indonesian cuisine, carefully crafted with premium ingredients and modern presentation.
                 </p>
             </div>
@@ -604,12 +598,12 @@
                     <!-- Navigation Arrows -->
                     <div class="flex items-center gap-4">
                         <button id="prevBtn" class="group flex items-center justify-center w-14 h-14 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed">
-                            <svg class="w-6 h-6 text-gray-700 group-hover:text-amber-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                             </svg>
                         </button>
                         <button id="nextBtn" class="group flex items-center justify-center w-14 h-14 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed">
-                            <svg class="w-6 h-6 text-gray-700 group-hover:text-amber-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                             </svg>
                         </button>
@@ -623,10 +617,10 @@
                     <!-- Auto-play Toggle -->
                     <div class="flex items-center gap-4">
                         <button id="autoplayBtn" class="group flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-md border border-white/30 rounded-xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl">
-                            <svg id="playIcon" class="w-4 h-4 text-gray-700 group-hover:text-amber-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg id="playIcon" class="w-4 h-4 text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h1m4 0h1m-6-8h8a2 2 0 012 2v8a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2z"></path>
                             </svg>
-                            <span class="text-sm font-medium text-gray-700 group-hover:text-amber-600 transition-colors duration-300">Auto</span>
+                            <span class="text-sm font-medium text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300">Auto</span>
                         </button>
                     </div>
                 </div>
@@ -639,7 +633,7 @@
     <div id="menuModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
         <div class="relative bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
             <button id="closeMenuModal" class="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors duration-300">
-                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
@@ -651,7 +645,7 @@
                     <!-- Tags will be inserted here -->
                 </div>
                 <h3 id="modalTitle" class="text-2xl font-bold text-gray-800 mb-3"></h3>
-                <p id="modalDescription" class="text-gray-600 leading-relaxed"></p>
+                <p id="modalDescription" class="text-white leading-relaxed"></p>
             </div>
         </div>
     </div>
@@ -945,18 +939,18 @@
     </section>
 
     <!-- VIP Rooms Section -->
-    <section id="rooms" class="py-12 lg:py-20 bg-white">
+    <section id="rooms" class="py-12 lg:py-20" style="background-image: url('public/assets/lumpang-emas-prapanca/BG-SIGNATURE-VIP.jpg'); background-size: cover; background-position: center center;">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12 lg:mb-16" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-palette2-e mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">Our VIP Rooms</h2>
-                <p class="text-base md:text-xl text-gray-600 max-w-3xl mx-auto px-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#C9A53D] mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">Our VIP Rooms</h2>
+                <p class="text-base md:text-xl text-white max-w-3xl mx-auto px-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                     Choose from our carefully designed dining spaces, each offering a unique ambiance for your special occasions.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
                 <!-- Main Dining Room -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                <div class="bg-white/70 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                     <div class="h-64 bg-gradient-to-br from-amber-100 to-orange-200 relative" style="background-image: url('public/assets/lumpang-emas-prapanca/MAINDINING1STFLOOR/Pro-Capture\ One\ 00448.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                         
                         <div class="absolute bottom-4 left-4">
@@ -964,47 +958,47 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 mb-4">
-                            Area dining tengah restoran dengan kapasitas hingga 40 orang. Fasilitas: AC, meja dan kursi makan (Screen Proyector + mic jika di perlukan) dan suasana luas & nyaman
+                        <p class="text-[#78411B] mb-4">
+                            Area dining tengah restoran dengan kapasitas hingga 40 orang. Fasilitas: AC, meja dan kursi makan (Screen Proyector) dan suasana luas & nyaman
                         </p>
-                        <div class="flex justify-between items-center mb-4">
+                        <div class="flex justify-between items-center mb-12">
                             <div>
-                                <span class="text-2xl font-bold text-gray-800">40 Pax</span>
-                                <p class="text-3xl font-bold text-palette2-e">12.000.000<span class="text-lg">++</span></p>
+                                <span class="text-2xl font-bold text-[#78411B]">40 Pax</span>
+                                <p class="text-3xl font-bold text-[#78411B]">12.000.000<span class="text-lg">++</span></p>
                             </div>
                         </div>
-                        <button class="w-full bg-palette2-b text-white py-3 rounded-full font-semibold hover:bg-amber-700 transition-colors">
+                        <a href="#" class="bg-gradient-to-b from-[#efd266] to-[#b9932f] text-[#78411B] py-3 rounded-xl font-semibold hover:bg-amber-700 transition-colors p-4">
                             Book Main Dining
-                        </button>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Sumatra Room -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-                    <div class="h-64 bg-gradient-to-br from-green-100 to-teal-200 relative" style="background-image: url('public/assets/lumpang-emas-prapanca/SUMATRA/OE4A0001.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                <div class="bg-white/70 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="h-64 relative" style="background-image: url('public/assets/lumpang-emas-prapanca/SUMATRA/OE4A0001.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                         
                         <div class="absolute bottom-4 left-4">
                             <h3 class="text-2xl font-bold text-white">Sumatra</h3>
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-[#78411B] mb-4">
                             Ruang eksklusif berkapasitas untuk 4 – 6 orang, dengan setting intimate dan cozy, cocok untuk makan malam romantis atau pertemuan kecil.
                         </p>
-                        <div class="flex justify-between items-center mb-4">
+                        <div class="flex justify-between items-center mb-12">
                             <div>
-                                <span class="text-2xl font-bold text-gray-800">4-6 Pax</span>
-                                <p class="text-3xl font-bold text-palette2-e">1.200.000<span class="text-lg">++</span></p>
+                                <span class="text-2xl font-bold text-[#78411B]">4-6 Pax</span>
+                                <p class="text-3xl font-bold text-[#78411B]">1.200.000<span class="text-lg">++</span></p>
                             </div>
                         </div>
-                        <button class="w-full bg-palette2-b text-white py-3 rounded-full font-semibold hover:bg-amber-700 transition-colors">
-                            Book Bali Room
-                        </button>
+                        <a href="#" class="bg-gradient-to-b from-[#efd266] to-[#b9932f] text-[#78411B] py-3 rounded-xl font-semibold hover:bg-amber-700 transition-colors p-4 mt-10">
+                            Book Sumatra Room
+                        </a>
                     </div>
                 </div>
 
                 <!-- Umaraja Room -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
+                <div class="bg-white/70 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
                     <div class="h-64 bg-gradient-to-br from-orange-100 to-red-200 relative" style="background-image: url('public/assets/lumpang-emas-prapanca/UMARAAJA/Pro-Capture\ One\ 00183.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                         
                         <div class="absolute bottom-4 left-4">
@@ -1012,23 +1006,23 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-[#78411B] mb-4">
                             Ruang eksklusif Berkapasitas untuk 20 – 24 orang, suasana premium dengan pencahayaan hangat dan Private Bar
                         </p>
-                        <div class="flex justify-between items-center mb-4">
+                        <div class="flex justify-between items-center mb-12">
                             <div>
-                                <span class="text-2xl font-bold text-gray-800">20-24 Pax</span>
+                                <span class="text-2xl font-bold text-[#78411B]">20-24 Pax</span>
                                 <p class="text-3xl font-bold text-palette2-e">8.000.000<span class="text-lg">++</span></p>
                             </div>
                         </div>
-                        <button class="w-full bg-palette2-b text-white py-3 rounded-full font-semibold hover:bg-amber-700 transition-colors">
+                        <a href="#" class="bg-gradient-to-b from-[#efd266] to-[#b9932f] text-[#78411B] py-3 rounded-xl font-semibold hover:bg-amber-700 transition-colors p-4">
                             Book Umaraja Room
-                        </button>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Main Dining 2nd Floor -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
+                <div class="bg-white/70 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
                     <div class="h-64 bg-gradient-to-br from-green-100 to-teal-200 relative" style="background-image: url('public/assets/lumpang-emas-prapanca/MAINDINNING2NDFLOOR/Pro-Capture\ One\ 00212.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                         
                         <div class="absolute bottom-4 left-4">
@@ -1036,39 +1030,39 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-[#78411B] mb-4">
                             Ruang eksklusif berkapasitas untuk 30 – 40 orang, dengan setting intimate dan cozy, cocok untuk makan malam romantis atau pertemuan kecil.
                         </p>
-                        <div class="flex justify-between items-center mb-4">
+                        <div class="flex justify-between items-center mb-12">
                             <div>
-                                <span class="text-2xl font-bold text-gray-800">4-6 Pax</span>
+                                <span class="text-2xl font-bold text-[#78411B]">4-6 Pax</span>
                                 <p class="text-3xl font-bold text-palette2-e">1.200.000<span class="text-lg">++</span></p>
                             </div>
                         </div>
-                        <button class="w-full bg-palette2-b text-white py-3 rounded-full font-semibold hover:bg-amber-700 transition-colors">
+                        <button class="bg-gradient-to-b from-[#efd266] to-[#b9932f] text-[#78411B] py-3 rounded-xl font-semibold hover:bg-amber-700 transition-colors p-4">
                             Book Bali Room
                         </button>
                     </div>
                 </div>
 
                 <!-- Kalimantan Room -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">
+                <div class="bg-white/70 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">
                     <div class="h-64 bg-gradient-to-br from-yellow-100 to-amber-200 relative" style="background-image: url('public/assets/lumpang-emas-prapanca/KALIMANTAN/Pro-Capture\ One\ 00443.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                         <div class="absolute bottom-4 left-4">
                             <h3 class="text-2xl font-bold text-white">Kalimantan</h3>
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 mb-4">
-                            Ruang makan Exclusive berkapasitas untuk 8 – 10 Pax, dengan fasilitas AC, meja dan kursi makan kayu elegan, dan suasana hangat yang cocok untuk momen bersama.
+                        <p class="text-[#78411B] mb-4">
+                            Ruang makan Exclusive berkapasitas untuk 8 – 10 Pax, dengan kursi makan kayu elegan, dan suasana hangat yang cocok untuk momen bersama.
                         </p>
-                        <div class="flex justify-between items-center mb-4">
+                        <div class="flex justify-between items-center mb-12">
                             <div>
-                                <span class="text-2xl font-bold text-gray-800">8-10 Pax</span>
-                                <p class="text-3xl font-bold text-palette2-e">3.000.000<span class="text-lg">++</span></p>
+                                <span class="text-2xl font-bold text-[#78411B]">8-10 Pax</span>
+                                <p class="text-3xl font-bold text-[#78411B]">3.000.000<span class="text-lg">++</span></p>
                             </div>
                         </div>
-                        <button class="w-full bg-palette2-b text-white py-3 rounded-full font-semibold hover:bg-amber-700 transition-colors">
+                        <button class="bg-gradient-to-b from-[#efd266] to-[#b9932f] text-[#78411B] py-3 rounded-xl font-semibold hover:bg-amber-700 transition-colors p-4">
                             Book Sumatra Room
                         </button>
                     </div>
@@ -1076,7 +1070,7 @@
 
 
                 <!-- Bali Room -->
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1200">
+                <div class="bg-white/70 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1200">
                     <div class="h-64 bg-gradient-to-br from-green-100 to-teal-200 relative" style="background-image: url('public/assets/lumpang-emas-prapanca/BALI/BALI.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                         
                         <div class="absolute bottom-4 left-4">
@@ -1084,16 +1078,16 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-[#78411B] mb-4">
                             Ruang eksklusif berkapasitas untuk 4 – 6 orang, dengan setting intimate dan cozy, cocok untuk makan malam romantis atau pertemuan kecil.
                         </p>
-                        <div class="flex justify-between items-center mb-4">
+                        <div class="flex justify-between items-center mb-12">
                             <div>
-                                <span class="text-2xl font-bold text-gray-800">4-6 Pax</span>
-                                <p class="text-3xl font-bold text-palette2-e">1.200.000<span class="text-lg">++</span></p>
+                                <span class="text-2xl font-bold text-[#78411B]">4-6 Pax</span>
+                                <p class="text-3xl font-bold text-[#78411B]">1.200.000<span class="text-lg">++</span></p>
                             </div>
                         </div>
-                        <button class="w-full bg-palette2-b text-white py-3 rounded-full font-semibold hover:bg-amber-700 transition-colors">
+                        <button class="bg-gradient-to-b from-[#efd266] to-[#b9932f] text-[#78411B] py-3 rounded-xl font-semibold hover:bg-amber-700 transition-colors p-4">
                             Book Bali Room
                         </button>
                     </div>
@@ -1232,13 +1226,13 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-[#131313] text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="flex items-center space-x-3 mb-4">
                         <div class="flex items-center justify-center">
-                            <img src="public/assets/vector/lumpang prapanca_by Umara putih.png" alt="" class="w-20 h-auto">
+                            <img src="public/assets/lumpang-emas-prapanca/logo-signature.png" alt="" class="w-20 h-auto">
                         </div>
                     </div>
                     <p class="text-gray-300">Premium dining experience with exclusive VIP rooms for your special occasions.</p>

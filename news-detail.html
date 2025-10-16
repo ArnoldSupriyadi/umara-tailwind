@@ -9,9 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair
     +Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link href="./dist/output.css" rel="stylesheet" />
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Careers - Umara Group</title>
+    <title>Umara - Title News</title>
 </head>
 <body>
     <!-- HEADER -->
@@ -90,250 +88,147 @@
     
     <main>
         <!-- HERO SECTION -->
-        <section class="bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white py-20">
-            <div class="container mx-auto px-4 text-center" data-aos="fade-up">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4 font-['Playfair_Display']">Careers at Umara Group</h1>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto font-['Inter']">Join our passionate team and grow with us. We offer exciting opportunities across our diverse culinary brands.</p>
+        <section class="relative text-white py-20" style="background-image: url('public/assets/bg/UG-BACKGROUND-WEB-ABOUT.jpg'); background-size: cover; position: center center;">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Browse by Category</h1>
+                    <div id="news-categories" class="flex flex-wrap items-center justify-center gap-4 mt-4">
+                        <a href="news-event.html" class="category-btn inline-flex items-center px-4 py-2 text-white/90 hover:text-white border-b-2 border-white/0 hover:border-white/30 transition-colors" data-category="all">All</a>
+                        <a href="news-event.html" class="category-btn inline-flex items-center px-4 py-2 text-white/90 hover:text-white border-b-2 border-white/0 hover:border-white/30 transition-colors" data-category="csr">CSR</a>
+                        <a href="news-event.html" class="category-btn inline-flex items-center px-4 py-2 text-white/90 hover:text-white border-b-2 border-white/0 hover:border-white/30 transition-colors" data-category="events">Events</a>
+                        <a href="news-event.html" class="category-btn inline-flex items-center px-4 py-2 text-white/90 hover:text-white border-b-2 border-white/0 hover:border-white/30 transition-colors" data-category="open-house">Open House</a>
+                        <a href="news-event.html" class="category-btn inline-flex items-center px-4 py-2 text-white/90 hover:text-white border-b-2 border-white/0 hover:border-white/30 transition-colors" data-category="announcement">Announcement</a>
+                        <a href="news-event.html" class="category-btn inline-flex items-center px-4 py-2 text-white/90 hover:text-white border-b-2 border-white/0 hover:border-white/30 transition-colors" data-category="awards">Awards</a>
+                        <a href="news-event.html" class="category-btn inline-flex items-center px-4 py-2 text-white/90 hover:text-white border-b-2 border-white/0 hover:border-white/30 transition-colors" data-category="partnerships">Partnerships</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- OWNER SECTION -->
+        <!-- NEWS DETAIL CONTENT -->
         <section class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12" data-aos="fade-up" data-aos-delay="200">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4 font-['Playfair_Display']">For Business Owners</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto font-['Inter']">Looking to partner with us? Explore franchise and collaboration opportunities.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Card 1 -->
-                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="300">
-                        <div class="text-amber-600 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 font-['Merriweather']">Franchise Opportunities</h3>
-                        <p class="text-gray-600 mb-4 font-['Inter']">Join our successful network with comprehensive support and proven business models.</p>
-                        <a href="#contact" class="text-amber-600 font-medium hover:text-amber-700 transition-colors">Learn More →</a>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="400">
-                        <div class="text-amber-600 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 font-['Merriweather']">Partnership Programs</h3>
-                        <p class="text-gray-600 mb-4 font-['Inter']">Collaborate with us for mutual growth through strategic partnerships.</p>
-                        <a href="#contact" class="text-amber-600 font-medium hover:text-amber-700 transition-colors">Explore →</a>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="500">
-                        <div class="text-amber-600 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 font-['Merriweather']">Proven Track Record</h3>
-                        <p class="text-gray-600 mb-4 font-['Inter']">Benefit from our established brand reputation and customer loyalty.</p>
-                        <a href="#brands" class="text-amber-600 font-medium hover:text-amber-700 transition-colors">Our Brands →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- APPLICANTS SECTION -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12" data-aos="fade-up" data-aos-delay="200">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4 font-['Playfair_Display']">Join Our Team</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto font-['Inter']">Discover exciting career opportunities across our diverse culinary brands and grow with us.</p>
-                </div>
-
-                <!-- Brand Categories -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    <!-- Umara Cipta Rasa -->
-                    <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-lg p-6 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center mr-4">
-                                <span class="text-white font-bold text-lg">U</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 font-['Merriweather']">Umara Cipta Rasa</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4 font-['Inter']">Premium catering services for corporate and private events. Join our culinary excellence team.</p>
-                        <div class="space-y-2 mb-4">
-                            <span class="inline-block bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-sm">Chef</span>
-                            <span class="inline-block bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-sm">Event Coordinator</span>
-                            <span class="inline-block bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-sm">Service Staff</span>
-                        </div>
-                        <button class="w-full bg-amber-600 text-white py-2 px-4 rounded-md hover:bg-amber-700 transition-colors font-['Inter']">View Openings</button>
-                    </div>
-
-                    <!-- Rasa Nusantara Baru -->
-                    <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="400">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mr-4">
-                                <span class="text-white font-bold text-lg">R</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 font-['Merriweather']">Rasa Nusantara Baru</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4 font-['Inter']">Modern Indonesian cuisine restaurant. Be part of our innovative culinary team.</p>
-                        <div class="space-y-2 mb-4">
-                            <span class="inline-block bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm">Sous Chef</span>
-                            <span class="inline-block bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm">Kitchen Staff</span>
-                            <span class="inline-block bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm">Wait Staff</span>
-                        </div>
-                        <button class="w-full bg-orange-600 text-white py-2 px-4 rounded-md hover:bg-orange-700 transition-colors font-['Inter']">View Openings</button>
-                    </div>
-
-                    <!-- Umara Mitra Kulina -->
-                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="500">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
-                                <span class="text-white font-bold text-lg">M</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 font-['Merriweather']">Umara Mitra Kulina</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4 font-['Inter']">Cloud kitchen and food delivery service. Join our fast-paced operations team.</p>
-                        <div class="space-y-2 mb-4">
-                            <span class="inline-block bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Delivery Driver</span>
-                            <span class="inline-block bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Kitchen Helper</span>
-                            <span class="inline-block bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Operations</span>
-                        </div>
-                        <button class="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors font-['Inter']">View Openings</button>
-                    </div>
-
-                    <!-- Lauk Kita Niaga -->
-                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="600">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
-                                <span class="text-white font-bold text-lg">L</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 font-['Merriweather']">Lauk Kita Niaga</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4 font-['Inter']">Traditional Indonesian side dishes. Join our heritage food production team.</p>
-                        <div class="space-y-2 mb-4">
-                            <span class="inline-block bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Production Staff</span>
-                            <span class="inline-block bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Quality Control</span>
-                            <span class="inline-block bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Packaging</span>
-                        </div>
-                        <button class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors font-['Inter']">View Openings</button>
-                    </div>
-
-                    <!-- Laukita Bersama -->
-                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="700">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
-                                <span class="text-white font-bold text-lg">L</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 font-['Merriweather']">Laukita Bersama</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4 font-['Inter']">Community-based food initiatives. Be part of our social impact programs.</p>
-                        <div class="space-y-2 mb-4">
-                            <span class="inline-block bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">Community Manager</span>
-                            <span class="inline-block bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">Trainer</span>
-                            <span class="inline-block bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">Coordinator</span>
-                        </div>
-                        <button class="w-full bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition-colors font-['Inter']">View Openings</button>
-                    </div>
-
-                    <!-- Corporate Roles -->
-                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-6 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="800">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center mr-4">
-                                <span class="text-white font-bold text-lg">C</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 font-['Merriweather']">Corporate Office</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4 font-['Inter']">Support our brands from the headquarters. Various corporate positions available.</p>
-                        <div class="space-y-2 mb-4">
-                            <span class="inline-block bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">HR</span>
-                            <span class="inline-block bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Marketing</span>
-                            <span class="inline-block bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Finance</span>
-                        </div>
-                        <button class="w-full bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition-colors font-['Inter']">View Openings</button>
-                    </div>
-                </div>
-
-                <!-- Benefits Section -->
-                <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg p-8" data-aos="fade-up" data-aos-delay="900">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center font-['Playfair_Display']">Why Work With Us?</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="text-center">
-                            <div class="text-amber-600 mb-3">
-                                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h4 class="font-bold text-gray-800 mb-2 font-['Merriweather']">Competitive Salary</h4>
-                            <p class="text-gray-600 text-sm font-['Inter']">Attractive compensation packages with performance bonuses</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-amber-600 mb-3">
-                                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h4 class="font-bold text-gray-800 mb-2 font-['Merriweather']">Career Growth</h4>
-                            <p class="text-gray-600 text-sm font-['Inter']">Clear career paths and professional development opportunities</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-amber-600 mb-3">
-                                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                                </svg>
-                            </div>
-                            <h4 class="font-bold text-gray-800 mb-2 font-['Merriweather']">Team Environment</h4>
-                            <p class="text-gray-600 text-sm font-['Inter']">Supportive and collaborative work culture</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section id="contact" class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-4xl mx-auto">
-                    <div class="text-center mb-12" data-aos="fade-up">
-                        <h2 class="text-3xl font-bold text-gray-800 mb-4 font-['Playfair_Display']">Get In Touch</h2>
-                        <p class="text-gray-600 font-['Inter']">Have questions about opportunities? Contact our HR team.</p>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-right">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4 font-['Merriweather']">For Job Applicants</h3>
-                            <div class="space-y-3">
-                                <div class="flex items-center">
-                                    <svg class="w-5 h-5 text-amber-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                    </svg>
-                                    <span class="text-gray-600 font-['Inter']">careers@umaragroup.com</span>
+                    <!-- Article Header -->
+                    <article>
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <!-- Article Image -->
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img src="public/assets/CSR/peduli-desa-sengkong-atas.png" 
+                                     alt="News Image" 
+                                     class="w-full h-96 object-cover">
+                            </div>
+
+                            <!-- Article Content -->
+                            <div class="p-8">
+                                <!-- Article Meta -->
+                                <div class="flex items-center gap-4 text-sm text-gray-500 mb-6">
+                                    <span class="bg-card-umara-group-brown-light text-white px-3 py-1 rounded-full">CSR</span>
                                 </div>
-                                <div class="flex items-center">
-                                    <svg class="w-5 h-5 text-amber-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                    </svg>
-                                    <span class="text-gray-600 font-['Inter']">021-80600900 ext. 123</span>
+                                <!-- Article Title -->
+                                <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                                    Caring for the Village: CSR Program in Sekongkang Atas
+                                </h2>
+                                <!-- Article Body -->
+                                <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                                    <p class="text-xl mb-6 font-medium text-gray-800">
+                                        On <strong>July 18, 2025</strong>, our team carried out a simple yet meaningful CSR activity in
+                                        <strong>Sekongkang Atas Village</strong> as part of our <em>Caring for the Village</em> program.
+                                    </p>
+                                    <p class="mb-6">
+                                        We shared <strong>7 cartons of Sari Kacang Hijau</strong> and <strong>8 cartons of Teh Kotak</strong>, with
+                                        a total value of <strong>Rp 1,495,000</strong>.
+                                        While it may seem like a small gesture, we believe these healthy drinks will bring warmth, energy, and a
+                                        little happiness to the community.
+                                    </p>
+                                    <h3 class="font-playfair text-2xl font-bold text-gray-900 mt-8 mb-4">Why It Matters</h3>
+                            
+                                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                                        <li>Supports local communities with nutritious and refreshing drinks</li>
+                                        <li>Strengthens the bond between Umara Group and the village</li>
+                                        <li>Shows that even small actions can create positive impact</li>
+                                    </ul>
+                                    <p class="mb-6">
+                                        This initiative is more than just giving—it’s about building connections and showing that we care.
+                                        Through small steps like this, we hope to support local communities and inspire more kindness along the way.
+                                    </p>
+                                    <blockquote class="border-l-4 border-card-umara-group-brown-light pl-6 my-8 italic text-gray-600">
+                                        "Together, let’s keep creating a better future—one small act of kindness at a time."
+                                        <cite class="block mt-2 text-sm not-italic text-gray-500">— Umara Group CSR Team</cite>
+                                    </blockquote>
+                                    <p class="mb-6">
+                                        This is just one of many CSR activities we plan to continue, focusing on education, health, and sustainable
+                                        community empowerment.
+                                        We believe small contributions can lead to meaningful change.
+                                    </p>
+                                    <!-- Share Section -->
+                                    <div class="border-t border-gray-200 pt-8 mt-12">
+                                        <h4 class="font-semibold text-gray-900 mb-4">Share this article</h4>
+                                        <div class="flex gap-3">
+                                            <button
+                                                class="bg-card-umara-group-brown-light hover:bg-card-umara-group-brown-dark text-white px-4 py-2 rounded-md transition-colors">
+                                                Facebook
+                                            </button>
+                                            <button
+                                                class="bg-card-umara-group-brown-light hover:bg-card-umara-group-brown-dark text-white px-4 py-2 rounded-md transition-colors">
+                                                Twitter
+                                            </button>
+                                            <button
+                                                class="bg-card-umara-group-brown-light hover:bg-card-umara-group-brown-dark text-white px-4 py-2 rounded-md transition-colors">
+                                                LinkedIn
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
-                        <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-left">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4 font-['Merriweather']">For Business Owners</h3>
-                            <div class="space-y-3">
-                                <div class="flex items-center">
-                                    <svg class="w-5 h-5 text-amber-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                    </svg>
-                                    <span class="text-gray-600 font-['Inter']">partnership@umaragroup.com</span>
+                    </article>
+
+                    <!-- Related Articles -->
+                    <section class="mt-16">
+                        <h3 class="font-playfair text-2xl font-bold text-gray-900 mb-8">Related News</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <!-- Related Article 1 -->
+                            <article class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                                <img src="public/assets/CSR/peduli-posyandu.png" alt="Related news" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <span class="text-sm text-card-umara-group-brown-light font-medium">March 10, 2025</span>
+                                    <h4 class="font-semibold text-gray-900 mt-2 mb-3">CSR Program: Caring for Posyandu</h4>
+                                    <p class="text-gray-600 text-sm line-clamp-2">Umara Group successfully supported Posyandu in West Sumbawa (DINKES)...</p>
+                                    <a href="#" class="text-card-umara-group-brown-light hover:text-card-umara-group-brown-dark font-medium text-sm mt-3 inline-block">Read More →</a>
                                 </div>
-                                <div class="flex items-center">
-                                    <svg class="w-5 h-5 text-amber-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                    </svg>
-                                    <span class="text-gray-600 font-['Inter']">021-80600900 ext. 456</span>
+                            </article>
+
+                            <!-- Related Article 2 -->
+                            <article class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                                <img src="public/assets/CSR/peduli-tubercullosis.png" alt="Related news" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <span class="text-sm text-card-umara-group-brown-light font-medium">March 5, 2025</span>
+                                    <h4 class="font-semibold text-gray-900 mt-2 mb-3">CSR Program: Caring for Tuberculosis Patients</h4>
+                                    <p class="text-gray-600 text-sm line-clamp-2">West Sumbawa (DINKES) through the Caring for Tuberculosis program...</p>
+                                    <a href="#" class="text-card-umara-group-brown-light hover:text-card-umara-group-brown-dark font-medium text-sm mt-3 inline-block">Read More →</a>
                                 </div>
-                            </div>
+                            </article>
+
+                            <!-- Related Article 3 -->
+                            <article class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                                <img src="public/assets/CSR/desa-sekongkang-kemuning.png" alt="Related news" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <span class="text-sm text-card-umara-group-brown-light font-medium">February 28, 2025</span>
+                                    <h4 class="font-semibold text-gray-900 mt-2 mb-3">CSR Program: Caring for the Village in Sekongkang Kemuning</h4>
+                                    <p class="text-gray-600 text-sm line-clamp-2">our CSR team visited Sekongkang Kemuning Village...</p>
+                                    <a href="#" class="text-card-umara-group-brown-light hover:text-card-umara-group-brown-dark font-medium text-sm mt-3 inline-block">Read More →</a>
+                                </div>
+                            </article>
                         </div>
+                    </section>
+
+                    <!-- Back to News -->
+                    <div class="mt-12 text-center">
+                        <a href="news-event.html" class="inline-flex items-center bg-card-umara-group-brown-light hover:bg-card-umara-group-brown-dark text-white px-6 py-3 rounded-md transition-colors font-medium">
+                            ← Back to All News
+                        </a>
                     </div>
                 </div>
             </div>
@@ -346,13 +241,13 @@
           <!-- Footer Content -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             <!-- Company Info -->
-            <div class="title-footer" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+            <div class="title-footer">
               <picture>
                 <img src="public/assets/images/logo-umara.svg" alt="">
               </picture>
             </div>
             <!-- Quick Links -->
-            <div class="title-footer" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            <div class="title-footer">
               <h3 class="text-xl font-bold mb-4">Quick Links</h3>
               <ul class="space-y-2">
                 <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
@@ -363,7 +258,7 @@
               </ul>
             </div>
             <!-- Services -->
-            <div class="title-footer" data-aos="fade-down" data-aos-duration="800" data-aos-delay="600">
+            <div class="title-footer">
               <h3 class="text-xl font-bold mb-4">Our Services</h3>
               <ul class="space-y-2">
                 <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Corporate Catering</a></li>
@@ -374,7 +269,7 @@
               </ul>
             </div>
             <!-- Contact Info -->
-            <div class="title-footer" data-aos="fade-left" data-aos-duration="800" data-aos-delay="800">
+            <div class="title-footer">
               <h3 class="text-xl font-bold mb-4">Contact Us</h3>
               <div class="space-y-3">
                 <div class="flex items-start space-x-3">
@@ -411,15 +306,7 @@
         </div>
     </footer>
 
-    <!-- AOS Animation Script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
-    </script>
+    
     <!-- Mobile Navigation Script -->
     <script>
         const navToggle = document.getElementById('nav-toggle');
@@ -431,5 +318,26 @@
             iconOpen.classList.toggle('hidden');
             iconClose.classList.toggle('hidden');
         });
+    </script>
+    <script>
+        // Category pills active-state toggle (UI only)
+        (function() {
+            const buttons = document.querySelectorAll('.category-btn');
+            function setActive(btn) {
+                buttons.forEach(b => {
+                    b.classList.remove('text-white', 'border-white');
+                    b.classList.add('text-white/90', 'border-white/0');
+                    b.setAttribute('aria-current', 'false');
+                });
+                btn.classList.remove('text-white/90', 'border-white/0');
+                btn.classList.add('text-white', 'border-white');
+                btn.setAttribute('aria-current', 'true');
+            }
+            const initial = document.querySelector('.category-btn[data-category="all"]');
+            if (initial) setActive(initial);
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => setActive(btn));
+            });
+        })();
     </script>
 </body>
