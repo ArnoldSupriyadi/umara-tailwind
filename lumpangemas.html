@@ -134,8 +134,8 @@
                     <div class="grid grid-cols-2 lg:grid-cols-2 grid-rows-3 gap-2 lg:gap-4 h-64 lg:h-96">
                         <!-- Image 1 - Tall -->
                         <div class="row-span-2" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="400">
-                            <div class="h-full rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/lumpang-emas-prapanca/UMARA AJA/umaraja.jpg', 'UMA RAJA')">
-                                <img src="public/assets/lumpang-emas-prapanca/UMARAAJA/5.jpeg" alt="Main Dining" class="w-full h-full object-cover">
+                            <div class="h-full rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/rnb/carousel/3.jpg', 'UMA RAJA')">
+                                <img src="public/assets/rnb/carousel/3.jpg" alt="Main Dining" class="w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 text-white p-3">
                                     <p class="text-sm font-semibold">UMARAJA</p>
                                 </div>
@@ -151,8 +151,8 @@
 
                         <!-- Image 2 - Square -->
                         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                            <div class="h-full rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/lumpang-emas-prapanca/MAINDINING 1ST FLOOR/Pro-Capture One 00448.jpg', 'MAIN DINNING')">
-                                <img src="public/assets/lumpang-emas-prapanca/MAINDINING1STFLOOR/Pro-Capture One 00448.jpg" alt="Sumatra Room" class="w-full h-full object-cover">
+                            <div class="h-full rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/rnb/carousel/13.jpg', 'MAIN DINING 1ST FLOOR')">
+                                <img src="public/assets/rnb/carousel/13.jpg" alt="Sumatra Room" class="w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 text-white p-2">
                                     <p class="text-xs font-semibold">MAIN DINING 1ST FLOOR</p>
                                 </div>
@@ -168,8 +168,8 @@
 
                         <!-- Image 3 - Square -->
                         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-                            <div class="h-full rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/lumpang-emas-prapanca/KALIMANTAN/Pro-Capture One 00437.jpg', 'KALIMANTAN')">
-                                <img src="public/assets/lumpang-emas-prapanca/KALIMANTAN/Pro-Capture One 00437.jpg" alt="Umaraja Room" class="w-full h-full object-cover">
+                            <div class="h-full rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/rnb/carousel/2.jpg', 'KALIMANTAN')">
+                                <img src="public/assets/rnb/carousel/2.jpg" alt="Umaraja Room" class="w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 text-white p-2">
                                     <p class="text-xs font-semibold">KALIMANTAN</p>
                                 </div>
@@ -185,8 +185,8 @@
 
                         <!-- Image 4 - Wide -->
                         <div class="col-span-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
-                            <div class="h-48 rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/lumpang-emas-prapanca/BALI/BALI.jpeg', 'BALI')">
-                                <img src="public/assets/lumpang-emas-prapanca/MAINDINNING2NDFLOOR/Pro-Capture One 00212.jpg" alt="Bali Room" class="w-full h-full object-cover">
+                            <div class="h-48 rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/rnb/MAIN-SECOND-FLOOR.jpg', 'MAIN DINNING 2ND FLOOR')">
+                                <img src="public/assets/rnb/MAIN-SECOND-FLOOR.jpg" alt="Bali Room" class="w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 text-white p-3">
                                     <p class="text-sm font-semibold">MAIN DINING 2ND FLOOR</p>
                                 </div>
@@ -630,22 +630,22 @@
     </section>
 
     <!-- Menu Item Modal -->
-    <div id="menuModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div id="menuModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="menuModalTitle">
         <div class="relative bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
-            <button id="closeMenuModal" class="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors duration-300">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="closeMenuModal" class="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors duration-300" aria-label="Close menu modal">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
             <div class="aspect-[4/3] overflow-hidden">
-                <img id="modalImage" src="" alt="" class="w-full h-full object-cover">
+                <img id="menuModalImage" src="" alt="" class="w-full h-full object-cover">
             </div>
             <div class="p-8">
-                <div id="modalTags" class="flex items-center gap-2 mb-4">
+                <div id="menuModalTags" class="flex items-center gap-2 mb-4">
                     <!-- Tags will be inserted here -->
                 </div>
-                <h3 id="modalTitle" class="text-2xl font-bold text-gray-800 mb-3"></h3>
-                <p id="modalDescription" class="text-white leading-relaxed"></p>
+                <h3 id="menuModalTitle" class="text-2xl font-bold text-gray-800 mb-3"></h3>
+                <p id="menuModalDescription" class="text-gray-700 leading-relaxed"></p>
             </div>
         </div>
     </div>
@@ -1176,18 +1176,18 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                    <div>
                         <h3 class="text-2xl font-semibold text-palette2-e mb-6">Quick Reservation</h3>
                         <form class="space-y-4">
-                            <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                            <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
                                 <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
                             </div>
-                            <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                            <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
                                 <input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
                             </div>
-                            <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+                            <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Room</label>
                                 <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
                                     <option>Main Dining (40 Pax)</option>
@@ -1196,11 +1196,11 @@
                                     <option>Bali (4-6 Pax)</option>
                                 </select>
                             </div>
-                            <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Date & Time</label>
-                                <input type="datetime-local" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                                <input type="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
                             </div>
-                            <button type="submit" class="w-full bg-palette2-b text-white py-3 rounded-lg font-semibold hover:bg-palette1-d hover:text-palette1-b transition-colors" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="1000">
+                            <button type="submit" class="w-full bg-palette2-b text-white py-3 rounded-lg font-semibold hover:bg-palette1-d hover:text-palette1-b transition-colors">
                                 Send Reservation Request
                             </button>
                         </form>
@@ -1211,7 +1211,7 @@
     </section>
 
     <!-- Image Modal -->
-    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4">
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="imageModalTitle">
         <div class="relative max-w-4xl max-h-full">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-white hover:text-gray-300 z-10">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1220,7 +1220,7 @@
             </button>
             <img id="modalImage" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg">
             <div class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-4 py-2 rounded-lg">
-                <p id="modalTitle" class="font-semibold"></p>
+                <p id="imageModalTitle" class="font-semibold"></p>
             </div>
         </div>
     </div>
@@ -1229,7 +1229,7 @@
     <footer class="bg-[#131313] text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div>
                     <div class="flex items-center space-x-3 mb-4">
                         <div class="flex items-center justify-center">
                             <img src="public/assets/lumpang-emas-prapanca/logo-signature.png" alt="" class="w-20 h-auto">
@@ -1237,7 +1237,7 @@
                     </div>
                     <p class="text-gray-300">Premium dining experience with exclusive VIP rooms for your special occasions.</p>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
                         <li><a href="#home" class="text-gray-300 hover:text-amber-400 transition-colors">Home</a></li>
@@ -1245,7 +1245,7 @@
                         <li><a href="#contact" class="text-gray-300 hover:text-amber-400 transition-colors">Contact</a></li>
                     </ul>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                <div>
                     <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
                     <div class="space-y-2">
                         <p class="text-gray-300"><a href="https://wa.me/6281222227496" target="_blank">📞 0812‑2222‑7496</a></p>
@@ -1253,7 +1253,7 @@
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
                 <p class="text-gray-400">&copy; 2024 Lumpang Emas Signature. All rights reserved.</p>
             </div>
         </div>
@@ -1298,18 +1298,20 @@
         function openModal(imageSrc, title) {
             const modal = document.getElementById('imageModal');
             const modalImage = document.getElementById('modalImage');
-            const modalTitle = document.getElementById('modalTitle');
+            const modalTitle = document.getElementById('imageModalTitle');
             
             modalImage.src = imageSrc;
             modalImage.alt = title;
             modalTitle.textContent = title;
             modal.classList.remove('hidden');
+            modal.classList.add('flex');
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
             const modal = document.getElementById('imageModal');
             modal.classList.add('hidden');
+            modal.classList.remove('flex');
             document.body.style.overflow = 'auto';
         }
 
@@ -1427,10 +1429,10 @@
         const closeMenuModal = document.getElementById('closeMenuModal');
         
         window.openMenuModal = function(image, title, description, category) {
-            const modalImage = document.getElementById('modalImage');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalDescription = document.getElementById('modalDescription');
-            const modalTags = document.getElementById('modalTags');
+            const modalImage = document.getElementById('menuModalImage');
+            const modalTitle = document.getElementById('menuModalTitle');
+            const modalDescription = document.getElementById('menuModalDescription');
+            const modalTags = document.getElementById('menuModalTags');
             
             modalImage.src = `public/assets/LUMPANG-EMAS-SIGNATURE-PRAPANCA/${image}`;
             modalTitle.textContent = title;
