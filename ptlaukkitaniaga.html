@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,9 +7,9 @@
     <link href="./dist/output.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
-  <body class="font-inter text-palette1-a">
+  <body class="font-inter text-[#234E33]">
     <!-- Header -->
-    <header class="bg-white border-b">
+    <header class="bg-[#FCF0CE]">
       <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-3">
           <img src="public/assets/lauk-kita-niaga/laukkita-logo.png" alt="PT Lauk Kita Niaga" class="h-20 w-auto" />
@@ -23,38 +23,30 @@
       </nav>
     </header>
 
-    <main>
+    <main class="bg-[#FCF0CE]">
       <!-- Intro Headline -->
-      <section class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 md:pt-14">
-        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
-          Laukita is the home of premium 
-          <span class="italic underline decoration-palette1-c decoration-4">ready-to-eat products.</span>
-        </h1>
-        <p class="mt-4 md:mt-5 text-base md:text-lg text-palette1-b max-w-3xl">
-          "Through an expanding distribution network, our products are enjoyed by millions of people every day with authentic
-          quality, practicality, and without preservatives."
-        </p>
-
-        <!-- Certification Row -->
-        <div class="mt-6 md:mt-8 flex items-center gap-4 md:gap-6 mb-5">
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full border border-palette1-a/20 flex items-center justify-center">
-              <span class="text-xs font-semibold">HALAL</span>
-            </div>
-            <div class="text-sm md:text-base text-palette1-b">Bersertifikasi halal sejak 2024</div>
-          </div>
-          <a href="#" class="inline-flex items-center gap-1 text-palette1-a hover:text-palette1-c font-semibold text-sm md:text-base">Lihat Sertifikat <span>→</span></a>
+      <section class="relative w-full bg-cover bg-center py-10 md:py-14">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            Laukita is the home of premium 
+            <span class="italic underline decoration-palette1-c decoration-4">ready-to-eat products.</span>
+          </h1>
+          <p class="mt-4 md:mt-5 text-base md:text-lg text-palette1-b max-w-3xl">
+            "Through an expanding distribution network, our products are enjoyed by millions of people every day with authentic
+            quality, practicality, and without preservatives."
+          </p>
         </div>
+
       </section>
 
       <!-- What is Laukita? -->
-      <section id="what-is-laukita" class="py-16 md:py-20 bg-palette1-b text-white">
+      <section id="what-is-laukita" class="py-16 md:py-20 ">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <!-- Column 1 -->
             <div>
               <h2 class="text-3xl md:text-5xl font-bold mb-6">What is Laukita?</h2>
-              <p class="max-w-xl text-base md:text-md leading-relaxed text-white/90">
+              <p class="max-w-xl text-base md:text-md leading-relaxed">
                 Laukita is a product developed by prioritizing consumer practicality. Laukita uses real ingredients without
                 preservatives; we freeze our food at the peak of its freshness. Sealed with packaging that applies vacuum
                 technology on thermo sealing machines, which covers the product completely, keeping it safe and dry.
@@ -70,139 +62,41 @@
         </div>
       </section>
 
-
-      <!-- Instagram-style Feed -->
-      <section id="products" class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-
-        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mt-10 mb-4">
-          Our Gourmet
-        </h1>
-
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-1 md:gap-1">
-          <!-- Tile 1 -->
-          <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
-            <img src="public/assets/lauk-kita-niaga/product/fettucine-carbonara.jpeg" alt="Fettucine Carbonara" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
-            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">Fettucine Carbonara</div>
-          </article>
-
-          <!-- Tile 2 -->
-          <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
-            <img src="public/assets/lauk-kita-niaga/product/mac-and-cheese.jpeg" alt="Mac & Cheese" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
-            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">Mac & Cheese</div>
-          </article>
-
-          <!-- Tile 3 -->
-          <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
-            <img src="public/assets/lauk-kita-niaga/product/spaghetti-bolognese.jpeg" alt="spaghetti bolognese" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
-            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">Spaghetti Bolognese</div>
-          </article>
-
-          <!-- Tile 4 -->
-          <article class="group relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-palette1-c to-palette1-a">
-          <img src="public/assets/lauk-kita-niaga/product/penne-pesto-chicken.jpg" alt="Penne Pesto Chicken" class="w-full h-full object-cover 
-          transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
-            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">Penne Pesto Chicken</div>
-          </article>
-
-          <!-- Tile 5 -->
-          <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
-            <img src="public/assets/lauk-kita-niaga/product/spaghetti-aglio-olio-chicken.png" alt="Spaghetti Aglio Olio Chicken" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
-            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">Spaghetti Aglio Olio Chicken</div>
-          </article>
-        </div>
-
-        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mt-10 mb-4">
-          Our Main Course
-        </h1>
-
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-1 md:gap-1">
-          <!-- Tile 1 -->
-          <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
-            <img src="public/assets/lauk-kita-niaga/product/Cumi-Cabe-Ijo.jpg" alt="Cumi-Cabe-Ijo" class="w-full h-full object-cover 
-        transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
-            <div
-              class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
-              Cumi-Cabe-Ijo
-              </div>
-          </article>
-          <!-- Tile 2 -->
-          <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
-            <img src="public/assets/lauk-kita-niaga/product/mac-and-cheese.jpeg" alt="Mac & Cheese" class="w-full h-full object-cover transition-transform 
-        duration-500 group-hover:scale-105" loading="lazy" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
-            <div
-              class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
-              Upcoming
-              </div>
-          </article>
-          <!-- Tile 3 -->
-          <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
-            <img src="public/assets/lauk-kita-niaga/product/spaghetti-bolognese.jpeg" alt="spaghetti bolognese" class="w-full h-full object-cover 
-        transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
-            <div
-              class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
-              Upcoming</div>
-          </article>
-          <!-- Tile 4 -->
-          <article class="group relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-palette1-c to-palette1-a">
-            <img src="public/assets/lauk-kita-niaga/product/penne-pesto-chicken.jpg" alt="Penne Pesto Chicken" class="w-full h-full object-cover 
-          transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
-            <div
-              class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
-              Upcoming</div>
-          </article>
-          <!-- Tile 5 -->
-          <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
-            <img src="public/assets/lauk-kita-niaga/product/spaghetti-aglio-olio-chicken.png" alt="Spaghetti Aglio Olio Chicken"
-              class="w-full h-full object-cover 
-        transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
-            <div
-              class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
-              Upcoming
-              </div>
-          </article>
-        </div>
-
-          <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mt-10 mb-4">
-            Hero’s Rice
+      
+      <!-- Section Wrapping Instagram -->
+      <div style="background-image: url('public/assets/lauk-kita-niaga/BG0-LNI-PRODUCT.svg'); background-size: cover; background-repeat: no-repeat;">
+        <!-- Instagram-style Feed -->
+        <section id="products" class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+          <h1 class="text-xl md:text-2xl lg:text-4xl font-bold leading-tight mt-10 mb-4">
+            Ready to Heat <span>GOURMET</span>
           </h1>
-
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-1 md:gap-1">
             <!-- Tile 1 -->
             <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
-              <img src="public/assets/lauk-kita-niaga/product/nasi-goreng-kampung.png" alt="Fettucine Carbonara" class="w-full h-full object-cover 
-          transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <img src="public/assets/lauk-kita-niaga/product/fettucine-carbonara.jpeg" alt="Fettucine Carbonara"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
               <div
                 class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
-                Nasi Goreng Kampung</div>
+                Fettucine Carbonara</div>
             </article>
             <!-- Tile 2 -->
             <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
-              <img src="public/assets/lauk-kita-niaga/product/nasi-goreng-kebuli.png" alt="Mac & Cheese" class="w-full h-full object-cover transition-transform 
-          duration-500 group-hover:scale-105" loading="lazy" />
+              <img src="public/assets/lauk-kita-niaga/product/mac-and-cheese.jpeg" alt="Mac & Cheese"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
               <div
                 class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
-                Nasi Goreng Kebuli</div>
+                Mac & Cheese</div>
             </article>
             <!-- Tile 3 -->
             <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
-              <img src="public/assets/lauk-kita-niaga/product/spaghetti-bolognese.jpeg" alt="spaghetti bolognese" class="w-full h-full object-cover 
-          transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <img src="public/assets/lauk-kita-niaga/product/spaghetti-bolognese.jpeg" alt="spaghetti bolognese"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
               <div
                 class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
-                Upcoming</div>
+                Spaghetti Bolognese</div>
             </article>
             <!-- Tile 4 -->
             <article class="group relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-palette1-c to-palette1-a">
@@ -211,35 +105,134 @@
               <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
               <div
                 class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
-                Upcoming</div>
+                Penne Pesto Chicken</div>
             </article>
             <!-- Tile 5 -->
             <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
-              <img src="public/assets/lauk-kita-niaga/product/spaghetti-aglio-olio-chicken.png" alt="Spaghetti Aglio Olio Chicken"
-                class="w-full h-full object-cover 
+              <img src="public/assets/lauk-kita-niaga/product/spaghetti-aglio-olio-chicken.png"
+                alt="Spaghetti Aglio Olio Chicken"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
+              <div
+                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
+                Spaghetti Aglio Olio Chicken</div>
+            </article>
+          </div>
+          <h1 class="text-xl md:text-2xl lg:text-4xl font-bold leading-tight mt-10 mb-4">
+            Ready to Heat <span>LAUK</span>
+          </h1>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-1 md:gap-1">
+            <!-- Tile 1 -->
+            <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
+              <img src="public/assets/lauk-kita-niaga/product/Cumi-Cabe-Ijo.jpg" alt="Cumi-Cabe-Ijo" class="w-full h-full object-cover 
           transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
               <div
                 class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
-                Upcoming
+                Cumi-Cabe-Ijo
+              </div>
+            </article>
+            <!-- Tile 2 -->
+            <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
+              <img src="public/assets/lauk-kita-niaga/product/Cumi-Tinta-Hitam.jpg" alt="Cumi Tinta Hitam" class="w-full h-full object-cover transition-transform 
+          duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
+              <div
+                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
+                Cumi Tinta Hitam
+              </div>
+            </article>
+            <!-- Tile 3 -->
+            <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
+              <img src="public/assets/lauk-kita-niaga/product/Cumi-Asin-Pedas-Jontor.jpg" alt="Cumi Asin Pedas Jontor" class="w-full h-full object-cover 
+          transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
+              <div
+                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
+                Cumi Asin Pedas Jontor
+              </div>
+            </article>
+            <!-- Tile 4 -->
+            <article class="group relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-palette1-c to-palette1-a">
+              <img src="public/assets/lauk-kita-niaga/product/Daging-sapi-balado-limau.jpg" alt="Daging Sapi Balado Limau"
+                class="w-full h-full object-cover 
+            transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
+              <div
+                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
+                Daging Sapi Balado Limau
+              </div>
+            </article>
+            <!-- Tile 5 -->
+            <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
+              <img src="public/assets/lauk-kita-niaga/product/lidah-sapi-cabe-ijo.jpeg" alt="Lidah Sapi Cabe Ijo" class="w-full h-full object-cover 
+          transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
+              <div
+                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
+                Lidah Sapi Cabe Ijo
+              </div>
+            </article>
+            <!-- Tile 6 -->
+            <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
+              <img src="public/assets/lauk-kita-niaga/product/Oseng-Mercon.jpg" alt="Oseng Mercon" class="w-full h-full object-cover 
+               transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
+              <div
+                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
+                Oseng Mercon
               </div>
             </article>
           </div>
-      </section>
-      
-      <!-- Brand Availability Row -->
-      <section class="container mx-auto px-4 sm:px-6 lg:px-8 pb-8 md:pb-12">
-        <div class="flex items-center gap-4 md:gap-6 flex-wrap">
-          <span class="text-palette1-b text-sm md:text-base">All of our brands are available at:</span>
-          <div class="flex items-center gap-6 md:gap-10 flex-wrap">
-            <!-- ShopeeFood logo -->
-            <img src="public/assets/clients/shopee.png" alt="ShopeeFood" class="h-6 md:h-8 object-contain" />
+          <h1 class="text-xl md:text-2xl lg:text-4xl font-bold leading-tight mt-10 mb-4">
+            Ready to Heat <span>NASI GORENG</span>
+          </h1>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-1 md:gap-1">
+            <!-- Tile 1 -->
+            <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
+              <img src="public/assets/lauk-kita-niaga/product/nasi-goreng-kampung.png" alt="Fettucine Carbonara" class="w-full h-full object-cover 
+            transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
+              <div
+                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
+                Nasi Goreng Kampung</div>
+            </article>
+            <!-- Tile 2 -->
+            <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
+              <img src="public/assets/lauk-kita-niaga/product/nasi-goreng-kebuli.png" alt="Mac & Cheese" class="w-full h-full object-cover transition-transform 
+            duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
+              <div
+                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
+                Nasi Goreng Kebuli</div>
+            </article>
+            <!-- Tile 3 -->
+            <article class="group relative aspect-[4/5] overflow-hidden bg-palette1-e">
+              <img src="public/assets/lauk-kita-niaga/product/Nasi-Goreng-Cumi.jpg" alt="Nasi Goreng Cumi" class="w-full h-full object-cover 
+            transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
+              <div
+                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs md:text-sm font-semibold text-palette1-a">
+                Nasi Goreng Chumi</div>
+            </article>
           </div>
-        </div>
-      </section>
+        </section>
+        
+        <!-- Brand Availability Row -->
+        <section class="container mx-auto px-4 sm:px-6 lg:px-8 pb-8 md:pb-12">
+          <div class="flex items-center gap-4 md:gap-6 flex-wrap">
+            <span class="text-palette1-b text-sm md:text-base">All of our brands are available at:</span>
+            <div class="flex items-center gap-6 md:gap-10 flex-wrap">
+              <!-- ShopeeFood logo -->
+              <img src="public/assets/clients/shopee.png" alt="ShopeeFood" class="h-6 md:h-8 object-contain" />
+            </div>
+          </div>
+        </section>
+      </div> 
+      <!-- Wrapping Instagram -->
 
       <!-- B2B Clients -->
-      <section id="b2b" class="py-16 md:py-20 bg-white">
+      <section id="b2b" class="py-16 md:py-20">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-3xl md:text-5xl font-bold text-palette1-b mb-8">B2B</h2>
           <div class="grid sm:grid-cols-2 gap-8 md:gap-12">
@@ -269,9 +262,8 @@
           </div>
         </div>
       </section>
-
       <!-- Contact Us -->
-      <section id="contact" class="py-16 md:py-20 bg-white">
+      <section id="contact" class="py-16 md:py-20">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-center items-center gap-8">
             <img src="public/assets/lauk-kita-niaga/laukkita-logo.png" alt="Laukita Niaga Indonesia" class="w-sm h-auto" />
@@ -280,7 +272,7 @@
               <div class="space-y-2 text-palette1-a">
                 <p class="font-semibold">Office Address</p>
                 <p>Bintaro Avenue Lt.2  Jl. MH Thamrin Blok A2 No. 1 Bintaro Sektor 7, Bintaro Jaya, Tangerang Selatan</p>
-                <p><span class="font-semibold">WA : <a href="#">0812-6060-1055</a></span> 
+                <p><span class="font-semibold">WA : <a href="https://wa.me/6281260601055">0812-6060-1055</a></span></p>
                 <p><span class="font-semibold">Email :</span> <a href="mailto:info@laukitaniaga.com" class="text-palette1-b hover:underline">info@laukitaniaga.com</a></p>
                 <p class="mt-4 text-palette1-b font-semibold">PT. LAUKITA NIAGA INDONESIA</p>
               </div>
