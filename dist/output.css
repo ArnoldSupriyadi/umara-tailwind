@@ -1375,6 +1375,9 @@
   .border-palette1-c {
     border-color: #889063;
   }
+  .border-palette1-d {
+    border-color: #CFBB99;
+  }
   .border-palette1-e {
     border-color: #E5D7C4;
   }
@@ -1468,6 +1471,9 @@
   .bg-\[\#8D4105\] {
     background-color: #8D4105;
   }
+  .bg-\[\#393F23\] {
+    background-color: #393F23;
+  }
   .bg-\[\#010713\] {
     background-color: #010713;
   }
@@ -1509,6 +1515,9 @@
   }
   .bg-\[\#FCF0CE\] {
     background-color: #FCF0CE;
+  }
+  .bg-\[\#bg-\[\#889063\]\] {
+    background-color: #bg-[#889063];
   }
   .bg-\[\#debe9d\] {
     background-color: #debe9d;
@@ -1632,6 +1641,9 @@
   }
   .bg-palette1-c {
     background-color: #889063;
+  }
+  .bg-palette1-d {
+    background-color: #CFBB99;
   }
   .bg-palette1-e {
     background-color: #E5D7C4;
@@ -3768,6 +3780,11 @@
       align-items: flex-start;
     }
   }
+  .md\:justify-start {
+    @media (width >= 48rem) {
+      justify-content: flex-start;
+    }
+  }
   .md\:gap-1 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 1);
@@ -3836,6 +3853,11 @@
   .md\:pb-12 {
     @media (width >= 48rem) {
       padding-bottom: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:text-left {
+    @media (width >= 48rem) {
+      text-align: left;
     }
   }
   .md\:text-2xl {
