@@ -135,8 +135,79 @@
         </div>
     </section>
 
+
+    <section id="menu" class="bg-[#131313] py-32 relative" style="background-image: url('public/assets/lumpang-emas-bintaro/BG-LUMPANG-BINTARO2.jpg'); background-size: cover;">
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Modern Header with improved typography -->
+            <div class="text-center mb-12 lg:mb-20" data-aos="fade-up" data-aos-duration="1000">
+                <div class="inline-flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 bg-[#C9A53D] rounded-2xl mb-4 lg:mb-6 shadow-lg"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 text-[#131313]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                        </path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl md:text-5xl lg:text-7xl font-black text-[#d97706] bg-clip-text mb-4 lg:mb-6 tracking-tight"
+                    data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+                    Our Menu
+                </h2>
+                <p class="text-base md:text-xl lg:text-2xl text-white max-w-4xl mx-auto leading-relaxed font-light px-4"
+                    data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    Discover our exquisite collection of authentic Indonesian cuisine, carefully crafted with premium
+                    ingredients and modern
+                    presentation.
+                </p>
+            </div>
+            <!-- Modern 2025 Carousel Design -->
+            <div class="relative w-full" data-aos="fade-up" data-aos-duration="1000">
+                <!-- Carousel Container -->
+                <div id="menuCarousel" class="relative overflow-x-auto overflow-y-hidden rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl p-4 lg:p-8">
+                    <!-- Carousel Track (items will be populated via JS) -->
+                    <div id="carouselTrack" class="flex transition-transform duration-700 ease-out gap-4 lg:gap-6 w-max">
+                    </div>
+                </div>
+                <!-- Modern Navigation Controls -->
+                <div class="flex items-center justify-between mt-8">
+                    <!-- Navigation Arrows -->
+                    <div class="flex items-center gap-4">
+                        <button id="menuPrevBtn" aria-label="Previous" class="group flex items-center justify-center w-14 h-14 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed">
+                            <svg class="w-6 h-6 text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                                </path>
+                            </svg>
+                        </button>
+                        <button id="menuNextBtn" aria-label="Next" class="group flex items-center justify-center w-14 h-14 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed">
+                            <svg class="w-6 h-6 text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Carousel Indicators -->
+                    <div id="menuCarouselIndicators" class="hidden items-center gap-2"></div>
+                    <!-- Auto-play Toggle -->
+                    <div class="flex items-center gap-4">
+                        <button id="menuAutoplayBtn" class="group flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-md border border-white/30 rounded-xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl">
+                            <svg id="menuPlayIcon"
+                                class="w-4 h-4 text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4
+        0h1m-6 4h1m4 0h1m-6-8h8a2 2 0 012 2v8a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2z"></path>
+                            </svg>
+                            <span
+                                class="text-sm font-medium text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300">Auto</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Rooms Section -->
-    <section id="rooms" class="py-20" style="background-image: url('public/assets/lumpang-emas-bintaro/BG-LUMPANG-BINTARO2.jpg'); background-size: cover;">
+    <section id="rooms" class="py-20" style="background-image: url('public/assets/lumpang-emas-bintaro'); background-size: cover;">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <h2 class="text-4xl font-bold text-[#C9A53D] mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">Our Dining Spaces</h2>
@@ -329,7 +400,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <img src="public/assets/vector/-_lumpang bintaro putih.png" alt="Lumpang Emas" class="h-16 w-auto">
+                        <img src="public/assets/lumpang-emas-bintaro/logo-lumpang-ba.png" alt="Lumpang Emas" class="h-16 w-auto">
                     </div>
                     <p class="text-gray-400">
                         Experience authentic Indonesian cuisine in the heart of Bintaro with premium dining atmosphere.
@@ -363,7 +434,7 @@
     </footer>
 
     <!-- Image Modal -->
-    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 items-center justify-center z-50 hidden">
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 items-center justify-center z-50 hidden flex p-4">
         <div class="relative max-w-4xl max-h-full p-4">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 z-10">
                 &times;
@@ -388,14 +459,18 @@
         });
 
         function openModal(imageSrc, title) {
+            const modal = document.getElementById('imageModal');
             document.getElementById('modalImage').src = imageSrc;
             document.getElementById('modalTitle').textContent = title;
-            document.getElementById('imageModal').classList.remove('hidden');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
-            document.getElementById('imageModal').classList.add('hidden');
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
             document.body.style.overflow = 'auto';
         }
 
@@ -511,6 +586,132 @@
                 }
             });
         });
+        // Menu Section (Bintaro Avenue) Carousel
+        (function() {
+            const basePath = 'public/assets/lumpang-emas-bintaro/MENU-BINTARO-AVENUE/';
+            const menuImageFiles = [
+                "Menu LE BA -10_page_1.jpg",
+                "Menu LE BA -11_page_1.jpg",
+                "Menu LE BA -12_page_1.jpg",
+                "Menu LE BA -13_page_1.jpg",
+                "Menu LE BA -14_page_1.jpg",
+                "Menu LE BA -15_page_1.jpg",
+                "Menu LE BA -16_page_1.jpg",
+                "Menu LE BA -17_page_1.jpg",
+                "Menu LE BA -18_page_1.jpg",
+                "Menu LE BA -19_page_1.jpg",
+                "Menu LE BA -20_page_1.jpg",
+                "Menu LE BA -21_page_1.jpg",
+                "Menu LE BA -22_page_1.jpg",
+                "Menu LE BA -23_page_1.jpg",
+                "Menu LE BA -2_page_1.jpg",
+                "Menu LE BA -3_page_1.jpg",
+                "Menu LE BA -4_page_1.jpg",
+                "Menu LE BA -5_page_1.jpg",
+                "Menu LE BA -6_page_1.jpg",
+                "Menu LE BA -7_page_1.jpg",
+                "Menu LE BA -8_page_1.jpg",
+                "Menu LE BA -9_page_1.jpg"
+            ];
+
+            const scroller = document.getElementById('menuCarousel');
+            const track = document.getElementById('carouselTrack');
+            if (!scroller || !track) return;
+
+            function toTitle(name) {
+                return name
+                    .replace(/_/g, ' ')
+                    .replace(/-/g, ' ')
+                    .replace(/\.[^/.]+$/, '');
+            }
+
+            // Populate items
+            menuImageFiles.forEach((file) => {
+                const title = toTitle(file);
+                const item = document.createElement('div');
+                item.className = 'group relative w-[220px] sm:w-[240px] lg:w-[280px] shrink-0 cursor-pointer';
+
+                const inner = document.createElement('div');
+                inner.className = 'relative aspect-[3/4] rounded-2xl overflow-hidden bg-black/30 border border-white/10';
+
+                const img = document.createElement('img');
+                img.src = basePath + encodeURI(file);
+                img.alt = title;
+                img.loading = 'lazy';
+                img.className = 'w-full h-full object-cover group-hover:scale-110 transition-transform duration-700';
+                img.addEventListener('click', () => openModal(img.src, title));
+
+                const gradient = document.createElement('div');
+                gradient.className = 'absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300';
+
+                inner.appendChild(img);
+                inner.appendChild(gradient);
+                item.appendChild(inner);
+
+
+
+                track.appendChild(item);
+            });
+
+            // Navigation controls
+            const nextBtn = document.getElementById('menuNextBtn');
+            const prevBtn = document.getElementById('menuPrevBtn');
+            const autoplayBtn = document.getElementById('menuAutoplayBtn');
+            const playIcon = document.getElementById('menuPlayIcon');
+
+            function pageWidth() {
+                return scroller.clientWidth;
+            }
+
+            function scrollNext() {
+                const atEnd = scroller.scrollLeft >= (scroller.scrollWidth - scroller.clientWidth - 5);
+                if (atEnd) {
+                    scroller.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    scroller.scrollBy({ left: pageWidth(), behavior: 'smooth' });
+                }
+            }
+
+            function scrollPrev() {
+                const atStart = scroller.scrollLeft <= 5;
+                if (atStart) {
+                    scroller.scrollTo({ left: scroller.scrollWidth - scroller.clientWidth, behavior: 'smooth' });
+                } else {
+                    scroller.scrollBy({ left: -pageWidth(), behavior: 'smooth' });
+                }
+            }
+
+            if (nextBtn) nextBtn.addEventListener('click', scrollNext);
+            if (prevBtn) prevBtn.addEventListener('click', scrollPrev);
+
+            // Autoplay
+            let autoplayTimer = null;
+            function startAutoplay() {
+                if (autoplayTimer) return;
+                autoplayTimer = setInterval(scrollNext, 4000);
+                if (playIcon) playIcon.classList.add('text-amber-600');
+            }
+            function stopAutoplay() {
+                if (!autoplayTimer) return;
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+                if (playIcon) playIcon.classList.remove('text-amber-600');
+            }
+            if (autoplayBtn) {
+                autoplayBtn.addEventListener('click', () => {
+                    if (autoplayTimer) stopAutoplay(); else startAutoplay();
+                });
+            }
+
+            // Pause autoplay on hover/focus
+            scroller.addEventListener('mouseenter', stopAutoplay);
+            scroller.addEventListener('mouseleave', startAutoplay);
+            scroller.addEventListener('focusin', stopAutoplay);
+            scroller.addEventListener('focusout', startAutoplay);
+
+            // Start autoplay on large screens
+            if (window.innerWidth >= 1024) startAutoplay();
+        })();
     </script>
 </body>
 </html>

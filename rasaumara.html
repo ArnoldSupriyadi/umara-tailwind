@@ -129,11 +129,9 @@
                         <button class="bg-palette2-e text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:bg-[#354024] transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                             Reserve Table
                         </button>
-                        <button class="border-2 border-[#889063] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[#889063] hover:text-white transition-all duration-300 hover:scale-105">
-                            View Menu
-                        </button>
                     </div>
                 </div>
+                
                 <!-- Right Images - 2025 Bento Grid Design -->
                 <div class="lg:col-span-5 relative" data-aos="fade-left" data-aos-duration="1200">
                     <!-- Main Image Card with 3D Effect -->
@@ -215,6 +213,85 @@
                 <div class="lg:col-span-6" data-aos="fade-left" data-aos-duration="800">
                     <div class="rounded-3xl overflow-hidden shadow-lg">
                         <img src="public/assets/rasa-umara/4.jpg" alt="Rasa Umara" class="w-full h-80 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="bg-[#131313] py-32 relative">
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-12 lg:mb-20" data-aos="fade-up" data-aos-duration="1000">
+                <div class="inline-flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 bg-[#C9A53D] rounded-2xl mb-4 lg:mb-6 shadow-lg"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 text-" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.
+    253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.
+    477-4.5 1.253">
+                        </path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl md:text-5xl lg:text-7xl font-black text-[#d97706] bg-clip-text mb-4 lg:mb-6 tracking-tight"
+                    data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+                    Our Menu
+                </h2>
+                <p class="text-base md:text-xl lg:text-2xl text-white max-w-4xl mx-auto leading-relaxed font-light px-4"
+                    data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    Discover our exquisite collection of authentic Indonesian cuisine, carefully crafted with premium
+                    ingredients and modern
+                    presentation.
+                </p>
+            </div>
+    
+            <!-- Modern 2025 Carousel Design -->
+            <div class="relative w-full" data-aos="fade-up" data-aos-duration="1000">
+                <!-- Carousel Container -->
+                <div id="menuCarousel" class="relative overflow-x-auto overflow-y-hidden rounded-3xl bg-white/10 backdrop-blur-md border border-white/
+    20 shadow-2xl p-4 lg:p-8">
+                    <!-- Carousel Track (items will be populated via JS) -->
+                    <div id="carouselTrack" class="flex transition-transform duration-700 ease-out gap-4 lg:gap-6 w-max">
+                    </div>
+                </div>
+                <!-- Modern Navigation Controls -->
+                <div class="flex items-center justify-between mt-8">
+                    <!-- Navigation Arrows -->
+                    <div class="flex items-center gap-4">
+                        <button id="prevBtn" aria-label="Previous" class="group flex items-center justify-center w-14 h-14 bg-white/20 backdrop-blur-md 
+    border border-white/30 rounded-2xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 
+    disabled:cursor-not-allowed">
+                            <svg class="w-6 h-6 text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                                </path>
+                            </svg>
+                        </button>
+                        <button id="nextBtn" aria-label="Next" class="group flex items-center justify-center w-14 h-14 bg-white/20 backdrop-blur-md 
+    border border-white/30 rounded-2xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 
+    disabled:cursor-not-allowed">
+                            <svg class="w-6 h-6 text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Carousel Indicators -->
+                    <div id="carouselIndicators" class="hidden items-center gap-2"></div>
+                    <!-- Auto-play Toggle -->
+                    <div class="flex items-center gap-4">
+                        <button id="autoplayBtn" class="group flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-md border border-white/30 
+    rounded-xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl">
+                            <svg id="playIcon"
+                                class="w-4 h-4 text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 
+    0h1m-6 4h1m4 0h1m-6-8h8a2 2 0 012 2v8a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2z"></path>
+                            </svg>
+                            <span
+                                class="text-sm font-medium text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300">Auto</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -426,7 +503,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#131313] text-white py-16">
+    <footer class="bg-[#131313] text-white pt-10 pb-5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <!-- Brand -->
@@ -495,6 +572,20 @@
         </div>
     </footer>
 
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="imageModalTitle">
+        <button id="closeImageModal" class="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-300" aria-label="Close image modal">&times;</button>
+        <img id="modalImage" src="" alt="" class="max-w-[90vw] max-h-[85vh] object-contain rounded-xl shadow-2xl">
+        <p id="imageModalTitle" class="mt-4 text-white/90 text-center font-semibold"></p>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="imageModalTitle">
+        <button id="closeImageModal" class="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-300" aria-label="Close image modal">&times;</button>
+        <img id="modalImage" src="" alt="" class="max-w-[90vw] max-h-[85vh] object-contain rounded-xl shadow-2xl">
+        <p id="imageModalTitle" class="mt-4 text-white/90 text-center font-semibold"></p>
+    </div>
+
     <!-- Mobile Menu Toggle Script -->
     <script>
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -533,6 +624,43 @@
         });
     </script>
 
+    <!-- Image Modal Script -->
+    <script>
+        function openModal(imageSrc, title) {
+            const modal = document.getElementById('imageModal');
+            const img = document.getElementById('modalImage');
+            const caption = document.getElementById('imageModalTitle');
+            if (!modal || !img) return;
+            img.src = imageSrc;
+            img.alt = title || '';
+            caption.textContent = title || '';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            if (!modal) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Close events
+        const closeBtn = document.getElementById('closeImageModal');
+        if (closeBtn) closeBtn.addEventListener('click', closeImageModal);
+
+        const modalOverlay = document.getElementById('imageModal');
+        if (modalOverlay) {
+            modalOverlay.addEventListener('click', function(e) {
+                if (e.target === this) closeImageModal();
+            });
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeImageModal();
+        });
+    </script>
+
     <!-- AOS Animation Initialization -->
     <script>
         AOS.init({
@@ -544,3 +672,129 @@
     </script>
 </body>
 </html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const isMobile = window.innerWidth <= 768;
+
+    // Base path and file list (easy to update)
+    const basePath = 'public/assets/rasa-umara-cikarang/menu_ruc/';
+    const menuImageFiles = [
+      'MENU RASA UMARA CIKARANG 2025-2_page_1.jpg',
+      'MENU RASA UMARA CIKARANG 2025-3_page_1.jpg',
+      'MENU RASA UMARA CIKARANG 2025-4_page_1.jpg',
+      'MENU RASA UMARA CIKARANG 2025-5_page_1.jpg',
+      'MENU RASA UMARA CIKARANG 2025-6_page_1.jpg'
+    ];
+
+    function toTitle(name) {
+      return name
+        .replace(/\.[^.]+$/, '')            // remove extension
+        .replace(/[_-]+/g, ' ')              // underscores/dashes to spaces
+        .replace(/\s{2,}/g, ' ')            // collapse multiple spaces
+        .trim();
+    }
+
+    function populateCarousel() {
+      const track = document.getElementById('carouselTrack');
+      track.innerHTML = '';
+      menuImageFiles.forEach((file) => {
+        const src = basePath + file;
+        const title = toTitle(file);
+        const item = document.createElement('div');
+        item.className = 'carousel-item flex-none w-64 lg:w-80 bg-white/10 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer';
+        item.innerHTML = `
+          <div class="relative">
+            <img src="${src}" alt="${title}" loading="lazy" class="w-full h-48 lg:h-64 object-cover">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+              <h4 class="text-white text-sm lg:text-base font-semibold">${title}</h4>
+            </div>
+          </div>
+        `;
+        item.addEventListener('click', () => {
+          if (typeof openModal === 'function') {
+            openModal(src, title);
+          }
+        });
+        track.appendChild(item);
+      });
+    }
+
+    populateCarousel();
+
+    class ModernCarousel {
+      constructor() {
+        this.carousel = document.getElementById('menuCarousel');
+        this.track = document.getElementById('carouselTrack');
+        this.prevBtn = document.getElementById('prevBtn');
+        this.nextBtn = document.getElementById('nextBtn');
+        this.autoplayBtn = document.getElementById('autoplayBtn');
+        this.currentIndex = 0;
+        this.itemWidth = isMobile ? 256 + 16 : 320 + 24; // width + gap
+        this.isAutoplay = !isMobile;
+        this.autoplayInterval = null;
+        this.autoplayDelay = isMobile ? 6000 : 4000;
+        this.init();
+      }
+
+      getVisibleItems() {
+        const containerWidth = this.carousel.clientWidth;
+        return Math.max(1, Math.floor(containerWidth / (isMobile ? 256 : 320)));
+      }
+
+      update() {
+        const offset = this.currentIndex * this.itemWidth;
+        this.track.style.transform = `translateX(-${offset}px)`;
+        this.updateButtons();
+      }
+
+      updateButtons() {
+        const totalItems = this.track.querySelectorAll('.carousel-item').length;
+        const maxIndex = Math.max(0, totalItems - this.getVisibleItems());
+        this.prevBtn.disabled = this.currentIndex <= 0;
+        this.nextBtn.disabled = this.currentIndex >= maxIndex;
+      }
+
+      bindEvents() {
+        this.prevBtn.addEventListener('click', () => {
+          this.currentIndex = Math.max(0, this.currentIndex - 1);
+          this.update();
+        });
+        this.nextBtn.addEventListener('click', () => {
+          const totalItems = this.track.querySelectorAll('.carousel-item').length;
+          const maxIndex = Math.max(0, totalItems - this.getVisibleItems());
+          this.currentIndex = Math.min(maxIndex, this.currentIndex + 1);
+          this.update();
+        });
+        this.autoplayBtn.addEventListener('click', () => {
+          this.isAutoplay = !this.isAutoplay;
+          this.toggleAutoplay();
+        });
+        window.addEventListener('resize', () => this.update());
+      }
+
+      toggleAutoplay() {
+        if (this.isAutoplay) {
+          if (this.autoplayInterval) return;
+          this.autoplayInterval = setInterval(() => {
+            const totalItems = this.track.querySelectorAll('.carousel-item').length;
+            const maxIndex = Math.max(0, totalItems - this.getVisibleItems());
+            this.currentIndex = this.currentIndex >= maxIndex ? 0 : this.currentIndex + 1;
+            this.update();
+          }, this.autoplayDelay);
+        } else {
+          clearInterval(this.autoplayInterval);
+          this.autoplayInterval = null;
+        }
+      }
+
+      init() {
+        this.bindEvents();
+        this.update();
+        this.toggleAutoplay();
+      }
+    }
+
+    new ModernCarousel();
+  });
+</script>
