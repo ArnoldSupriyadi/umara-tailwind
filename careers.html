@@ -26,6 +26,9 @@
                 <!-- Center: Desktop Nav -->
                 <div class="hidden md:flex items-center justify-center flex-1">
                     <ul class="flex items-center gap-5">
+                        <li><a href="index.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">Home</a>
+                        </li>
                         <li><a href="about.html"
                                 class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">About</a>
                         </li>
@@ -115,9 +118,9 @@
                                 <select id="companyFilter" class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#8D4105]">
                                     <option>All Companies</option>
                                     <option>PT Rasa Nusantara Baru</option>
-                                    <option>Umara Catering</option>
-                                    <option>PT Umara Mitra Kuiina</option>
-                                    <option>PT Laukita Niaga</option>
+                                    <option>PT Umara Citra Rasa</option>
+                                    <option>PT Umara Mitra Kulina</option>
+                                    <option>PT Laukita Niaga Indonesia</option>
                                     <option>PT Laukita Bersama Indonesia</option>
                                 </select>
                             </div>
@@ -132,73 +135,54 @@
 
                 <!-- Job Cards -->
                 <section id="jobsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Card: Rasa Nusantara Baru -->
-                    <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="PT Rasa Nusantara Baru">
+
+                    <!-- Card: PT Umara Citra Rasa -->
+                    <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="PT Umara Citra Rasa">
                         <div class="p-4">
                             <div class="flex items-center gap-3">
-                                <img src="public/assets/images/logo-umara.svg" alt="PT Rasa Nusantara Baru" class="h-8"/>
-                            </div>
-                            <h3 class="mt-4 text-lg font-semibold">QC Piping & Mechanic - RNB</h3>
-                            <p class="text-sm text-gray-600">PT Rasa Nusantara Baru</p>
-                            <ul class="mt-3 space-y-2 text-sm text-gray-600">
-                                <li>Production and Manufacturing • All</li>
-                                <li>Application Deadline: March 1, 2026</li>
-                            </ul>
-                        </div>
-                        <div class="flex items-center justify-between px-4 py-3 border-t bg-[#F9F7F4]">
-                            <!-- OPEN MODAL BUTTON -->
-                            <button type="button"
-                                class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-3 py-2 hover:brightness-110 transition cursor-pointer"
-                                data-modal-target="job-rnb-modal">
-                                See Details
-                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </button>
-
-                            <a href="apply-job.html" class="inline-flex items-center justify-center outline outline-1-[#8D4105] text-[#8D4105] px-4 py-2 rounded-md hover:bg-[#8D4105] hover:text-white transition">Apply</a>
-                        </div>
-                    </article>
-
-                    <!-- Card: Umara Catering -->
-                    <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="Umara Catering">
-                        <div class="p-4">
-                            <div class="flex items-center gap-3">
-                                <img src="public/assets/images/logo-umara.svg" alt="Umara Catering" class="h-8"/>
+                                <img src="public/assets/ucr/logo-ucr-catering.png" alt="PT Umara Citra Rasa" class="h-14"/>
                             </div>
                             <h3 class="mt-4 text-lg font-semibold">Quality Assurance Staff</h3>
-                            <p class="text-sm text-gray-600">Umara Catering</p>
-                            <ul class="mt-3 space-y-2 text-sm text-gray-600">
-                                <li>Engineering • All</li>
-                                <li>Application Deadline: March 1, 2026</li>
-                            </ul>
+                            <p class="text-gray-600 my-1">PT Umara Cipta Rasa</p>
+                            <div class="responsibilities">
+                                <p class="text-gray-600 text-sm">Responsibilities :</p>
+                                <ul class="mt-1 mb-8 space-y-2 text-sm text-gray-600 list-disc">
+                                    <li class="ms-3">Inspect surface preparation, blasting quality, and painting application.</li>
+                                    <li class="ms-3">Ensure compliance with quality standards and safety regulations.</li>
+                                </ul>
+                            </div>
+                            <small class="text-gray-500">Application Deadline: March 1, 2026</small>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 border-t bg-[#F9F7F4]">
-                            <a href="#" class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-4 py-2 hover:brightness-110 transition">See Details
+                            <a href="#job-rnb-modal" data-modal-target="job-rnb-modal" class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-4 py-2 hover:brightness-110 transition">See Details
                                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                             </a>
-                            <a href="#" class="inline-flex items-center justify-center border border-[#8D4105] text-[#8D4105] px-4 py-2 rounded-md hover:bg-[#8D4105] hover:text-white transition">Apply</a>
+                            <a href="apply-job.html" class="inline-flex items-center justify-center border border-[#8D4105] text-[#8D4105] px-4 py-2 rounded-md hover:bg-[#8D4105] hover:text-white transition">Apply</a>
                         </div>
                     </article>
 
                     <!-- Card: Umara Mitra Kulina -->
-                    <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="PT Umara Mitra Kuiina">
+                    <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="PT Umara Mitra Kulina">
                         <div class="p-4">
                             <div class="flex items-center gap-3">
-                                <img src="public/assets/images/logo-umara.svg" alt="PT Umara Mitra Kuiina" class="h-8"/>
+                                <img src="public/assets/umara-mitra-kulina/logo-umk.png" alt="Umara Mitra Kulina" class="h-14" />
                             </div>
                             <h3 class="mt-4 text-lg font-semibold">QC Blasting & Painting</h3>
-                            <p class="text-sm text-gray-600">PT Umara Mitra Kuiina</p>
-                            <ul class="mt-3 space-y-2 text-sm text-gray-600">
-                                <li>Production and Manufacturing • All</li>
-                                <li>Application Deadline: March 1, 2026</li>
-                            </ul>
+                            <p class=" text-gray-600 my-1">PT Umara Mitra Kulina</p>
+                            <div class="responsibilities">
+                                <p class="text-gray-600 text-sm">Responsibilities :</p>
+                                <ul class="mt-1 mb-8 space-y-2 text-sm text-gray-600 list-disc">
+                                    <li class="ms-3">Check surface preparation, blasting quality, and coating application.</li>
+                                    <li class="ms-3">Verify DFT, mixing, curing, and environmental <br>conditions.</li>
+                                </ul>
+                            </div>
+                            <small class="text-gray-500">Application Deadline: March 1, 2026</small>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 border-t bg-[#F9F7F4]">
                             <a href="#" class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-4 py-2 hover:brightness-110 transition">See Details
                                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                             </a>
-                            <a href="#apply-job.html" class="inline-flex items-center justify-center border border-[#8D4105] text-[#8D4105] px-4 py-2 rounded-md hover:bg-[#8D4105] hover:text-white transition">Apply</a>
+                            <a href="apply-job.html" class="inline-flex items-center justify-center border border-[#8D4105] text-[#8D4105] px-4 py-2 rounded-md hover:bg-[#8D4105] hover:text-white transition">Apply</a>
                         </div>
                     </article>
 
@@ -206,14 +190,18 @@
                     <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="PT Laukita Niaga">
                         <div class="p-4">
                             <div class="flex items-center gap-3">
-                                <img src="public/assets/images/logo-umara.svg" alt="PT Laukita Niaga" class="h-8"/>
+                                <img src="public/assets/lauk-kita-niaga/laukkita-logo.png" alt="Laukita Niaga Indonesia" class="h-14" />
                             </div>
                             <h3 class="mt-4 text-lg font-semibold">Production Supervisor</h3>
-                            <p class="text-sm text-gray-600">PT Laukita Niaga</p>
-                            <ul class="mt-3 space-y-2 text-sm text-gray-600">
-                                <li>Production and Manufacturing • All</li>
-                                <li>Application Deadline: May 10, 2026</li>
-                            </ul>
+                            <p class="text-gray-600 my-1">PT Laukita Niaga Indonesia</p>
+                            <div class="responsibilities">
+                                <p class="text-gray-600 text-sm">Responsibilities :</p>
+                                <ul class="mt-1 mb-8 space-y-2 text-sm text-gray-600 list-disc">
+                                    <li class="ms-3">Supervise and coordinate production staff and work schedules.</li>
+                                    <li class="ms-3">Monitor production processes to meet output, quality, and efficiency targets.</li>
+                                </ul>
+                            </div>
+                            <small class="text-gray-600">Application Deadline: May 10, 2026</small>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 border-t bg-[#F9F7F4]">
                             <a href="#" class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-4 py-2 hover:brightness-110 transition">See Details
@@ -227,14 +215,18 @@
                     <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="PT Laukita Bersama Indonesia">
                         <div class="p-4">
                             <div class="flex items-center gap-3">
-                                <img src="public/assets/images/logo-umara.svg" alt="PT Laukita Bersama Indonesia" class="h-8"/>
+                                <img src="public/assets/laukkita-bersama/LBI-Logo.png" alt="Laukita Bersama Indonesia" class="h-14" />
                             </div>
-                            <h3 class="mt-4 text-lg font-semibold">R&D Technologist</h3>
-                            <p class="text-sm text-gray-600">PT Laukita Bersama Indonesia</p>
-                            <ul class="mt-3 space-y-2 text-sm text-gray-600">
-                                <li>Engineering • All</li>
-                                <li>Application Deadline: June 20, 2026</li>
-                            </ul>
+                            <h3 class="mt-4 text-lg font-semibold">R&D</h3>
+                            <p class="text-gray-600">PT Laukita Bersama Indonesia</p>
+                            <div class="responsibilities">
+                                <p class="text-gray-600 text-sm">Responsibilities :</p>
+                                <ul class="mt-1 mb-8 space-y-2 text-sm text-gray-600 list-disc">
+                                    <li class="ms-3">Analyze market trends and customer feedback for innovation.</li>
+                                    <li class="ms-3">Document results and coordinate with production, QC, and marketing teams.</li>
+                                </ul>
+                            </div>
+                            <small class="text-gray-500">Application Deadline: March 1, 2026</small>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 border-t bg-[#F9F7F4]">
                             <a href="#" class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-4 py-2 hover:brightness-110 transition">See Details
@@ -245,17 +237,21 @@
                     </article>
 
                     <!-- Duplicate some cards for grid feel -->
-                    <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="Umara Catering">
+                    <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="PT Umara Citra Rasa">
                         <div class="p-4">
                             <div class="flex items-center gap-3">
-                                <img src="public/assets/images/logo-umara.svg" alt="Umara Catering" class="h-8"/>
+                                <img src="public/assets/ucr/logo-ucr-catering.png" alt="PT Umara Citra Rasa" class="h-14" />
                             </div>
                             <h3 class="mt-4 text-lg font-semibold">Event Operations Lead</h3>
-                            <p class="text-sm text-gray-600">Umara Catering</p>
-                            <ul class="mt-3 space-y-2 text-sm text-gray-600">
-                                <li>Operations • All</li>
-                                <li>Application Deadline: April 30, 2026</li>
-                            </ul>
+                            <p class="text-gray-600">PT Umara Cipta Rasa</p>
+                            <div class="responsibilities">
+                                <p class="text-gray-600 text-sm">Responsibilities :</p>
+                                <ul class="mt-1 mb-8 space-y-2 text-sm text-gray-600 list-disc">
+                                    <li class="ms-3">Lead and oversee all on-site event operations and event crew.</li>
+                                    <li class="ms-3">Coordinate logistics: venue setup, equipment, vendors, and timelines.</li>
+                                </ul>
+                            </div>
+                            <small class="text-gray-500">Application Deadline: May 10, 2026</small>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 border-t bg-[#F9F7F4]">
                             <a href="#" class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-4 py-2 hover:brightness-110 transition">See Details
@@ -268,14 +264,18 @@
                     <article class="job-card bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:ring-1 hover:ring-[#8D4105]/20 transition" data-company="PT Rasa Nusantara Baru">
                         <div class="p-4">
                             <div class="flex items-center gap-3">
-                                <img src="public/assets/images/logo-umara.svg" alt="PT Rasa Nusantara Baru" class="h-8"/>
+                                <img src="public/assets/vector/logo-rnb.png" alt="Rasa Nusantara Baru" class="h-14" />
                             </div>
                             <h3 class="mt-4 text-lg font-semibold">Kitchen Supervisor</h3>
-                            <p class="text-sm text-gray-600">PT Rasa Nusantara Baru</p>
-                            <ul class="mt-3 space-y-2 text-sm text-gray-600">
-                                <li>Culinary • All</li>
-                                <li>Application Deadline: May 17, 2026</li>
-                            </ul>
+                            <p class="text-gray-600">PT Rasa Nusantara Baru</p>
+                            <div class="responsibilities">
+                                <p class="text-gray-600 text-sm">Responsibilities :</p>
+                                <ul class="mt-1 mb-8 space-y-2 text-sm text-gray-600 list-disc">
+                                    <li class="ms-3">Ensure food preparation meets quality, taste, and presentation standards.</li>
+                                    <li class="ms-3">Maintain cleanliness, hygiene, and compliance with food safety regulations.</li>
+                                </ul>
+                            </div>
+                            <small class="text-gray-500">Application Deadline: March 1, 2026</small>
                         </div>
                         <div class="flex items-center justify-between px-4 py-3 border-t bg-[#F9F7F4]">
                             <a href="#" class="inline-flex items-center gap-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-md px-4 py-2 hover:brightness-110 transition">See Details
@@ -369,8 +369,8 @@
             <!-- Header -->
             <div class="flex items-start justify-between border-b px-6 py-4">
                 <div>
-                    <h3 class="text-xl font-semibold text-gray-900">QC Piping & Mechanic — PT Rasa Nusantara Baru</h3>
-                    <p class="mt-1 text-sm text-gray-500">Production & Manufacturing • Jakarta • On-site</p>
+                    <h3 class="text-xl font-semibold text-gray-900">Quality Assurance Staff — PT Umara Cipta Rasa</h3>
+                    <p class="mt-1 text-sm text-gray-500">Placement : Jakarta | On-site</p>
                 </div>
                 <button class="ml-4 rounded-md p-2 text-gray-500 hover:bg-gray-100" data-modal-close aria-label="Close">
                     <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -385,7 +385,7 @@
             <div class="max-h-[70vh] overflow-y-auto px-6 py-5">
                 <!-- Image -->
                 <div class="mb-5 overflow-hidden rounded-xl border">
-                    <img src="public/assets/careers/careers.jpg" alt="QC Piping & Mechanic"
+                    <img src="public/assets/careers/careers.jpg" alt="Quality Assurance Staff"
                         class="h-auto w-full object-cover">
                 </div>
     
@@ -424,7 +424,7 @@
             <!-- Footer -->
             <div class="flex items-center justify-end gap-3 border-t px-6 py-4">
                 <button class="rounded-md px-4 py-2 text-gray-700 hover:bg-gray-100" data-modal-close>Close</button>
-                <a href="#apply-rnb" class="rounded-md bg-[#8D4105] px-4 py-2 font-medium text-white hover:brightness-110">
+                <a href="apply-job.html" class="rounded-md bg-[#8D4105] px-4 py-2 font-medium text-white hover:brightness-110">
                     Apply Now
                 </a>
             </div>
