@@ -159,6 +159,7 @@
                     presentation.
                 </p>
             </div>
+
             <!-- Modern 2025 Carousel Design -->
             <div class="relative w-full" data-aos="fade-up" data-aos-duration="1000">
                 <!-- Carousel Container -->
@@ -167,6 +168,7 @@
                     <div id="carouselTrack" class="flex transition-transform duration-700 ease-out gap-4 lg:gap-6 w-max">
                     </div>
                 </div>
+                
                 <!-- Modern Navigation Controls -->
                 <div class="flex items-center justify-between mt-8">
                     <!-- Navigation Arrows -->
@@ -434,17 +436,26 @@
     </footer>
 
     <!-- Image Modal -->
-    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 items-center justify-center z-50 hidden flex p-4">
-        <div class="relative max-w-4xl max-h-full p-4">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 z-10">
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 p-4 flex items-center justify-center">
+        <div class="relative max-w-4xl max-h-[90vh] w-full">
+            <!-- Close button -->
+            <button type="button" class="absolute top-4 right-4 text-white text-3xl leading-none hover:text-gray-300 z-10"
+                onclick="closeModal()" aria-label="Close image modal">
                 &times;
             </button>
-            <img id="modalImage" src="" alt="" class="max-w-full max-h-full object-contain">
-            <div class="absolute bottom-4 left-4 text-white">
-                <h3 id="modalTitle" class="text-2xl font-bold"></h3>
+    
+            <!-- Image wrapper -->
+            <div class="w-full h-full flex items-center justify-center">
+                <img id="modalImage" src="" alt="" class="max-w-full max-h-[90vh] object-contain mx-auto" />
+            </div>
+    
+            <!-- Optional title text -->
+            <div class="absolute bottom-4 left-4 text-white drop-shadow">
+                <h3 id="modalTitle" class="text-xl md:text-2xl font-bold hidden"></h3>
             </div>
         </div>
     </div>
+
 
     <!-- AOS JavaScript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -590,6 +601,8 @@
         (function() {
             const basePath = 'public/assets/lumpang-emas-bintaro/MENU-BINTARO-AVENUE/';
             const menuImageFiles = [
+                "NASI_BOX_1.jpg",
+                "NASI_BOX_2.jpg",
                 "Menu LE BA -10_page_1.jpg",
                 "Menu LE BA -11_page_1.jpg",
                 "Menu LE BA -12_page_1.jpg",
@@ -642,7 +655,8 @@
                 img.addEventListener('click', () => openModal(img.src, title));
 
                 const gradient = document.createElement('div');
-                gradient.className = 'absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300';
+                // Allow clicks to pass through the overlay so the image click opens the modal
+                gradient.className = 'absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none';
 
                 inner.appendChild(img);
                 inner.appendChild(gradient);

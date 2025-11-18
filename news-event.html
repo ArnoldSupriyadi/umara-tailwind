@@ -14,14 +14,14 @@
   <body>
     <header class="bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white">
       <nav class="container mx-auto py-2 sm:px-6 lg:px-8 relative">
-        <div class="flex h-16 items-center justify-between">
+        <div class="flex h-16 items-center">
           <!-- Left: Brand -->
-          <a href="/" class="flex items-center gap-2 md:hidden">
+          <a href="index.html" class="flex items-center gap-2">
             <img src="public/assets/images/logo-umara.svg" alt="Umara Group" class="h-10 w-auto" />
             <span class="sr-only">Umara Group</span>
           </a>
           <!-- Center: Desktop Nav -->
-          <div class="hidden md:flex items-center justify-center flex-1">
+          <div class="hidden md:flex items-center justify-end flex-1">
             <ul class="flex items-center gap-5">
               <li><a href="index.html"
                   class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">Home</a></li>
@@ -29,10 +29,9 @@
                   class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">About</a></li>
               <li><a href="news-event.html"
                   class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">News</a></li>
-              <li>
-                <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium hover:text-white"><img
-                    src="public/assets/images/logo-umara.svg" alt="Umara Group" class="h-14 w-auto" /></a>
-              </li>
+              <!-- <li> -->
+              <!-- <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium hover:text-white"><img src="public/assets/images/logo-umara.svg" alt="Umara Group" class="h-14 w-auto" /></a> -->
+              <!-- </li> -->
               <li><a href="careers.html"
                   class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">Careers</a></li>
               <li><a href="contact.html"
@@ -40,8 +39,8 @@
             </ul>
           </div>
           <!-- Mobile menu button -->
-          <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center bg-amber rounded-md p-2 text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 
-        focus:ring-offset-gray-800 focus:ring-indigo-500" aria-controls="nav-mobile" aria-expanded="false" type="button">
+          <button id="nav-toggle" class="md:hidden ml-auto inline-flex items-center justify-center rounded-md p-2 text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 
+    focus:ring-offset-gray-800 focus:ring-indigo-500" aria-controls="nav-mobile" aria-expanded="false" type="button">
             <span class="sr-only">Open main menu</span>
             <!-- icon open -->
             <svg id="icon-open" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -79,7 +78,7 @@
           </ul>
         </div>
       </nav>
-      </header>
+    </header>
 
     <main>
       <!-- Hero Section -->
@@ -103,7 +102,7 @@
                 </div>
                 <div class="md:w-1/2 p-8">
                   <div class="flex items-center mb-4">
-                    <span class="bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white text-xs font-semibold px-3 py-1 rounded-full">CSR</span>
+                    <span class="bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white text-xs font-semibold px-3 py-1 rounded-full">Groundbreaking</span>
                   </div>
                   <h2 class="text-2xl font-bold text-gray-900 mb-4">Peduli Desa Sekongkang Atas</h2>
                   <p class="text-gray-600 mb-6">On July 18, 2025, our team carried out a simple yet meaningful CSR activity in Sekongkang Atas Village as part of our
@@ -130,16 +129,32 @@
               <h2 class="text-4xl font-bold text-amber-100 mb-4">Latest News</h2>
               <p class="text-lg max-w-2xl mx-auto mb-8">Stay informed with our latest updates, achievements, and community initiatives</p>
               <div class="flex justify-center space-x-2">
-                <button class="px-6 py-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-full hover:bg-amber-700 transition-colors font-medium">All</button>
-                <button class="px-6 py-2 hover:bg-white/10 rounded-full transition-colors font-medium">News</button>
-                <button class="px-6 py-2 hover:bg-white/10 rounded-full transition-colors font-medium">Events</button>
+                <button class="px-6 py-2 bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white rounded-full hover:bg-amber-700 transition-colors font-medium" data-filter="all">
+                  All
+                </button>
+                <button class="px-6 py-2 hover:bg-white/10 rounded-full transition-colors font-medium" data-filter="Umara Mitra Kulina">
+                  Umara Mitra Kulina
+                </button>
+                <button class="px-6 py-2 hover:bg-white/10 rounded-full transition-colors font-medium" data-filter="Rasa Nusantara Baru">
+                  Rasa Nusantara Baru
+                </button>
+                <button class="px-6 py-2 hover:bg-white/10 rounded-full transition-colors font-medium" data-filter="Umara Cipta Rasa">
+                  Umara Cipta Rasa
+                </button>
+                <button class="px-6 py-2 hover:bg-white/10 rounded-full transition-colors font-medium" data-filter="Laukita Bersama Indonesia">
+                  Laukita Bersama Indonesia
+                </button>
+                <button class="px-6 py-2 hover:bg-white/10 rounded-full transition-colors font-medium" data-filter="Laukita Niaga Indonesia">
+                  Laukita Niaga Indonesia
+                </button>
               </div>
+
             </div>
 
             <!-- News Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
               <!-- Article 1 -->
-              <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2" data-company="Umara Mitra Kulina">
                 <div class="relative overflow-hidden">
                   <img src="public/assets/CSR/peduli-posyandu.png" alt="" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute top-4 left-4">
@@ -161,7 +176,7 @@
               </article>
 
               <!-- Article 2 -->
-              <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2" data-company="Umara Cipta Rasa">
                 <div class="relative overflow-hidden">
                   <img src="public/assets/CSR/peduli-tubercullosis.png" alt="" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute top-4 left-4">
@@ -183,7 +198,7 @@
               </article>
 
               <!-- Article 3 -->
-              <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2" data-company="Rasa Nusantara Baru">
                 <div class="relative overflow-hidden">
                   <img src="public/assets/CSR/desa-sekongkang-kemuning.png" alt="" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute top-4 left-4">
@@ -204,7 +219,7 @@
               </article>
 
               <!-- Article 4 -->
-              <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2" data-company="Laukita Bersama Indonesia">
                 <div class="relative overflow-hidden">
                   <img src="public/assets/CSR/merdeka-ploggin-amman.png" alt="" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute top-4 left-4">
@@ -225,7 +240,7 @@
               </article>
 
               <!-- Article 5 -->
-              <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2" data-company="Laukita Niaga Indonesia">
                 <div class="relative overflow-hidden">
                   <img src="public/assets/CSR/pemberdayaan-ikan-lele/4.jpg" alt="" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute top-4 left-4">
@@ -301,7 +316,7 @@
                     d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                     clip-rule="evenodd"></path>
                 </svg>
-                <p class="text-gray-300">Jakarta, Indonesia</p>
+                <p class="text-gray-300"><a href="https://maps.app.goo.gl/yiPbgXhZpc7P8tfs5">Tangerang, Indonesia</a></p>
               </div>
               <div class="flex items-center space-x-3">
                 <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
@@ -341,6 +356,51 @@
       });
     </script>
     <script>
+      // News category filter
+        (function () {
+          const filterButtons = document.querySelectorAll('[data-filter]');
+          const cards = document.querySelectorAll('[data-company]');
+          if (!filterButtons.length || !cards.length) return;
+
+          function setActiveButton(activeBtn) {
+            filterButtons.forEach(btn => {
+              if (btn === activeBtn) {
+                btn.classList.add(
+                  'bg-gradient-to-r',
+                  'from-card-umara-group-brown-light',
+                  'to-card-umara-group-brown-dark',
+                  'text-white'
+                );
+              } else {
+                btn.classList.remove(
+                  'bg-gradient-to-r',
+                  'from-card-umara-group-brown-light',
+                  'to-card-umara-group-brown-dark',
+                  'text-white'
+                );
+              }
+            });
+          }
+
+          filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+              const filter = btn.dataset.filter;
+
+              setActiveButton(btn);
+
+              cards.forEach(card => {
+                const company = card.dataset.company;
+                const show = filter === 'all' || company === filter;
+                card.classList.toggle('hidden', !show);
+              });
+            });
+          });
+
+          // default: aktifkan filter "All" saat pertama kali load
+          const defaultBtn = document.querySelector('[data-filter="all"]');
+          if (defaultBtn) defaultBtn.click();
+        })();
+
       // Toggle mobile nav
       (function () {
         const btn = document.getElementById("nav-toggle");
