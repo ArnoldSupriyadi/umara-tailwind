@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair
+    +Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet" />
+    <title>Groundbreaking Restaurant Roemah Umara Officially Opens</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark text-white">
+        <nav class="container mx-auto py-2 sm:px-6 lg:px-8 relative">
+            <div class="flex h-16 items-center">
+                <!-- Left: Brand -->
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="public/assets/images/logo-umara.svg" alt="Umara Group" class="h-10 w-auto" />
+                    <span class="sr-only">Umara Group</span>
+                </a>
+                <!-- Center: Desktop Nav -->
+                <div class="hidden md:flex items-center justify-end flex-1">
+                    <ul class="flex items-center gap-5">
+                        <li><a href="index.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">Home</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">About</a>
+                        </li>
+                        <li><a href="news-event.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">News</a>
+                        </li>
+                        <!-- <li> -->
+                        <!-- <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium hover:text-white"><img src="public/assets/images/logo-umara.svg" alt="Umara Group" class="h-14 w-auto" /></a> -->
+                        <!-- </li> -->
+                        <li><a href="careers.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">Careers</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium hover:bg-amber-100 hover:text-white">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Mobile menu button -->
+                <button id="nav-toggle" class="md:hidden ml-auto inline-flex items-center justify-center rounded-md p-2 text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-ind
+            aria-controls=" nav-mobile" aria-expanded="false" type="button">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- icon open -->
+                    <svg id="icon-open" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5" aria-hidden="true">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <!-- icon close -->
+                    <svg id="icon-close" class="h-6 w-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5" aria-hidden="true">
+                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Nav -->
+            <div id="nav-mobile"
+                class="md:hidden hidden absolute top-full left-0 right-0 bg-amber-100 border-t border-white/10 z-50 shadow-lg">
+                <ul class="flex flex-col items-center gap-1 py-3">
+                    <!-- pakai text-base agar nyaman di mobile -->
+                    <li class="w-full max-w-sm">
+                        <a href="about.html"
+                            class="block rounded-md px-3 py-2 text-base font-medium text-white bg-gray-900 text-center">About</a>
+                    </li>
+                    <li class="w-full max-w-sm">
+                        <a href="news-event.html"
+                            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-white/5 hover:text-white text-center">News</a>
+                    </li>
+                    <li class="w-full max-w-sm">
+                        <a href="careers.html"
+                            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-white/5 hover:text-white text-center">Careers</a>
+                    </li>
+                    <li class="w-full max-w-sm">
+                        <a href="contact.html"
+                            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-white/5 hover:text-white text-center">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- HERO SECTION -->
+        <!-- <section class="relative text-white py-20" style="background-image: url('public/assets/bg/UG-BACKGROUND-WEB-ABOUT.jpg'); background-size: cover; position: center center;"> -->
+            <!-- <div class="container mx-auto px-4 sm:px-6 lg:px-8"> -->
+                <!-- <div class="max-w-4xl mx-auto text-center"> -->
+<!--                     -->
+<!--                     -->
+                <!-- </div -->
+            <!-- </div> -->
+        <!-- </section> -->
+
+        <!-- NEWS DETAIL CONTENT -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Article Header -->
+                    <article>
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <!-- Article Image -->
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img src="public/assets/news/groundbreaking/img6.jpeg" alt="News Image" class="w-full h-96 object-cover">
+                            </div>
+
+                            <!-- Article Content -->
+                            <div class="p-8">
+                                <!-- Article Meta -->
+                                <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                                    <span class="bg-card-umara-group-brown-light text-white px-3 py-1 rounded-full">Umara Group</span>
+                                </div>
+                                <div class="date mb-4">
+                                    <p class="text-gray-600 text-sm">30 October 2025</p>
+                                </div>
+                                <!-- Article Title -->
+                                <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                                    Groundbreaking Restaurant Roemah Umara Officially Opens
+                                </h2>
+                                <!-- Article Body -->
+                                <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                                    <p class="mb-5">
+                                        Umara Group, a subsidiary of Honda Immora, has officially commenced the development of Roemah Umara, its newest
+                                        restaurant located on Jalan Veteran, South Jakarta. This groundbreaking milestone marks a strategic expansion of Umara
+                                        Catering into the restaurant sector, bringing Indonesian culinary experiences closer and more meaningfully to the
+                                        community.
+                                    </p>
+                                    <p class="mb-5">
+                                        Roemah Umara will showcase the richness of Indonesian flavors through a curated selection of heritage and authentic
+                                        dishes—crafted with the high standards of quality that have defined Umara Catering. Designed as a space that blends
+                                        traditional Indonesian charm with modern comfort, the restaurant will evoke the warmth of a classic Indonesian home,
+                                        reimagined for today’s dining lifestyle.
+                                    </p>
+                                    <p class="mb-5">
+                                        With the establishment of Roemah Umara, Umara Group strengthens its commitment to celebrating Indonesia’s culinary
+                                        heritage through authentic, heartfelt, and character-driven gastronomic experiences.
+                                    </p>
+
+                                    <!-- Carousel Foto -->
+                                    <div class="carousel-container">
+                                        <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                            Photo Highlights – Roemah Umara Groundbreaking
+                                        </h3>
+                                        
+                                        <div class="relative">
+                                            <button id="newsCarouselPrev" type="button" class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10
+                                                         w-10 h-10 rounded-full bg-white shadow-md border border-gray-200
+                                                         items-center justify-center hover:bg-gray-50 transition" aria-label="Previous photo">
+                                                <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                                                </svg>
+                                            </button>
+
+                                            <div id="newsCarousel" class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 -mx-4 px-4 md:mx-0 md:px-0">
+                                                <!-- Slide 1 -->
+                                                <figure class="min-w-[260px] sm:min-w-[320px] md:min-w-[360px] lg:min-w-[420px]
+                                                           bg-white rounded-xl overflow-hidden shadow-sm snap-start">
+                                                    <img src="public/assets/news/groundbreaking/img1.jpeg"
+                                                        alt="Management and project representatives during Roemah Umara groundbreaking ceremony"
+                                                        class="w-full h-64 object-cover" loading="lazy" />
+                                                    <figcaption class="text-sm text-gray-600 px-4 py-3">
+                                                        Opening the Groundbreaking Ceremony of Umara Group.
+                                                    </figcaption>
+                                                </figure>
+                                            
+                                                <!-- Slide 2 -->
+                                                <figure class="min-w-[260px] sm:min-w-[320px] md:min-w-[360px] lg:min-w-[420px]
+                                                           bg-white rounded-xl overflow-hidden shadow-sm snap-start">
+                                                    <img src="public/assets/news/groundbreaking/img2.jpeg"
+                                                        alt="Symbolic groundbreaking moment at Roemah Umara site" class="w-full h-64 object-cover" loading="lazy" />
+                                                    <figcaption class="text-sm text-gray-600 px-4 py-3">
+                                                        Symbolic groundbreaking to officially begin the construction.
+                                                    </figcaption>
+                                                </figure>
+                                            
+                                                <!-- Slide 3 -->
+                                                <figure class="min-w-[260px] sm:min-w-[320px] md:min-w-[360px] lg:min-w-[420px]
+                                                           bg-white rounded-xl overflow-hidden shadow-sm snap-start">
+                                                    <img src="public/assets/news/groundbreaking/img3.jpeg"
+                                                        alt="Roemah Umara architectural concept and site overview" class="w-full h-64 object-cover"
+                                                        loading="lazy" />
+                                                    <figcaption class="text-sm text-gray-600 px-4 py-3">
+                                                        Sharing the vision and development plan for the new Umara facility.
+                                                    </figcaption>
+                                                </figure>
+
+                                                <!-- Slide 4 -->
+                                                <figure class="min-w-[260px] sm:min-w-[320px] md:min-w-[360px] lg:min-w-[420px]
+                                                           bg-white rounded-xl overflow-hidden shadow-sm snap-start">
+                                                    <img src="public/assets/news/groundbreaking/img4.jpeg" alt="Roemah Umara architectural concept and site overview"
+                                                        class="w-full h-64 object-cover" loading="lazy" />
+                                                    <figcaption class="text-sm text-gray-600 px-4 py-3">
+                                                        The core team behind the Umara Restaurant & Central Kitchen project.
+                                                    </figcaption>
+                                                </figure>
+
+                                                <!-- Slide 5-->
+                                                <figure class="min-w-[260px] sm:min-w-[320px] md:min-w-[360px] lg:min-w-[420px]
+                                                           bg-white rounded-xl overflow-hidden shadow-sm snap-start">
+                                                    <img src="public/assets/news/groundbreaking/img5.jpeg" alt="Roemah Umara architectural concept and site overview"
+                                                        class="w-full h-64 object-cover" loading="lazy" />
+                                                    <figcaption class="text-sm text-gray-600 px-4 py-3">
+                                                        The first stone laid—officially starting the construction process.
+                                                    </figcaption>
+                                                </figure>
+                                            
+                                                <!-- Tambah slide lain kalau perlu -->
+
+                                                <!-- Next button -->
+                                                <button id="newsCarouselNext" type="button" class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10
+                                                             w-10 h-10 rounded-full bg-white shadow-md border border-gray-200
+                                                             items-center justify-center hover:bg-gray-50 transition" aria-label="Next photo">
+                                                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <!-- Related Articles -->
+                    <section class="mt-16">
+                        <h3 class="font-playfair text-2xl font-bold text-gray-900 mb-8">Related News</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <!-- Related Article 1 -->
+                            <article class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                                <img src="public/assets/CSR/peduli-posyandu.png" alt="Related news" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <span class="text-sm text-card-umara-group-brown-light font-medium">March 10, 2025</span>
+                                    <h4 class="font-semibold text-gray-900 mt-2 mb-3">CSR Program: Caring for Posyandu</h4>
+                                    <p class="text-gray-600 text-sm line-clamp-2">Umara Group successfully supported Posyandu in West Sumbawa (DINKES)...</p>
+                                    <a href="#" class="text-card-umara-group-brown-light hover:text-card-umara-group-brown-dark font-medium text-sm mt-3 inline-block">Read More →</a>
+                                </div>
+                            </article>
+
+                            <!-- Related Article 2 -->
+                            <article class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                                <img src="public/assets/CSR/peduli-tubercullosis.png" alt="Related news" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <span class="text-sm text-card-umara-group-brown-light font-medium">March 5, 2025</span>
+                                    <h4 class="font-semibold text-gray-900 mt-2 mb-3">CSR Program: Caring for Tuberculosis Patients</h4>
+                                    <p class="text-gray-600 text-sm line-clamp-2">West Sumbawa (DINKES) through the Caring for Tuberculosis program...</p>
+                                    <a href="#" class="text-card-umara-group-brown-light hover:text-card-umara-group-brown-dark font-medium text-sm mt-3 inline-block">Read More →</a>
+                                </div>
+                            </article>
+
+                            <!-- Related Article 3 -->
+                            <article class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                                <img src="public/assets/CSR/desa-sekongkang-kemuning.png" alt="Related news" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <span class="text-sm text-card-umara-group-brown-light font-medium">February 28, 2025</span>
+                                    <h4 class="font-semibold text-gray-900 mt-2 mb-3">CSR Program: Caring for the Village in Sekongkang Kemuning</h4>
+                                    <p class="text-gray-600 text-sm line-clamp-2">our CSR team visited Sekongkang Kemuning Village...</p>
+                                    <a href="#" class="text-card-umara-group-brown-light hover:text-card-umara-group-brown-dark font-medium text-sm mt-3 inline-block">Read More →</a>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Back to News -->
+                    <div class="mt-12 text-center">
+                        <a href="news-event.html" class="inline-flex items-center bg-card-umara-group-brown-light hover:bg-card-umara-group-brown-dark text-white px-6 py-3 rounded-md transition-colors font-medium">
+                            ← Back to All News
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#131313] text-white pt-12 pb-4">
+        <div class="container mx-auto px-4">
+          <!-- Footer Content -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+            <!-- Company Info -->
+            <div class="title-footer">
+              <picture>
+                <img src="public/assets/images/logo-umara.svg" alt="">
+              </picture>
+            </div>
+            <!-- Quick Links -->
+            <div class="title-footer">
+              <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+                <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                <li><a href="#highlights" class="text-gray-300 hover:text-white transition-colors">Highlights</a></li>
+                <li><a href="#our-client" class="text-gray-300 hover:text-white transition-colors">Our Clients</a></li>
+              </ul>
+            </div>
+            <!-- Services -->
+            <div class="title-footer">
+              <h3 class="text-xl font-bold mb-4">Our Services</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Corporate Catering</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Event Catering</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Wedding Catering</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Food Delivery</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Meal Planning</a></li>
+              </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="title-footer">
+              <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+              <div class="space-y-3">
+                <div class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 mt-1 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <p class="text-gray-300">Jakarta, Indonesia</p>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 
+      18 2 12.18 2 5V3z"
+                    ></path>
+                  </svg>
+                  <p class="text-gray-300"><a href="tel:02180600900">021-80600900</a></p>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                  </svg>
+                  <p class="text-gray-300">info@umaragroup.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Footer Bottom -->
+          <div class="border-t border-white pt-8">
+            <div class="flex flex-col md:flex-row justify-center items-center">
+              <p class="text-gray-300 mb-4 md:mb-0">Copyright © 2025 Umara Group. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+    </footer>
+    <script>
+        //Mobile Navigation Script
+        const navToggle = document.getElementById('nav-toggle');
+        const navMobile = document.getElementById('nav-mobile');
+        const iconOpen = document.getElementById('icon-open');
+        const iconClose = document.getElementById('icon-close');
+        navToggle.addEventListener('click', () => {
+            navMobile.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+
+        // Simple horizontal carousel for article photos
+            (function () {
+                const scroller = document.getElementById('newsCarousel');
+                const prevBtn = document.getElementById('newsCarouselPrev');
+                const nextBtn = document.getElementById('newsCarouselNext');
+
+                if (!scroller) return;
+
+                function scrollAmount() {
+                    // geser sekitar 80% lebar container
+                    return scroller.clientWidth * 0.8;
+                }
+
+                function scrollNext() {
+                    scroller.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+                }
+
+                function scrollPrev() {
+                    scroller.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+                }
+
+                if (nextBtn) nextBtn.addEventListener('click', scrollNext);
+                if (prevBtn) prevBtn.addEventListener('click', scrollPrev);
+
+                // Optional: tampilkan tombol hanya kalau kontennya lebih lebar dari container
+                function updateArrows() {
+                    const needsControl = scroller.scrollWidth > scroller.clientWidth + 10;
+                    [prevBtn, nextBtn].forEach(btn => {
+                        if (!btn) return;
+                        btn.classList.toggle('hidden', !needsControl || window.innerWidth < 768);
+                    });
+                }
+
+                window.addEventListener('resize', updateArrows);
+                window.addEventListener('load', updateArrows);
+                updateArrows();
+            })();
+    </script>
+</body>
