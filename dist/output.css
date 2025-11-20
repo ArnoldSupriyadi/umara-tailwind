@@ -1092,6 +1092,12 @@
   .break-inside-avoid {
     break-inside: avoid;
   }
+  .auto-cols-\[120px\] {
+    grid-auto-columns: 120px;
+  }
+  .grid-flow-col {
+    grid-auto-flow: column;
+  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -1559,6 +1565,9 @@
   }
   .bg-amber-200 {
     background-color: #964405;
+  }
+  .bg-amber-400 {
+    background-color: var(--color-amber-400);
   }
   .bg-amber-400\/10 {
     background-color: color-mix(in srgb, oklch(82.8% 0.189 84.429) 10%, transparent);
@@ -2075,6 +2084,9 @@
   .object-top {
     object-position: top;
   }
+  .p-0 {
+    padding: calc(var(--spacing) * 0);
+  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -2098,6 +2110,9 @@
   }
   .p-\[3px\] {
     padding: 3px;
+  }
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
@@ -2132,6 +2147,9 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
@@ -2149,6 +2167,9 @@
   }
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
+  }
+  .py-28 {
+    padding-block: calc(var(--spacing) * 28);
   }
   .py-32 {
     padding-block: calc(var(--spacing) * 32);
@@ -2699,6 +2720,9 @@
   .ease-out {
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
+  }
+  .will-change-transform {
+    will-change: transform;
   }
   .group-hover\:translate-x-1 {
     &:is(:where(.group):hover *) {
@@ -3504,6 +3528,11 @@
       min-width: 320px;
     }
   }
+  .sm\:auto-cols-\[140px\] {
+    @media (width >= 40rem) {
+      grid-auto-columns: 140px;
+    }
+  }
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3676,6 +3705,11 @@
       height: calc(var(--spacing) * 12);
     }
   }
+  .md\:h-14 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 14);
+    }
+  }
   .md\:h-20 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 20);
@@ -3766,6 +3800,11 @@
     @media (width >= 48rem) {
       --tw-translate-y: calc(var(--spacing) * -10);
       translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .md\:auto-cols-\[160px\] {
+    @media (width >= 48rem) {
+      grid-auto-columns: 160px;
     }
   }
   .md\:grid-cols-1 {
@@ -4301,6 +4340,11 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
+  .xl\:grid-cols-5 {
+    @media (width >= 80rem) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
   .xl\:grid-cols-10 {
     @media (width >= 80rem) {
       grid-template-columns: repeat(10, minmax(0, 1fr));
@@ -4328,6 +4372,19 @@
 @layer base {
   body {
     font-family: Nunito Sans, sans-serif;
+  }
+}
+@layer utilities {
+  @keyframes client-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-scroll {
+    animation: client-scroll 25s linear infinite;
   }
 }
 .btn-primary {
