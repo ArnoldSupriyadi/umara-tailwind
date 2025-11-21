@@ -568,9 +568,6 @@
   .my-8 {
     margin-block: calc(var(--spacing) * 8);
   }
-  .my-20 {
-    margin-block: calc(var(--spacing) * 20);
-  }
   .ms-3 {
     margin-inline-start: calc(var(--spacing) * 3);
   }
@@ -603,9 +600,6 @@
   }
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
-  }
-  .mt-20 {
-    margin-top: calc(var(--spacing) * 20);
   }
   .mt-32 {
     margin-top: calc(var(--spacing) * 32);
@@ -979,9 +973,6 @@
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
-  }
-  .max-w-\[12rem\] {
-    max-width: 12rem;
   }
   .max-w-\[90vw\] {
     max-width: 90vw;
@@ -1380,10 +1371,6 @@
     border-left-style: var(--tw-border-style);
     border-left-width: 4px;
   }
-  .border-dashed {
-    --tw-border-style: dashed;
-    border-style: dashed;
-  }
   .\!border-white\/30 {
     border-color: color-mix(in srgb, #fff 30%, transparent) !important;
     @supports (color: color-mix(in lab, red, red)) {
@@ -1767,12 +1754,6 @@
   }
   .bg-white {
     background-color: var(--color-white);
-  }
-  .bg-white\/0 {
-    background-color: color-mix(in srgb, #fff 0%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 0%, transparent);
-    }
   }
   .bg-white\/10 {
     background-color: color-mix(in srgb, #fff 10%, transparent);
@@ -2220,9 +2201,6 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
-  .py-6 {
-    padding-block: calc(var(--spacing) * 6);
-  }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
@@ -2240,9 +2218,6 @@
   }
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
-  }
-  .py-28 {
-    padding-block: calc(var(--spacing) * 28);
   }
   .py-32 {
     padding-block: calc(var(--spacing) * 32);
@@ -2321,6 +2296,9 @@
   }
   .font-merriweather {
     font-family: Merriweather, serif;
+  }
+  .font-nunito {
+    font-family: Nunito Sans, sans-serif;
   }
   .font-playfair {
     font-family: Playfair Display, serif;
@@ -2464,9 +2442,6 @@
   .text-\[\#CE8131\] {
     color: #CE8131;
   }
-  .text-\[\#E8DDC9\] {
-    color: #E8DDC9;
-  }
   .text-\[\#d97706\] {
     color: #d97706;
   }
@@ -2475,9 +2450,6 @@
   }
   .text-\[\#fef3c7\] {
     color: #fef3c7;
-  }
-  .text-\[\#text-\[\#67281F\]\] {
-    color: #text-[#67281F];
   }
   .text-amber-100 {
     color: #D68631;
@@ -2598,12 +2570,6 @@
   }
   .text-white {
     color: var(--color-white);
-  }
-  .text-white\/70 {
-    color: color-mix(in srgb, #fff 70%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--color-white) 70%, transparent);
-    }
   }
   .text-white\/80 {
     color: color-mix(in srgb, #fff 80%, transparent);
