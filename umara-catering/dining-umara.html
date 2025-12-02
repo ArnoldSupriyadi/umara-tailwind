@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Dining — Umara Catering</title>
+
+    <style>
+        /* Foundations */
+        :root{--ink:#0F1210;--accent:#CBB88A;--muted:#6B6F65}
+        .container-wide{max-width:1200px;margin:0 auto;padding:0 24px}
+        .container-full{width:100%;padding:0 16px}
+        @media (min-width:640px){.container-full{padding:0 24px}}
+        @media (min-width:1024px){.container-full{padding:0 40px}}
+        @media (min-width:1536px){.container-full{padding:0 64px}}
+        .container-hero-fluid{width:100vw;margin:0;padding:0;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+        /* Header & Navbar */
+        .nav-wrap{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #E1D5A6}
+        .brand{display:flex;align-items:center;gap:12px}
+        .nav-list{display:flex;align-items:center;gap:24px}
+        .nav-link{color:#1F2937;font-weight:500;padding:14px 4px}
+        .nav-link.active{color:var(--ink)}
+        .nav-toggle{display:none;align-items:center;justify-content:center;width:40px;height:40px;border-radius:12px;border:1px solid #e5e7eb}
+        @media (max-width:1024px){.nav-list{display:none}.nav-toggle{display:flex}}
+        /* Mobile Nav Panel */
+        .nav-panel{position:fixed;inset:0;z-index:60;display:block;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s cubic-bezier(.22,.61,.
+        36,1)}
+        .nav-panel.show{opacity:1;visibility:visible;pointer-events:auto}
+        .nav-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.45);opacity:0;transition:opacity .3s cubic-bezier(.22,.61,.36,1)}
+        .nav-sheet{position:relative;background:#fff;border-radius:0;width:clamp(280px,92vw,520px);margin:88px auto 0;padding:16px;opacity:0;
+        transform:translateY(-14px) scale(.98);will-change:transform,opacity;transition:transform .32s cubic-bezier(.22,.61,.36,1), opacity .32s cubic-bezier(.
+        22,.61,.36,1)}
+        .nav-panel.show .nav-backdrop{opacity:1}
+        .nav-panel.show .nav-sheet{opacity:1;transform:translateY(0) scale(1)}
+        .nav-mobile-list{display:flex;flex-direction:column;gap:6px}
+        .nav-mobile-list a{display:block;padding:12px 10px;border-radius:0;color:#111827;font-weight:600}
+
+         /* Footer */
+        .footer{padding:32px 0;border-top:1px solid #E1D5A6;background:#fff}
+        .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:24px}
+        @media (max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
+        @media (max-width:640px){.footer-grid{grid-template-columns:1fr}}
+        .foot-title{font-family:'Playfair Display',serif;font-weight:700;color:#0F1210;font-size:20px}
+        .foot-link{color:#374151}
+        .footer-bottom{margin-top:24px;padding-top:16px;border-top:1px solid #eee;color:#6B7280;font-size:14px}
+    </style>
+</head>
+<body>
+    <header class="nav-wrap">
+        <div class="container-full">
+            <div class="flex h-20 items-center justify-between">
+                <a class="brand" href="#">
+                    <img src="../public/assets/ucr/logo-ucr-catering.png" alt="Umara Catering" class="h-12 w-auto">
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                        </path>
+                    </svg>
+                </button>
+                <nav class="nav-list">
+                    <a href="../ptumaraciptarasa.html" class="nav-link active">Overview</a>
+                    <a href="../umara-catering/wedding-umara.html" class="nav-link">Wedding</a>
+                    <a href="../umara-catering/meeting-umara.html" class="nav-link">Meeting</a>
+                    <a href="../umara-catering/event-umara.html" class="nav-link">Event</a>
+                    <a href="../umara-catering/mealbox-umara.html" class="nav-link">Mealbox</a>
+                    <a href="../umara-catering/dining-umara.html" class="nav-link">Dining</a>
+                    <a href="../umara-catering/gallery-umara.html" class="nav-link">Gallery</a>
+                </nav>
+            </div>
+            <div class="flex items-center justify-between w-full border-t border-[#E1D5A6] py-4">
+                <div class="text-sm text-gray-700"><a href="https://maps.app.goo.gl/YC4n6zPsfpeXsECR8" target="_blank">📍
+                        Jakarta, Indonesia</a></div>
+                <div class="text-sm text-gray-700"><a href="https://wa.me/6281212008700" target="_blank">📞
+                        0812‑1200‑8700</a></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="nav-panel" id="navPanel">
+        <div class="nav-backdrop" id="navBackdrop"></div>
+        <div class="nav-sheet">
+            <div class="nav-mobile-list" id="navMobileList"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-wide">
+            <div class="footer-grid">
+                <div>
+                    <a class="brand" href="#">
+                        <img src="../public/assets/ucr/logo-ucr-catering.png" alt="Umara Catering" class="h-12 w-auto mb-2">
+                    </a>
+                    <p class="lede" style="margin-top:8px">Premium Experiences for Weddings, Meetings & Events.</p>
+                </div>
+                <div>
+                    <h4 class="foot-title">Overview</h4>
+                    <div class="flex flex-col gap-2" style="margin-top:10px">
+                        <a href="#wedding" class="foot-link">Wedding</a>
+                        <a href="#meeting" class="foot-link">Meeting</a>
+                        <a href="#event" class="foot-link">Event</a>
+                        <a href="#mealbox" class="foot-link">Mealbox</a>
+                        <a href="#gallery" class="foot-link">Gallery</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="foot-title">Contact</h4>
+                    <div class="flex flex-col gap-2" style="margin-top:10px">
+                        <span class="foot-link">📍 Jakarta, Indonesia</span>
+                        <a class="foot-link" href="tel:+6281212008700">📞 +62-812-1200-8700</a>
+                        <a class="foot-link" href="mailto:info@umaracatering.com">✉️ info@umaracatering.com</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="foot-title">Address</h4>
+                    <div class="flex flex-col gap-2" style="margin-top:10px">
+                        <a class="foot-link" href="https://maps.app.goo.gl/YC4n6zPsfpeXsECR8" target="_blank"
+                            rel="noopener">
+                            Jl. H. Mandor No.34 FG, RT.16/RW.2, Cilandak Barat,<br>
+                            Kec. Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12430
+                        </a>
+                    </div>
+                    <h4 class="foot-title" style="margin-top:16px">For More Information</h4>
+                    <a class="foot-link" href="https://linktr.ee/umaracatering" target="_blank"
+                        rel="noopener">https://linktr.ee/umaracatering</a>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">© 2026 PT Umara Cipta Rasa. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>
