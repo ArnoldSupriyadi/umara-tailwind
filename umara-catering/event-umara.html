@@ -212,6 +212,8 @@
             color: #6B7280;
             font-size: 14px
         }
+
+        .headline{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.01em;font-size:48px;line-height:1.1}
     </style>
 </head>
 
@@ -256,6 +258,52 @@
         </div>
     </div>
 
+    <main>
+        <section>
+            <section id="hero">
+                <div class="container-hero-fluid">
+                    <div class="hero-media">
+                        <img src="../public/assets/vector/sample-image-wide.jpg" alt="Meeting" class="h-auto w-full">
+                    </div>
+                </div>
+                <div class="container-wide">
+                    <div class="hero-text pt-30 pb-20">
+                        <h1 class="headline text-center mb-5 tracking-wider">Event</h1>
+                        <p class="subheadline text-center tracking-wider">Designed to elevate every occasion, Umara brings refined food experiences to a wide spectrum of events from brand launches and corporate celebrations to social gatherings and private showcases. Beyond serving menus, our team collaborates with you to shape concepts, presentation styles, and service flow — offering insight, creativity, and thoughtful execution.Each event is approached with intention, ensuring impactful moments, elevated taste, and a memorable experience for
+                        every guest.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="event-gallery">
+            <div class="container-wide">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../public/assets/vector/sample-image-wide.jpg" alt="Event" class="h-auto w-full">
+                    </div>
+                </div>
+            <div class="container">
+                <div class="gallery-grid grid grid-cols-3">
+                    <img src="../public/assets/vector/sample-image-wide.jpg" alt="Event" class="h-auto w-full">
+                    <img src="../public/assets/vector/sample-image-wide.jpg" alt="Event" class="h-auto w-full">
+                    <img src="../public/assets/vector/sample-image-wide.jpg" alt="Event" class="h-auto w-full">
+                    <img src="../public/assets/vector/sample-image-wide.jpg" alt="Event" class="h-auto w-full">
+                    <img src="../public/assets/vector/sample-image-wide.jpg" alt="Event" class="h-auto w-full">
+                    <img src="../public/assets/vector/sample-image-wide.jpg" alt="Event" class="h-auto w-full">
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-action" class="mb-20 py-[72px]">
+            <div class="container-wide text-center">
+                <h1 class="py-5 text-6xl font-playfair">Turning Moments into Signature Experiences</h1>
+                <p class="font-playfair mb-10">We collaborate with you to elevate celebrations, launches, and executive functions with inspiring ideas, curated menus, and polished delivery.</p>
+                <a href="../umara-catering/contact-umara.html" class="btn border-1 border-[#e1d5a6] p-3 bg-[#fffbe8] font-bold">Start Your Event Plan</a>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container-wide">
             <div class="footer-grid">
@@ -280,7 +328,7 @@
                     <h4 class="foot-title">Contact</h4>
                     <div class="flex flex-col gap-2" style="margin-top:10px">
                         <span class="foot-link">📍 Jakarta, Indonesia</span>
-                        <a class="foot-link" href="tel:+6281212008700">📞 +62-812-1200-8700</a>
+                        <a class="foot-link" href="tel:+6281212008700">📞 0812-1200-8700</a>
                         <a class="foot-link" href="mailto:info@umaracatering.com">✉️ info@umaracatering.com</a>
                     </div>
                 </div>
@@ -302,5 +350,25 @@
         </div>
     </footer>
 </body>
-
+<script>
+    /* Navbar */
+    (function () {
+        const toggle = document.getElementById('navToggle');
+        const panel = document.getElementById('navPanel');
+        const backdrop = document.getElementById('navBackdrop');
+        const mobileList = document.getElementById('navMobileList');
+        const desktopLinks = document.querySelectorAll('.nav-list a');
+        desktopLinks.forEach(function (link) {
+            const a = link.cloneNode(true);
+            a.classList.remove('active');
+            a.addEventListener('click', function () { panel.classList.remove('show'); toggle.setAttribute('aria-expanded', 'false'); });
+            mobileList.appendChild(a);
+        });
+        function open() { panel.classList.add('show'); toggle.setAttribute('aria-expanded', 'true'); }
+        function close() { panel.classList.remove('show'); toggle.setAttribute('aria-expanded', 'false'); }
+        if (toggle) toggle.addEventListener('click', function () { if (panel.classList.contains('show')) close(); else open(); });
+        if (backdrop) backdrop.addEventListener('click', close);
+        window.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
+</script>
 </html>

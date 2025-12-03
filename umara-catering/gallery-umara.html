@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/output.css" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Gallery — Umara Catering</title>
@@ -212,6 +211,8 @@
             color: #6B7280;
             font-size: 14px
         }
+
+        .headline{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.01em;font-size:48px;line-height:1.1}
     </style>
 </head>
 
@@ -256,13 +257,86 @@
         </div>
     </div>
 
+     <main>
+        <section id="gallery" class="py-[72px]">
+            <div class="container-wide">
+                <h1 class="py-5 text-6xl font-playfair">Gallery</h1>
+                <p class="font-playfair mb-10">Discover a curated collection of our culinary creations — thoughtfully plated, beautifully presented, and designed to elevate every occasion.</p>
+            </div>
+        </section>
+
+        <section id="photo-gallery" class="">
+            <div class="container-wide">
+                <h2 class="font-playfair text-4xl mb-4">Asian Cuisine</h2>
+            </div>
+            <div class="container-wide">
+                <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-3 gap-4" data-gallery-group="asian">
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Asian 1"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Asian 2"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Asian 3"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Asian 4"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Asian 5"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Asian 6"></div>
+                </div>
+            </div>
+
+            <div class="container-wide mt-10">
+                <h2 class="font-playfair text-4xl mb-4">Western Cuisine</h2>
+            </div>
+            <div class="container-wide">
+                <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-3 gap-4" data-gallery-group="western">
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Western 1"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Western 2"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Western 3"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Western 4"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Western 5"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Western 6"></div>
+                </div>
+            </div>
+
+            <div class="container-wide mt-10">
+                <h2 class="font-playfair text-4xl mb-4">Pastry & Dessert</h2>
+            </div>
+            <div class="container-wide">
+                <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-3 gap-4" data-gallery-group="pastry">
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Pastry 1"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Pastry 2"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Pastry 3"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Pastry 4"></div>
+                </div>
+            </div>
+
+            <div class="container-wide mt-10">
+                <h2 class="font-playfair text-4xl mb-4">Beverage</h2>
+            </div>
+            <div class="container-wide">
+                <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-3 gap-4" data-gallery-group="beverage">
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Beverage 1"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Beverage 2"></div>
+                    <div class="mb-4" style="break-inside: avoid"><img class="w-full h-auto object-cover" src="../public/assets/vector/image-sample.png" alt="Beverage 3"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-overview" class="py-[72px]">
+            <div class="container-wide">
+                <div class="cta-block">
+                    <h2 class="py-5 text-6xl font-playfair">Your next remarkable event begins here.</h2>
+                    <p class="subheadline text-center tracking-wider mb-10">Contact our team to start your consultation.</p>
+                    <div class="text-center">
+                        <a href="https://wa.me/6281234567890" class="btn border-1 border-[#e1d5a6] p-3 bg-[#fffbe8] font-bold">Let's Discuss Your Event Needs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+     </main>
+
     <footer class="footer">
         <div class="container-wide">
             <div class="footer-grid">
                 <div>
                     <a class="brand" href="#">
-                        <img src="../public/assets/ucr/logo-ucr-catering.png" alt="Umara Catering"
-                            class="h-12 w-auto mb-2">
+                        <img src="../public/assets/ucr/logo-ucr-catering.png" alt="Umara Catering" class="h-12 w-auto mb-2">
                     </a>
                     <p class="lede" style="margin-top:8px">Premium Experiences for Weddings, Meetings & Events.</p>
                 </div>
@@ -301,6 +375,78 @@
             <div class="footer-bottom text-center">© 2026 PT Umara Cipta Rasa. All rights reserved.</div>
         </div>
     </footer>
-</body>
+    <div id="lightbox" role="dialog" aria-modal="true" class="fixed inset-0 z-50 hidden">
+        <div id="lbBackdrop" class="absolute inset-0 bg-black/80"></div>
+        <div class="relative z-10 h-full w-full flex items-center justify-center">
+            <div class="relative w-full max-w-6xl px-3 sm:px-6">
+                <img id="lbImage" src="" alt="" class="max-h-[86vh] w-auto mx-auto object-contain select-none">
+                <button id="lbClose" aria-label="Close" class="absolute top-4 right-3 sm:right-6 px-3 sm:px-4 py-2 border border-white text-white bg-white/10 hover:bg-white/20">Close</button>
+                <div class="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-2 sm:px-6 pointer-events-none">
+                    <button id="lbPrev" aria-label="Previous" class="pointer-events-auto px-3 sm:px-4 py-2 border border-white text-white bg-white/10 hover:bg-white/20">Prev</button>
+                    <button id="lbNext" aria-label="Next" class="pointer-events-auto px-3 sm:px-4 py-2 border border-white text-white bg-white/10 hover:bg-white/20">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    /* Navbar */
+    (function () {
+        const toggle = document.getElementById('navToggle');
+        const panel = document.getElementById('navPanel');
+        const backdrop = document.getElementById('navBackdrop');
+        const mobileList = document.getElementById('navMobileList');
+        const desktopLinks = document.querySelectorAll('.nav-list a');
+        desktopLinks.forEach(function (link) {
+            const a = link.cloneNode(true);
+            a.classList.remove('active');
+            a.addEventListener('click', function () { panel.classList.remove('show'); toggle.setAttribute('aria-expanded', 'false'); });
+            mobileList.appendChild(a);
+        });
+        function open() { panel.classList.add('show'); toggle.setAttribute('aria-expanded', 'true'); }
+        function close() { panel.classList.remove('show'); toggle.setAttribute('aria-expanded', 'false'); }
+        if (toggle) toggle.addEventListener('click', function () { if (panel.classList.contains('show')) close(); else open(); });
+        if (backdrop) backdrop.addEventListener('click', close);
+        window.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
 
+    (function(){
+        var root = document.getElementById('photo-gallery');
+        var overlay = document.getElementById('lightbox');
+        var imgEl = document.getElementById('lbImage');
+        var closeBtn = document.getElementById('lbClose');
+        var prevBtn = document.getElementById('lbPrev');
+        var nextBtn = document.getElementById('lbNext');
+        var backdrop = document.getElementById('lbBackdrop');
+        if(!root || !overlay || !imgEl) return;
+        var currentList = [];
+        var idx = 0;
+        function show(){ overlay.classList.remove('hidden'); }
+        function hide(){ overlay.classList.add('hidden'); }
+        function update(){ var item = currentList[idx]; if(!item) return; imgEl.src = item.src; imgEl.alt = item.alt || ''; }
+        function prev(){ if(!currentList.length) return; idx = (idx - 1 + currentList.length) % currentList.length; update(); }
+        function next(){ if(!currentList.length) return; idx = (idx + 1) % currentList.length; update(); }
+        root.addEventListener('click', function(e){
+            var img = e.target.closest('img');
+            if(!img) return;
+            var container = img.closest('[data-gallery-group]');
+            if(!container) return;
+            var imgs = Array.from(container.querySelectorAll('img'));
+            currentList = imgs.map(function(i){ return { src: i.src, alt: i.alt }; });
+            idx = Math.max(0, imgs.indexOf(img));
+            update();
+            show();
+        });
+        function onKey(e){ if(overlay.classList.contains('hidden')) return; if(e.key === 'Escape') hide(); else if(e.key === 'ArrowLeft') prev(); else if(e.key === 'ArrowRight') next(); }
+        window.addEventListener('keydown', onKey);
+        if(closeBtn) closeBtn.addEventListener('click', hide);
+        if(backdrop) backdrop.addEventListener('click', hide);
+        if(prevBtn) prevBtn.addEventListener('click', prev);
+        if(nextBtn) nextBtn.addEventListener('click', next);
+        var sx = 0;
+        imgEl.addEventListener('touchstart', function(e){ if(!e.changedTouches || !e.changedTouches[0]) return; sx = e.changedTouches[0].clientX; });
+        imgEl.addEventListener('touchend', function(e){ if(!e.changedTouches || !e.changedTouches[0]) return; var dx = e.changedTouches[0].clientX - sx; if(Math.abs(dx) > 30){ if(dx < 0) next(); else prev(); } });
+        Array.from(root.querySelectorAll('[data-gallery-group] img')).forEach(function(i){ i.style.cursor = 'zoom-in'; });
+    })();
+    </script>
+</body>
 </html>

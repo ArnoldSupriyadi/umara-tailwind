@@ -89,6 +89,18 @@
         </div>
     </div>
 
+    <main>
+        <section id="coming-soon" class="py-[72px]">
+            <div class="container-wide text-center">
+                <h1 class="font-['Playfair_Display',serif] text-4xl sm:text-5xl font-bold tracking-[0.01em] text-[#0F1210]">Dining Experience — Coming Soon</h1>
+                <p class="text-gray-700 mt-4">We’re crafting a refined dining journey. Stay tuned for launch updates.</p>
+                <div class="mt-8 inline-flex items-center gap-3">
+                    <a href="../ptumaraciptarasa.html" class="px-5 py-3 border border-gray-300 text-gray-800 bg-[#fffbe8] font-bold">Back to Overview</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container-wide">
             <div class="footer-grid">
@@ -134,4 +146,25 @@
         </div>
     </footer>
 </body>
+<script>
+    /* Navbar */
+    (function () {
+        const toggle = document.getElementById('navToggle');
+        const panel = document.getElementById('navPanel');
+        const backdrop = document.getElementById('navBackdrop');
+        const mobileList = document.getElementById('navMobileList');
+        const desktopLinks = document.querySelectorAll('.nav-list a');
+        desktopLinks.forEach(function (link) {
+            const a = link.cloneNode(true);
+            a.classList.remove('active');
+            a.addEventListener('click', function () { panel.classList.remove('show'); toggle.setAttribute('aria-expanded', 'false'); });
+            mobileList.appendChild(a);
+        });
+        function open() { panel.classList.add('show'); toggle.setAttribute('aria-expanded', 'true'); }
+        function close() { panel.classList.remove('show'); toggle.setAttribute('aria-expanded', 'false'); }
+        if (toggle) toggle.addEventListener('click', function () { if (panel.classList.contains('show')) close(); else open(); });
+        if (backdrop) backdrop.addEventListener('click', close);
+        window.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
+</script>
 </html>
