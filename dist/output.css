@@ -743,12 +743,6 @@
   .aspect-\[4\/5\] {
     aspect-ratio: 4/5;
   }
-  .aspect-\[16\/9\] {
-    aspect-ratio: 16/9;
-  }
-  .aspect-\[21\/9\] {
-    aspect-ratio: 21/9;
-  }
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
@@ -1156,9 +1150,6 @@
   .columns-1 {
     columns: 1;
   }
-  .columns-2 {
-    columns: 2;
-  }
   .break-inside-avoid {
     break-inside: avoid;
   }
@@ -1442,9 +1433,6 @@
   .border-\[\#E1D5A6\] {
     border-color: #E1D5A6;
   }
-  .border-\[\#\] {
-    border-color: #;
-  }
   .border-\[\#debe9d\] {
     border-color: #debe9d;
   }
@@ -1577,9 +1565,6 @@
       background-color: color-mix(in oklab, var(--color-white) 60%, transparent) !important;
     }
   }
-  .bg-\[\#\#fffbe7\] {
-    background-color: ##fffbe7;
-  }
   .bg-\[\#3a4024\] {
     background-color: #3a4024;
   }
@@ -1660,9 +1645,6 @@
   }
   .bg-\[\#e3d7c3\] {
     background-color: #e3d7c3;
-  }
-  .bg-\[\#fffbe7\] {
-    background-color: #fffbe7;
   }
   .bg-\[\#fffbe8\] {
     background-color: #fffbe8;
@@ -2294,15 +2276,6 @@
   .py-32 {
     padding-block: calc(var(--spacing) * 32);
   }
-  .py-\[48px\] {
-    padding-block: 48px;
-  }
-  .py-\[50px\] {
-    padding-block: 50px;
-  }
-  .py-\[50xp\] {
-    padding-block: 50xp;
-  }
   .py-\[72px\] {
     padding-block: 72px;
   }
@@ -2326,12 +2299,6 @@
   }
   .pt-30 {
     padding-top: calc(var(--spacing) * 30);
-  }
-  .pt-50 {
-    padding-top: calc(var(--spacing) * 50);
-  }
-  .pt-\[50px\] {
-    padding-top: 50px;
   }
   .pr-0 {
     padding-right: calc(var(--spacing) * 0);
@@ -3672,11 +3639,6 @@
       left: calc(var(--spacing) * 4) !important;
     }
   }
-  .sm\:col-span-1 {
-    @media (width >= 40rem) {
-      grid-column: span 1 / span 1;
-    }
-  }
   .sm\:mb-4 {
     @media (width >= 40rem) {
       margin-bottom: calc(var(--spacing) * 4);
@@ -4035,11 +3997,6 @@
     @media (width >= 48rem) {
       --tw-translate-y: calc(var(--spacing) * -10);
       translate: var(--tw-translate-x) var(--tw-translate-y);
-    }
-  }
-  .md\:columns-2 {
-    @media (width >= 48rem) {
-      columns: 2;
     }
   }
   .md\:auto-cols-\[160px\] {
@@ -4417,16 +4374,6 @@
       grid-template-columns: repeat(12, minmax(0, 1fr));
     }
   }
-  .lg\:grid-cols-\[2_25\%_25\%\] {
-    @media (width >= 64rem) {
-      grid-template-columns: 2 25% 25%;
-    }
-  }
-  .lg\:grid-cols-\[25\%_25\%_25\%\] {
-    @media (width >= 64rem) {
-      grid-template-columns: 25% 25% 25%;
-    }
-  }
   .lg\:grid-cols-\[25\%_25\%_50\%\] {
     @media (width >= 64rem) {
       grid-template-columns: 25% 25% 50%;
@@ -4608,11 +4555,6 @@
   .xl\:columns-3 {
     @media (width >= 80rem) {
       columns: 3;
-    }
-  }
-  .xl\:columns-4 {
-    @media (width >= 80rem) {
-      columns: 4;
     }
   }
   .xl\:grid-cols-3 {
