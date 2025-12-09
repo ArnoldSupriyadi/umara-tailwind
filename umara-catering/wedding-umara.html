@@ -267,7 +267,7 @@
         <section id="hero" class="hero-card">
             <div class="container-hero-fluid">
                 <div class="hero-media">
-                    <img src="../public/assets/ucr/UCR-WEB/wedding-hero-img.png" alt="Wedding" class="h-auto w-full">
+                    <img src="../public/assets/ucr/UCR-WEB/wedding-hero-img.jpg" alt="Wedding" class="h-auto w-full">
                 </div>
             </div>
             <div class="container-wide">
@@ -303,15 +303,15 @@
                 <div id="venueTrack" class="flex gap-4 transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] will-change-transform">
                     <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]">
                         <div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden">
-                            <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" src="../public/assets/vector/image-sample.png" alt="Venue 1">
+                            <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" src="../public/assets/ucr/UCR-WEB/wedding/highlight-moments1.png" alt="Venue 1">
                         </div>
-                        <p class="text-gray-600 mt-2">Grand ballroom setup</p>
+                        <p class="text-gray-600 mt-2"><a href="#">📍 Menara Danareksa</a></p>
                     </div>
                     <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]">
                         <div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden">
-                            <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" src="../public/assets/vector/image-sample.png" alt="Venue 2">
+                            <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" src="../public/assets/ucr/UCR-WEB/wedding/highlight-moments2.png" alt="Venue 2">
                         </div>
-                        <p class="text-gray-600 mt-2">Intimate garden ceremony</p>
+                        <p class="text-gray-600 mt-2"><a href="#" target="_blank">📍 Musem Macan</a></p>
                     </div>
                     <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]">
                         <div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden">
@@ -348,11 +348,11 @@
             </div>
         </section>
 
-        <section id="wedding-venues" class="py-[72px] bg-[#e1d6a5]">
+        <section id="wedding-venues" class="py-[72px] bg-[#fffdee]">
             <div class="container-wide venue">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <img src="../public/assets/vector/image-sample.png" alt="Wedding Venue" class="w-full h-auto rounded-lg shadow-lg object-cover">
+                        <img src="../public/assets/ucr/UCR-WEB/wedding/wedding-venue.png" alt="Wedding Venue" class="w-full h-auto rounded-lg shadow-lg object-cover">
                     </div>
                     <div>
                         <h3 class="title headline mb-4">Wedding Venues</h3>
@@ -369,7 +369,7 @@
                         wedding unfolds with sentiment, clarity, and effortless elegance.</p>
                     </div>
                     <div>
-                        <img src="../public/assets/vector/image-sample.png" alt="Wedding Venue" class="w-full h-auto rounded-lg shadow-lg object-cover">
+                        <img src="../public/assets/ucr/UCR-WEB/wedding/wedding-advisor.png" alt="Wedding Venue" class="w-full h-auto rounded-lg shadow-lg object-cover">
                     </div>
                 </div>
             </div>
@@ -477,10 +477,10 @@
   var i = L; // start at first of middle set
   var isAnimating = false;
   function setActive(){
-    items.forEach(function(el,idx){
+    items.forEach(function(el){
       var img = el.querySelector('img');
       if(!img) return;
-      img.style.transform = idx===i ? 'scale(2)' : 'scale(1)';
+      img.style.transform = 'scale(1)';
     });
   }
   function center(animated){

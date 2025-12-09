@@ -1565,6 +1565,9 @@
       background-color: color-mix(in oklab, var(--color-white) 60%, transparent) !important;
     }
   }
+  .bg-\[\#\#e0d6a4\] {
+    background-color: ##e0d6a4;
+  }
   .bg-\[\#3a4024\] {
     background-color: #3a4024;
   }
@@ -1637,8 +1640,17 @@
   .bg-\[\#FCF0CE\] {
     background-color: #FCF0CE;
   }
+  .bg-\[\#d4ba13\] {
+    background-color: #d4ba13;
+  }
+  .bg-\[\#dcd8bd\] {
+    background-color: #dcd8bd;
+  }
   .bg-\[\#debe9d\] {
     background-color: #debe9d;
+  }
+  .bg-\[\#e0d6a4\] {
+    background-color: #e0d6a4;
   }
   .bg-\[\#e1d6a5\] {
     background-color: #e1d6a5;
@@ -1646,8 +1658,17 @@
   .bg-\[\#e3d7c3\] {
     background-color: #e3d7c3;
   }
+  .bg-\[\#eee8c1\] {
+    background-color: #eee8c1;
+  }
+  .bg-\[\#f6f3e5\] {
+    background-color: #f6f3e5;
+  }
   .bg-\[\#fffbe8\] {
     background-color: #fffbe8;
+  }
+  .bg-\[\#fffdee\] {
+    background-color: #fffdee;
   }
   .bg-amber-50 {
     background-color: var(--color-amber-50);
