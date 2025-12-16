@@ -38,7 +38,7 @@
         .hero-media{position:relative;height:clamp(520px,70vh,780px)}
         .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center}
         .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.15) 40%, rgba(0,0,0,0) 70%)}
-        .hero-text{position:absolute;left:56px;bottom:56px;max-width:720px}
+        .hero-text{position:absolute;left:56px;bottom:56px;max-width:720px;background-color:rgba(0,0,0,.50);}
         
         @media (max-width:768px){.hero-text{left:24px;right:24px;bottom:24px}}
 
@@ -83,7 +83,8 @@
         .slider-item.active{opacity:1}
         .slider-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
         .slider-caption{position:absolute;left:14px;bottom:14px;color:#fff;background:rgba(0,0,0,.45);padding:6px 10px}
-        .slider-controls{position:absolute;left:50%;transform:translateX(-50%);bottom:16px;display:flex;align-items:center;gap:10px;padding:8px 12px;background:rgba(0,0,0,.35);border-radius:0;z-index:10}
+        .slider-controls{position:absolute;right:16px;bottom:16px;display:flex;align-items:center;gap:10px;padding:8px 12px;background:rgba(0,0,0,.35);border-radius:0;z-index:10}
+        @media (max-width:1024px){.slider-controls{display:none}}
         .ctrl-btn{width:34px;height:34px;display:flex;align-items:center;justify-content:center;color:#fff;background:rgba(255,255,255,.18)}
         .slider-dots{display:flex;align-items:center;gap:8px}
         .slider-dot{width:22px;height:3px;background:rgba(255,255,255,.45)}
@@ -92,7 +93,7 @@
         .slider-hero .slider-stage{height:clamp(520px,70vh,780px);padding-top:0}
         .slider-hero .slider-item img{object-fit:cover;object-position:center}
         .slider-hero .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.15) 40%, rgba(0,0,0,0) 70%)}
-        .slider-hero .hero-text{position:absolute;left:56px;bottom:56px;max-width:720px}
+        .slider-hero .hero-text{position:absolute;left:56px;bottom:56px;max-width:720px;padding: 10px;}
         @media (max-width:768px){.slider-hero .hero-text{left:24px;right:24px;bottom:24px}}
         
         /* Footer */
@@ -151,15 +152,15 @@
                                 <img src="public/assets/ucr/authentic-recipes/Nasi-Umara-Horizontal.jpg" alt="Premium Ambiance">
                             </div>
                             <div class="slider-item">
-                                <img src="public/assets/ucr/UCR-WEB/wedding-hero-img.jpg" alt="Wedding Ambiance">
+                                <img src="public/assets/ucr/UCR-WEB/wedding-slider1.png" alt="Wedding Ambiance">
                             </div>
                             <div class="slider-item">
-                                <img src="public/assets/ucr/UCR-WEB/overview-slide-3.jpg" alt="Meeting Ambiance">
+                                <img src="public/assets/ucr-wedding-catering/3.jpg" alt="Meeting Ambiance">
                             </div>
                             <div class="hero-overlay"></div>
                             <div class="hero-text">
-                                <h3 class="font-['Playfair_Display',serif] text-white font-bold tracking-[0.01em] text-5xl leading-[1.1]">Premium Culinary Journeys for Every Grand Occasion</h3>
-                                <p class="text-white opacity-90 mt-4">Elevating Weddings, Meetings, and Events through Exceptional Dining.</p>
+                                <h3 class="font-['Playfair_Display',serif] text-white font-bold tracking-[0.01em] text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1]">Premium Culinary Journeys for Every Grand Occasion</h3>
+                                <p class="text-white opacity-90 mt-4 text-sm sm:text-base md:text-lg">Elevating Weddings, Meetings, and Events through Exceptional Dining.</p>
                             </div>
                         </div>
                         <div class="slider-controls">
@@ -181,20 +182,20 @@
                 <h2 class="title">Welcome to Umara</h2>
                 <small>A destination for elevated wedding, meeting, and event experiences.</small>
 
-                <p class="lede">
+                <p class="lede lg:text-lg md:text-lg">
                     Located in South Jakarta, Umara brings a modern expression of refined Indonesian excellence — thoughtfully crafted for
                     celebrations, corporate engagements, and curated private occasions. Every experience is shaped with intention, combining
                     culinary artistry, meticulous planning, and seamless coordination to create moments that feel both effortless and
                     memorable.
                 </p>
 
-                <p class="lede" style="margin-top:12px">
+                <p class="lede lg:text-lg md:text-lg" style="margin-top:12px">
                     Guided by seasoned chefs and an experienced event team, Umara presents bespoke menus, elegant setups, and a warm,
                     attentive approach that honors every client’s vision. From intimate gatherings to large-scale events, each moment is
                     designed with precision, comfort, and understated sophistication.
                 </p>
 
-                <p class="lede">
+                <p class="lede lg:text-lg md:text-lg">
                     Umara is where meaningful celebrations take shape — a place where exceptional service and refined ambiance come together
                     to create experiences that feel personal, polished, and exclusively yours.
                 </p>
@@ -206,28 +207,28 @@
                 <h2 class="title">Experiences with Umara</h2>
                 <div class="grid-3" style="margin-top:24px">
                     <div class="card" id="wedding">
-                        <div class="card-media"><img src="public/assets/ucr/UCR-WEB/weddingexperience725x472-03.jpg" alt="Wedding"></div>
+                        <div class="card-media"><img src="public/assets/ucr-wedding-catering/2.jpg" alt="Wedding"></div>
                         <div class="card-body">
                             <h3 style="font-weight:700;color:#111827">Wedding</h3>
                             <p style="color:#6B7280;margin-top:6px">Elegant wedding experiences with bespoke menus and refined service.</p>
-                            <a href="#" class="link" style="margin-top:10px;display:inline-block">Learn More</a>
+                            <a href="umara-catering/wedding-umara.html" class="link" style="margin-top:10px;display:inline-block">Learn More</a>
                         </div>
                     </div>
                     <div class="card" id="meeting">
-                        <div class="card-media"><img src="public/assets/ucr/UCR-WEB/meeting experience 725x472-05.webp" alt="Meeting"></div>
+                        <div class="card-media"><img src="public/assets/ucr/UCR-WEB/meeting.jpg" alt="Meeting"></div>
                         <div class="card-body">
                             <h3 style="font-weight:700;color:#111827">Meeting</h3>
                             <p style="color:#6B7280;margin-top:6px">Professional meeting experiences with curated menus and seamless coordination.</p>
-                            <a href="#" class="link" style="margin-top:10px;display:inline-block">Learn More</a>
+                            <a href="umara-catering/meeting-umara.html" class="link" style="margin-top:10px;display:inline-block">Learn More</a>
                         </div>
                     </div>
                     <div class="card" id="event">
-                        <div class="card-media"><img src="public/assets/ucr/UCR-WEB/event experience 725x472-07.jpg" alt="Event">
+                        <div class="card-media"><img src="public/assets/ucr-coorporate-event/2.jpg" alt="Event">
                         </div>
                         <div class="card-body">
                             <h3 style="font-weight:700;color:#111827">Event</h3>
                             <p style="color:#6B7280;margin-top:6px">Exceptional experiences for celebrations, product launches, and executive gatherings.</p>
-                            <a href="#" class="link" style="margin-top:10px;display:inline-block">Learn More</a>
+                            <a href="umara-catering/event-umara.html" class="link" style="margin-top:10px;display:inline-block">Learn More</a>
                         </div>
                     </div>
                     <div class="card" id="mealbox">
@@ -235,15 +236,15 @@
                         <div class="card-body">
                             <h3 style="font-weight:700;color:#111827">Mealbox</h3>
                             <p style="color:#6B7280;margin-top:6px">High-quality meal solutions crafted for corporate needs and daily operations.</p>
-                            <a href="#" class="link" style="margin-top:10px;display:inline-block">Learn More</a>
+                            <a href="umara-catering/mealbox-umara.html" class="link" style="margin-top:10px;display:inline-block">Learn More</a>
                         </div>
                     </div>
                     <div class="card" id="dining">
-                        <div class="card-media"><img src="public/assets/ucr/UCR-WEB/dinning experience 725x472-06.jpg" alt="Dining"></div>
+                        <div class="card-media"><img src="public/assets/ucr-private-event/1.jpg" alt="Dining"></div>
                         <div class="card-body">
                             <h3 style="font-weight:700;color:#111827">Dining</h3>
                             <p style="color:#6B7280;margin-top:6px">A curated dining experience, crafted for refined moments.</p>
-                            <a href="#" class="link" style="margin-top:10px;display:inline-block">Learn More</a>
+                            <a href="umara-catering/dining-umara.html" class="link" style="margin-top:10px;display:inline-block">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -257,7 +258,7 @@
                     <div class="slider-stage">
                         <div class="slider-item active">
                             <img src="public/assets/ucr/showcase-1.jpg" alt="Wedding Showcase">
-                            <div class="slider-caption">Elegant wedding setup with refined table styling.</div>
+                            <div class="slider-caption">Slices through the golden crust of a classic Beef Wellington</div>
                         </div>
                         <div class="slider-item">
                             <img src="public/assets/ucr/showcase-2.jpg" alt="Meeting Showcase">
@@ -269,7 +270,7 @@
                         </div>
                         <div class="slider-item">
                             <img src="public/assets/ucr/showcase-4.jpg" alt="Dining Showcase">
-                            <div class="slider-caption">Private dining, tailored by our culinary team.</div>
+                            <div class="slider-caption">Live cooking stations add an exciting visual element to the dining experience.</div>
                         </div>
                     </div>
                     <div class="slider-controls">
@@ -294,7 +295,7 @@
                     <h2 class="title text-[32px]">Your next remarkable event begins here.</h2>
                     <p class="lede">Contact our team to start your consultation.</p>
                     <div class="cta-links">
-                        <a href="https://wa.me/6281234567890" class="cta-link">Let's Discuss Your Event Needs</a>
+                        <a href="https://wa.me/6281212008700" class="cta-link">Let's Discuss Your Event Needs</a>
                     </div>
                 </div>
             </div>
