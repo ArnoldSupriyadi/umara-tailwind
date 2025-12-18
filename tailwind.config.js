@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html", "./src/**/*.{html,js}", "./public/**/*.{html,js}"],
+  content: ["./*.html", "./src/**/*.{html,js}", "./public/**/*.{html,js}", "./lbi/**/*.{html,js}"],
   safelist: ['bg-gradient-to-r', 'from-brand-burgundy', 'to-brand-darkBurgundy', 'bg-brand-burgundy'],
   theme: {
     extend: {
@@ -67,4 +67,3 @@ module.exports = {
   },
   plugins: []
 }
-
