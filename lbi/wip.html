@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Laukita Bersama Indonesia - WIP</title>
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand': {
+                            'primary': '#4C3D19',
+                            'secondary': '#354024',
+                            'accent': '#889063',
+                            'dark': '#4C3D19',
+                            'light': '#E5D7C4',
+                            'gold': '#CFBB99'
+                        }
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .timeline-panel {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease-in-out;
+        }
+
+        .timeline-panel.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-tab {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .timeline-tab:hover {
+            transform: translateY(-2px);
+        }
+
+        .timeline-tab.active {
+            transform: translateY(-2px);
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .timeline-panel.active .bg-gradient-to-br {
+            animation: slideInUp 0.6s ease-out forwards;
+        }
+
+        .timeline-panel.active .bg-gradient-to-br:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .timeline-panel.active .bg-gradient-to-br:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        /* Glass effect */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Smooth transitions */
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile menu animation */
+        .mobile-menu-enter {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .mobile-menu-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        .mt-auto.text-\[\#8B1C3D\].tracking-wider {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body class="font-inter">
+    <!-- Floating Header -->
+    <header id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <picture>
+                        <source srcset="../public/assets/laukkita-bersama/LBI-Logo.png" type="image/svg+xml">
+                        <img src="../public/assets/laukkita-bersama/LBI-Logo.png" alt="PT Laukita Bersama Indonesia"
+                            class="w-24 h-auto lg:w-28">
+                    </picture>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-brand-primary font-medium">Home</a>
+                    <a href="/lbi/retort.html" class="text-gray-700 hover:text-brand-primary font-medium">B2B Products</a>
+                    <a href="/lbi/wip.html" class="text-gray-700 hover:text-brand-primary font-medium">Exports Products</a>
+                    <a href="#" class="text-gray-700 hover:text-brand-primary font-medium">Mining Supply</a>
+                    <a href="#" class="text-gray-700 hover:text-brand-primary font-medium">Resto & Hotel Supply</a>
+                    <a href="/lbi/news-lbi.html" class="text-gray-700 hover:text-brand-primary font-medium">News</a>
+                    <a href="tel:085217777177" class="font-medium text-gray-700 px-6 py-2 rounded-full hover:bg-brand-secondary text-underline">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                    class="lg:hidden text-gray-700 p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu"
+            class="lg:hidden hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200/50 shadow-lg z-40">
+            <nav class="flex flex-col space-y-1 p-4 mx-4">
+                <a href="../index.html" class="text-gray-700 hover:text-brand-primary font-medium">Home</a>
+                <a href="/lbi/retort.html" class="text-gray-700 hover:text-brand-primary font-medium">B2B & Export Products</a>
+                <a href="/lbi/wip.html" class="text-gray-700 hover:text-brand-primary font-medium">WIP Products</a>
+                <a href="/lbi/news-lbi.html" class="text-gray-700 hover:text-brand-primary font-medium">News</a>
+                <a href="tel:085217777177"
+                    class="font-medium text-gray-700 px-6 py-2 rounded-full hover:bg-brand-secondary text-underline">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="lg:hidden hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-30"></div>
+
+    <section id="wip-catalog" class="py-20">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-[#F7F3EF] px-6 py-3 rounded-full border border-[#debe9d] mb-6">
+                    <div class="w-2 h-2 bg-[#8B1C3D] rounded-full animate-pulse"></div>
+                    <span class="text-sm font-medium text-[#8B1C3D] tracking-wide uppercase">WIP</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-[#8B1C3D] mb-4 leading-tight">WIP Catalog</h2>
+                <p class="text-[#8B1C3D] max-w-3xl mx-auto leading-relaxed">Gramage : 500g/1000g | Packaging: Vaccum Pack</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch max-w-7xl mx-auto">
+                <div class="col-span-full">
+                    <h3 class="text-2xl md:text-3xl font-bold text-[#8B1C3D] mb-2">Fried Rice Spice</h3>
+                </div>
+                <div class="col-span-full">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                        <div>
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/Bumbu Nasi Goreng.png" alt="Bumbu Nasi Goreng" class="w-full h-64 object-contain p-1">
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <div class="border-[#debe9d] p-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
+                                    <div class="space-y-3">
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Village-Style Fried Rice Seasoning</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Skipjack Tuna & Smoked Roa Fish Fried Rice Seasoning</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Anchovy Fried Rice Seasoning</span></div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Squid Ink Fried Rice Seasoning</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Green Chili Fried Rice Seasoning</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-full">
+                    <h3 class="text-2xl md:text-3xl font-bold text-[#8B1C3D] mb-2">Basic Spice</h3>
+                </div>
+                <div class="col-span-full">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                        <div class="space-y-6">
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/Bumbu dasar-28.png" alt="Bumbu Dasar" class="w-full h-64 object-contain p-1">
+                            </div>
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/Bumbu dasar-29.png" alt="Bumbu Dasar" class="w-full h-64 object-contain p-1">
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <div class="border-[#debe9d] p-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
+                                    <div class="space-y-3">
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Red Basic Spice</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">White Basic Spice</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Yellow Basic Spice</span></div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Green Basic Spice</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Orange Basic Spice</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-full">
+                    <h3 class="text-2xl md:text-3xl font-bold text-[#8B1C3D] mb-2">Protein Asian & Nusantara</h3>
+                </div>
+                <div class="col-span-full">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                        <div class="space-y-6">
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/PROTEIN ASIAN & NUSANTARA-22.png" alt="Protein Asian & Nusantara Pack 1" class="w-full h-64 object-contain p-1">
+                            </div>
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/PROTEIN ASIAN & NUSANTARA-23.png" alt="Protein Asian & Nusantara Pack 2" class="w-full h-64 object-contain p-1">
+                            </div>
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/PROTEIN ASIAN & NUSANTARA-24.png" alt="Protein Asian & Nusantara Pack 3" class="w-full h-64 object-contain p-1">
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <div class="border-[#debe9d] p-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
+                                    <div class="space-y-3">
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Nyangnyeom chicken</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Beef bulgogi</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Beef/chicken yakiniku</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chicken karage</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Lamb Curry</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chicken Liver & Gizzard</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Kalasan Sweet Braised Chicken</span></div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chicken Balado</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Balinese Spiced Chicken</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spicy Coconut Chicken</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Thai Spiced Chicken</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Green Chili Chicken</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chicken Gulai</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chicken Curry</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Black Pepper Chicken</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Indonesian Butter Chicken</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Paniki Chicken</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Pandan Chicken</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chicken Rendang</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-full">
+                    <h3 class="text-2xl md:text-3xl font-bold text-[#8B1C3D] mb-2">Spices Giling</h3>
+                </div>
+                <div class="col-span-full">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                        <div>
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/bumbu giling.png" alt="Bumbu Giling" class="w-full h-64 object-contain p-1">
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <div class="border-[#debe9d] p-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
+                                    <div class="space-y-3">
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Ground Shallots</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Ground Garlic</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Ground Red Chili or Red Chili Paste</span></div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Ground Green Chili or Green Chili Paste</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Ground Bird's Eye Chili</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-full">
+                    <h3 class="text-2xl md:text-3xl font-bold text-[#8B1C3D] mb-2">Indonesian Spices</h3>
+                </div>
+                <div class="col-span-full">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                        <div class="space-y-6">
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/bumbu nusantara-19.png" alt="Bumbu Nusantara Pack 1" class="w-full h-64 object-contain p-1">
+                            </div>
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/bumbu nusantara-20.png" alt="Bumbu Nusantara Pack 2" class="w-full h-64 object-contain p-1">
+                            </div>
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/bumbu nusantara-21.png" alt="Bumbu Nusantara Pack 3" class="w-full h-64 object-contain p-1">
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <div class="border-[#debe9d] p-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
+                                    <div class="space-y-3">
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Kalio</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Gulai</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Singgang</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Kari</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Balado</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Balado Limau</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Cabe Ijo</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Ayam Bakar Padang</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Bali</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Betutu</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Woku</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Rica-rica</span></div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Rica Kemangi</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Paniki</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Taliwang</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Bacem Kalasan</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Rujak</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Semur</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Rawon</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Pesmol</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Ayam Goreng</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Mie Godok</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Nasi Goreng Kampung</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Spices Opor</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-full">
+                    <h3 class="text-2xl md:text-3xl font-bold text-[#8B1C3D] mb-2">Chilli sauce</h3>
+                </div>
+                <div class="col-span-full">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                        <div class="space-y-6">
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/sambal-32.png" alt="Sambal Pack 1" class="w-full h-64 object-contain p-1">
+                            </div>
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/sambal-33.png" alt="Sambal Pack 2" class="w-full h-64 object-contain p-1">
+                            </div>
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/sambal-34.png" alt="Sambal Pack 3" class="w-full h-64 object-contain p-1">
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <div class="border-[#debe9d] p-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
+                                    <div class="space-y-3">
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chilli sauce Bawang</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chilli sauce Ijo</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chilli sauce Lado Hijau</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chilli sauce Lado Merah</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chilli sauce Lombok</span></div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chilli sauce Roa</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chilli sauce Penyet</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chilli sauce Seset</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chilli sauce Soto</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Chilli sauce Terasi</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-full">
+                    <h3 class="text-2xl md:text-3xl font-bold text-[#8B1C3D] mb-2">Sauce Western</h3>
+                </div>
+                <div class="col-span-full">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                        <div class="space-y-6">
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/sauce western-25.png" alt="Sauce Western Pack 1" class="w-full h-64 object-contain p-1">
+                            </div>
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/sauce western-26.png" alt="Sauce Western Pack 2" class="w-full h-64 object-contain p-1">
+                            </div>
+                            <div class="rounded-2xl shadow-lg border border-[#debe9d] overflow-hidden">
+                                <img src="../public/assets/laukkita-bersama/wip/sauce western-27.png" alt="Sauce Western Pack 3" class="w-full h-64 object-contain p-1">
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <div class="border-[#debe9d] p-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
+                                    <div class="space-y-3">
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Bolognese sauce</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Alfredo sauce</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Aglio olio</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Napolitan</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Alfredo with truffle oil sauce</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Black pepper sauce (western)</span></div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Michelin sauce</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Mushroom sauce white</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Mushroom sauce brown</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">Pesto sauce</span></div>
+                                        <div class="border-b border-[#debe9d] pb-2"><span class="text-[#8B1C3D]">BBQ sauce western</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#131313] text-white py-12">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <picture>
+                            <source srcset="../public/assets/images/pt-lauk-kita-bersama.svg" type="image/svg+xml">
+                            <img src="../public/assets/images/pt-lauk-kita-bersama.svg" alt="PT Laukita Bersama Indonesia" class="w-24 h-16">
+                        </picture>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">Providing food manufacturing and white label services since
+                        2018.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">OEM Manufacturing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">White Label Services</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">WIP Manufacturing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Custom Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#developments-process" class="hover:text-white transition-colors">Our Process</a>
+                        </li>
+                        <li><a href="#quality" class="hover:text-white transition-colors">Quality Management</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Information</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://maps.app.goo.gl/6w6mGygpoLPSihTL9" target="_blank"
+                                class="hover:text-white transition-colors">Curug Kulon, Curug, Tangerang Regency, Banten
+                                15810</a></li>
+                        <li><a href="tel:085217777177">0852-1777-7177</a></li>
+                        <li><a href="mailto:info@laukita.com"
+                                class="hover:text-white transition-colors">info@laukita.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 PT Laukita Bersama Indonesia. All rights reserved.</p>
+        </div>
+        </div>
+    </footer>
+
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const ytWrapper = document.getElementById('yt-wrapper');
+        if (ytWrapper) {
+            ytWrapper.addEventListener('click', function () {
+                this.innerHTML = `
+        <iframe class="w-full h-[400px] rounded-2xl"
+            src="https://www.youtube.com/embed/pcyKffW7IyM?autoplay=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+    `;
+            });
+        }
+
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            mobileMenuBtn.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+                mobileOverlay.classList.toggle('hidden');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+
+                // Prevent body scroll when menu is open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close mobile menu when clicking on overlay
+            mobileOverlay.addEventListener('click', function () {
+                mobileMenu.classList.add('hidden');
+                mobileOverlay.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+
+            // Close mobile menu when clicking on a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileMenu.classList.add('hidden');
+                    mobileOverlay.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-xl');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-xl');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+    </script>
+</body>
+
+</html>

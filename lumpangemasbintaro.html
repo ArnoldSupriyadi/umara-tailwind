@@ -39,7 +39,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center pt-20" style="background-image: url('public/assets/lumpang-emas-bintaro/BG-LUMPANG-BINTARO1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+    <section id="home" class="min-h-screen flex items-center" style="background-image: url('public/assets/lumpang-emas-bintaro/BG-LUMPANG-BINTARO1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Left Side - Content -->
@@ -97,46 +97,58 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20" style="background-image: url('public/assets/lumpang-emas-bintaro/BG-LUMPANG-BINTARO2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <h2 class="text-4xl font-bold text-[#C9A53D] mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">Welcome to Lumpang Emas Bintaro</h2>
-                <p class="text-xl text-white max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                    Located in the prestigious Bintaro area, our restaurant offers an exceptional dining experience that combines authentic Indonesian cuisine with contemporary ambiance.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-gradient-to-b from-[#efd266] to-[#b9932f] rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-map-marker-alt text-2xl text-white"></i>
+    <!-- Promo Section -->
+    <section id="promo" class="py-20 lg:py-28 relative overflow-hidden bg-[#200901]">
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-6xl mx-auto bg-[#251610] rounded-3xl overflow-hidden shadow-2xl border border-[#C9A53D]/20 hover:border-[#C9A53D]/40 transition-all duration-500">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <!-- Image Side -->
+                    <div class="relative h-80 lg:h-auto overflow-hidden group">
+                        <img src="public/assets/lumpang-emas-bintaro/main-dining.jpeg" alt="Special Promotion" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a0f0a] via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute top-6 left-6">
+                            <span class="px-4 py-2 bg-[#C9A53D] text-[#1a0f0a] text-xs font-bold uppercase tracking-widest rounded-sm">Limited Offer</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Prime Location</h3>
-                    <p class="text-white">Strategically located in Bintaro, easily accessible from Jakarta and surrounding areas.</p>
-                </div>
-                
-                <div class="text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
-                    <div class="w-16 h-16 bg-gradient-to-b from-[#efd266] to-[#b9932f] rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-utensils text-2xl text-white"></i>
+                    
+                    <!-- Content Side -->
+                    <div class="p-8 lg:p-12 flex flex-col justify-center text-center lg:text-left">
+                        <h3 class="text-[#C9A53D] font-serif text-2xl lg:text-3xl mb-2" data-aos="fade-up">Exclusive Dining Package</h3>
+                        <h2 class="text-white text-3xl lg:text-5xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100">Intimate Gathering</h2>
+                        
+                        <p class="text-gray-400 mb-8 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="200">
+                            Create unforgettable memories with our exclusive intimate gathering package. Perfect for small celebrations, business meetings, or family reunions in our private dining spaces.
+                        </p>
+                        
+                        <ul class="space-y-4 mb-10 text-gray-300 mx-auto lg:mx-0 max-w-md" data-aos="fade-up" data-aos-delay="300">
+                            <li class="flex items-center gap-3">
+                                <span class="w-2 h-2 bg-[#C9A53D] rounded-full"></span>
+                                <span>Complimentary Welcome Drinks</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-2 h-2 bg-[#C9A53D] rounded-full"></span>
+                                <span>Special Set Menu Selection</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-2 h-2 bg-[#C9A53D] rounded-full"></span>
+                                <span>Dedicated Service Staff</span>
+                            </li>
+                        </ul>
+
+                        <div data-aos="fade-up" data-aos-delay="400">
+                            <a href="https://wa.me/6281222227496" target="_blank" class="inline-block w-full lg:w-auto text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] px-8 py-4 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
+                                Reserve Now
+                            </a>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Authentic Cuisine</h3>
-                    <p class="text-white">Traditional Indonesian dishes prepared with the finest ingredients and modern techniques.</p>
-                </div>
-                
-                <div class="text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
-                    <div class="w-16 h-16 bg-gradient-to-b from-[#efd266] to-[#b9932f] rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-star text-2xl text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Premium Experience</h3>
-                    <p class="text-white">Elegant atmosphere perfect for family gatherings, business meetings, and special occasions.</p>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <section id="menu" class="bg-[#131313] py-20 relative" style="background-image: url('public/assets/lumpang-emas-bintaro/BG-LUMPANG-BINTARO1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+    <section id="menu" class="py-20 relative">
         <div class="container mx-auto px-4 relative z-10">
             <!-- Modern Header with improved typography -->
             <div class="text-center mb-12 lg:mb-20" data-aos="fade-up" data-aos-duration="1000">
@@ -148,11 +160,11 @@
                         </path>
                     </svg>
                 </div>
-                <h2 class="text-3xl md:text-5xl lg:text-7xl font-black text-[#d97706] bg-clip-text mb-4 lg:mb-6 tracking-tight"
+                <h2 class="text-3xl md:text-5xl lg:text-7xl font-black text-[#c8a53e] bg-clip-text mb-4 lg:mb-6 tracking-tight"
                     data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                     Our Menu
                 </h2>
-                <p class="text-base md:text-xl lg:text-2xl text-white max-w-4xl mx-auto leading-relaxed font-light px-4"
+                <p class="text-base md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light px-4"
                     data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                     Discover our exquisite collection of authentic Indonesian cuisine, carefully crafted with premium
                     ingredients and modern
@@ -209,72 +221,111 @@
     </section>
 
     <!-- Rooms Section -->
-    <section id="rooms" class="py-20" style="background-image: url('public/assets/lumpang-emas-bintaro/BG-LUMPANG-BINTARO3.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <h2 class="text-4xl font-bold text-[#C9A53D] mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">Our Dining Spaces</h2>
-                <p class="text-xl text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Choose from our variety of beautifully designed dining areas</p>
+    <section id="rooms" class="py-16 lg:py-24 relative overflow-hidden" style="background-image: url('public/assets/lumpang-emas-bintaro/BG-LUMPANG-BINTARO3.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+        <!-- Dark Overlay for better contrast -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16 lg:mb-24" data-aos="fade-up" data-aos-duration="1000">
+                <div class="inline-block border-b-2 border-[#C9A53D] pb-2 mb-4">
+                    <span class="text-[#C9A53D] font-medium tracking-widest uppercase text-sm">Exclusive Dining</span>
+                </div>
+                <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+                    Our Dining Spaces
+                </h2>
+                <p class="text-base md:text-xl text-gray-300 max-w-3xl mx-auto px-4 font-light leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    Choose from our variety of beautifully designed dining areas, each offering a unique ambiance for your dining experience.
+                </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
                 <!-- Main Dining -->
-                <div class="bg-white/80 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openModal('public/assets/lumpang-emas-bintaro/main-dining.jpeg', 'Main Dining Area')" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="h-64 bg-gradient-to-br from-amber-100 to-orange-200 relative" style="background-image: url('public/assets/lumpang-emas-bintaro/main-dining.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                        <div class="absolute bottom-4 left-4">
-                            <h3 class="text-2xl font-bold text-white">Main Dining</h3>
+                <div class="group relative rounded-xl overflow-hidden shadow-2xl bg-[#1a0f0a] border border-[#C9A53D]/20 hover:border-[#C9A53D]/60 transition-all duration-500" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="h-80 relative overflow-hidden">
+                        <img src="public/assets/lumpang-emas-bintaro/main-dining.jpeg" alt="Main Dining Area" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a0f0a] via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-4 left-6 right-6">
+                            <h3 class="text-2xl font-serif font-bold text-white mb-2 group-hover:text-[#C9A53D] transition-colors">Main Dining</h3>
+                            <div class="w-12 h-0.5 bg-[#C9A53D] group-hover:w-full transition-all duration-500"></div>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">
+                    <div class="p-6 pt-2">
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed min-h-[60px]">
                             Our spacious main dining area accommodates large groups and families, featuring comfortable seating and elegant decor.
                         </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-gray-800">50+ Seats</span>
-                            <button class="bg-palette2-e text-white px-4 py-2 rounded-full hover:bg-custom1-b transition-colors">
-                                Reserve
-                            </button>
+                        <div class="flex items-end justify-between border-t border-white/10 pt-4 mb-6">
+                            <div>
+                                <p class="text-xs text-[#C9A53D] uppercase tracking-wider mb-1">Capacity</p>
+                                <p class="text-white font-semibold">50+ Guests</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xs text-[#C9A53D] uppercase tracking-wider mb-1">Availability</p>
+                                <p class="text-white font-semibold">Open Daily</p>
+                            </div>
                         </div>
+                        <a href="https://wa.me/6281222227496" target="_blank" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
+                            Reserve Table
+                        </a>
                     </div>
                 </div>
 
-                <!-- VIP Room -->
-                <div class="bg-white/80 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openModal('public/assets/lumpang-emas-bintaro/main-dining2.jpeg', 'VIP Private Room')" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
-                    <div class="h-64 bg-gradient-to-br from-amber-100 to-orange-200 relative" style="background-image: url('public/assets/lumpang-emas-bintaro/main-dining2.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                        
-                        <div class="absolute bottom-4 left-4">
-                            <h3 class="text-2xl font-bold text-white">Private Room</h3>
+                <!-- Private Room -->
+                <div class="group relative rounded-xl overflow-hidden shadow-2xl bg-[#1a0f0a] border border-[#C9A53D]/20 hover:border-[#C9A53D]/60 transition-all duration-500" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="h-80 relative overflow-hidden">
+                        <img src="public/assets/lumpang-emas-bintaro/main-dining2.jpeg" alt="VIP Private Room" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a0f0a] via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-4 left-6 right-6">
+                            <h3 class="text-2xl font-serif font-bold text-white mb-2 group-hover:text-[#C9A53D] transition-colors">Private Room</h3>
+                            <div class="w-12 h-0.5 bg-[#C9A53D] group-hover:w-full transition-all duration-500"></div>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">
+                    <div class="p-6 pt-2">
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed min-h-[60px]">
                             Intimate private dining room perfect for business meetings, family celebrations, or romantic dinners.
                         </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-gray-800">8-12 Pax</span>
-                            <button class="bg-palette2-e text-white px-4 py-2 rounded-full hover:bg-amber-700 transition-colors">
-                                Reserve
-                            </button>
+                        <div class="flex items-end justify-between border-t border-white/10 pt-4 mb-6">
+                            <div>
+                                <p class="text-xs text-[#C9A53D] uppercase tracking-wider mb-1">Capacity</p>
+                                <p class="text-white font-semibold">8-12 Guests</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xs text-[#C9A53D] uppercase tracking-wider mb-1">Booking</p>
+                                <p class="text-white font-semibold">Reservation Only</p>
+                            </div>
                         </div>
+                        <a href="https://wa.me/6281222227496" target="_blank" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
+                            Reserve Room
+                        </a>
                     </div>
                 </div>
 
                 <!-- Outdoor Terrace -->
-                <div class="bg-white/80 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openModal('public/assets/lumpang-emas-bintaro/outdoor-1.jpeg', 'Outdoor Terrace')" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
-                    <div class="h-64 bg-gradient-to-br from-amber-100 to-orange-200 relative" style="background-image: url('public/assets/lumpang-emas-bintaro/outdoor-1.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                        <div class="absolute bottom-4 left-4">
-                            <h3 class="text-2xl font-bold text-white">Outdoor Terrace</h3>
+                <div class="group relative rounded-xl overflow-hidden shadow-2xl bg-[#1a0f0a] border border-[#C9A53D]/20 hover:border-[#C9A53D]/60 transition-all duration-500" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="h-80 relative overflow-hidden">
+                        <img src="public/assets/lumpang-emas-bintaro/outdoor-1.jpeg" alt="Outdoor Terrace" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a0f0a] via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-4 left-6 right-6">
+                            <h3 class="text-2xl font-serif font-bold text-white mb-2 group-hover:text-[#C9A53D] transition-colors">Outdoor Terrace</h3>
+                            <div class="w-12 h-0.5 bg-[#C9A53D] group-hover:w-full transition-all duration-500"></div>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">
+                    <div class="p-6 pt-2">
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed min-h-[60px]">
                             Enjoy your meal in our beautiful outdoor terrace with garden views and fresh air ambiance.
                         </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-gray-800">20+ Seats</span>
-                            <button class="bg-palette2-e text-white px-4 py-2 rounded-full hover:bg-amber-700 transition-colors">
-                                Reserve
-                            </button>
+                        <div class="flex items-end justify-between border-t border-white/10 pt-4 mb-6">
+                            <div>
+                                <p class="text-xs text-[#C9A53D] uppercase tracking-wider mb-1">Capacity</p>
+                                <p class="text-white font-semibold">20+ Guests</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xs text-[#C9A53D] uppercase tracking-wider mb-1">Atmosphere</p>
+                                <p class="text-white font-semibold">Relaxed</p>
+                            </div>
                         </div>
+                        <a href="https://wa.me/6281222227496" target="_blank" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
+                            Reserve Spot
+                        </a>
                     </div>
                 </div>
             </div>
@@ -292,10 +343,10 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
                     <div class="w-16 h-16 bg-gradient-to-b from-[#efd266] to-[#b9932f] rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-wifi text-2xl text-white"></i>
+                        <i class="fas fa-utensils text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-palette2-e mb-2">Free WiFi</h3>
-                    <p class="text-gray-600">High-speed internet connection available throughout the restaurant for your convenience.</p>
+                    <h3 class="text-xl font-semibold text-palette2-e mb-2">Authentic Cuisine</h3>
+                    <p class="text-gray-600">Traditional Indonesian dishes prepared with the finest ingredients and modern techniques.</p>
                 </div>
 
                 <div class="text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
