@@ -6,19 +6,7 @@
     <title>Lumpang Emas Signature - Premium Dining Experience</title>
     <link href="./dist/output.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'nunito': ['Nunito Sans', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         /* Prevent horizontal page scrolling */
         html, body {
@@ -44,17 +32,35 @@
         #carouselTrack {
             width: max-content;
         }
+        #promoCarousel {
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        #promoCarousel::-webkit-scrollbar {
+            display: none;
+        }
+        #promoTrack {
+            width: max-content;
+        }
         
         .smooth-scroll {
             scroll-behavior: smooth;
         }
         
-        .mobile-menu-hidden {
-            transform: translateX(-100%);
+        .le-media {
+            position: relative;
+            width: 100%;
+            height: 320px;
         }
-        
-        .mobile-menu-visible {
-            transform: translateX(0);
+        @media (min-width: 768px) { .le-media { height: 420px; } }
+        @media (min-width: 1024px) { .le-media { height: 520px; } }
+        .le-img-fit {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     </style>
 </head>
@@ -131,10 +137,10 @@
 
                 <!-- Right Side - Gallery -->
                 <div class="mt-8 lg:mt-0" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="grid grid-cols-2 lg:grid-cols-2 grid-rows-3 gap-2 lg:gap-4 h-64 lg:h-96">
+                    <div class="grid grid-cols-2 lg:grid-cols-2 grid-rows-3 gap-2 lg:gap-4 h-auto lg:h-96">
                         <!-- Image 1 - Tall -->
                         <div class="row-span-2" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="400">
-                            <div class="h-full rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/rnb/carousel/3.jpg', 'UMA RAJA')">
+                            <div class="h-64 lg:h-full rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/rnb/carousel/3.jpg', 'UMA RAJA')">
                                 <img src="public/assets/rnb/carousel/3.jpg" alt="Main Dining" class="w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 text-white p-3">
                                     <p class="text-sm font-semibold">UMARAJA</p>
@@ -151,7 +157,7 @@
 
                         <!-- Image 2 - Square -->
                         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                            <div class="h-full rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/rnb/carousel/13.jpg', 'MAIN DINING 1ST FLOOR')">
+                            <div class="h-32 lg:h-full rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/rnb/carousel/13.jpg', 'MAIN DINING 1ST FLOOR')">
                                 <img src="public/assets/rnb/carousel/13.jpg" alt="Sumatra Room" class="w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 text-white p-2">
                                     <p class="text-xs font-semibold">MAIN DINING 1ST FLOOR</p>
@@ -168,7 +174,7 @@
 
                         <!-- Image 3 - Square -->
                         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-                            <div class="h-full rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/rnb/carousel/2.jpg', 'KALIMANTAN')">
+                            <div class="h-32 lg:h-full rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/rnb/carousel/2.jpg', 'KALIMANTAN')">
                                 <img src="public/assets/rnb/carousel/2.jpg" alt="Umaraja Room" class="w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 text-white p-2">
                                     <p class="text-xs font-semibold">KALIMANTAN</p>
@@ -185,7 +191,7 @@
 
                         <!-- Image 4 - Wide -->
                         <div class="col-span-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
-                            <div class="h-48 rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/rnb/MAIN-SECOND-FLOOR.jpg', 'MAIN DINNING 2ND FLOOR')">
+                            <div class="aspect-video lg:h-48 rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="openModal('public/assets/rnb/MAIN-SECOND-FLOOR.jpg', 'MAIN DINNING 2ND FLOOR')">
                                 <img src="public/assets/rnb/MAIN-SECOND-FLOOR.jpg" alt="Bali Room" class="w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 text-white p-3">
                                     <p class="text-sm font-semibold">MAIN DINING 2ND FLOOR</p>
@@ -207,48 +213,76 @@
 
     <!-- Promo Section -->
     <section id="promo" class="py-20 lg:py-28 relative overflow-hidden bg-[#200901]">
-        
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#1a0f0a]/40 to-[#1a0f0a]/80"></div>
         <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-6xl mx-auto bg-[#251610] rounded-3xl overflow-hidden shadow-2xl border border-[#C9A53D]/20 hover:border-[#C9A53D]/40 transition-all duration-500">
-                <div class="grid grid-cols-1 lg:grid-cols-2">
-                    <!-- Image Side -->
-                    <div class="relative h-80 lg:h-auto overflow-hidden group">
-                        <img src="public/assets/rnb/carousel/3.jpg" alt="Family Feast" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a0f0a] via-transparent to-transparent opacity-60"></div>
-                        <div class="absolute top-6 left-6">
-                            <span class="px-4 py-2 bg-[#C9A53D] text-[#1a0f0a] text-xs font-bold uppercase tracking-widest rounded-sm">Limited Time</span>
+            <div class="max-w-6xl mx-auto le-panel">
+                <div class="p-4">
+                    <div>
+                        <div id="promoCarousel" class="relative overflow-hidden">
+                            <div id="promoTrack" class="flex transition-transform duration-700 ease-out relative z-10">
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/afternoon-tea.jpeg" alt="Afternoon Tea"
+                                        class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/es-tape-ijo.jpeg" alt="Es Tape Ijo" class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/free-coffee-nusantara.jpeg" alt="Free Coffee Nusantara"
+                                        class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/gourmet-a.jpeg" alt="Gourmet A" class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/gourmet-b.jpeg" alt="Gourmet B" class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/gourmet-c.jpeg" alt="Gourmet C" class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/holiday-special-drinks.jpeg" alt="Holiday Special Drinks"
+                                        class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/joy-cookies.jpeg" alt="Joy Cookies" class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/santa-suprised.jpeg" alt="Santa Surprised"
+                                        class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/snack-jar.jpeg" alt="Snack Jar" class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/juicy-whole-chicken.jpeg" alt="Juicy Whole Chicken"
+                                        class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/salom-en-croute.jpeg" alt="Salmon En Croute"
+                                        class="le-img-fit">
+                                </figure>
+                            </div>
+                            <div class="pointer-events-none">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-4">
+                                    <button id="promoPrev" class="pointer-events-auto le-button le-gold">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 19l-7-7 7-7"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="absolute inset-y-0 right-0 flex items-center pr-4">
+                                    <button id="promoNext" class="pointer-events-auto le-button le-gold">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <!-- Content Side -->
-                    <div class="p-8 lg:p-12 flex flex-col justify-center text-center lg:text-left">
-                        <h3 class="text-[#C9A53D] font-serif text-2xl lg:text-3xl mb-2" data-aos="fade-up">Exclusive Dining Package</h3>
-                        <h2 class="text-white text-3xl lg:text-5xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100">Family Feast</h2>
-                        
-                        <p class="text-gray-400 mb-8 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="200">
-                            Gather your loved ones for a memorable dining experience. Enjoy a complimentary dessert platter featuring our signature sweet treats when you dine with a party of 4 or more.
-                        </p>
-                        
-                        <ul class="space-y-4 mb-10 text-gray-300 mx-auto lg:mx-0 max-w-md" data-aos="fade-up" data-aos-delay="300">
-                            <li class="flex items-center gap-3">
-                                <span class="w-2 h-2 bg-[#C9A53D] rounded-full"></span>
-                                <span>Complimentary Dessert Platter</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-2 h-2 bg-[#C9A53D] rounded-full"></span>
-                                <span>Signature Sweet Treats</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-2 h-2 bg-[#C9A53D] rounded-full"></span>
-                                <span>Valid for Groups of 4+</span>
-                            </li>
-                        </ul>
-
-                        <div data-aos="fade-up" data-aos-delay="400">
-                            <a href="https://wa.me/6281222227496" target="_blank" class="inline-block w-full lg:w-auto text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] px-8 py-4 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
-                                Reserve Table
-                            </a>
-                        </div>
+                        <div id="promoIndicators" class="flex items-center justify-center gap-2 mt-6"></div>
                     </div>
                 </div>
             </div>
@@ -1034,7 +1068,6 @@
                         <p class="text-xs text-gray-600">Premium Indonesian cuisine</p>
                     </div>
                 </div>
-
         </div>
     </div>
     </section>
@@ -1082,7 +1115,7 @@
                                 <p class="text-xl text-white font-bold">12.000.000<span class="text-xs text-gray-400 font-normal">++</span></p>
                             </div>
                         </div>
-                        <a href="#contact" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
+                        <a href="https://wa.me/6281222227496" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
                             Book Now
                         </a>
                     </div>
@@ -1105,14 +1138,14 @@
                         <div class="flex items-end justify-between border-t border-white/10 pt-4 mb-6">
                             <div>
                                 <p class="text-xs text-[#C9A53D] uppercase tracking-wider mb-1">Capacity</p>
-                                <p class="text-white font-semibold">4-6 Guests</p>
+                                <p class="text-white font-semibold">8-10 Guests</p>
                             </div>
                             <div class="text-right">
                                 <p class="text-xs text-[#C9A53D] uppercase tracking-wider mb-1">Starting From</p>
-                                <p class="text-xl text-white font-bold">1.200.000<span class="text-xs text-gray-400 font-normal">++</span></p>
+                                <p class="text-xl text-white font-bold">3.000.000<span class="text-xs text-gray-400 font-normal">++</span></p>
                             </div>
                         </div>
-                        <a href="#contact" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
+                        <a href="https://wa.me/6281222227496" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
                             Book Now
                         </a>
                     </div>
@@ -1135,14 +1168,14 @@
                         <div class="flex items-end justify-between border-t border-white/10 pt-4 mb-6">
                             <div>
                                 <p class="text-xs text-[#C9A53D] uppercase tracking-wider mb-1">Capacity</p>
-                                <p class="text-white font-semibold">20-24 Guests</p>
+                                <p class="text-white font-semibold">15 - 20 Guests</p>
                             </div>
                             <div class="text-right">
                                 <p class="text-xs text-[#C9A53D] uppercase tracking-wider mb-1">Starting From</p>
-                                <p class="text-xl text-white font-bold">8.000.000<span class="text-xs text-gray-400 font-normal">++</span></p>
+                                <p class="text-xl text-white font-bold">10.000.000<span class="text-xs text-gray-400 font-normal">++</span></p>
                             </div>
                         </div>
-                        <a href="#contact" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
+                        <a href="https://wa.me/6281222227496" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
                             Book Now
                         </a>
                     </div>
@@ -1165,14 +1198,14 @@
                         <div class="flex items-end justify-between border-t border-white/10 pt-4 mb-6">
                             <div>
                                 <p class="text-xs text-[#C9A53D] uppercase tracking-wider mb-1">Capacity</p>
-                                <p class="text-white font-semibold">30-40 Guests</p>
+                                <p class="text-white font-semibold">40-50 Guests</p>
                             </div>
                             <div class="text-right">
                                 <p class="text-xs text-[#C9A53D] uppercase tracking-wider mb-1">Starting From</p>
-                                <p class="text-xl text-white font-bold">1.200.000<span class="text-xs text-gray-400 font-normal">++</span></p>
+                                <p class="text-xl text-white font-bold">15.000.000<span class="text-xs text-gray-400 font-normal">++</span></p>
                             </div>
                         </div>
-                        <a href="#contact" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
+                        <a href="https://wa.me/6281222227496" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
                             Book Now
                         </a>
                     </div>
@@ -1195,14 +1228,14 @@
                         <div class="flex items-end justify-between border-t border-white/10 pt-4 mb-6">
                             <div>
                                 <p class="text-xs text-[#C9A53D] uppercase tracking-wider mb-1">Capacity</p>
-                                <p class="text-white font-semibold">8-10 Guests</p>
+                                <p class="text-white font-semibold">25-30 Guests</p>
                             </div>
                             <div class="text-right">
                                 <p class="text-xs text-[#C9A53D] uppercase tracking-wider mb-1">Starting From</p>
-                                <p class="text-xl text-white font-bold">3.000.000<span class="text-xs text-gray-400 font-normal">++</span></p>
+                                <p class="text-xl text-white font-bold">9.000.000<span class="text-xs text-gray-400 font-normal">++</span></p>
                             </div>
                         </div>
-                        <a href="#contact" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
+                        <a href="https://wa.me/6281222227496" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
                             Book Now
                         </a>
                     </div>
@@ -1232,7 +1265,7 @@
                                 <p class="text-xl text-white font-bold">1.200.000<span class="text-xs text-gray-400 font-normal">++</span></p>
                             </div>
                         </div>
-                        <a href="#contact" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
+                        <a href="https://wa.me/6281222227496" class="block w-full text-center bg-transparent border border-[#C9A53D] text-[#C9A53D] py-3 rounded-lg font-medium hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 uppercase text-sm tracking-wider">
                             Book Now
                         </a>
                     </div>
@@ -1405,7 +1438,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         // Mobile Performance Optimization
@@ -1417,20 +1449,6 @@
             once: true,
             offset: isMobile ? 50 : 100,
             disable: isMobile ? 'mobile' : false // Disable AOS on mobile for better performance
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
         });
 
         // Form submission handler
@@ -1474,192 +1492,6 @@
             }
         });
 
-        // Modern Menu functionality - Mobile Optimized
-        let currentItemsShown = 10;
-        const totalItems = 39;
-        const itemsPerLoad = isMobile ? 5 : 10; // Load fewer items on mobile
-        
-        // Lazy load additional menu items data (only when needed)
-        function getAdditionalMenuItems() {
-            return [
-                { id: 11, category: 'traditional', title: 'Traditional Dish 11', description: 'Authentic Indonesian flavors', image: 'page11_img1.jpg', type: 'compact' },
-                { id: 12, category: 'modern', title: 'Modern Fusion 12', description: 'Contemporary Indonesian cuisine', image: 'page12_img1.jpg', type: 'standard' },
-                { id: 13, category: 'signature', title: 'Signature Dish 13', description: 'Chef\'s special creation', image: 'page13_img1.jpg', type: 'featured' },
-                { id: 14, category: 'traditional', title: 'Traditional Dish 14', description: 'Classic Indonesian recipe', image: 'page14_img1.jpg', type: 'tall' },
-                { id: 15, category: 'modern', title: 'Modern Dish 15', description: 'Innovative Indonesian cuisine', image: 'page15_img1.jpg', type: 'standard' },
-                { id: 16, category: 'signature', title: 'Signature Dish 16', description: 'Premium Indonesian cuisine', image: 'page16_img1.jpg', type: 'compact' },
-                { id: 17, category: 'traditional', title: 'Traditional Dish 17', description: 'Heritage Indonesian flavors', image: 'page17_img1.jpg', type: 'standard' },
-                { id: 18, category: 'modern', title: 'Modern Fusion 18', description: 'Contemporary twist on classics', image: 'page18_img1.jpg', type: 'featured' }
-            ];
-        }
-        
-        // Load more functionality - Mobile Optimized
-        const loadMoreBtn = document.getElementById('loadMoreBtn');
-        const menuGrid = document.querySelector('.menu-grid');
-        
-        if (loadMoreBtn) {
-            loadMoreBtn.addEventListener('click', function() {
-                const additionalMenuItems = getAdditionalMenuItems(); // Lazy load only when needed
-                const itemsToShow = Math.min(itemsPerLoad, totalItems - currentItemsShown);
-                const startIndex = currentItemsShown - 10;
-                const endIndex = startIndex + itemsToShow;
-                
-                for (let i = startIndex; i < endIndex && i < additionalMenuItems.length; i++) {
-                    const item = additionalMenuItems[i];
-                    const menuItem = createMenuItem(item);
-                    menuGrid.insertAdjacentHTML('beforeend', menuItem);
-                }
-                
-                currentItemsShown += itemsToShow;
-                
-                // Update button text and counter
-                const remainingItems = totalItems - currentItemsShown;
-                if (remainingItems <= 0) {
-                    this.style.display = 'none';
-                } else {
-                    this.querySelector('span').textContent = `Discover ${Math.min(itemsPerLoad, remainingItems)} More Dishes`;
-                }
-                
-                this.parentElement.querySelector('p').textContent = `Showing ${currentItemsShown} of ${totalItems} dishes`;
-                
-                // Only refresh AOS on desktop for performance
-                if (typeof AOS !== 'undefined' && !isMobile) {
-                    AOS.refresh();
-                }
-            });
-        }
-        
-        function createMenuItem(item) {
-            const cardTypes = {
-                featured: 'col-span-2 row-span-2',
-                tall: 'row-span-2',
-                compact: '',
-                standard: ''
-            };
-            
-            const aspectRatios = {
-                featured: 'aspect-[4/3]',
-                tall: 'aspect-[3/4]',
-                compact: 'aspect-[3/2]',
-                standard: 'aspect-square'
-            };
-            
-            const categoryColors = {
-                signature: 'bg-gradient-to-r from-amber-400 to-orange-500 text-white',
-                traditional: 'bg-green-100 text-green-700',
-                modern: 'bg-blue-100 text-blue-700'
-            };
-            
-            return `
-                <div class="menu-item break-inside-avoid mb-6 group ${cardTypes[item.type]}" data-category="${item.category}" data-aos="fade-up" data-aos-duration="800">
-                    <div class="relative bg-white/70 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-500 cursor-pointer" onclick="openMenuModal('${item.image}', '${item.title}', '${item.description}', '${item.category}')">
-                        <div class="${aspectRatios[item.type]} overflow-hidden relative">
-                            <img src="public/assets/LUMPANG-EMAS-SIGNATURE-PRAPANCA/${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <div class="p-4">
-                            <div class="flex items-center gap-2 mb-2">
-                                <span class="px-2 py-1 ${categoryColors[item.category]} text-xs font-medium rounded-full">${item.category.charAt(0).toUpperCase() + item.category.slice(1)}</span>
-                            </div>
-                            <h3 class="font-semibold text-gray-800 text-sm mb-1 group-hover:text-amber-600 transition-colors duration-300">${item.title}</h3>
-                            <p class="text-xs text-gray-600">${item.description}</p>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }
-        
-        // Menu Modal functionality
-        const menuModal = document.getElementById('menuModal');
-        const closeMenuModal = document.getElementById('closeMenuModal');
-        
-        window.openMenuModal = function(image, title, description, category) {
-            const modalImage = document.getElementById('menuModalImage');
-            const modalTitle = document.getElementById('menuModalTitle');
-            const modalDescription = document.getElementById('menuModalDescription');
-            const modalTags = document.getElementById('menuModalTags');
-            
-            modalImage.src = `public/assets/LUMPANG-EMAS-SIGNATURE-PRAPANCA/${image}`;
-            modalTitle.textContent = title;
-            modalDescription.textContent = description;
-            
-            const categoryColors = {
-                signature: 'bg-gradient-to-r from-amber-400 to-orange-500 text-white',
-                traditional: 'bg-green-100 text-green-700',
-                modern: 'bg-blue-100 text-blue-700'
-            };
-            
-            modalTags.innerHTML = `<span class="px-3 py-1 ${categoryColors[category]} text-sm font-medium rounded-full">${category.charAt(0).toUpperCase() + category.slice(1)}</span>`;
-            
-            menuModal.classList.remove('hidden');
-            menuModal.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        };
-        
-        function closeMenuModalFunc() {
-            menuModal.classList.add('hidden');
-            menuModal.classList.remove('flex');
-            document.body.style.overflow = 'auto';
-        }
-        
-        if (closeMenuModal) {
-            closeMenuModal.addEventListener('click', closeMenuModalFunc);
-        }
-        
-        if (menuModal) {
-            menuModal.addEventListener('click', function(e) {
-                if (e.target === this) closeMenuModalFunc();
-            });
-        }
-        
-        // Category filtering
-        const filterTabs = document.querySelectorAll('.filter-tab');
-        
-        filterTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                const category = this.dataset.category;
-                
-                // Update active tab
-                filterTabs.forEach(t => {
-                    t.classList.remove('bg-gradient-to-r', 'from-amber-500', 'to-orange-600', 'text-white', 'shadow-lg');
-                    t.classList.add('bg-white/70', 'text-gray-600', 'hover:bg-white/90');
-                });
-                
-                this.classList.remove('bg-white/70', 'text-gray-600', 'hover:bg-white/90');
-                this.classList.add('bg-gradient-to-r', 'from-amber-500', 'to-orange-600', 'text-white', 'shadow-lg');
-                
-                // Filter menu items
-                const menuItems = document.querySelectorAll('.menu-item');
-                menuItems.forEach(item => {
-                    if (category === 'all' || item.dataset.category === category) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-        
-        // Search functionality
-        const searchInput = document.getElementById('menuSearch');
-        
-        if (searchInput) {
-            searchInput.addEventListener('input', function() {
-                const searchTerm = this.value.toLowerCase();
-                const menuItems = document.querySelectorAll('.menu-item');
-                
-                menuItems.forEach(item => {
-                    const title = item.querySelector('h3').textContent.toLowerCase();
-                    const description = item.querySelector('p').textContent.toLowerCase();
-                    
-                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        }
         
         // Modern 2025 Carousel Functionality - Mobile Optimized
         class ModernCarousel {
@@ -1867,6 +1699,69 @@
             if (document.getElementById('menuCarousel')) {
                 new ModernCarousel();
             }
+            if (document.getElementById('promoCarousel')) {
+                new (class {
+                    constructor() {
+                        this.carousel = document.getElementById('promoCarousel');
+                        this.track = document.getElementById('promoTrack');
+                        this.prev = document.getElementById('promoPrev');
+                        this.next = document.getElementById('promoNext');
+                        this.indicators = document.getElementById('promoIndicators');
+                        this.items = Array.from(this.track.querySelectorAll('figure'));
+                        this.index = 0;
+                        this.itemWidth = this.items[0]?.offsetWidth || this.carousel.offsetWidth;
+                        this.max = Math.max(0, this.items.length - 1);
+                        this.init();
+                    }
+                    init() {
+                        this.bind();
+                        this.buildIndicators();
+                        this.update();
+                        window.addEventListener('resize', () => {
+                            this.itemWidth = this.items[0]?.offsetWidth || this.carousel.offsetWidth;
+                            this.update();
+                        });
+                        let sx = 0, cx = 0, drag = false;
+                        this.track.addEventListener('touchstart', e => { sx = e.touches[0].clientX; drag = true; });
+                        this.track.addEventListener('touchmove', e => {
+                            if (!drag) return;
+                            cx = e.touches[0].clientX;
+                            const d = sx - cx;
+                            if (Math.abs(d) > 50) { d > 0 ? this.nextSlide() : this.prevSlide(); drag = false; }
+                        });
+                        this.track.addEventListener('touchend', () => { drag = false; });
+                    }
+                    bind() {
+                        this.prev.addEventListener('click', () => this.prevSlide());
+                        this.next.addEventListener('click', () => this.nextSlide());
+                    }
+                    buildIndicators() {
+                        this.indicators.innerHTML = '';
+                        this.items.forEach((_, i) => {
+                            const b = document.createElement('button');
+                            b.className = 'w-3 h-3 rounded-full bg-white/40 border border-white/30 transition-all duration-300';
+                            b.addEventListener('click', () => { this.index = i; this.update(); });
+                            this.indicators.appendChild(b);
+                        });
+                    }
+                    updateIndicators() {
+                        const nodes = Array.from(this.indicators.querySelectorAll('button'));
+                        nodes.forEach((n, i) => {
+                            n.className = i === this.index
+                                ? 'w-8 h-3 rounded-full bg-[#C9A53D] shadow-lg transition-all duration-300'
+                                : 'w-3 h-3 rounded-full bg-white/40 border border-white/30 transition-all duration-300';
+                        });
+                    }
+                    update() {
+                        this.track.style.transform = `translateX(${-this.index * this.itemWidth}px)`;
+                        this.prev.disabled = this.index === 0;
+                        this.next.disabled = this.index === this.max;
+                        this.updateIndicators();
+                    }
+                    prevSlide() { if (this.index > 0) { this.index--; this.update(); } }
+                    nextSlide() { if (this.index < this.max) { this.index++; this.update(); } else { this.index = 0; this.update(); } }
+                })();
+            }
             
             // Add custom CSS for animations
             const style = document.createElement('style');
@@ -1911,19 +1806,6 @@
             `;
             document.head.appendChild(style);
             
-            document.querySelectorAll('.menu-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    const title = this.querySelector('h3').textContent;
-                    const description = this.querySelector('p').textContent;
-                    const category = this.dataset.category || 'signature';
-                    
-                    if (img && img.src) {
-                        const imageName = img.src.split('/').pop();
-                        openMenuModal(imageName, title, description, category);
-                    }
-                });
-            });
         });
         
         // Image Modal Functionality for 2x Zoom
@@ -2086,6 +1968,119 @@
                     closeIcon.classList.add('hidden');
                 }
             });
+
+            // Menu Promo (Bintaro Avenue) Carousel
+            if (document.getElementById('promoCarousel')) {
+                new (class {
+                    constructor() {
+                        this.carousel = document.getElementById('promoCarousel');
+                        this.track = document.getElementById('promoTrack');
+                        this.prev = document.getElementById('promoPrev');
+                        this.next = document.getElementById('promoNext');
+                        this.indicators = document.getElementById('promoIndicators');
+                        this.items = Array.from(this.track.querySelectorAll('figure'));
+                        this.index = 0;
+                        this.itemWidth = this.items[0]?.offsetWidth || this.carousel.offsetWidth;
+                        this.max = Math.max(0, this.items.length - 1);
+                        this.interval = null;
+                        this.init();
+                    }
+                    init() {
+                        this.bind();
+                        this.buildIndicators();
+                        this.update();
+                        this.startAutoPlay();
+                        // Fix: Set explicit slide width on init and resize
+                        window.addEventListener('resize', () => {
+                            this.itemWidth = this.carousel.offsetWidth;
+                            // Enforce slide width to match carousel container
+                            this.items.forEach(item => {
+                                item.style.width = `${this.itemWidth}px`;
+                                item.style.minWidth = `${this.itemWidth}px`;
+                                item.style.flexShrink = 0;
+                            });
+                            this.update();
+                        });
+                        // Initial width set
+                        this.itemWidth = this.carousel.offsetWidth;
+                        this.items.forEach(item => {
+                            item.style.width = `${this.itemWidth}px`;
+                            item.style.minWidth = `${this.itemWidth}px`;
+                            item.style.flexShrink = 0;
+                        });
+
+                        let sx = 0, cx = 0, drag = false;
+                        this.track.addEventListener('touchstart', e => {
+                            this.stopAutoPlay();
+                            sx = e.touches[0].clientX;
+                            drag = true;
+                        });
+                        this.track.addEventListener('touchmove', e => {
+                            if (!drag) return;
+                            cx = e.touches[0].clientX;
+                            const d = sx - cx;
+                            if (Math.abs(d) > 50) { d > 0 ? this.nextSlide() : this.prevSlide(); drag = false; }
+                        });
+                        this.track.addEventListener('touchend', () => {
+                            drag = false;
+                            this.startAutoPlay();
+                        });
+                    }
+                    bind() {
+                        this.prev.addEventListener('click', () => {
+                            this.prevSlide();
+                            this.resetAutoPlay();
+                        });
+                        this.next.addEventListener('click', () => {
+                            this.nextSlide();
+                            this.resetAutoPlay();
+                        });
+                    }
+                    buildIndicators() {
+                        this.indicators.innerHTML = '';
+                        this.items.forEach((_, i) => {
+                            const b = document.createElement('button');
+                            b.className = 'w-3 h-3 rounded-full bg-white/40 border border-white/30 transition-all duration-300';
+                            b.addEventListener('click', () => {
+                                this.index = i;
+                                this.update();
+                                this.resetAutoPlay();
+                            });
+                            this.indicators.appendChild(b);
+                        });
+                    }
+                    updateIndicators() {
+                        const nodes = Array.from(this.indicators.querySelectorAll('button'));
+                        nodes.forEach((n, i) => {
+                            n.className = i === this.index
+                                ? 'w-8 h-3 rounded-full bg-[#C9A53D] shadow-lg transition-all duration-300'
+                                : 'w-3 h-3 rounded-full bg-white/40 border border-white/30 transition-all duration-300';
+                        });
+                    }
+                    update() {
+                        this.track.style.transform = `translateX(${-this.index * this.itemWidth}px)`;
+                        this.prev.disabled = this.index === 0;
+                        this.next.disabled = this.index === this.max;
+                        this.updateIndicators();
+                    }
+                    prevSlide() { if (this.index > 0) { this.index--; this.update(); } }
+                    nextSlide() { if (this.index < this.max) { this.index++; this.update(); } else { this.index = 0; this.update(); } }
+                    startAutoPlay() {
+                        if (this.interval) return;
+                        this.interval = setInterval(() => this.nextSlide(), 3000);
+                    }
+                    stopAutoPlay() {
+                        if (this.interval) {
+                            clearInterval(this.interval);
+                            this.interval = null;
+                        }
+                    }
+                    resetAutoPlay() {
+                        this.stopAutoPlay();
+                        this.startAutoPlay();
+                    }
+                })();
+            }
         });
     </script>
 </body>

@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="transition-colors duration-300" style="color: #fff;" onmouseover="this.style.color='#889063'" onmouseout="this.style.color='#fff'">
+                    <button id="mobile-menu-button" class="transition-colors duration-300" style="color: #fff;" onmouseover="this.style.color='#889063'" onmouseout="this.style.color='#fff'">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -183,60 +183,31 @@
     </section>
 
     <!-- Promo Section -->
-    <section id="about" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" class="py-16 bg-gray-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-10">
                 <h2 class="text-3xl md:text-4xl font-bold text-[#354024]">Promo</h2>
+                <p class="py-5">Jangan lewatkan kesempatan menikmati menu terbaik bulan ini.</p>
                 <div class="w-20 h-1 bg-[#889063] mx-auto mt-2 rounded-full"></div>
             </div>
-            <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                <div class="md:flex">
-                    <!-- Image Container -->
-                    <div class="md:w-1/2 h-64 md:h-auto relative">
-                        <img 
-                            src="public/assets/rasa-umara/1.jpeg" 
-                            alt="Rasa Umara Promo" 
-                            class="w-full h-full object-cover"
-                        >
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded">
-                            POPULAR
-                        </div>
+            
+            <div class="relative max-w-5xl mx-auto">
+                <!-- Carousel Container -->
+                <div class="overflow-hidden rounded-2xl shadow-2xl relative group">
+                    <div id="promoTrack" class="flex transition-transform duration-500 ease-out h-[300px] md:h-[400px] lg:h-[500px]">
+                        <!-- Items will be injected here via JS -->
                     </div>
                     
-                    <!-- Content Container -->
-                    <div class="p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
-                        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-                            Special Offer Lunch
-                        </h2>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Nikmati sajian khas Indonesia dengan harga spesial setiap hari Senin - Jumat, jam 11:00 - 14:00. Pilihan tepat untuk makan siang Anda.
-                        </p>
-                        
-                        <div class="space-y-3 mb-8">
-                            <div class="flex items-center text-gray-700">
-                                <svg class="w-5 h-5 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span>Paket Lengkap + Minum</span>
-                            </div>
-                            <div class="flex items-center text-gray-700">
-                                <svg class="w-5 h-5 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span>Harga Mulai Rp 45.000</span>
-                            </div>
-                            <div class="flex items-center text-gray-700">
-                                <svg class="w-5 h-5 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span>Gratis Kerupuk</span>
-                            </div>
-                        </div>
-
-                        <a href="https://wa.me/6281222227495" class="block w-full bg-[#354024] hover:bg-[#2a331d] text-white text-center font-semibold py-3 px-6 rounded-lg transition duration-300">
-                            Pesan Sekarang
-                        </a>
-                    </div>
+                    <!-- Navigation Buttons -->
+                    <button id="promoPrev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#354024] p-3 md:p-4 rounded-full transition-all duration-300 shadow-lg opacity-0 group-hover:opacity-100 disabled:opacity-50 transform hover:scale-110 z-20">
+                        <i class="fas fa-chevron-left text-xl"></i>
+                    </button>
+                    <button id="promoNext" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#354024] p-3 md:p-4 rounded-full transition-all duration-300 shadow-lg opacity-0 group-hover:opacity-100 disabled:opacity-50 transform hover:scale-110 z-20">
+                        <i class="fas fa-chevron-right text-xl"></i>
+                    </button>
+                    
+                    <!-- Indicators -->
+                    <div id="promoIndicators" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-20"></div>
                 </div>
             </div>
         </div>
@@ -346,10 +317,6 @@
                                     <!-- Our spacious main dining area features modern industrial design with warm lighting, perfect for family gatherings and special celebrations. -->
                                 <!-- </p> -->
                                 <div class="flex items-center space-x-6">
-                                    <!-- <div class="flex items-center space-x-2"> -->
-                                        <!-- <i class="fas fa-user-friends text-amber-400"></i> -->
-                                        <!-- <span class="text-amber-400">80 Seats</span> -->
-                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>
@@ -588,13 +555,6 @@
         <p id="imageModalTitle" class="mt-4 text-white/90 text-center font-semibold hidden"></p>
     </div>
 
-    <!-- Image Modal -->
-    <div id="imageModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="imageModalTitle">
-        <button id="closeImageModal" class="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-300" aria-label="Close image modal">&times;</button>
-        <img id="modalImage" src="" alt="" class="max-w-[90vw] max-h-[85vh] object-contain rounded-xl shadow-2xl">
-        <p id="imageModalTitle" class="mt-4 text-white/90 text-center font-semibold hidden"></p>
-    </div>
-
     <!-- Mobile Menu Toggle Script -->
     <script>
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -685,6 +645,137 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const isMobile = window.innerWidth <= 768;
+
+    // --- PROMO CAROUSEL LOGIC ---
+    class PromoCarousel {
+        constructor() {
+            this.track = document.getElementById('promoTrack');
+            this.prevBtn = document.getElementById('promoPrev');
+            this.nextBtn = document.getElementById('promoNext');
+            this.indicatorsContainer = document.getElementById('promoIndicators');
+            
+            // Promo Images
+            this.images = [
+                'public/assets/promo/holiday-special-drinks.jpeg',
+                'public/assets/promo/joy-cookies.jpeg',
+                'public/assets/promo/snack-jar.jpeg',
+                'public/assets/promo/juicy-whole-chicken.jpeg',
+                'public/assets/promo/salom-en-croute.jpeg'
+            ];
+            
+            this.currentIndex = 0;
+            this.autoPlayInterval = null;
+            this.startPos = 0;
+            
+            this.init();
+        }
+
+        init() {
+            if (!this.track) return;
+            
+            // Clear existing content
+            this.track.innerHTML = '';
+            this.indicatorsContainer.innerHTML = '';
+            
+            // Populate Carousel
+            this.images.forEach((src, index) => {
+                // Slide Item
+                const slide = document.createElement('div');
+                slide.className = 'min-w-full h-full flex items-center justify-center relative px-10';
+                
+                const imgContainer = document.createElement('div');
+                imgContainer.className = 'relative transition-all duration-300';
+                
+                const img = document.createElement('img');
+                img.src = src;
+                img.className = 'h-full w-auto object-contain cursor-pointer bg-white';
+                img.alt = `Promo ${index + 1}`;
+                img.loading = 'lazy';
+                
+                // Click to enlarge
+                img.onclick = () => {
+                    if (typeof openModal === 'function') openModal(src, `Promo ${index + 1}`);
+                };
+                
+                imgContainer.appendChild(img);
+                slide.appendChild(imgContainer);
+                this.track.appendChild(slide);
+                
+                // Indicator Dot
+                const dot = document.createElement('button');
+                dot.className = `w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${index === 0 ? 'bg-[#354024] scale-125' : 'bg-[#354024]/40 hover:bg-[#354024]/60'}`;
+                dot.ariaLabel = `Go to slide ${index + 1}`;
+                dot.onclick = () => this.goToSlide(index);
+                this.indicatorsContainer.appendChild(dot);
+            });
+
+            // Button Listeners
+            if(this.prevBtn) this.prevBtn.onclick = () => this.prev();
+            if(this.nextBtn) this.nextBtn.onclick = () => this.next();
+            
+            // Auto Play
+            this.startAutoPlay();
+            
+            // Pause on Hover
+            const container = this.track.parentElement;
+            container.onmouseenter = () => this.stopAutoPlay();
+            container.onmouseleave = () => this.startAutoPlay();
+            
+            // Touch/Swipe Support
+            this.track.addEventListener('touchstart', (e) => {
+                this.startPos = e.changedTouches[0].clientX;
+                this.stopAutoPlay();
+            }, {passive: true});
+            
+            this.track.addEventListener('touchend', (e) => {
+                const movedBy = e.changedTouches[0].clientX - this.startPos;
+                if (movedBy < -50) this.next();
+                if (movedBy > 50) this.prev();
+                this.startAutoPlay();
+            }, {passive: true});
+        }
+
+        update() {
+            this.track.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+            
+            // Update dots
+            Array.from(this.indicatorsContainer.children).forEach((dot, index) => {
+                if (index === this.currentIndex) {
+                    dot.className = 'w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 bg-[#354024] scale-125';
+                } else {
+                    dot.className = 'w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 bg-[#354024]/40 hover:bg-[#354024]/60';
+                }
+            });
+        }
+
+        next() {
+            this.currentIndex = (this.currentIndex + 1) % this.images.length;
+            this.update();
+        }
+
+        prev() {
+            this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+            this.update();
+        }
+
+        goToSlide(index) {
+            this.currentIndex = index;
+            this.update();
+        }
+
+        startAutoPlay() {
+            this.stopAutoPlay();
+            this.autoPlayInterval = setInterval(() => this.next(), 5000);
+        }
+
+        stopAutoPlay() {
+            if (this.autoPlayInterval) clearInterval(this.autoPlayInterval);
+        }
+    }
+    
+    // Initialize Promo Carousel
+    new PromoCarousel();
+    // ----------------------------
 
     // Base path and file list (easy to update)
     const basePath = 'public/assets/rasa-umara-cikarang/menu_ruc/';

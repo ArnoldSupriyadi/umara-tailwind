@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PT Laukita Bersama Indonesia - News</title>
     <link href="../dist/output.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script>
@@ -17,14 +17,15 @@
                         'brand': {
                             'primary': '#4C3D19',
                             'secondary': '#354024',
-                            'accent': '#889063',
+                            'accent': '#8B1C3D',
                             'dark': '#4C3D19',
                             'light': '#E5D7C4',
                             'gold': '#CFBB99'
                         }
                     },
                     fontFamily: {
-                        'inter': ['Inter', 'sans-serif']
+                        'inter': ['Inter', 'sans-serif'],
+                        'playfair': ['"Playfair Display"', 'serif']
                     }
                 }
             }
@@ -128,10 +129,14 @@
                 <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex items-center space-x-8">
                     <a href="../index.html" class="text-gray-700 hover:text-brand-primary font-medium">Home</a>
-                    <a href="/lbi/retort.html" class="text-gray-700 hover:text-brand-primary font-medium">B2B Products</a>
-                    <a href="/lbi/wip.html" class="text-gray-700 hover:text-brand-primary font-medium">Exports Products</a>
-                    <a href="../lbi/mining-lbi.html" class="text-gray-700 hover:text-brand-primary font-medium">Mining Supply</a>
-                    <a href="../lbi/mining-lbi.html" class="text-gray-700 hover:text-brand-primary font-medium">Resto & Hotel Supply</a>
+                    <a href="/lbi/retort.html" class="text-gray-700 hover:text-brand-primary font-medium">B2B
+                        Products</a>
+                    <a href="/lbi/wip.html" class="text-gray-700 hover:text-brand-primary font-medium">Exports
+                        Products</a>
+                    <a href="../lbi/mining-lbi.html" class="text-gray-700 hover:text-brand-primary font-medium">Mining
+                        Supply</a>
+                    <a href="../lbi/mining-lbi.html" class="text-gray-700 hover:text-brand-primary font-medium">Resto &
+                        Hotel Supply</a>
                     <a href="../lbi/news-lbi.html" class="text-gray-700 hover:text-brand-primary font-medium">News</a>
                     <a href="tel:085217777177"
                         class="font-medium text-gray-700 px-6 py-2 rounded-full hover:bg-brand-secondary text-underline">Contact</a>
@@ -160,8 +165,10 @@
                 <a href="../index.html" class="text-gray-700 hover:text-brand-primary font-medium">Home</a>
                 <a href="/lbi/retort.html" class="text-gray-700 hover:text-brand-primary font-medium">B2B Products</a>
                 <a href="/lbi/wip.html" class="text-gray-700 hover:text-brand-primary font-medium">Exports Products</a>
-                <a href="../lbi/mining-lbi.html" class="text-gray-700 hover:text-brand-primary font-medium">Mining Supply</a>
-                <a href="../lbi/mining-lbi.html" class="text-gray-700 hover:text-brand-primary font-medium">Resto & Hotel Supply</a>
+                <a href="../lbi/mining-lbi.html" class="text-gray-700 hover:text-brand-primary font-medium">Mining
+                    Supply</a>
+                <a href="../lbi/mining-lbi.html" class="text-gray-700 hover:text-brand-primary font-medium">Resto &
+                    Hotel Supply</a>
                 <a href="../lbi/news-lbi.html" class="text-gray-700 hover:text-brand-primary font-medium">News</a>
                 <a href="tel:085217777177"
                     class="font-medium text-gray-700 px-6 py-2 rounded-full hover:bg-brand-secondary text-underline">Contact</a>
@@ -171,43 +178,144 @@
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-overlay" class="lg:hidden hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-30"></div>
-    
-    <main>
-        <section id="news" class="py-20 mt-10">
-            <div class="container mx-auto px-4 lg:px-8">
-                <div class="text-center mb-12">
-                    <div class="inline-flex items-center gap-2 bg-[#F7F3EF] px-6 py-3 rounded-full border border-[#debe9d] mb-6">
-                        <div class="w-2 h-2 bg-[#8B1C3D] rounded-full animate-pulse"></div>
-                        <span class="text-sm font-semibold text-[#8B1C3D] tracking-wide uppercase">News</span>
-                    </div>
-                    <h2 class="text-4xl md:text-5xl font-bold text-[#8B1C3D] mb-4 leading-tight">News & Updates</h2>
-                    <p class="text-[#8B1C3D] max-w-3xl mx-auto leading-relaxed">Latest stories from Laukita Bersama Indonesia.</p>
+
+    <main class="bg-[#FAFAFA]">
+        <article class="pt-24 pb-20">
+            <!-- Header Section -->
+            <div class="container mx-auto px-4 lg:px-8 mb-12 text-center max-w-5xl">
+                <!-- Breadcrumb -->
+                <nav class="flex justify-center items-center gap-2 text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+                    <a href="news-lbi.html" class="hover:text-brand-accent transition-colors">News</a>
+                    <span class="text-gray-300">/</span>
+                    <span class="text-brand-primary font-medium">Article Details</span>
+                </nav>
+
+                <!-- Category & Date -->
+                <div class="flex items-center justify-center gap-4 mb-6">
+                    <span class="px-4 py-1 rounded-full border border-brand-gold/30 bg-brand-light/20 text-brand-primary text-xs font-bold tracking-widest uppercase">
+                        Laukita Bersama Indonesia
+                    </span>
+                    <span class="text-gray-400 text-sm font-medium italic">November 12, 2025</span>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch max-w-7xl mx-auto">
-                    <article class="group rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-[#debe9d] bg-white">
-                        <div class="relative overflow-hidden">
-                            <img src="../public/assets/news/sial-interfood/1.jpg" alt="SIAL InterFood 2025" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-[#E5D7C4] text-[#4C3D19] text-xs font-semibold px-3 py-1 rounded-full">Laukita Bersama Indonesia</span>
-                            </div>
-                        </div>
-                        <div class="p-6 bg-[#F7F3EF]">
-                            <div class="text-sm text-[#8B1C3D] mb-3">12 November 2025</div>
-                            <h3 class="text-xl font-bold text-[#8B1C3D] mb-3 group-hover:text-[#6f162e] transition-colors">Laukita Bersama Indonesia Showcases Food Manufacturing at SIAL InterFood 2025</h3>
-                            <p class="text-[#8B1C3D] mb-4">LBI participated in SIAL InterFood 2025, one of Indonesia’s leading food and beverage exhibitions. This participation serves as an important step for LBI to introduce its advanced frozen and retort food</p>
-                            <a href="../lbi/news-detail-lbi.html" class="inline-flex items-center text-[#8B1C3D] hover:text-[#6f162e] font-semibold">
-                                Read More
-                                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
+
+                <!-- Title -->
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-brand-primary leading-tight mb-8">
+                    Laukita Bersama Indonesia Showcases Food Manufacturing at SIAL InterFood 2025
+                </h1>
+
+                <!-- Author/Source -->
+                <div class="flex items-center justify-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-brand-light flex items-center justify-center text-brand-primary font-serif font-bold text-lg">
+                        L
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm font-bold text-brand-primary">LBI Editorial Team</p>
+                        <p class="text-xs text-gray-500">Press Release</p>
+                    </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Hero Image -->
+            <div class="container mx-auto px-4 lg:px-8 mb-16 md:mb-24">
+                <div class="relative w-full aspect-[21/9] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="../public/assets/news/sial-interfood/1.jpg" 
+                        alt="Laukita Booth at SIAL InterFood" 
+                        class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[2s]">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+                </div>
+                <figcaption class="text-center mt-4 text-sm text-gray-500 font-inter italic">
+                    The Laukita Bersama Indonesia booth at SIAL InterFood 2025, displaying our latest manufacturing capabilities.
+                </figcaption>
+            </div>
+
+            <!-- Content Body -->
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="max-w-3xl mx-auto">
+                    <div class="prose prose-lg md:prose-xl prose-headings:font-playfair prose-headings:text-brand-primary prose-p:text-gray-600 prose-p:font-light prose-p:leading-relaxed prose-strong:text-brand-primary prose-strong:font-semibold">
+                        <p class="first-letter:text-7xl first-letter:font-playfair first-letter:font-bold first-letter:text-brand-accent first-letter:mr-3 first-letter:float-left">
+                            PT Laukita Bersama Indonesia (LBI) participated in SIAL InterFood 2025, one of Indonesia’s leading food and beverage exhibitions. This participation serves as an important step for LBI to introduce its advanced frozen and retort food manufacturing capabilities to the public, industry players, and potential partners.
+                        </p>
+                        
+                        <p>
+                            Established in 2018, LBI has become a trusted toll manufacturing and white label partner, delivering high-quality frozen, retort, and pasteurized food solutions. With state-of-the-art facilities and modern safety standards, LBI supports the entire production lifecycle—from concept to completion.
+                        </p>
+
+                        <!-- Pull Quote -->
+                        <blockquote class="border-l-4 border-brand-accent pl-6 my-12 italic text-2xl font-playfair text-brand-primary bg-brand-light/10 py-4 pr-4 rounded-r-lg">
+                            "LBI’s presence at SIAL InterFood reinforces its commitment to delivering future-ready food manufacturing solutions that emphasize quality, efficiency, and innovation."
+                        </blockquote>
+
+                        <p>
+                            Through this exhibition, LBI aims to expand collaboration opportunities with F&B brands, hotels, restaurants, cafés, and FMCG companies seeking a reliable and innovative manufacturing partner capable of supporting business scalability.
+                        </p>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="mt-16 pt-8 border-t border-gray-200">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-sm font-medium text-gray-400 mr-2">Tags:</span>
+                            <a href="#" class="text-sm text-brand-accent hover:underline">#SIALInterFood</a>
+                            <a href="#" class="text-sm text-brand-accent hover:underline">#FoodManufacturing</a>
+                            <a href="#" class="text-sm text-brand-accent hover:underline">#LaukitaBersama</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photo Gallery Section -->
+            <div class="bg-white mt-24 py-20 border-t border-gray-100 hidden">
+                <div class="container mx-auto px-4 lg:px-8 max-w-6xl">
+                    <div class="text-center mb-16">
+                        <span class="text-brand-accent font-bold tracking-widest uppercase text-xs mb-3 block">Gallery</span>
+                        <h3 class="text-3xl md:text-4xl font-playfair font-bold text-brand-primary">Event Highlights</h3>
+                        <div class="w-20 h-1 bg-brand-gold/30 mx-auto mt-6 rounded-full"></div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                        <!-- Image 1 -->
+                        <figure class="group cursor-pointer">
+                            <div class="overflow-hidden rounded-xl shadow-lg mb-4 relative aspect-[4/3]">
+                                <img src="../public/assets/news/sial-interfood/2.jpg" 
+                                    alt="Product Showcase" 
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+                            </div>
+                            <figcaption class="text-center">
+                                <h4 class="font-playfair text-xl font-bold text-brand-primary mb-2">Retort Pouch Innovation</h4>
+                                <p class="text-sm text-gray-500 font-light">Laukita’s Chicken Semur retort pouch showcased at the event.</p>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Image 2 -->
+                        <figure class="group cursor-pointer">
+                            <div class="overflow-hidden rounded-xl shadow-lg mb-4 relative aspect-[4/3]">
+                                <img src="../public/assets/news/sial-interfood/3.jpg" 
+                                    alt="Booth Display" 
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+                            </div>
+                            <figcaption class="text-center">
+                                <h4 class="font-playfair text-xl font-bold text-brand-primary mb-2">Product Lineup</h4>
+                                <p class="text-sm text-gray-500 font-light">A comprehensive display of frozen and retort food products.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Footer -->
+            <div class="container mx-auto px-4 lg:px-8 mt-16 text-center">
+                <a href="news-lbi.html" class="inline-flex items-center gap-3 text-brand-primary hover:text-brand-accent transition-colors group">
+                    <span class="w-10 h-10 rounded-full border border-brand-primary/20 flex items-center justify-center group-hover:border-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7 7-7M8 12h13" />
+                        </svg>
+                    </span>
+                    <span class="font-playfair font-bold text-lg tracking-wide">Back to News</span>
+                </a>
+            </div>
+        </article>
     </main>
-    
 
 
     <!-- Footer -->

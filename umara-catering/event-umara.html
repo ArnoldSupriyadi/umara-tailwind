@@ -285,10 +285,16 @@
             </div>
             <div id="eventCarousel" class="w-[100vw] ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] overflow-hidden relative">
                 <div id="eventTrack" class="flex gap-4 transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] will-change-transform">
-                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]"><div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr-coorporate-event/3.jpg" alt="Coorporate Event"></div></div>
-                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]"><div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr/UCR-WEB/event/PLN.jpg" alt="PLN"></div></div>
-                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]"><div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr/UCR-WEB/event/Gymnastic Olympics.jpg" alt="Gymnastic Olympics"></div></div>
-                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]"><div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr-private-event/1.jpg" alt="Private Event"></div></div>
+                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]"><div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr/UCR-WEB/event/EVENT3.jpg" alt="Private Event"></div></div>
+                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]">
+                        <div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img
+                                class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr-coorporate-event/3.jpg"
+                                alt="Coorporate Event"></div>
+                    </div>
+                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]"><div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr/UCR-WEB/event/EVENT.jpg" alt="Gymnastic Olympics"></div></div>
+                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]"><div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr/UCR-WEB/event/EVENT2.jpg" alt="Private Event"></div></div>
+                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]"><div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr/UCR-WEB/event/EVENT4.jpg" alt="Private Event"></div></div>
+                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]"><div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr/UCR-WEB/event/EVENT5.jpg" alt="Private Event"></div></div>
                 </div>
                 <div class="absolute left-1/2 -translate-x-1/2 bottom-4 flex items-center justify-center gap-3 bg-black/35 backdrop-blur rounded-full px-3 py-2">
                     <button id="eventPrev" class="w-10 h-10 flex items-center justify-center text-white bg-white/20 hover:bg-white/30 rounded-full" aria-label="Previous"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></button>
@@ -455,8 +461,8 @@
             try{ name = decodeURIComponent(name); }catch(e){}
             name = name.replace(/\.[^.]+$/, '');
             name = name.replace(/[_-]+/g, ' ').trim();
-            var alt = img.getAttribute('alt') || '';
-            var title = alt.trim() || name;
+            // var alt = img.getAttribute('alt') || '';
+            // var title = alt.trim() || name;
             if(!title) return;
             var cap = document.createElement('div');
             cap.className = 'absolute left-0 bottom-0 bg-black/50 text-white px-3 py-2 text-sm sm:text-base pointer-events-none';

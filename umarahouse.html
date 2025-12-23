@@ -81,6 +81,19 @@
         #carouselTrack {
             width: max-content;
         }
+
+        .le-media {
+            position: relative;
+            width: 100%;
+            height: 320px;
+        }
+        @media (min-width: 768px) { .le-media { height: 420px; } }
+        @media (min-width: 1024px) { .le-media { height: 520px; } }
+        .le-img-fit {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
@@ -122,9 +135,9 @@
             </div>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="bg-[#131313] min-h-screen flex items-center pt-20 relative">
+    
+    <main class="bg-[#131313] min-h-screen flex items-center pt-20 relative">
+        <!-- Hero Section -->
         <div class="container mx-auto px-4 relative z-10">
             <div class="asymmetric-grid items-center mb-32" data-aos="fade-up" data-aos-duration="1000">
                 <!-- Left Side - Content -->
@@ -197,61 +210,65 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </main>
 
-            <!-- Promo Section -->
-            <div class="relative mt-24 mb-12" data-aos="fade-up" data-aos-duration="1000">
-                <div class="bg-[#1a0f0a] rounded-3xl overflow-hidden shadow-2xl border border-[#C9A53D]/20 relative group">
-                    <!-- Glow Effects -->
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-[#C9A53D]/5 rounded-full blur-[80px] pointer-events-none"></div>
-                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-[#C9A53D]/5 rounded-full blur-[80px] pointer-events-none"></div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                        <!-- Image Side -->
-                        <div class="relative h-72 lg:h-auto overflow-hidden">
-                            <img src="public/assets/umara-house/4.jpeg" alt="Signature Experience" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-gradient-to-r from-[#1a0f0a]/90 via-transparent to-transparent lg:bg-gradient-to-l lg:from-[#1a0f0a] lg:to-transparent"></div>
-                            
-                            <!-- Badge -->
-                            <div class="absolute top-6 left-6 bg-[#C9A53D] text-[#1a0f0a] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg animate-pulse">
-                                Limited Offer
+    <!-- Promo Section -->
+    <section id="promo" class="bg-[#131313] py-32 relative">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <div class="p-4">
+                    <div>
+                        <div id="promoCarousel" class="relative overflow-hidden">
+                            <div id="promoTrack" class="flex transition-transform duration-700 ease-out relative z-10">
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/holiday-special-drinks-uh.jpeg" alt="Holiday Special Drinks"
+                                        class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/joy-cookies.jpeg" alt="Joy Cookies" class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/santa-suprised.jpeg" alt="Santa Surprised"
+                                        class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/snack-jar.jpeg" alt="Snack Jar" class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/juicy-whole-chicken.jpeg" alt="Juicy Whole Chicken"
+                                        class="le-img-fit">
+                                </figure>
+                                <figure class="min-w-full le-media">
+                                    <img src="public/assets/promo/salom-en-croute.jpeg" alt="Salmon En Croute"
+                                        class="le-img-fit">
+                                </figure>
                             </div>
-                        </div>
-
-                        <!-- Content Side -->
-                        <div class="p-8 lg:p-14 flex flex-col justify-center relative z-10">
-                            <div class="flex items-center space-x-3 mb-6">
-                                <div class="w-10 h-[1px] bg-[#C9A53D]"></div>
-                                <span class="text-[#C9A53D] text-xs font-bold tracking-[0.2em] uppercase">Chef's Recommendation</span>
-                            </div>
-                            
-                            <h3 class="text-3xl lg:text-5xl font-serif font-bold text-white mb-6 leading-tight">
-                                Signature <span class="italic text-[#C9A53D]">Tasting Menu</span>
-                            </h3>
-                            
-                            <p class="text-gray-400 mb-8 leading-relaxed font-light text-base lg:text-lg">
-                                Experience a curated journey through authentic Indonesian flavors, reimagined with modern culinary techniques. Available for dinner service only.
-                            </p>
-                            
-                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-8 border-t border-white/10 pt-8">
-                                <div>
-                                    <p class="text-[#C9A53D] text-xs uppercase tracking-wider mb-1">Starting From</p>
-                                    <div class="flex items-baseline gap-2">
-                                        <span class="text-3xl font-serif font-bold text-white">IDR 450k</span>
-                                        <span class="text-sm text-gray-500">/ person</span>
-                                    </div>
+                            <div class="pointer-events-none">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-4">
+                                    <button id="promoPrev" class="pointer-events-auto le-button le-gold">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 19l-7-7 7-7"></path>
+                                        </svg>
+                                    </button>
                                 </div>
-                                
-                                <a href="https://wa.me/6281222227495" target="_blank" class="flex-1 w-full sm:w-auto text-center px-8 py-4 bg-transparent border border-[#C9A53D] text-[#C9A53D] rounded-full hover:bg-[#C9A53D] hover:text-[#1a0f0a] transition-all duration-300 font-bold uppercase tracking-wider text-sm group-hover:shadow-[0_0_30px_rgba(201,165,61,0.2)]">
-                                    Reserve Table
-                                </a>
+                                <div class="absolute inset-y-0 right-0 flex items-center pr-4">
+                                    <button id="promoNext" class="pointer-events-auto le-button le-gold">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
+                        <div id="promoIndicators" class="flex items-center justify-center gap-2 mt-6"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
 
     <!-- Menu Section -->
     <section id="menu" class="bg-[#131313] py-32 relative">
@@ -260,7 +277,7 @@
             <div class="text-center mb-12 lg:mb-20" data-aos="fade-up" data-aos-duration="1000">
                 <div class="inline-flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 bg-[#C9A53D] rounded-2xl mb-4 lg:mb-6 shadow-lg"
                     data-aos="zoom-in" data-aos-duration="800">
-                    <svg class="w-6 h-6 lg:w-8 lg:h-8 text-" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
                         </path>
@@ -280,8 +297,7 @@
             <!-- Modern 2025 Carousel Design -->
             <div class="relative w-full" data-aos="fade-up" data-aos-duration="1000">
                 <!-- Carousel Container -->
-                <div id="menuCarousel" class="relative overflow-x-auto overflow-y-hidden rounded-3xl bg-white/10 backdrop-blur-md border border-white/
-    20 shadow-2xl p-4 lg:p-8">
+                <div id="menuCarousel" class="relative overflow-x-auto overflow-y-hidden rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl p-4 lg:p-8">
                     <!-- Carousel Track (items will be populated via JS) -->
                     <div id="carouselTrack" class="flex transition-transform duration-700 ease-out gap-4 lg:gap-6 w-max">
                     </div>
@@ -290,18 +306,14 @@
                 <div class="flex items-center justify-between mt-8">
                     <!-- Navigation Arrows -->
                     <div class="flex items-center gap-4">
-                        <button id="prevBtn" aria-label="Previous" class="group flex items-center justify-center w-14 h-14 bg-white/20 backdrop-blur-md 
-    border border-white/30 rounded-2xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 
-    disabled:cursor-not-allowed">
+                        <button id="prevBtn" aria-label="Previous" class="group flex items-center justify-center w-14 h-14 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed">
                             <svg class="w-6 h-6 text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300"
                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
                                 </path>
                             </svg>
                         </button>
-                        <button id="nextBtn" aria-label="Next" class="group flex items-center justify-center w-14 h-14 bg-white/20 backdrop-blur-md 
-    border border-white/30 rounded-2xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 
-    disabled:cursor-not-allowed">
+                        <button id="nextBtn" aria-label="Next" class="group flex items-center justify-center w-14 h-14 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50  disabled:cursor-not-allowed">
                             <svg class="w-6 h-6 text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300"
                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
@@ -313,13 +325,11 @@
                     <div id="carouselIndicators" class="hidden items-center gap-2"></div>
                     <!-- Auto-play Toggle -->
                     <div class="flex items-center gap-4">
-                        <button id="autoplayBtn" class="group flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-md border border-white/30 
-    rounded-xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <button id="autoplayBtn" class="group flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-md border border-white/30 rounded-xl hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl">
                             <svg id="playIcon"
                                 class="w-4 h-4 text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300"
                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 
-    0h1m-6 4h1m4 0h1m-6-8h8a2 2 0 012 2v8a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h1m4 0h1m-6-8h8a2 2 0 012 2v8a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2z"></path>
                             </svg>
                             <span
                                 class="text-sm font-medium text-[#C9A53D] group-hover:text-amber-600 transition-colors duration-300">Auto</span>
@@ -549,7 +559,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <!-- Contact Information -->
                 <div class="space-y-8" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
-                    <div class="rounded-3xl p-6 floating-card bg-amber-50" border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
+                    <div class="rounded-3xl p-6 floating-card bg-amber-50" style="border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
                         <div class="flex items-start space-x-6">
                             <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: #f59e0b;">
                         <i class="fas fa-map-marker-alt text-xl text-white"></i>
@@ -561,7 +571,7 @@
                         </div>
                     </div>
                     
-                    <div class="rounded-3xl p-6 floating-card bg-amber-50" border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
+                    <div class="rounded-3xl p-6 floating-card bg-amber-50" style="border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);">
                         <div class="flex items-start space-x-6">
                             <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: #fbbf24;">
                                 <i class="fas fa-phone text-xl text-white"></i>
@@ -601,7 +611,7 @@
                 </div>
                 
                 <!-- Reservation Form -->
-                <div class="rounded-3xl p-8 floating-card bg-amber-50" border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
+                <div class="rounded-3xl p-8 floating-card bg-amber-50" style="border: 1px solid rgba(207, 187, 153, 0.3); backdrop-filter: blur(10px);" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
                     <h3 class="text-3xl font-bold mb-8 text-palette2-e">Make a Reservation</h3>
                     <form class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -686,7 +696,7 @@
     </footer>
 
     <!-- Image Modal -->
-    <div id="imageModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div id="imageModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="relative flex flex-col items-center">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 z-10" aria-label="Close image modal">&times;</button>
             <img id="modalImage" src="" alt="" class="block mx-auto max-w-[90vw] max-h-[85vh] object-contain rounded-xl shadow-2xl">
@@ -751,11 +761,7 @@
             });
         });
 
-        // Mobile menu toggle (if needed)
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            mobileMenu.classList.toggle('hidden');
-        }
+
     </script>
     <!-- Menu Carousel JavaScript -->
     <script>
@@ -822,6 +828,33 @@
                 });
             }
 
+            // Helper function for layout state
+            function getLayoutState() {
+                const width = window.innerWidth;
+                const isDesktop = width >= 1024;
+                const isTablet = width >= 768;
+                
+                // Values matching CSS classes: w-64 (16rem/256px) / lg:w-80 (20rem/320px)
+                // Gap: gap-4 (1rem/16px) / lg:gap-6 (1.5rem/24px)
+                
+                let itemWidth, gap;
+                
+                if (isDesktop) {
+                    itemWidth = 320;
+                    gap = 24;
+                } else {
+                    itemWidth = 256;
+                    gap = 16;
+                }
+                
+                return {
+                    isDesktop,
+                    isTablet,
+                    itemWidth,
+                    gap
+                };
+            }
+
             // Modern Carousel (ported from Lumpang Emas)
             class ModernCarousel {
                 constructor() {
@@ -833,13 +866,14 @@
                     this.indicatorsContainer = document.getElementById('carouselIndicators');
 
                     this.currentIndex = 0;
-                    this.itemWidth = isMobile ? 256 : 320; // Smaller width on mobile
+                    const state = getLayoutState();
+                    this.itemWidth = state.itemWidth + state.gap; // Include gap in width calculation
                     this.visibleItems = this.getVisibleItems();
                     this.totalItems = document.querySelectorAll('.carousel-item').length;
                     this.maxIndex = Math.max(0, this.totalItems - this.visibleItems);
-                    this.isAutoplay = !isMobile; // Disable autoplay on mobile for performance
+                    this.isAutoplay = state.isDesktop; // Auto-play on desktop
                     this.autoplayInterval = null;
-                    this.autoplayDelay = isMobile ? 6000 : 4000; // Slower on mobile
+                    this.autoplayDelay = 4000;
 
                     this.init();
                 }
@@ -852,6 +886,8 @@
                     this.addTouchSupport();
 
                     window.addEventListener('resize', () => {
+                        const state = getLayoutState();
+                        this.itemWidth = state.itemWidth + state.gap;
                         this.visibleItems = this.getVisibleItems();
                         this.maxIndex = Math.max(0, this.totalItems - this.visibleItems);
                         this.currentIndex = Math.min(this.currentIndex, this.maxIndex);
@@ -1032,6 +1068,119 @@
             if (document.getElementById('menuCarousel')) {
                 populateCarousel();
                 new ModernCarousel();
+            }
+
+             // Menu Promo (Bintaro Avenue) Carousel
+            if (document.getElementById('promoCarousel')) {
+                new (class {
+                    constructor() {
+                        this.carousel = document.getElementById('promoCarousel');
+                        this.track = document.getElementById('promoTrack');
+                        this.prev = document.getElementById('promoPrev');
+                        this.next = document.getElementById('promoNext');
+                        this.indicators = document.getElementById('promoIndicators');
+                        this.items = Array.from(this.track.querySelectorAll('figure'));
+                        this.index = 0;
+                        this.itemWidth = this.items[0]?.offsetWidth || this.carousel.offsetWidth;
+                        this.max = Math.max(0, this.items.length - 1);
+                        this.interval = null;
+                        this.init();
+                    }
+                    init() {
+                        this.bind();
+                        this.buildIndicators();
+                        this.update();
+                        this.startAutoPlay();
+                        // Fix: Set explicit slide width on init and resize
+                        window.addEventListener('resize', () => {
+                            this.itemWidth = this.carousel.offsetWidth;
+                            // Enforce slide width to match carousel container
+                            this.items.forEach(item => {
+                                item.style.width = `${this.itemWidth}px`;
+                                item.style.minWidth = `${this.itemWidth}px`;
+                                item.style.flexShrink = 0;
+                            });
+                            this.update();
+                        });
+                        // Initial width set
+                        this.itemWidth = this.carousel.offsetWidth;
+                        this.items.forEach(item => {
+                            item.style.width = `${this.itemWidth}px`;
+                            item.style.minWidth = `${this.itemWidth}px`;
+                            item.style.flexShrink = 0;
+                        });
+
+                        let sx = 0, cx = 0, drag = false;
+                        this.track.addEventListener('touchstart', e => {
+                            this.stopAutoPlay();
+                            sx = e.touches[0].clientX;
+                            drag = true;
+                        });
+                        this.track.addEventListener('touchmove', e => {
+                            if (!drag) return;
+                            cx = e.touches[0].clientX;
+                            const d = sx - cx;
+                            if (Math.abs(d) > 50) { d > 0 ? this.nextSlide() : this.prevSlide(); drag = false; }
+                        });
+                        this.track.addEventListener('touchend', () => {
+                            drag = false;
+                            this.startAutoPlay();
+                        });
+                    }
+                    bind() {
+                        this.prev.addEventListener('click', () => {
+                            this.prevSlide();
+                            this.resetAutoPlay();
+                        });
+                        this.next.addEventListener('click', () => {
+                            this.nextSlide();
+                            this.resetAutoPlay();
+                        });
+                    }
+                    buildIndicators() {
+                        this.indicators.innerHTML = '';
+                        this.items.forEach((_, i) => {
+                            const b = document.createElement('button');
+                            b.className = 'w-3 h-3 rounded-full bg-white/40 border border-white/30 transition-all duration-300';
+                            b.addEventListener('click', () => {
+                                this.index = i;
+                                this.update();
+                                this.resetAutoPlay();
+                            });
+                            this.indicators.appendChild(b);
+                        });
+                    }
+                    updateIndicators() {
+                        const nodes = Array.from(this.indicators.querySelectorAll('button'));
+                        nodes.forEach((n, i) => {
+                            n.className = i === this.index
+                                ? 'w-8 h-3 rounded-full bg-[#C9A53D] shadow-lg transition-all duration-300'
+                                : 'w-3 h-3 rounded-full bg-white/40 border border-white/30 transition-all duration-300';
+                        });
+                    }
+                    update() {
+                        this.track.style.transform = `translateX(${-this.index * this.itemWidth}px)`;
+                        this.prev.disabled = this.index === 0;
+                        this.next.disabled = this.index === this.max;
+                        this.updateIndicators();
+                    }
+                    prevSlide() { if (this.index > 0) { this.index--; this.update(); } }
+                    nextSlide() { if (this.index < this.max) { this.index++; this.update(); } else { this.index = 0; this.update(); } }
+                    startAutoPlay() {
+                        if (this.interval) return;
+                        this.interval = setInterval(() => this.nextSlide(), 3000);
+                    }
+                    stopAutoPlay() {
+                        if (this.interval) {
+                            clearInterval(this.interval);
+                            this.interval = null;
+                        }
+                    }
+                    resetAutoPlay() {
+                        this.stopAutoPlay();
+                        this.startAutoPlay();
+                    }
+                })();
             }
         });
     </script>
