@@ -6,6 +6,8 @@
     <title>PT Umara Mitra Kulina - Professional Catering Services</title>
     <link href="./dist/output.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nunito+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <style>
         /* Responsive carousel heights */
         .carousel-responsive {
@@ -28,7 +30,7 @@
         
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 font-nunito text-umk-a antialiased selection:bg-palette1-c selection:text-white">
     <!-- Navigation -->
     <nav class="bg-white/95 backdrop-blur-md shadow-sm fixed w-full z-50 transition-all duration-300">
         <div class="container mx-auto px-4 lg:px-8">
@@ -49,13 +51,35 @@
                     <a href="#contact"
                         class="text-gray-600 text-sm uppercase tracking-wider transition-colors hover:text-palette1-a">Contact</a>
                 </div>
-                <button class="md:hidden text-gray-600 hover:text-palette1-a focus:outline-none">
+                <button id="nav-toggle" class="md:hidden text-gray-600 hover:text-palette1-a focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                         </path>
                     </svg>
                 </button>
             </div>
+        </div>
+        <!-- Mobile Nav -->
+        <div id="nav-mobile"
+            class="md:hidden hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 z-50 shadow-lg">
+            <ul class="flex flex-col items-center gap-1 py-3">
+                <li class="w-full">
+                    <a href="../index.html"
+                        class="block px-4 py-3 text-center text-gray-600 hover:bg-gray-50 hover:text-palette1-a font-medium text-sm uppercase tracking-wider transition-colors">Home</a>
+                </li>
+                <li class="w-full">
+                    <a href="../ptumaramitrakulina.html" class="block px-4 py-3 text-center text-gray-600 hover:bg-gray-50 hover:text-palette1-a font-medium text-sm uppercase tracking-wider 
+    transition-colors">Services</a>
+                </li>
+                <li class="w-full">
+                    <a href="/umk/news-umk.html"
+                        class="block px-4 py-3 text-center text-gray-600 hover:bg-gray-50 hover:text-palette1-a font-medium text-sm uppercase tracking-wider transition-colors">News</a>
+                </li>
+                <li class="w-full">
+                    <a href="#contact"
+                        class="block px-4 py-3 text-center text-gray-600 hover:bg-gray-50 hover:text-palette1-a font-medium text-sm uppercase tracking-wider transition-colors">Contact</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
@@ -803,6 +827,21 @@
  
             
 
+    </script>
+    <script>
+        // Mobile menu functionality
+        const navToggle = document.getElementById('nav-toggle');
+        const navMobile = document.getElementById('nav-mobile');
+
+        if (navToggle && navMobile) {
+            navToggle.addEventListener('click', function () {
+                navMobile.classList.toggle('hidden');
+                
+                // Optional: Toggle icon state if you have different icons for open/close
+                const expanded = navMobile.classList.contains('hidden') ? 'false' : 'true';
+                navToggle.setAttribute('aria-expanded', expanded);
+            });
+        }
     </script>
 </body>
 </html>

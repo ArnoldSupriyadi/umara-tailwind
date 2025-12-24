@@ -50,13 +50,30 @@
                     <a href="/umk/news-umk.html" class="text-palette1-a font-bold text-sm uppercase tracking-wider transition-colors border-b-2 border-palette1-a">News</a>
                     <a href="#contact" class="px-5 py-2.5 bg-palette1-a text-white rounded-sm font-medium text-sm uppercase tracking-wider hover:bg-palette1-b transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact</a>
                 </div>
-                <button class="md:hidden text-gray-600 hover:text-palette1-a focus:outline-none">
+                <button id="nav-toggle" class="md:hidden text-gray-600 hover:text-palette1-a focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
+        </div>
+        <!-- Mobile Nav -->
+        <div id="nav-mobile" class="md:hidden hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 z-50 shadow-lg">
+            <ul class="flex flex-col items-center gap-1 py-3">
+                <li class="w-full">
+                    <a href="../index.html" class="block px-4 py-3 text-center text-gray-600 hover:bg-gray-50 hover:text-palette1-a font-medium text-sm uppercase tracking-wider transition-colors">Home</a>
+                </li>
+                <li class="w-full">
+                    <a href="#services" class="block px-4 py-3 text-center text-gray-600 hover:bg-gray-50 hover:text-palette1-a font-medium text-sm uppercase tracking-wider transition-colors">Services</a>
+                </li>
+                <li class="w-full">
+                    <a href="/umk/news-umk.html" class="block px-4 py-3 text-center text-gray-600 hover:bg-gray-50 hover:text-palette1-a font-medium text-sm uppercase tracking-wider transition-colors">News</a>
+                </li>
+                <li class="w-full">
+                    <a href="#contact" class="block px-4 py-3 text-center text-gray-600 hover:bg-gray-50 hover:text-palette1-a font-medium text-sm uppercase tracking-wider transition-colors">Contact</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
@@ -278,6 +295,21 @@
         </div>
     </footer>
 
+    <script>
+        // Mobile menu functionality
+        const navToggle = document.getElementById('nav-toggle');
+        const navMobile = document.getElementById('nav-mobile');
+
+        if (navToggle && navMobile) {
+            navToggle.addEventListener('click', function () {
+                navMobile.classList.toggle('hidden');
+                
+                // Optional: Toggle icon state if you have different icons for open/close
+                const expanded = navMobile.classList.contains('hidden') ? 'false' : 'true';
+                navToggle.setAttribute('aria-expanded', expanded);
+            });
+        }
+    </script>
 </body>
 
 </html>
