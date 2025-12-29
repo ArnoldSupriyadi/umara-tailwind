@@ -1247,6 +1247,9 @@
   .justify-start {
     justify-content: flex-start;
   }
+  .justify-items-center {
+    justify-items: center;
+  }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
   }
@@ -1432,10 +1435,6 @@
   .rounded-r-lg {
     border-top-right-radius: var(--radius-lg);
     border-bottom-right-radius: var(--radius-lg);
-  }
-  .rounded-r-sm {
-    border-top-right-radius: var(--radius-sm);
-    border-bottom-right-radius: var(--radius-sm);
   }
   .rounded-b-md {
     border-bottom-right-radius: var(--radius-md);
@@ -1706,9 +1705,6 @@
   }
   .bg-\[\#C9A53D\]\/10 {
     background-color: color-mix(in oklab, #C9A53D 10%, transparent);
-  }
-  .bg-\[\#CBB88A\] {
-    background-color: #CBB88A;
   }
   .bg-\[\#CFBB99\] {
     background-color: #CFBB99;
@@ -2319,9 +2315,6 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
-  }
-  .py-2\.5 {
-    padding-block: calc(var(--spacing) * 2.5);
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
@@ -3082,20 +3075,6 @@
       }
     }
   }
-  .group-hover\:scale-\[02\] {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        scale: 02;
-      }
-    }
-  }
-  .group-hover\:scale-\[2\] {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        scale: 2;
-      }
-    }
-  }
   .group-hover\:bg-\[\#C9A53D\] {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -3308,14 +3287,6 @@
       content: var(--tw-content);
       --tw-font-weight: var(--font-weight-bold) !important;
       font-weight: var(--font-weight-bold) !important;
-    }
-  }
-  .hover\:-translate-y-0\.5 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-translate-y: calc(var(--spacing) * -0.5);
-        translate: var(--tw-translate-x) var(--tw-translate-y);
-      }
     }
   }
   .hover\:-translate-y-1 {
@@ -4348,6 +4319,11 @@
   .md\:w-\[280px\] {
     @media (width >= 48rem) {
       width: 280px;
+    }
+  }
+  .md\:max-w-3xl {
+    @media (width >= 48rem) {
+      max-width: var(--container-3xl);
     }
   }
   .md\:max-w-sm {

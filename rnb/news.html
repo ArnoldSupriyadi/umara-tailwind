@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet" />
+    <style>
+        * {
+            letter-spacing: 1px;
+        }
+    </style>
+    <title>PT Nusantara Baru</title>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <img src="../public/assets/vector/logo-rnb.png" alt="PT Nusantara Baru" class="w-20 h-auto">
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="../index.html"
+                            class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#about"
+                            class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="rnb/news.html"
+                            class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">News</a>
+                        <a href="#services"
+                            class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Restaurant</a>
+                        <a href="#contact"
+                            class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                    <a href="../index.html"
+                        class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                    <a href="#about"
+                        class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                    <a href="rnb/news.html"
+                        class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">News</a>
+                    <a href="#services"
+                        class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Restaurant</a>
+                    <a href="#contact"
+                        class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="py-20 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-palette2-e">Latest News</h2>
+                    <p class="text-xl text-gray-600">Updates and stories from Rasa Nusantara Baru</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="group bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="relative overflow-hidden">
+                            <img src="../public/assets/news/wardah/1.png" alt="" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <div class="text-gray-500 text-sm mb-3">26 Juni 2025</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-600 transition-colors">Rasa Umara x Wardah: Jelajahi Bazar Fashion & Beauty Experience</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3">Rasa Umara collaborates with Wardah Beauty to present a special event titled “Explore the Rasa Umara Fashion Bazaar”—a celebration of Rasa</p>
+                            <a href="../news-rasaumaraxwardah.html" class="inline-flex items-center text-amber-600 hover:text-amber-700 font-semibold">
+                                Read More
+                                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="group bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="relative overflow-hidden">
+                            <img src="../public/assets/news/hayomoto/1.jpeg" alt="" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <div class="text-gray-500 text-sm mb-3">8 November 2025</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-600 transition-colors">Lumpang Emas Bintaro Hosts the Vibrant 8th Anniversary Celebration of HayoMoto</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3">Lumpang Emas Bintaro is honored to be part of the vibrant celebration of HayoMoto’s 8th Anniversary</p>
+                            <a href="../news-hayomoto-8-anniversary.html" class="inline-flex items-center text-amber-600 hover:text-amber-700 font-semibold">
+                                Read More
+                                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="group bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="relative overflow-hidden">
+                            <img src="../public/assets/news/santa-umara/IMG_7935.jpg" alt="" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <div class="text-gray-500 text-sm mb-3">25 Desember 2025</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-600 transition-colors">A Magical Christmas: Santa Surprises Guests at Umara House & Lumpang Emas Signature</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3">Christmas is a season of giving, sharing, and creating beautiful memories with loved ones. To celebrate this joyous occasion, Umara Group brought a special touch of magic to its beloved dining establishments.</p>
+                            <a href="../news-santa-visits-to-umara.html" class="inline-flex items-center text-amber-600 hover:text-amber-700 font-semibold">
+                                Read More
+                                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#131313] text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2">
+                    <picture>
+                        <source srcset="../public/assets/vector/logo-rnb.png" type="image/png">
+                        <img src="../public/assets/vector/logo-rnb.png" alt="PT Nusantara Baru" class="w-20 h-auto mb-5">
+                    </picture>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Your trusted partner for innovative business solutions across Indonesia. We help companies
+                        achieve their full potential through strategic consulting and exceptional service.
+                    </p>
+                    <div class="flex space-x-4">
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Services</a>
+                        </li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Business Consulting</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Technology
+                                Solutions</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Human Resources</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Financial Services</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2026 PT Rasa Nusantara Baru. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    
+
+</body>
+
+</html>
