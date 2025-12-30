@@ -598,6 +598,9 @@
   .ms-3 {
     margin-inline-start: calc(var(--spacing) * 3);
   }
+  .ms-6 {
+    margin-inline-start: calc(var(--spacing) * 6);
+  }
   .-mt-16 {
     margin-top: calc(var(--spacing) * -16);
   }
@@ -4154,11 +4157,6 @@
   .md\:-left-12 {
     @media (width >= 48rem) {
       left: calc(var(--spacing) * -12);
-    }
-  }
-  .md\:col-span-1 {
-    @media (width >= 48rem) {
-      grid-column: span 1 / span 1;
     }
   }
   .md\:col-span-2 {
