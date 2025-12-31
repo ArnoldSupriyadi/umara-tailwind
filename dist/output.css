@@ -3639,6 +3639,13 @@
       }
     }
   }
+  .hover\:text-\[\#CBB88A\] {
+    &:hover {
+      @media (hover: hover) {
+        color: #CBB88A;
+      }
+    }
+  }
   .hover\:text-\[\#bfa56e\] {
     &:hover {
       @media (hover: hover) {
