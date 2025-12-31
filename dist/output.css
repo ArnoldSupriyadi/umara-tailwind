@@ -1721,9 +1721,6 @@
   .bg-\[\#E1D5A6\] {
     background-color: #E1D5A6;
   }
-  .bg-\[\#E5D7C4\] {
-    background-color: #E5D7C4;
-  }
   .bg-\[\#E5D7C4\]\/90 {
     background-color: color-mix(in oklab, #E5D7C4 90%, transparent);
   }
@@ -3636,13 +3633,6 @@
     &:hover {
       @media (hover: hover) {
         color: #889063;
-      }
-    }
-  }
-  .hover\:text-\[\#CBB88A\] {
-    &:hover {
-      @media (hover: hover) {
-        color: #CBB88A;
       }
     }
   }
