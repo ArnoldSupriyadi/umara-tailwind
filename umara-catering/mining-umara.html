@@ -212,6 +212,8 @@
             color: #6B7280;
             font-size: 14px
         }
+        
+        .headline{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.01em;font-size:48px;line-height:1.1}
     </style>
 </head>
 
@@ -230,13 +232,13 @@
                     </svg>
                 </button>
                 <nav class="nav-list">
-                    <a href="../index.html" class="nav-link active">Home</a>
+                    <a href="../index.html" class="nav-link">Home</a>
                     <a href="../umara-catering/wedding-umara.html" class="nav-link">Wedding</a>
                     <a href="../umara-catering/dining-umara.html" class="nav-link">Ballroom</a>
                     <a href="../umara-catering/event-umara.html" class="nav-link">Event</a>
                     <a href="../umara-catering/mealbox-umara.html" class="nav-link">Mealbox</a>
                     <a href="../umara-catering/meeting-umara.html" class="nav-link">Meeting</a>
-                    <a href="../umara-catering/mining-umara.html" class="nav-link">Mining</a>
+                    <a href="../umara-catering/mining-umara.html" class="nav-link active">Mining</a>
                     <a href="../umara-catering/gallery-umara.html" class="nav-link">Gallery</a>
                     <a href="../umara-catering/news-umara.html" class="nav-link">News</a>
                 </nav>
@@ -259,14 +261,49 @@
     </div>
 
     <main>
-        <section id="coming-soon" class="py-[72px]">
-            <div class="container-wide text-center">
-                <h1
-                    class="font-['Playfair_Display',serif] text-4xl sm:text-5xl font-bold tracking-[0.01em] text-[#0F1210]">
-                    We are Mining Experience — at Amman</h1>
-                <div class="mt-8 inline-flex items-center gap-3 py-10">
-                    <IMG src="../public/assets/clients/Amman.png" alt="Amman" class="h-24 w-auto"></IMG>
+        <section>
+            <section id="hero">
+                <div class="container-hero-fluid">
+                    <div class="hero-media">
+                        <img src="../public/assets/ucr-mining-event/minig-cover.jpg" alt="Mining Catering" class="h-auto w-full">
+                    </div>
                 </div>
+                <div class="container-wide">
+                    <div class="hero-text pt-30 pb-20">
+                        <h1 class="headline text-center mb-5 tracking-wider">Mining, Oil and Gas</h1>
+                        <p class="subheadline text-center tracking-wider">We deliver field-proven catering services specifically designed for the Mining, Oil, and Gas sectors. With established operations in East Kalimantan, our team provides consistent quality and reliable logistics across remote sites. We prioritize robust food safety standards and efficient batch production to meet the demands of large-volume
+                        operations. Our services are tailored to support roster-based shifts, ensuring your workforce receives nutritious,
+                        high-quality meals that sustain productivity and morale in the most demanding environments.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="mining-gallery" class="py-[72px]">
+            <div class="container-wide">
+                <h2 class="headline mb-6">Gallery</h2>
+                <p class="text-gray-700 mb-8">Highlights from high-volume production and site operations.</p>
+            </div>
+            <div id="miningCarousel" class="w-[100vw] ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] overflow-hidden relative">
+                <div id="miningTrack" class="flex gap-4 transition-transform duration-500 ease-[cubic-bezier(.22,.61,.36,1)] will-change-transform">
+                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]"><div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr-mining-event/6.jpg" alt="Mining Operation 1"></div></div>
+                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]"><div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr-mining-event/8.jpg" alt="Mining Operation 2"></div></div>
+                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]"><div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr-mining-event/3.jpg" alt="Mining Operation 3"></div></div>
+                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]"><div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr-mining-event/4.jpg" alt="Mining Operation 4"></div></div>
+                    <div class="flex-none w-[86vw] sm:w-[70vw] lg:w-[44vw]"><div class="relative h-[56.25vw] sm:h-[40vw] lg:h-[28vw] overflow-hidden"><img class="absolute inset-0 w-full h-full object-cover" src="../public/assets/ucr-mining-event/5.jpg" alt="Mining Operation 5"></div></div>
+                </div>
+                <div class="absolute left-1/2 -translate-x-1/2 bottom-4 flex items-center justify-center gap-3 bg-black/35 backdrop-blur rounded-full px-3 py-2">
+                    <button id="miningPrev" class="w-10 h-10 flex items-center justify-center text-white bg-white/20 hover:bg-white/30 rounded-full" aria-label="Previous"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></button>
+                    <button id="miningNext" class="w-10 h-10 flex items-center justify-center text-white bg-white/20 hover:bg-white/30 rounded-full" aria-label="Next"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-action" class="mb-20 py-[72px]">
+            <div class="container-wide text-center">
+                <h1 class="py-5 text-6xl font-playfair">Reliable Catering for Remote Operations</h1>
+                <p class="font-playfair mb-10">From roster shifts to mass production, we deliver consistent, safe, and efficient meals for mining sites.</p>
+                <a href="https://wa.me/6281212008700" class="btn border-1 border-[#e1d5a6] p-3 bg-[#fffbe8] font-bold">Discuss Your Site Needs</a>
             </div>
         </section>
     </main>
@@ -335,6 +372,95 @@
         if (toggle) toggle.addEventListener('click', function () { if (panel.classList.contains('show')) close(); else open(); });
         if (backdrop) backdrop.addEventListener('click', close);
         window.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
+</script>
+
+<script>
+    (function () {
+        var root = document.getElementById('miningCarousel');
+        if (!root) return;
+        var track = document.getElementById('miningTrack');
+        var originals = Array.from(track.children);
+        var L = originals.length;
+        if (!L) return;
+        var before = document.createDocumentFragment();
+        var middle = document.createDocumentFragment();
+        var after = document.createDocumentFragment();
+        originals.forEach(function (el) { before.appendChild(el.cloneNode(true)); });
+        originals.forEach(function (el) { middle.appendChild(el); });
+        originals.forEach(function (el) { after.appendChild(el.cloneNode(true)); });
+        track.innerHTML = '';
+        track.appendChild(before);
+        track.appendChild(middle);
+        track.appendChild(after);
+        var items = Array.from(track.children);
+        var N = L;
+        var i = N;
+        var isAnimating = false;
+        function center(animated) {
+            var active = items[i];
+            var w = root.clientWidth;
+            var itemW = active.offsetWidth;
+            var offset = active.offsetLeft;
+            var x = offset - (w - itemW) / 2;
+            if (animated === false) {
+                track.style.transitionProperty = 'none';
+            } else {
+                track.style.transitionProperty = 'transform';
+                track.style.transitionDuration = '500ms';
+                track.style.transitionTimingFunction = 'cubic-bezier(.22,.61,.36,1)';
+            }
+            track.style.transform = 'translateX(' + (-x) + 'px)';
+        }
+        function snap() {
+            if (i < N) {
+                i += N;
+                center(false);
+                requestAnimationFrame(function () { track.style.transitionProperty = 'transform'; });
+            } else if (i >= 2 * N) {
+                i -= N;
+                center(false);
+                requestAnimationFrame(function () { track.style.transitionProperty = 'transform'; });
+            }
+            isAnimating = false;
+        }
+        function step(delta) {
+            if (isAnimating) return;
+            isAnimating = true;
+            i += delta;
+            center(true);
+            track.addEventListener('transitionend', snap, { once: true });
+        }
+        var prev = document.getElementById('miningPrev');
+        var next = document.getElementById('miningNext');
+        if (prev) prev.addEventListener('click', function () { step(-1); });
+        if (next) next.addEventListener('click', function () { step(1); });
+        var sx = 0, dx = 0; root.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; });
+        root.addEventListener('touchmove', function (e) { dx = e.touches[0].clientX - sx; });
+        root.addEventListener('touchend', function () { if (Math.abs(dx) > 50) { step(dx < 0 ? 1 : -1); } dx = 0; });
+        window.addEventListener('resize', function () { center(false); });
+        center(false);
+    })();
+</script>
+
+<script>
+    (function(){
+        var track = document.getElementById('miningTrack');
+        if(!track) return;
+        Array.from(track.children).forEach(function(item){
+            var rel = item.querySelector('.relative');
+            var img = item.querySelector('img');
+            if(!rel || !img) return;
+            var src = img.getAttribute('src') || '';
+            var name = src.split('/').pop();
+            try{ name = decodeURIComponent(name); }catch(e){}
+            name = name.replace(/\.[^.]+$/, '');
+            name = name.replace(/[_-]+/g, ' ').trim();
+            var alt = img.getAttribute('alt') || '';
+            var title = alt.trim() || name;
+            var cap = document.createElement('div');
+            rel.appendChild(cap);
+        });
     })();
 </script>
 
