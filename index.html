@@ -86,7 +86,47 @@
         <!-- Swiper -->
         <div class="swiper hero-swiper">
           <div class="swiper-wrapper">
-            <!-- Slide 1 -->
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide relative overflow-hidden group">
+            <img src="public/assets/slider/Web-Chinese-New-Year.jpg" loading="lazy" alt="Happy Chinese New Year" class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover transition-transform duration-700" />
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+            <!-- Text Overlay -->
+            <div class="absolute inset-0 flex items-center justify-start text-white p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
+              <div class="max-w-xl sm:max-w-2xl animate-fade-in-up">
+                <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight 
+          font-merriweather">
+                  Happy<br>
+                  <span class="text-white">Chinese New Year</span>
+                </h3>
+                <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 leading-relaxed mb-4 sm:mb-6">
+                  Wishing you abundance, prosperity, and good fortune in the year of the Horse.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Eid Mubarok -->
+          <div class="swiper-slide relative overflow-hidden group">
+            <img src="public/assets/slider/Web-Eid-Mubarok.jpg" loading="lazy" alt="Happy Eid Mubarok" class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover transition-transform duration-700" />
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+            <!-- Text Overlay -->
+            <div class="absolute inset-0 flex items-center justify-start text-white p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
+              <div class="max-w-xl sm:max-w-2xl animate-fade-in-up">
+                <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight font-merriweather">
+                  Happy<br>
+                  <span class="text-white">Eid Mubarok</span>
+                </h3>
+                <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 leading-relaxed mb-4 sm:mb-6">
+                  May this special day bring peace, happiness, and prosperity to everyone.
+                </p>
+              </div>
+            </div>
+          </div>
+
+            <!-- Slide 3 -->
             <div class="swiper-slide relative overflow-hidden group">
               <img src="public/assets/images/Umara-00189.jpg" loading="lazy" alt="Umara Group Excellence" class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] object-cover transition-transform duration-700" />
               <!-- Gradient Overlay -->
@@ -174,7 +214,7 @@
               <div class="absolute inset-0 flex items-center justify-start text-white p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
                 <div class="max-w-xl sm:max-w-2xl animate-fade-in-up">
                   <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                    <span class="text-white">Modern Living</span><br>
+                    <span class="text-white">Modern Restaurant</span><br>
                     in Cikarang
                   </h3>
                   <p class="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 leading-relaxed mb-6">
@@ -282,11 +322,11 @@
               </div>
 
           <!-- Navigation arrows -->
-          <div class="swiper-button-next !text-white !text-lg sm:!text-2xl !w-10 !h-10 sm:!w-12 sm:!h-12 !bg-white/20 !backdrop-blur-md !border !border-white/30 !rounded-full !transition-all !duration-300 !shadow-lg after:!text-sm sm:after:!text-lg after:!font-bold !right-2 sm:!right-4"></div>
-          <div class="swiper-button-prev !text-white !text-lg sm:!text-2xl !w-10 !h-10 sm:!w-12 sm:!h-12 !bg-white/20 !backdrop-blur-md !border !border-white/30 !rounded-full !transition-all !duration-300 !shadow-lg after:!text-sm sm:after:!text-lg after:!font-bold !left-2 sm:!left-4"></div>
+          <div class="swiper-button-next !text-white !text-lg sm:!text-2xl !w-10 !h-10 sm:!w-12 sm:!h-12 !bg-white/20 !backdrop-blur-md !border !border-white/30 !rounded-full !transition-all !duration-300 !shadow-lg hover:!bg-white/40 !z-50 after:!text-sm sm:after:!text-lg after:!font-bold !right-4 sm:!right-6"></div>
+          <div class="swiper-button-prev !text-white !text-lg sm:!text-2xl !w-10 !h-10 sm:!w-12 sm:!h-12 !bg-white/20 !backdrop-blur-md !border !border-white/30 !rounded-full !transition-all !duration-300 !shadow-lg hover:!bg-white/40 !z-50 after:!text-sm sm:after:!text-lg after:!font-bold !left-4 sm:!left-6"></div>
 
           <!-- Enhanced Pagination -->
-          <div class="swiper-pagination !bottom-4 sm:!bottom-6 md:!bottom-8"></div>
+          <div class="swiper-pagination !bottom-4 sm:!bottom-6 md:!bottom-8 !z-50"></div>
         </div>
       </section>
       <!-- END OF SECTION CAROUSEL -->
@@ -306,6 +346,7 @@
         <!-- 5 COLUMN GRID SECTION -->
         <section class="w-full py-12 px-8 md:px-2 lg:px-12">
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          
             <!-- Grid Item 1 -->
             <div class="bg-gradient-to-r from-card-umara-group-brown-light to-card-umara-group-brown-dark rounded-lg shadow-md p-6 text-center flex flex-col h-full" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
               <div class="w-36 h-36 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -1050,30 +1091,19 @@
           // Basic settings
           loop: true,
           autoplay: {
-            delay: 6000,
+            delay: 3000,
             disableOnInteraction: false,
-            pauseOnMouseEnter: true,
+            pauseOnMouseEnter: false,
           },
-          speed: 1200,
+          observer: true,
+          observeParents: true,
+          speed: 1000,
 
-          // Modern Effects - Creative Zoom Transition
-          effect: "creative",
-          creativeEffect: {
-            prev: {
-              shadow: true,
-              translate: [0, 0, -400],
-              scale: 0.8,
-              opacity: 0.5,
-            },
-            next: {
-              translate: [0, 0, 0],
-              scale: 1.2,
-              opacity: 0.8,
-            },
+          // Effect - Fade for smoother transition
+          effect: "fade",
+          fadeEffect: {
+            crossFade: true
           },
-
-          // Parallax effect
-          parallax: true,
 
           // Navigation arrows
           navigation: {
@@ -1092,88 +1122,28 @@
             },
           },
 
-          // Responsive breakpoints
-          breakpoints: {
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 0,
-            },
-            768: {
-              slidesPerView: 1,
-              spaceBetween: 0,
-            },
-            1024: {
-              slidesPerView: 1,
-              spaceBetween: 0,
-            },
-          },
-
-          // Touch settings
-          touchRatio: 1,
-          touchAngle: 45,
-          grabCursor: true,
-
           // Keyboard control
           keyboard: {
             enabled: true,
             onlyInViewport: true,
           },
 
-          // Mouse wheel control
-          mousewheel: {
-            enabled: false,
-          },
-
-          // Accessibility
-          a11y: {
-            enabled: true,
-            prevSlideMessage: "Previous slide",
-            nextSlideMessage: "Next slide",
-            firstSlideMessage: "This is the first slide",
-            lastSlideMessage: "This is the last slide",
-          },
-
           // Events with enhanced animations
           on: {
             init: function () {
-              console.log("Modern Swiper initialized");
-              // Add initial animation to first slide
-              const firstSlide = this.slides[this.activeIndex];
-              if (firstSlide) {
-                const textContent = firstSlide.querySelector('.animate-fade-in-up');
-                if (textContent) {
-                  textContent.style.animationDelay = '0.3s';
-                }
-              }
+              console.log("Swiper initialized");
             },
             slideChange: function () {
-              // Enhanced slide change animations - Reset and trigger CSS animation
+              // Reset text animations
               const activeSlide = this.slides[this.activeIndex];
               if (activeSlide) {
                 const textContent = activeSlide.querySelector('.animate-fade-in-up');
                 if (textContent) {
-                  // Remove existing animation class
                   textContent.classList.remove('animate-fade-in-up');
-                  // Reset styles to prevent conflicts
-                  textContent.style.opacity = '';
-                  textContent.style.transform = '';
-                  textContent.style.transition = '';
-                  
-                  // Force reflow and re-add animation class
-                  setTimeout(() => {
-                    textContent.classList.add('animate-fade-in-up');
-                  }, 50);
+                  void textContent.offsetWidth; // trigger reflow
+                  textContent.classList.add('animate-fade-in-up');
                 }
               }
-            },
-            slideChangeTransitionStart: function () {
-              // Add zoom effect to images during transition
-              this.slides.forEach(slide => {
-                const img = slide.querySelector('img');
-                if (img) {
-                  img.style.transition = 'transform 1.2s ease-out';
-                }
-              });
             },
           },
         });
@@ -1185,22 +1155,6 @@
           } else {
             swiper.autoplay.start();
           }
-        });
-
-        // Add progress indicator
-        const progressBar = document.createElement('div');
-        progressBar.className = 'swiper-progress-bar fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 z-50 transition-all duration-300';
-        progressBar.style.width = '0%';
-        document.body.appendChild(progressBar);
-
-        // Update progress bar
-        swiper.on('autoplayTimeLeft', function (s, time, progress) {
-          progressBar.style.width = (1 - progress) * 100 + '%';
-        });
-
-        // Reset progress on slide change
-        swiper.on('slideChange', function () {
-          progressBar.style.width = '0%';
         });
       });
     </script>
@@ -1275,11 +1229,6 @@
           opacity: 1;
           transform: translateY(0);
         }
-      }
-
-      /* Progress Bar Enhancement */
-      .swiper-progress-bar {
-        box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
       }
     </style>
   </body>
