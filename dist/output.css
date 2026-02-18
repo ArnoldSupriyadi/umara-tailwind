@@ -1445,10 +1445,6 @@
     border-top-right-radius: var(--radius-lg);
     border-bottom-right-radius: var(--radius-lg);
   }
-  .rounded-b-2xl {
-    border-bottom-right-radius: var(--radius-2xl);
-    border-bottom-left-radius: var(--radius-2xl);
-  }
   .rounded-b-md {
     border-bottom-right-radius: var(--radius-md);
     border-bottom-left-radius: var(--radius-md);
@@ -2414,9 +2410,6 @@
   }
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
-  }
-  .pb-10 {
-    padding-bottom: calc(var(--spacing) * 10);
   }
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
@@ -3982,11 +3975,6 @@
       height: calc(var(--spacing) * 48);
     }
   }
-  .sm\:h-64 {
-    @media (width >= 40rem) {
-      height: calc(var(--spacing) * 64);
-    }
-  }
   .sm\:h-80 {
     @media (width >= 40rem) {
       height: calc(var(--spacing) * 80);
@@ -4258,11 +4246,6 @@
   .md\:h-56 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 56);
-    }
-  }
-  .md\:h-80 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 80);
     }
   }
   .md\:h-96 {
@@ -4978,11 +4961,6 @@
     @media (width >= 64rem) {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
-    }
-  }
-  .xl\:h-\[32rem\] {
-    @media (width >= 80rem) {
-      height: 32rem;
     }
   }
   .xl\:h-\[40rem\] {
