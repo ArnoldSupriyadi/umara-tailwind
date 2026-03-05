@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrating Ramadan with PT Bintang Toedjoe - PT Umara Mitra Kulina</title>
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nunito+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+        }
+
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: currentColor;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-nunito text-umk-a antialiased selection:bg-palette1-c selection:text-white">
+    <nav class="bg-white/95 backdrop-blur-md shadow-sm fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <a href="../index.html" class="flex items-center justify-center">
+                        <img src="../public/assets/umara-mitra-kulina/logo-umk.png" alt="Umara Mitra Kulina"
+                            class="w-28 h-auto transition-transform hover:scale-105 duration-300">
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="../index.html"
+                        class="text-gray-600 hover:text-palette1-a font-medium text-sm uppercase tracking-wider transition-colors">Home</a>
+                    <a href="../ptumaramitrakulina.html"
+                        class="text-gray-600 hover:text-palette1-a font-medium text-sm uppercase tracking-wider transition-colors">Services</a>
+                    <a href="/umk/news-umk.html"
+                        class="text-gray-600 text-sm uppercase tracking-wider transition-colors hover:text-palette1-a">News</a>
+                    <a href="#contact"
+                        class="text-gray-600 text-sm uppercase tracking-wider transition-colors hover:text-palette1-a">Contact</a>
+                </div>
+                <button id="nav-toggle" class="md:hidden text-gray-600 hover:text-palette1-a focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="nav-mobile"
+            class="md:hidden hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 z-50 shadow-lg">
+            <ul class="flex flex-col items-center gap-1 py-3">
+                <li class="w-full">
+                    <a href="../index.html"
+                        class="block px-4 py-3 text-center text-gray-600 hover:bg-gray-50 hover:text-palette1-a font-medium text-sm uppercase tracking-wider transition-colors">Home</a>
+                </li>
+                <li class="w-full">
+                    <a href="../ptumaramitrakulina.html" class="block px-4 py-3 text-center text-gray-600 hover:bg-gray-50 hover:text-palette1-a font-medium text-sm uppercase tracking-wider 
+    transition-colors">Services</a>
+                </li>
+                <li class="w-full">
+                    <a href="/umk/news-umk.html"
+                        class="block px-4 py-3 text-center text-gray-600 hover:bg-gray-50 hover:text-palette1-a font-medium text-sm uppercase tracking-wider transition-colors">News</a>
+                </li>
+                <li class="w-full">
+                    <a href="#contact"
+                        class="block px-4 py-3 text-center text-gray-600 hover:bg-gray-50 hover:text-palette1-a font-medium text-sm uppercase tracking-wider transition-colors">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24">
+        <article>
+            <div class="container mx-auto px-4 lg:px-8 mb-12">
+                <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                    <div
+                        class="flex items-center justify-center gap-2 text-sm text-gray-500 mb-6 font-medium uppercase tracking-wide">
+                        <a href="index.html" class="hover:text-palette1-a transition-colors">Home</a>
+                        <span class="text-gray-300">/</span>
+                        <a href="news-umk.html" class="hover:text-palette1-a transition-colors">News</a>
+                    </div>
+                    <h1
+                        class="text-3xl md:text-5xl lg:text-6xl font-playfair font-bold text-palette1-a mb-8 leading-tight">
+                        Fostering Togetherness: UMK Cikarang Hosts Ramadan Iftar for PT Bintang Toedjoe
+                    </h1>
+                    <div class="flex items-center justify-center gap-6 text-sm text-gray-500 border-t border-b border-gray-200 py-4 max-w-lg mx-auto">
+                        <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                        <span class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-palette1-c" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            March 5, 2026
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 lg:px-8 mb-16" data-aos="fade-up" data-aos-delay="100">
+                <div class="max-w-5xl mx-auto rounded-sm overflow-hidden shadow-2xl relative">
+                    <img src="../public/assets/umara-mitra-kulina/news/pt-bintang-toedjoe/UMK-1.jpeg" alt="PT Bintang Toedjoe Ramadan Iftar"
+                        class="w-full h-auto object-cover">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/50 to-transparent p-8">
+                        <p class="text-white/90 text-sm font-light italic text-right">A warm and joyful breaking of the fast (Buka Bersama) atmosphere.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="max-w-3xl mx-auto">
+                    <p class="text-xl md:text-2xl text-gray-600 font-playfair leading-relaxed mb-10 first-letter:text-7xl first-letter:font-bold first-letter:text-palette1-a first-letter:float-left first-letter:mr-3 first-letter:mt-[-10px]"
+                        data-aos="fade-up">
+                        The holy month of Ramadan is a time for reflection, gratitude, and strengthening bonds. Embracing this spirit of togetherness, 
+                        <strong>Umara Mitra Kulina (UMK)</strong> had the distinct honor of hosting a special Iftar (Buka Bersama) event for the dedicated staff of 
+                        <strong>PT Bintang Toedjoe</strong>.
+                    </p>
+
+                    <div class="prose prose-lg prose-stone text-gray-600 mb-12" data-aos="fade-up">
+                        <p class="mb-6 font-light leading-relaxed">
+                            What made this event truly special was its location. The gathering was hosted directly at our state-of-the-art 
+                            <strong>UMK Satellite Kitchen in Cikarang</strong>. Operating a satellite kitchen allows us to bridge the gap between production and serving, 
+                            ensuring that every meal is served fresh, piping hot, and at peak quality precisely when the call to Maghrib prayer echoes.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 my-12" data-aos="fade-up">
+                        <figure>
+                            <img src="../public/assets/umara-mitra-kulina/news/pt-bintang-toedjoe/UMK-2.jpeg" alt="UMK Cikarang Satellite Kitchen Serving"
+                                class="w-full h-64 object-cover rounded-sm mb-3">
+                            <figcaption class="text-xs text-gray-500 italic text-center">Fresh and nutritious meals prepared at our Cikarang Satellite Kitchen</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../public/assets/umara-mitra-kulina/news/pt-bintang-toedjoe/UMK-1.jpeg" alt="PT Bintang Toedjoe Staff Gathering"
+                                class="w-full h-64 object-cover rounded-sm mb-3">
+                            <figcaption class="text-xs text-gray-500 italic text-center">PT Bintang Toedjoe staff enjoying the Buka Bersama moments</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="prose prose-lg prose-stone text-gray-600 mb-12" data-aos="fade-up">
+                        <h3 class="text-2xl font-playfair font-bold text-palette1-a mt-10 mb-4">A Curated Ramadan Culinary Experience</h3>
+                        <p class="mb-6 font-light leading-relaxed">
+                            For this auspicious occasion, our culinary experts curated a menu designed to perfectly break the fast. The feast began with a selection of refreshing 
+                            takjil to restore energy, followed by a hearty spread of authentic Indonesian comfort foods. Every dish was prepared with strict adherence 
+                            to hygiene standards and tailored to replenish the nutritional needs of the hardworking PT Bintang Toedjoe team.
+                        </p>
+                        <p class="mb-6 font-light leading-relaxed">
+                            Serving PT Bintang Toedjoe during this blessed month is a testament to UMK's commitment to being more than just a catering provider. 
+                            We strive to be a reliable partner in creating meaningful corporate moments. We extend our deepest gratitude to PT Bintang Toedjoe for their trust, 
+                            and we wish everyone a blessed and peaceful Ramadan.
+                        </p>
+                    </div>
+
+                    <div class="border-t border-b border-gray-100 py-6 flex items-center justify-between">
+                        <span class="text-sm font-bold uppercase tracking-wider text-gray-500">Share this
+                            article:</span>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-palette1-a hover:text-white transition-colors">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                                </svg>
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section class="bg-[#F9F7F2] py-20 mt-20 hidden">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="max-w-5xl mx-auto">
+                    <h3 class="text-3xl font-playfair font-bold text-palette1-a mb-12 text-center">Related Articles</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <a href="#"
+                            class="group bg-white rounded-sm shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300">
+                            <div class="h-48 overflow-hidden">
+                                <img src="../public/assets/umara-mitra-kulina/certificate/Sertifikat_ISO_9001_2024_UMK.png"
+                                    alt="ISO"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="p-6">
+                                <h4
+                                    class="text-xl font-playfair font-bold text-palette1-a mb-2 group-hover:text-palette1-c transition-colors">
+                                    Achieving ISO 9001:2015 Certification</h4>
+                                <p class="text-gray-600 text-sm line-clamp-2">Our commitment to quality management
+                                    systems has been recognized internationally.</p>
+                                <span class="text-xs font-bold text-palette1-c mt-4 block uppercase tracking-wider">Read
+                                    More</span>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="group bg-white rounded-sm shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300">
+                            <div class="h-48 overflow-hidden">
+                                <img src="../public/assets/umara-mitra-kulina/Team-umk.jpg" alt="Training"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="p-6">
+                                <h4
+                                    class="text-xl font-playfair font-bold text-palette1-a mb-2 group-hover:text-palette1-c transition-colors">
+                                    Expanding Production Capacity</h4>
+                                <p class="text-gray-600 text-sm line-clamp-2">The new 2,500 square meter facility in
+                                    KIIC boosts our production capacity by 200%.</p>
+                                <span class="text-xs font-bold text-palette1-c mt-4 block uppercase tracking-wider">Read
+                                    More</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="text-center mt-12">
+                        <a href="news-umk.html"
+                            class="inline-flex items-center text-gray-500 hover:text-palette1-a font-bold uppercase tracking-widest text-xs transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                            </svg>
+                            Back to All News
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#131313] text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-32 h-auto rounded-lg flex items-center justify-center">
+                            <img src="../public/assets/umara-mitra-kulina/logo-umk-footer.png" alt="Umara Mitra Kulina"
+                                class="w-32 h-auto">
+                        </div>
+                    </div>
+                    <p class="text-gray-400">
+                        Delivering exceptional food services across industries with uncompromising quality and
+                        reliability.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Activity</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/umk/news-umk.html" class="hover:text-white transition-colors">News</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#kitchen" class="hover:text-white transition-colors">Our Kitchen</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://maps.app.goo.gl/TXghacYWdL5FdpPQA" target="_blank">Jl. Menati 1,
+                                Puseurjaya, Telukjambe Timur, Karawang, Jawa Barat 41361</a></li>
+                        <li><a href="tel:+6282121200500"
+                                class="hover:text-white transition-colors">+62-821-2120-0500</a></li>
+                        <li><a href="mailto:info@umarakulina.co.id"
+                                class="hover:text-white transition-colors">info@umarakulina.co.id</a></li>
+                    </ul>
+                    <div class="flex space-x-4 mt-6">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2026 PT Umara Mitra Kulina. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const navToggle = document.getElementById('nav-toggle');
+        const navMobile = document.getElementById('nav-mobile');
+
+        if (navToggle && navMobile) {
+            navToggle.addEventListener('click', function () {
+                navMobile.classList.toggle('hidden');
+
+                // Optional: Toggle icon state if you have different icons for open/close
+                const expanded = navMobile.classList.contains('hidden') ? 'false' : 'true';
+                navToggle.setAttribute('aria-expanded', expanded);
+            });
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50
+            });
+        });
+    </script>
+</body>
+
+</html>
