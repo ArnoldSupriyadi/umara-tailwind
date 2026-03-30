@@ -2258,9 +2258,6 @@
   .object-center {
     object-position: center;
   }
-  .object-top {
-    object-position: top;
-  }
   .p-0 {
     padding: calc(var(--spacing) * 0);
   }
@@ -2443,9 +2440,6 @@
   }
   .text-center {
     text-align: center;
-  }
-  .text-end {
-    text-align: end;
   }
   .text-left {
     text-align: left;
