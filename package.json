@@ -26,8 +26,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-      "dev": "npm exec --yes --package @tailwindcss/cli -- tailwindcss --watch -i ./src/input.css -o ./dist/output.css",
-      "build": "npm exec --yes --package @tailwindcss/cli -- tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+    "dev": "npx tailwindcss --watch -i ./src/input.css -o ./dist/output.css",
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },
   "keywords": [],
   "author": "",
